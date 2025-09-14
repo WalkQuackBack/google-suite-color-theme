@@ -1,0 +1,275 @@
+/* ==UserStyle==
+@name           M3 Google Docs Compiled
+@namespace      github.com/walkquackback/gsuite-bundle-puller
+@version        0.0.0
+@description    A new userstyle
+@author         walkquackback
+@license        MIT
+
+==/UserStyle== */
+@-moz-document url-prefix("https://docs.google.com/document/d/") {
+  /**** Generated code START ****/
+  
+  /**** Generated code END****/
+  
+  /* Subjective M3 changes */
+  .goog-menu,
+  .ac-renderer,
+  .docs-omnibox-row-content {
+    font-family: "Google Sans Flex", "Google Sans Text", "Google Sans", "Roboto";
+  }
+  .docs-gm .goog-menu,
+  .goog-menu,
+  .ac-renderer,
+  .document-details-bubble-container,
+  .docs-gm .docs-toolbar-more-bubble,
+  .docs-material.docs-toolbar-more-bubble,
+  .peoplekitComponentsAutocompletePopupContainer {
+    box-shadow: 0px 2px 4px -1px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.3), 0px 4px 5px 0px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.14), 0px 1px 10px 0px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.12);
+  }
+  .docs-gm .docos-anchoreddocoview.docos-docoview-active,
+  .docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-active,
+  .docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-active:hover,
+  .docs-checkupdialog-content-container,
+  .docsEmojisWizEmojiPickerTab {
+    box-shadow: 0px 5px 5px -3px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.3), 0px 8px 10px 1px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.14), 0px 3px 14px 2px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.12);
+  }
+  hr {
+    border-color: var(--gm3-sys-color-outline-variant);
+  }
+  input {
+    background: transparent;
+    color: inherit;
+  }
+  .docs-grille-gm3 .docs-companion-app-switcher-container:not(
+            .docs-companion-app-switcher-container-collapsed
+        ) {
+    clip-path: inset(8px round 21px);
+    background-color: var(--gm3-sys-color-surface-container);
+    padding: 16px 0;
+  }
+  .app-switcher-button {
+    width: 40px;
+    height: 40px;
+    left: 8px;
+  }
+  .app-switcher-button-icon-container {
+    inset: -1px 0;
+  }
+  .app-switcher-button-icon-background {
+    inset: 4px 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+  }
+  .agca-gab-icon-selection-indicator {
+    visibility: hidden;
+  }
+  .companion-app-switcher-separator {
+    padding-bottom: 0;
+    margin-top: 4px;
+  }
+  .share-client-content-iframe {
+    color-scheme: none;
+  }
+  .kix-equation-toolbar-palette .goog-palette-cell {
+    padding: 2px;
+  }
+  .kix-equation-toolbar-palette-item {
+    border-color: transparent;
+    position: relative;
+    border-radius: 4px;
+    background-image: none;
+  }
+  .goog-control-hover .kix-equation-toolbar-palette-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    outline-style: solid;
+    outline-width: var(--gm3-focus-ring-inward-track-width, 3px);
+    outline-color: var(--gm3-sys-color-secondary);
+  }
+  .kix-equation-toolbar-palette-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-position: inherit;
+    background-image: url(https://ssl.gstatic.com/docs/common/ee-palettes-2.gif);
+  }
+  .apps-share-sprite,
+  .docs-material.goog-menu .goog-menuitem.goog-option-selected .goog-menuitem-checkbox,
+  .premiumFeatureDialogTitleIcon,
+  .docs-revisions-icon,
+  .app-switcher-button-icon-container[style="background-image: url(https://fonts.gstatic.com/s/i/googlematerialicons/add/v21/black-24dp/1x/gm_add_black_24dp.png)"],
+  .ita-kd-img {
+    filter: brightness(0) invert(1) !important;
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+  *[fill="#000"] {
+    fill: var(--gm3-sys-color-on-surface) !important;
+  }
+  *[fill="#1a73e8"] {
+    fill: var(--gm3-sys-color-primary) !important;
+  }
+  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-checked:before,
+  div.docs-material-gm-checkbox-checked:before,
+  span.docs-material-gm-checkbox-checked:before {
+    filter: brightness(0.1);
+  }
+  .kix-equation-toolbar-icon,
+  .kix-equation-toolbar-palette-item::after {
+    filter: brightness(0.75) invert(1);
+  }
+  .docs-grille-gm3 .share-butter-icon {
+    filter: invert(0) !important;
+  }
+  .vk-box {
+    border-radius: 12px;
+    background-color: var(--gm3-sys-color-surface-container-low);
+    color: var(--gm3-sys-color-on-surface);
+    font: inherit;
+  }
+  .vk-box * {
+    color: inherit !important;
+    font-family: inherit;
+  }
+  .vk-box .vk-btn {
+    background: var(--gm3-sys-color-surface-container-high);
+    border-radius: 6px;
+    border-color: var(--gm3-sys-color-outline-variant);
+  }
+  .vk-box .vk-btn.vk-sf-h {
+    border-color: var(--gm3-sys-color-outline);
+    background: var(--gm3-sys-color-surface-container-highest);
+  }
+  .vk-box .vk-btn.vk-sf-s {
+    border-color: var(--gm3-sys-color-secondary);
+  }
+  .goog-dimension-picker div.goog-dimension-picker-highlighted {
+    filter: saturate(2);
+  }
+  .docs-gm .jfk-button.jfk-button-focused:is(*):is(*):is(*),
+  .docs-gm .docs-material-gm-dialog-title-close:focus:is(*):is(*):is(*),
+  .docs-gm .docos-overflowmenu-outer > .docos-docomenu-dropdown:focus:is(*):is(*):is(*),
+  .docs-material-menu-button-flat-default-focused:is(*):is(*):is(*),
+  .goog-flat-button-focused:is(*):is(*):is(*),
+  .docs-material-button-focused:is(*):is(*):is(*),
+  .docs-sidebar-gm-titlebar-icon-button:focus:is(*):is(*):is(*),
+  .docs-material-gm-checkbox.docs-material-gm-checkbox-focused:is(*):is(*):is(*),
+  .docs-gm .docs-docos-activity-sidebar .docos-subscription-settings-button .docs-material-button.docs-material-button-focused:is(*):is(*):is(*),
+  .docs-gm.docos-xeditor .docos-search-button .docs-material-button.docs-material-button-focused:is(*):is(*):is(*),
+  .docs-gm.docos-xeditor .docos-subscription-settings-button .docs-material-button.docs-material-button-focused:is(*):is(*):is(*) {
+    outline-style: solid;
+    outline-width: 3px;
+    outline-offset: 2px;
+    outline-color: var(--gm3-sys-color-primary);
+    color: var(--gm3-focus-ring-color, var(--gm3-sys-color-secondary, #625b71));
+  }
+  body:not(.docs-body-pageless) .kix-appview-editor {
+    background: var(--gm3-sys-color-surface-container-lowest) !important;
+  }
+  .docs-body-pageless .kix-appview-editor {
+    background-image: none !important;
+  }
+  .docs-grille-gm3 .docs-ui-toast {
+    background: var(--gm3-sys-color-inverse-surface);
+    color: var(--gm3-sys-color-inverse-on-surface);
+    box-shadow: 0px 5px 5px -3px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.3), 0px 8px 10px 1px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.14), 0px 3px 14px 2px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.12);
+  }
+  .docs-gm div.goog-modalpopup-bg,
+  .docs-gm div.modal-dialog-bg,
+  .docs-material-gm-dialog-bg {
+    background-color: var(--gm3-sys-color-scrim) !important;
+  }
+  #docos-shadow {
+    background-color: color-mix(in oklab, transparent, var(--gm3-sys-color-scrim) 50%);
+  }
+  .docos-emoji-counter-button-tooltip {
+    box-shadow: none;
+  }
+  .docs-material-color-picker-value-overlay {
+    background: linear-gradient(180deg, transparent 0, #000);
+  }
+  .docs-material-color-picker-saturation-overlay {
+    background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0));
+  }
+  .appsElementsColorPickerColorMap-color-map__background--transparent-to-black {
+    background: linear-gradient(in oklab to bottom, transparent, #000);
+  }
+  .appsElementsColorPickerColorMap-color-map__background--white-to-transparent {
+    background: linear-gradient(in oklab to right, #fff, transparent);
+  }
+  .unifiedPreviewBubbleRoot.docs-bubble {
+    background: #fff;
+  }
+  .goog-menuitem.docs-submenuitem .goog-menuitem-content {
+    background-color: transparent !important;
+  }
+  .chapter-item-label-and-buttons-container-selected .chapter-item-icon .docs-icon-editors-ia-article-document {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(17%) saturate(6039%) hue-rotate(199deg) brightness(93%) contrast(106%) invert(1) hue-rotate(180deg);
+  }
+  .goog-menuitem.docs-submenuitem .goog-menuitem-content {
+    background-color: #fff;
+  }
+  ::selection {
+    background-color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-on-primary);
+  }
+  .docsCommonWiz {
+    /*Apply class aRDKUe, P9KVBf, LgGVmb on some dialogs to make them dark
+            but this is controlled by Wiz, you'd need userscript to make
+            work properly. D:*/
+    --gm3-sys-color-error: #f2b8b5;
+    --gm3-sys-color-on-error: #601410;
+    --gm3-sys-color-background: #131314;
+    --gm3-sys-color-on-background: #e3e3e3;
+    --gm3-sys-color-primary: #a8c7fa;
+    --gm3-sys-color-on-primary: #062e6f;
+    --gm3-sys-color-inverse-primary: #0b57d0;
+    --gm3-sys-color-secondary: #7fcfff;
+    --gm3-sys-color-on-secondary: #035;
+    --gm3-sys-color-surface: #131314;
+    --gm3-sys-color-on-surface: #e3e3e3;
+    --gm3-sys-color-on-surface-variant: #c4c7c5;
+    --gm3-sys-color-inverse-on-surface: #303030;
+    --gm3-sys-color-inverse-surface: #e3e3e3;
+    --gm3-sys-color-shadow: #000;
+    --gm3-sys-color-primary-container: #0842a0;
+    --gm3-sys-color-on-primary-container: #d3e3fd;
+    --gm3-sys-color-secondary-container: #004a77;
+    --gm3-sys-color-on-secondary-container: #c2e7ff;
+    --gm3-sys-color-error-container: #8c1d18;
+    --gm3-sys-color-on-error-container: #f9dedc;
+    --gm3-sys-color-surface-bright: #37393b;
+    --gm3-sys-color-surface-variant: #444746;
+    --gm3-sys-color-surface-tint: #d1e1ff;
+    --gm3-sys-color-surface-container-lowest: #0e0e0e;
+    --gm3-sys-color-surface-container-low: #1b1b1b;
+    --gm3-sys-color-surface-container: #1e1f20;
+    --gm3-sys-color-surface-container-high: #282a2c;
+    --gm3-sys-color-surface-container-highest: #333537;
+    --gm3-sys-color-tertiary: #6dd58c;
+    --gm3-sys-color-on-tertiary: #0a3818;
+    --gm3-sys-color-tertiary-container: #0f5223;
+    --gm3-sys-color-outline: #8e918f;
+    --gm3-sys-color-outline-variant: #444746;
+    --gm3-sys-color-scrim: #000;
+    color-scheme: dark;
+
+    --gm3-data-table-row-item-unselected-container-color: transparent;
+    --gm3-dialog-container-color: var(--gm3-sys-color-surface-container, #fff);
+    --gm3-select-shared-menu-container-color: var(--gm3-sys-color-surface-bright, #fff);
+    --ae-side-sheet-container-color: var(--gm3-sys-color-surface-container, #f0f4f9);
+    --gm3-dropdown-button-outlined-hover-state-layer-opacity: 0;
+    --gm3-dropdown-button-outlined-pressed-state-layer-opacity: 0;
+    --gm3-dropdown-button-outlined-hover-outline-color: var(--gm3-sys-color-on-surface, #1f1f1f);
+    --gm3-dropdown-button-outlined-pressed-outline-color: var(--gm3-sys-color-primary, #0b57d0);
+  }
+  .docsCommonWizDialogDialogContent {
+    --gm3-tabs-primary-container-color: transparent;
+  }
+  body {
+    color: var(--gm3-sys-color-on-surface);
+  }
+}
