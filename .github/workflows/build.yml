@@ -33,7 +33,7 @@ jobs:
       run: npx puppeteer browsers install chrome
 
     - name: Build artifacts
-      run: pnpm run build-all
+      run: pnpm run build
       
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
