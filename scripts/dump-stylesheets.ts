@@ -1,8 +1,10 @@
 import puppeteer from 'puppeteer';
 import postcss from 'postcss';
-// import replaceColors from './replace-colors';
 import autoprefixer from 'autoprefixer';
+
 import postcssReplaceColors from './postcss-replace-colors.t.js';
+import postcssRemoveNonVariables from './postcss-remove-non-variables.t.js';
+import postcssTrimEmpty from './postcss-trim-empty.t.js';
 
 async function getSiteStyles(url: string): Promise<string> {
   const browser = await puppeteer.launch();
@@ -69,6 +71,8 @@ export async function dumpStylesheets(urls: string[]) {
       [
         autoprefixer,
         postcssReplaceColors,
+        postcssRemoveNonVariables,
+        postcssTrimEmpty
       ]
     ).process(combinedCss, { from: undefined });
     console.log(`Successfully processed with PostCSS`);
