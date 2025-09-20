@@ -49,33 +49,52 @@ export const colorIndex: Record<string, string> = {
     // "#c4eed0": "var(--gm3-sys-color-tertiary-fixed)",
     "#6dd58c": "var(--gm3-sys-color-tertiary-fixed-dim)",
 
+    "#185abc": "var(--gm3-sys-color-primary)",
     "#1a73e8": "var(--gm3-sys-color-primary)",
     "#1e64d4": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 8%)",
     "#296bd6": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 12%)",
+    "#4285f4": "var(--gm3-sys-color-secondary)",
     "rgba(11,87,208,.08)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 8%)",
     "rgba(11,87,208,.12)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 12%)",
+    "rgba(66,133,244,.12)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 12%)",
+    "rgba(66,133,244,.32)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 32%)",
 
+    "#fbbc04": "var(--gm3-sys-color-caution)",
+
+    "rgba(0,0,0,.04)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 4%)",
+    "rgba(0,0,0,.54)": "var(--gm3-sys-color-on-surface)",
+    "rgba(0,0,0,.6)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.7)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.87)":  "var(--gm3-sys-color-on-surface)",
     "#202124": "var(--gm3-sys-color-on-surface)",
     "#333": "var(--gm3-sys-color-on-surface)",
     "#3c4043": "var(--gm3-sys-color-on-surface)",
     "#5f6368": "var(--gm3-sys-color-on-surface-variant)",
+    "#777": "var(--gm3-sys-color-outline)",
+    "#80868b": "var(--gm3-sys-color-outline)",
+    "#abcfe7": "color-mix(in oklab, var(--gm3-sys-color-secondary-container), var(--gm3-sys-color-on-secondary-container) 16%)",
+    "#b2d7ef": "color-mix(in oklab, var(--gm3-sys-color-secondary-container), var(--gm3-sys-color-on-secondary-container) 8%)",
+    "#b9cbe7": "color-mix(in oklab, var(--gm3-sys-color-primary-container), var(--gm3-sys-color-on-primary-container) 16%)",
     "#bbd4fb": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary-fixed-dim) 30%)",
     "#c1d8fb": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary-fixed-dim) 50%)",
+    "#c7c7c7": "var(--gm3-sys-color-outline-variant)",
     "#cbdbf6": "color-mix(in oklab, var(--gm3-sys-color-primary-container), var(--gm3-sys-color-on-primary-container) 8%)",
-    "#b9cbe7": "color-mix(in oklab, var(--gm3-sys-color-primary-container), var(--gm3-sys-color-on-primary-container) 16%)",
+    "#cce0fc": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary-fixed-dim) 50%)",
     "#dadce0": "var(--gm3-sys-color-outline-variant)",
+    "gray": "var(--gm3-sys-color-outline-variant)",
     "#dae3f2": "color-mix(in oklab, var(--gm3-sys-color-surface-container-high), var(--gm3-sys-color-on-surface) 16%)",
     "#dfe7f3": "color-mix(in oklab, var(--gm3-sys-color-surface-container-high), var(--gm3-sys-color-on-surface) 8%)",
     "#d4dce8": "color-mix(in oklab, var(--gm3-sys-color-surface-container-highest), var(--gm3-sys-color-on-surface) 8%)",
     // Disabled BG
+    "rgba(31,31,31,.12)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
+    "rgba(31,31,31,.38)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 38%)",
     "#e4e4e4": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
     "#e8f0fe": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#e9f1fe": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
     "#e1ecfe": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 18%)",
     "#edf2fa": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#f3f6fc": "var(--gm3-sys-color-surface-container)",
+    "#f8f8f8": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#f9fbfd": "var(--gm3-sys-color-surface-container-lowest)",
 
     "#e8ebee": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
@@ -85,4 +104,7 @@ export const colorIndex: Record<string, string> = {
 
     // Menu item highlight
     "#f1f3f4": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
+    "#f8fbff": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
+
+    "transparent": "var(--gm3-sys-color-transparent, transparent)"
 };

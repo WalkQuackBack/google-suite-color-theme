@@ -3,8 +3,8 @@ name: Build userstyles
 on:
   workflow_dispatch:
   schedule: 
-    # Every Wednesday at 12PM PST
-    - cron: "20 12 * * 3"
+    # Every day at 12PM PST
+    - cron: "0 20 * * *"
 
 jobs:
   build:
