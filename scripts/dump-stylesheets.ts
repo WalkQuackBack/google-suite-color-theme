@@ -14,15 +14,17 @@ async function getSiteStyles(url: string): Promise<string> {
   const page = await browser.newPage();
   
   await page.setViewportSize({
-    width: 1024,
-    height: 720
+    width: 800,
+    height: 600
   });
 
-  await page.goto(url, { waitUntil: 'networkidle' });
+  await page.goto(url, { 
+    timeout: 20000,
+    waitUntil: 'domcontentloaded'
+  });
 
   const cssSources = await page.evaluate(() => {
     const styleTags = Array.from(document.querySelectorAll('style')).map(tag => {
-      const dataHref = tag.getAttribute('data-href')
       return {
         content: tag.textContent,
         href: tag.getAttribute('data-href') || '',
