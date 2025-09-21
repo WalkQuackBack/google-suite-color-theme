@@ -29,8 +29,8 @@ jobs:
     - name: Install dependencies
       run: pnpm install
 
-    - name: Install Chrome
-      run: npx puppeteer browsers install chrome
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
 
     - name: Build artifacts
       run: pnpm run build

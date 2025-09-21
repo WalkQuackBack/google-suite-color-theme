@@ -46282,22 +46282,6 @@
       0 -2px 6px 2px
         color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
-  .CodeMirror {
-    color: var(--gm3-sys-color-shadow);
-  }
-  .CodeMirror-gutter-filler,
-  .CodeMirror-scrollbar-filler {
-    background-color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .CodeMirror-guttermarker {
-    color: var(--gm3-sys-color-shadow);
-  }
-  .CodeMirror-cursor {
-    border-left: 1px solid var(--gm3-sys-color-shadow);
-  }
-  .CodeMirror {
-    background: var(--gm3-sys-color-surface-container-lowest);
-  }
 
   /**** Generated code END****/
 

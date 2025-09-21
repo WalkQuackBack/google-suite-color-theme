@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+import playwright from 'playwright';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 
@@ -8,19 +8,23 @@ import postcssTrimEmpty from './postcss-trim-empty.t.js';
 import postcssMergeRules from './postcss-merge-rules.t.js';
 
 async function getSiteStyles(url: string): Promise<string> {
-  const browser = await puppeteer.launch({
+  const browser = await playwright.chromium.launch({
     headless: true
   });
   const page = await browser.newPage();
-  await page.setViewport({
-    width: 1024,
-    height: 720
+  
+  await page.setViewportSize({
+    width: 800,
+    height: 600
   });
-  await page.goto(url, { waitUntil: 'networkidle2' });
+
+  await page.goto(url, { 
+    timeout: 20000,
+    waitUntil: 'domcontentloaded'
+  });
 
   const cssSources = await page.evaluate(() => {
     const styleTags = Array.from(document.querySelectorAll('style')).map(tag => {
-      const dataHref = tag.getAttribute('data-href')
       return {
         content: tag.textContent,
         href: tag.getAttribute('data-href') || '',
