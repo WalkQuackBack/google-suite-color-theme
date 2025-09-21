@@ -30,7 +30,7 @@ jobs:
       run: pnpm install
 
     - name: Install Chrome
-      run: npx puppeteer browsers install chrome
+      run: npx playwright install --with-deps chromium
 
     - name: Build artifacts
       run: pnpm run build
