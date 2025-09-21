@@ -13,19 +13,205 @@
 @-moz-document url-prefix("https://docs.google.com/spreadsheets/d/")
 {
   /**** Generated code START ****/
-  .gb_E,
-  .gb_F {
-    fill: var(--gm3-sys-color-on-surface-variant);
+  a.gb_Qa {
+    color: var(--gm3-sys-color-primary);
   }
-  a.gb_A {
-    background: var(--gm3-sys-color-primary);
+  a.gb_Ra {
+    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
-  .gb_H .gb_A {
+  .gb_Ta,
+  .gb_Ua {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+  }
+  .gb_Ua {
+    border: 1px solid var(--gm3-sys-color-primary);
+  }
+  #gb a.gb_Ua {
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  #gb .gb_Va {
+    border: 1px solid var(--gm3-sys-color-outline-variant);
+    color: var(--gm3-sys-color-primary);
+  }
+  #gb .gb_Va:hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+    border-color: var(--gm3-sys-color-outline-variant);
+  }
+  #gb .gb_Va.gb_H {
+    border: 1px solid var(--gm3-sys-color-on-surface-variant);
+  }
+  #gb .gb_Va.gb_H:hover {
+    color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  #gb .gb_Va.gb_H:focus {
+    color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+    outline: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%);
+  }
+  #gb .gb_Va.gb_H:active,
+  #gb .gb_Va.gb_H:focus:active {
+    color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .gb_B,
+  a.gb_B {
+    color: var(--gm3-sys-color-shadow);
+  }
+  .gb_vd,
+  .gb_wd {
+    border-bottom-color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .gb_la {
+    background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-shadow);
+  }
+  .gb_0c .gb_Dd.gb_Ed button:focus-visible svg,
+  .gb_Dd button:focus-visible svg,
+  .gb_B:focus-visible {
+    outline: 1px solid var(--gm3-sys-color-on-surface);
+  }
+  .gb_0c .gb_Dd button:focus-visible svg,
+  .gb_0c .gb_B:focus-visible {
+    outline: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
+  }
+  .gb_B[aria-expanded="true"] .gb_F {
+    fill: var(--gm3-sys-color-on-surface-variant);
+  }
+  .gb_nd.gb_od {
     color: var(--gm3-sys-color-on-surface);
   }
-  .gb_O {
-    fill: var(--gm3-sys-color-primary);
+  .gb_ba {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .gb_Fa svg,
+  .gb_4c svg,
+  .gb_pd .gb_Od,
+  .gb_gd .gb_Od {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  a.gb_X,
+  span.gb_X {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .gb_Md {
+    background: var(--gm3-sys-color-primary);
+  }
+  #gb .gb_0c a.gb_Md:not(.gb_H),
+  #gb.gb_0c a.gb_Md {
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border-color: var(--gm3-sys-color-outline-variant);
+    color: var(--gm3-sys-color-primary);
+  }
+  #gb a.gb_Ua.gb_H.gb_Md {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  #gb .gb_0c a.gb_Md:hover:not(.gb_H),
+  #gb.gb_0c a.gb_Md:hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+    border-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary-fixed-dim) 50%
+    );
+  }
+  #gb a.gb_Ua.gb_H.gb_Md:active {
+    box-shadow:
+      0 1px 2px rgba(60, 64, 67, 0.3),
+      0 2px 6px 2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .gb_Wa {
+    border: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .gb_Wa.gb_H {
+    border: 1px solid var(--gm3-sys-color-on-surface-variant);
+  }
+  .gb_Wa.gb_H .gb_3a {
+    background: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .gb_Wa:hover {
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%);
+  }
+  .gb_Wa.gb_H:hover {
+    border: 1px solid var(--gm3-sys-color-on-surface-variant);
+  }
+  .gb_Wa:focus-visible,
+  .gb_Wa:focus {
+    background-color: var(--gm3-sys-color-surface-container-lowest);
+    outline: 1px solid var(--gm3-sys-color-on-surface);
+    box-shadow:
+      0 1px 2px 0 rgba(60, 64, 67, 0.3),
+      0 1px 3px 1px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .gb_Wa.gb_H:focus-visible,
+  .gb_Wa.gb_H:focus {
+    outline: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
+  }
+  .gb_Wa.gb_H:active,
+  .gb_Wa.gb_8c.gb_H:focus {
+    border: 1px solid var(--gm3-sys-color-on-surface-variant);
+  }
+  .gb_4a.gb_5a {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+  }
+  .gb_fb {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+  }
+  .gb_gb {
+    background: var(--gm3-sys-color-surface-container-lowest);
+    box-shadow:
+      0px 1px 2px 0px rgba(60, 64, 67, 0.3),
+      0px 1px 3px 1px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .gb_mb {
+    border-top: 4px solid var(--gm3-sys-color-shadow);
+  }
+  .gb_nb.gb_eb {
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  #gb#gb.gb_1.gb_1 a.gb_jb,
+  #gb#gb .gb_1.gb_1 a.gb_jb {
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .gb_1.gb_1 .gb_mb {
+    border-top-color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffleDialogRitzImportDialogStandardDialog {
     --gm3-dialog-modal-container-color: var(
@@ -46030,6 +46216,72 @@
     border: 1px solid
       var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
   }
+  .gb_Ka {
+    box-shadow:
+      0px 1px 2px 0px rgba(60, 64, 67, 0.3),
+      0px 1px 3px 1px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .gb_Ma > .gb_La {
+    fill: var(--gm3-sys-color-error);
+  }
+  .gb_Na,
+  .gb_H .gb_Ma > .gb_Na {
+    fill: var(--gm3-sys-color-on-surface);
+  }
+  .gb_Nc {
+    background: var(--gm3-sys-color-inverse-surface);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .gb_Oc > * {
+    color: var(--gm3-sys-color-outline-variant);
+  }
+  .gb_Ea:hover {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+  }
+  .gb_Ea:focus,
+  .gb_Ea:active {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .gb_Ea:focus-visible {
+    border-color: var(--gm3-sys-color-primary);
+  }
+  .gb_H .gb_Ea:focus-visible {
+    border-color: var(--gm3-sys-color-inverse-primary);
+  }
+  .gb_Fa .gb_Ha {
+    color: var(--gm3-sys-color-primary);
+  }
+  .gb_Ha:hover {
+    color: var(--gm3-sys-color-on-primary-fixed-variant);
+  }
+  .gb_Ha:focus-visible {
+    border-color: var(--gm3-sys-color-primary);
+  }
+  .gb_H .gb_Ha {
+    color: var(--gm3-sys-color-inverse-primary);
+  }
+  .gb_H .gb_Ha:hover {
+    color: var(--gm3-sys-color-primary-container);
+  }
+  .gb_H .gb_Ha:focus-visible {
+    border-color: var(--gm3-sys-color-inverse-primary);
+    color: var(--gm3-sys-color-inverse-primary);
+  }
+  .gb_Ia {
+    box-shadow:
+      0 -1px 2px 0 rgba(60, 64, 67, 0.3),
+      0 -2px 6px 2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
   .CodeMirror {
     color: var(--gm3-sys-color-shadow);
   }
@@ -46045,43 +46297,6 @@
   }
   .CodeMirror {
     background: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .gb_B:focus-visible {
-    outline: 1px solid var(--gm3-sys-color-on-surface);
-  }
-  .gb_H .gb_B:focus-visible {
-    outline-color: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 8%
-    );
-  }
-  .gb_H .gb_A:active {
-    box-shadow:
-      0 1px 2px rgba(60, 64, 67, 0.3),
-      0 2px 6px 2px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .gb_C:hover .gb_O {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 8%
-    );
-  }
-  .gb_C:active .gb_O,
-  .gb_C:focus .gb_O {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 12%
-    );
-  }
-  .gb_C:focus-visible .gb_O {
-    outline: 1px solid var(--gm3-sys-color-primary);
-  }
-  .gb_H .gb_C:focus-visible .gb_O {
-    outline: 1px solid var(--gm3-sys-color-inverse-primary);
   }
 
   /**** Generated code END****/
