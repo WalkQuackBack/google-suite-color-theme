@@ -1,0 +1,335 @@
+/* ==UserStyle==
+@name Google Sheets Color Theme
+@namespace github.com/walkquackback/google-sheets-color-theme
+@homepageURL https://github.com/walkquackback/google-docs-color-theme
+@version <version>
+@updateURL https://github.com/walkquackback/google-docs-color-theme/build.user.css
+@supportURL https://github.com/walkquackback/google-docs-color-theme/issues?q=is%3Aopen+is%3Aissue
+@description Allows Google Sheets to be themed using CSS variables. Comes by default with a dark theme.
+@author WalkQuackBack
+@license MIT
+
+==/UserStyle== */
+@-moz-document url-prefix("https://docs.google.com/spreadsheets/d/") {
+  /**** Generated code START ****/
+  /**** Generated code REPLACE ****/
+  /**** Generated code END****/
+  
+  /* Other changes */
+  .docs-gm .goog-menu,
+  .goog-menu,
+  .ac-renderer,
+  .document-details-bubble-container,
+  .docs-gm .docs-toolbar-more-bubble,
+  .docs-material.docs-toolbar-more-bubble,
+  .peoplekitComponentsAutocompletePopupContainer {
+    background-color: var(--gm3-sys-color-surface-container);
+    box-shadow: 0px 2px 4px -1px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.3), 0px 4px 5px 0px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.14), 0px 1px 10px 0px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.12);
+  }
+
+  .docs-gm .docos-anchoreddocoview.docos-docoview-active,
+  .docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-active,
+  .docs-grille-gm3 .docos-anchoreddocoview.docos-docoview-active:hover,
+  .docs-checkupdialog-content-container,
+  .docsEmojisWizEmojiPickerTab {
+    box-shadow: 0px 5px 5px -3px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.3), 0px 8px 10px 1px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.14), 0px 3px 14px 2px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.12);
+  }
+
+  a:link {
+    color: var(--gm3-sys-color-primary);
+  }
+
+  hr {
+    border-color: var(--gm3-sys-color-outline-variant);
+  }
+
+  input {
+    background: transparent;
+    color: inherit;
+  }
+  
+  .share-client-content-iframe {
+    color-scheme: none;
+  }
+
+  [fill="#000"],
+  [fill="#202124"] {
+    fill: var(--gm3-sys-color-on-surface) !important;
+  }
+  [fill="#1a73e8"],
+  [fill="#188038"],
+  [fill="#F9AB00"] {
+    fill: var(--gm3-sys-color-primary) !important;
+  }
+  [style="color: rgb(0, 0, 0);"],
+  .goog-submenu-arrow {
+    color: var(--gm3-sys-color-on-surface) !important;
+  }
+
+  [src^="https://ssl.gstatic.com/docs/common/material_common_sprite"],
+  .docs-icon-img,
+  .docs-dialog .modal-dialog-title-close:after,
+  .docs-charts-editor-charttype-select-icon,
+  .goog-menuitem-checkbox,
+  .docs-palette-grippy-icon {
+    filter: var(--icon-filter);
+  }
+
+  .docs-gm .docs-icon-video-camera-front-18 .docs-icon-img, .docs-gm .docs-icon-video-camera-front-24 .docs-icon-img, .docs-gm .docs-material .docs-analytics-sidebar-tab-selected .docs-icon-img, .docs-gm .docs-material .docs-smart-summary-tinted.docs-icon-img, .docs-gm .docs-material .kix-calendar-template-date-range-picker-blue-icon .docs-icon-img, .docs-gm .docs-material .kix-task-bubble-blue-icon .docs-icon-img, .docs-gm .docs-material .waffle-named-ranges-promo-title .docs-icon-img, .docs-gm .docs-material.docs-sheet-active-tab .docs-icon-img, .docs-material .docs-icon-system-applied-labels.docs-icon-img, .docs-material .docs-odp-banner-icon .docs-icon-editors-ia-label.docs-icon-img, .docs-material .smart-canvas-date-details-bubble-book-meeting-button .docs-icon-img, .docs-material .smart-canvas-date-details-bubble-pattern-picker-button .docs-icon-img, .docs-material .smart-canvas-date-details-bubble-pattern-picker-button-original .docs-icon-img, .docs-gm .docs-material .trix-data-prep-insights-label-active .docs-icon-img {
+    content: url('https://ssl.gstatic.com/docs/common/material_common_sprite869_gm3_grey_medium.svg');
+  }
+
+  .kix-appview-editor {
+    background-color: transparent !important;
+  }
+
+  .docs-material-color-picker-value-overlay {
+    background: linear-gradient(180deg,transparent 0,#000);
+  }
+  .docs-material-color-picker-saturation-overlay {
+    background: linear-gradient(90deg,#fff 0,hsla(0,0%,100%,0));
+  }
+
+  ::selection {
+    background-color: var(--gm3-sys-color-primary) !important;
+    color: var(--gm3-sys-color-on-primary) !important;
+  }
+
+  .docsCommonWiz {
+    /*Apply class aRDKUe, P9KVBf, LgGVmb on some dialogs to make them dark
+    but this is controlled by Wiz, you'd need userscript to make
+    work properly. D:*/
+
+    --icon-filter: none;
+    
+    --gm3-sys-color-background: #fff;
+    --gm3-sys-color-background-rgb: 255, 255, 255;
+    --gm3-sys-color-error: #b3261e;
+    --gm3-sys-color-error-rgb: 179, 38, 30;
+    --gm3-sys-color-error-container: #f9dedc;
+    --gm3-sys-color-error-container-rgb: 249, 222, 220;
+    --gm3-sys-color-inverse-on-surface: #f2f2f2;
+    --gm3-sys-color-inverse-on-surface-rgb: 242, 242, 242;
+    --gm3-sys-color-inverse-primary: #a8c7fa;
+    --gm3-sys-color-inverse-primary-rgb: 168, 199, 250;
+    --gm3-sys-color-inverse-surface: #303030;
+    --gm3-sys-color-inverse-surface-rgb: 48, 48, 48;
+    --gm3-sys-color-on-background: #1f1f1f;
+    --gm3-sys-color-on-background-rgb: 31, 31, 31;
+    --gm3-sys-color-on-error: #fff;
+    --gm3-sys-color-on-error-rgb: 255, 255, 255;
+    --gm3-sys-color-on-error-container: #410e0b;
+    --gm3-sys-color-on-error-container-rgb: 65, 14, 11;
+    --gm3-sys-color-on-primary: #fff;
+    --gm3-sys-color-on-primary-rgb: 255, 255, 255;
+    --gm3-sys-color-on-primary-container: #041e49;
+    --gm3-sys-color-on-primary-container-rgb: 4, 30, 73;
+    --gm3-sys-color-on-primary-fixed: #041e49;
+    --gm3-sys-color-on-primary-fixed-rgb: 4, 30, 73;
+    --gm3-sys-color-on-primary-fixed-variant: #0842a0;
+    --gm3-sys-color-on-primary-fixed-variant-rgb: 8, 66, 160;
+    --gm3-sys-color-on-secondary: #fff;
+    --gm3-sys-color-on-secondary-rgb: 255, 255, 255;
+    --gm3-sys-color-on-secondary-container: #001d35;
+    --gm3-sys-color-on-secondary-container-rgb: 0, 29, 53;
+    --gm3-sys-color-on-secondary-fixed: #001d35;
+    --gm3-sys-color-on-secondary-fixed-rgb: 0, 29, 53;
+    --gm3-sys-color-on-secondary-fixed-variant: #004a77;
+    --gm3-sys-color-on-secondary-fixed-variant-rgb: 0, 74, 119;
+    --gm3-sys-color-on-surface: #1f1f1f;
+    --gm3-sys-color-on-surface-rgb: 31, 31, 31;
+    --gm3-sys-color-on-surface-variant: #444746;
+    --gm3-sys-color-on-surface-variant-rgb: 68, 71, 70;
+    --gm3-sys-color-on-tertiary: #fff;
+    --gm3-sys-color-on-tertiary-rgb: 255, 255, 255;
+    --gm3-sys-color-on-tertiary-container: #072711;
+    --gm3-sys-color-on-tertiary-container-rgb: 7, 39, 17;
+    --gm3-sys-color-on-tertiary-fixed: #072711;
+    --gm3-sys-color-on-tertiary-fixed-rgb: 7, 39, 17;
+    --gm3-sys-color-on-tertiary-fixed-variant: #0f5223;
+    --gm3-sys-color-on-tertiary-fixed-variant-rgb: 15, 82, 35;
+    --gm3-sys-color-outline: #747775;
+    --gm3-sys-color-outline-rgb: 116, 119, 117;
+    --gm3-sys-color-outline-variant: #c4c7c5;
+    --gm3-sys-color-outline-variant-rgb: 196, 199, 197;
+    --gm3-sys-color-primary: #0b57d0;
+    --gm3-sys-color-primary-rgb: 11, 87, 208;
+    --gm3-sys-color-primary-container: #d3e3fd;
+    --gm3-sys-color-primary-container-rgb: 211, 227, 253;
+    --gm3-sys-color-primary-fixed: #d3e3fd;
+    --gm3-sys-color-primary-fixed-rgb: 211, 227, 253;
+    --gm3-sys-color-primary-fixed-dim: #a8c7fa;
+    --gm3-sys-color-primary-fixed-dim-rgb: 168, 199, 250;
+    --gm3-sys-color-scrim: #000;
+    --gm3-sys-color-scrim-rgb: 0, 0, 0;
+    --gm3-sys-color-secondary: #00639b;
+    --gm3-sys-color-secondary-rgb: 0, 99, 155;
+    --gm3-sys-color-secondary-container: #c2e7ff;
+    --gm3-sys-color-secondary-container-rgb: 194, 231, 255;
+    --gm3-sys-color-secondary-fixed: #c2e7ff;
+    --gm3-sys-color-secondary-fixed-rgb: 194, 231, 255;
+    --gm3-sys-color-secondary-fixed-dim: #7fcfff;
+    --gm3-sys-color-secondary-fixed-dim-rgb: 127, 207, 255;
+    --gm3-sys-color-shadow: #000;
+    --gm3-sys-color-shadow-rgb: 0, 0, 0;
+    --gm3-sys-color-surface: #fff;
+    --gm3-sys-color-surface-rgb: 255, 255, 255;
+    --gm3-sys-color-surface-bright: #fff;
+    --gm3-sys-color-surface-bright-rgb: 255, 255, 255;
+    --gm3-sys-color-surface-container: #f0f4f9;
+    --gm3-sys-color-surface-container-rgb: 240, 244, 249;
+    --gm3-sys-color-surface-container-high: #e9eef6;
+    --gm3-sys-color-surface-container-high-rgb: 233, 238, 246;
+    --gm3-sys-color-surface-container-highest: #dde3ea;
+    --gm3-sys-color-surface-container-highest-rgb: 221, 227, 234;
+    --gm3-sys-color-surface-container-low: #f8fafd;
+    --gm3-sys-color-surface-container-low-rgb: 248, 250, 253;
+    --gm3-sys-color-surface-container-lowest: #fff;
+    --gm3-sys-color-surface-container-lowest-rgb: 255, 255, 255;
+    --gm3-sys-color-surface-dim: #d3dbe5;
+    --gm3-sys-color-surface-dim-rgb: 211, 219, 229;
+    --gm3-sys-color-surface-tint: #6991d6;
+    --gm3-sys-color-surface-tint-rgb: 105, 145, 214;
+    --gm3-sys-color-surface-variant: #e1e3e1;
+    --gm3-sys-color-surface-variant-rgb: 225, 227, 225;
+    --gm3-sys-color-tertiary: #146c2e;
+    --gm3-sys-color-tertiary-rgb: 20, 108, 46;
+    --gm3-sys-color-tertiary-container: #c4eed0;
+    --gm3-sys-color-tertiary-container-rgb: 196, 238, 208;
+    --gm3-sys-color-tertiary-fixed: #c4eed0;
+    --gm3-sys-color-tertiary-fixed-rgb: 196, 238, 208;
+    --gm3-sys-color-tertiary-fixed-dim: #6dd58c;
+    --gm3-sys-color-tertiary-fixed-dim-rgb: 109, 213, 140;
+    --gm3-sys-color-caution: #fbbc05;
+    --gm3-sys-color-caution-rgb: 251, 188, 5;
+    --gm3-sys-color-caution-container: #ffefd5;
+    --gm3-sys-color-caution-container-rgb: 255, 239, 213;
+    --gm3-sys-color-on-caution: #261900;
+    --gm3-sys-color-on-caution-rgb: 38, 25, 0;
+    --gm3-sys-color-on-caution-container: #2d2a1e;
+    --gm3-sys-color-on-caution-container-rgb: 45, 42, 30;
+
+    color-scheme: light;
+    
+    @media (prefers-color-scheme: dark) {
+      --icon-filter: invert(1) hue-rotate(180deg);
+
+      --gm3-sys-color-background: #131314;
+      --gm3-sys-color-background-rgb: 19, 19, 20;
+      --gm3-sys-color-error: #f2b8b5;
+      --gm3-sys-color-error-rgb: 242, 184, 181;
+      --gm3-sys-color-error-container: #8c1d18;
+      --gm3-sys-color-error-container-rgb: 140, 29, 24;
+      --gm3-sys-color-inverse-on-surface: #303030;
+      --gm3-sys-color-inverse-on-surface-rgb: 48, 48, 48;
+      --gm3-sys-color-inverse-primary: #0b57d0;
+      --gm3-sys-color-inverse-primary-rgb: 11, 87, 208;
+      --gm3-sys-color-inverse-surface: #e3e3e3;
+      --gm3-sys-color-inverse-surface-rgb: 227, 227, 227;
+      --gm3-sys-color-on-background: #e3e3e3;
+      --gm3-sys-color-on-background-rgb: 227, 227, 227;
+      --gm3-sys-color-on-error: #601410;
+      --gm3-sys-color-on-error-rgb: 96, 20, 16;
+      --gm3-sys-color-on-error-container: #f9dedc;
+      --gm3-sys-color-on-error-container-rgb: 249, 222, 220;
+      --gm3-sys-color-on-primary: #062e6f;
+      --gm3-sys-color-on-primary-rgb: 6, 46, 111;
+      --gm3-sys-color-on-primary-container: #d3e3fd;
+      --gm3-sys-color-on-primary-container-rgb: 211, 227, 253;
+      --gm3-sys-color-on-primary-fixed: #041e49;
+      --gm3-sys-color-on-primary-fixed-rgb: 4, 30, 73;
+      --gm3-sys-color-on-primary-fixed-variant: #0842a0;
+      --gm3-sys-color-on-primary-fixed-variant-rgb: 8, 66, 160;
+      --gm3-sys-color-on-secondary: #035;
+      --gm3-sys-color-on-secondary-rgb: 0, 51, 85;
+      --gm3-sys-color-on-secondary-container: #c2e7ff;
+      --gm3-sys-color-on-secondary-container-rgb: 194, 231, 255;
+      --gm3-sys-color-on-secondary-fixed: #001d35;
+      --gm3-sys-color-on-secondary-fixed-rgb: 0, 29, 53;
+      --gm3-sys-color-on-secondary-fixed-variant: #004a77;
+      --gm3-sys-color-on-secondary-fixed-variant-rgb: 0, 74, 119;
+      --gm3-sys-color-on-surface: #e3e3e3;
+      --gm3-sys-color-on-surface-rgb: 227, 227, 227;
+      --gm3-sys-color-on-surface-variant: #c4c7c5;
+      --gm3-sys-color-on-surface-variant-rgb: 196, 199, 197;
+      --gm3-sys-color-on-tertiary: #0a3818;
+      --gm3-sys-color-on-tertiary-rgb: 10, 56, 24;
+      --gm3-sys-color-on-tertiary-container: #c4eed0;
+      --gm3-sys-color-on-tertiary-container-rgb: 196, 238, 208;
+      --gm3-sys-color-on-tertiary-fixed: #072711;
+      --gm3-sys-color-on-tertiary-fixed-rgb: 7, 39, 17;
+      --gm3-sys-color-on-tertiary-fixed-variant: #0f5223;
+      --gm3-sys-color-on-tertiary-fixed-variant-rgb: 15, 82, 35;
+      --gm3-sys-color-outline: #8e918f;
+      --gm3-sys-color-outline-rgb: 142, 145, 143;
+      --gm3-sys-color-outline-variant: #444746;
+      --gm3-sys-color-outline-variant-rgb: 68, 71, 70;
+      --gm3-sys-color-primary: #a8c7fa;
+      --gm3-sys-color-primary-rgb: 168, 199, 250;
+      --gm3-sys-color-primary-container: #0842a0;
+      --gm3-sys-color-primary-container-rgb: 8, 66, 160;
+      --gm3-sys-color-primary-fixed: #d3e3fd;
+      --gm3-sys-color-primary-fixed-rgb: 211, 227, 253;
+      --gm3-sys-color-primary-fixed-dim: #a8c7fa;
+      --gm3-sys-color-primary-fixed-dim-rgb: 168, 199, 250;
+      --gm3-sys-color-scrim: #000;
+      --gm3-sys-color-scrim-rgb: 0, 0, 0;
+      --gm3-sys-color-secondary: #7fcfff;
+      --gm3-sys-color-secondary-rgb: 127, 207, 255;
+      --gm3-sys-color-secondary-container: #004a77;
+      --gm3-sys-color-secondary-container-rgb: 0, 74, 119;
+      --gm3-sys-color-secondary-fixed: #c2e7ff;
+      --gm3-sys-color-secondary-fixed-rgb: 194, 231, 255;
+      --gm3-sys-color-secondary-fixed-dim: #7fcfff;
+      --gm3-sys-color-secondary-fixed-dim-rgb: 127, 207, 255;
+      --gm3-sys-color-shadow: #000;
+      --gm3-sys-color-shadow-rgb: 0, 0, 0;
+      --gm3-sys-color-surface: #131314;
+      --gm3-sys-color-surface-rgb: 19, 19, 20;
+      --gm3-sys-color-surface-bright: #37393b;
+      --gm3-sys-color-surface-bright-rgb: 55, 57, 59;
+      --gm3-sys-color-surface-container: #1e1f20;
+      --gm3-sys-color-surface-container-rgb: 30, 31, 32;
+      --gm3-sys-color-surface-container-high: #282a2c;
+      --gm3-sys-color-surface-container-high-rgb: 40, 42, 44;
+      --gm3-sys-color-surface-container-highest: #333537;
+      --gm3-sys-color-surface-container-highest-rgb: 51, 53, 55;
+      --gm3-sys-color-surface-container-low: #1b1b1b;
+      --gm3-sys-color-surface-container-low-rgb: 27, 27, 27;
+      --gm3-sys-color-surface-container-lowest: #0e0e0e;
+      --gm3-sys-color-surface-container-lowest-rgb: 14, 14, 14;
+      --gm3-sys-color-surface-dim: #131314;
+      --gm3-sys-color-surface-dim-rgb: 19, 19, 20;
+      --gm3-sys-color-surface-tint: #d1e1ff;
+      --gm3-sys-color-surface-tint-rgb: 209, 225, 255;
+      --gm3-sys-color-surface-variant: #444746;
+      --gm3-sys-color-surface-variant-rgb: 68, 71, 70;
+      --gm3-sys-color-tertiary: #6dd58c;
+      --gm3-sys-color-tertiary-rgb: 109, 213, 140;
+      --gm3-sys-color-tertiary-container: #0f5223;
+      --gm3-sys-color-tertiary-container-rgb: 15, 82, 35;
+      --gm3-sys-color-tertiary-fixed: #c4eed0;
+      --gm3-sys-color-tertiary-fixed-rgb: 196, 238, 208;
+      --gm3-sys-color-tertiary-fixed-dim: #6dd58c;
+      --gm3-sys-color-tertiary-fixed-dim-rgb: 109, 213, 140;
+      --gm3-sys-color-caution: #fbd27b;
+      --gm3-sys-color-caution-rgb: 251, 210, 123;
+      --gm3-sys-color-caution-container: #2d2a1e;
+      --gm3-sys-color-caution-container-rgb: 45, 42, 30;
+      --gm3-sys-color-on-caution: #261900;
+      --gm3-sys-color-on-caution-rgb: 38, 25, 0;
+      --gm3-sys-color-on-caution-container: #ffefd5;
+      --gm3-sys-color-on-caution-container-rgb: 255, 239, 213;
+
+      color-scheme: dark;
+    }
+    
+    --gm3-dialog-container-color: var(--gm3-sys-color-surface-container, #fff);
+  }
+  .docsCommonWizDialogDialogContent {
+    --gm3-tabs-primary-container-color: transparent;
+  }
+  body {
+    color: var(--gm3-sys-color-on-surface);
+  }
+}

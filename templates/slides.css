@@ -1,16 +1,16 @@
 /* ==UserStyle==
-@name Google Docs Color Theme
-@namespace github.com/walkquackback/google-docs-color-theme
+@name Google Slides Color Theme
+@namespace github.com/walkquackback/google-slides-color-theme
 @homepageURL https://github.com/walkquackback/google-docs-color-theme
 @version <version>
 @updateURL https://github.com/walkquackback/google-docs-color-theme/build.user.css
 @supportURL https://github.com/walkquackback/google-docs-color-theme/issues?q=is%3Aopen+is%3Aissue
-@description Allows Google Docs to be themed using CSS variables. Comes by default with a dark theme.
+@description Allows Google Slides to be themed using CSS variables. Comes by default with a dark theme.
 @author WalkQuackBack
 @license MIT
 
 ==/UserStyle== */
-@-moz-document url-prefix("https://docs.google.com/document/d/") {
+@-moz-document url-prefix("https://docs.google.com/presentation/d/") {
   /**** Generated code START ****/
   /**** Generated code REPLACE ****/
   /**** Generated code END****/
@@ -25,12 +25,6 @@
   .peoplekitComponentsAutocompletePopupContainer {
     background-color: var(--gm3-sys-color-surface-container);
     box-shadow: 0px 2px 4px -1px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.3), 0px 4px 5px 0px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.14), 0px 1px 10px 0px rgb(var(--gm3-sys-color-shadow-rgb, 0, 0, 0), 0.12);
-  }
-
-  .docsLinkSmartinsertlinkBubble {
-    box-shadow: none;
-    border: none;
-    background: transparent;
   }
 
   .docs-gm .docos-anchoreddocoview.docos-docoview-active,
@@ -58,23 +52,58 @@
     color-scheme: none;
   }
 
-  *[fill="#000"] {
+  /* Editor overlay SVG */
+  #pages + svg {
+    [stroke="#ffffff"] {
+      stroke: var(--gm3-sys-color-surface) !important
+    }
+    [fill="#ffffff"] {
+      fill: var(--gm3-sys-color-surface) !important;
+    }
+    image {
+      filter: var(--icon-filter)
+    }
+  }
+
+  [fill="#000"] {
     fill: var(--gm3-sys-color-on-surface) !important;
   }
-  *[fill="#1a73e8"] {
+  [fill="#1a73e8"] {
     fill: var(--gm3-sys-color-primary) !important;
+  }
+  [stroke="#1a73e8"] {
+    stroke: var(--gm3-sys-color-primary) !important
   }
   [style="color: rgb(0, 0, 0);"] {
     color: var(--gm3-sys-color-on-surface) !important;
+  }
+
+  [fill="#F9AB00"],
+  [fill="#f9ab00"] {
+    fill: var(--gm3-sys-color-primary) !important;
+  }
+  [style^="stroke: rgb(11, 87, 208);"] {
+    stroke: var(--gm3-sys-color-primary) !important;
+  }
+
+  .goog-submenu-arrow {
+    color: var(--gm3-sys-color-on-surface)
   }
 
   #docs-branding-container.docs-branding-documents {
     background: transparent;
   }
 
+  .punch-filmstrip-controls-size-buttons {
+    background: var(--gm3-sys-color-surface-container);
+  }
+
   [src^="https://ssl.gstatic.com/docs/common/material_common_sprite"],
+  .docs-dialog .modal-dialog-title-close:after,
   .docs-icon-img,
-  .goog-menuitem-checkbox {
+  .goog-menuitem-checkbox,
+  .sketchy-icon-accessible-img,
+  div.docs-material-gm-checkbox-checked:before, span.docs-material-gm-checkbox-checked:before {
     filter: var(--icon-filter);
   }
 
@@ -106,6 +135,10 @@
   }
   .docs-material-color-picker-saturation-overlay {
     background: linear-gradient(90deg,#fff 0,hsla(0,0%,100%,0));
+  }
+
+  [fill="#444746"] {
+    fill: var(--gm3-sys-color-on-surface) !important
   }
 
   ::selection {
