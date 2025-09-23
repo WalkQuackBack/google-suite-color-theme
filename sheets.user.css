@@ -2,7 +2,7 @@
 @name Google Sheets Color Theme
 @namespace github.com/walkquackback/google-sheets-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.9.22
+@version 2025.9.23
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/sheets.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Sheets to be themed using CSS variables. Comes by default with a dark theme.
@@ -13,205 +13,19 @@
 @-moz-document url-prefix("https://docs.google.com/spreadsheets/d/")
 {
   /**** Generated code START ****/
-  a.gb_Qa {
-    color: var(--gm3-sys-color-primary);
-  }
-  a.gb_Ra {
-    background-color: var(--gm3-sys-color-primary);
-    color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .gb_Ta,
-  .gb_Ua {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 8%
-    );
-  }
-  .gb_Ua {
-    border: 1px solid var(--gm3-sys-color-primary);
-  }
-  #gb a.gb_Ua {
-    color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  #gb .gb_Va {
-    border: 1px solid var(--gm3-sys-color-outline-variant);
-    color: var(--gm3-sys-color-primary);
-  }
-  #gb .gb_Va:hover {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 8%
-    );
-    border-color: var(--gm3-sys-color-outline-variant);
-  }
-  #gb .gb_Va.gb_H {
-    border: 1px solid var(--gm3-sys-color-on-surface-variant);
-  }
-  #gb .gb_Va.gb_H:hover {
-    color: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 12%
-    );
-  }
-  #gb .gb_Va.gb_H:focus {
-    color: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 12%
-    );
-    outline: 1px solid
-      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%);
-  }
-  #gb .gb_Va.gb_H:active,
-  #gb .gb_Va.gb_H:focus:active {
-    color: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 12%
-    );
-  }
-  .gb_B,
-  a.gb_B {
-    color: var(--gm3-sys-color-shadow);
-  }
-  .gb_vd,
-  .gb_wd {
-    border-bottom-color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .gb_la {
-    background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-shadow);
-  }
-  .gb_0c .gb_Dd.gb_Ed button:focus-visible svg,
-  .gb_Dd button:focus-visible svg,
-  .gb_B:focus-visible {
-    outline: 1px solid var(--gm3-sys-color-on-surface);
-  }
-  .gb_0c .gb_Dd button:focus-visible svg,
-  .gb_0c .gb_B:focus-visible {
-    outline: 1px solid
-      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
-  }
-  .gb_B[aria-expanded="true"] .gb_F {
+  .gb_E,
+  .gb_F {
     fill: var(--gm3-sys-color-on-surface-variant);
   }
-  .gb_nd.gb_od {
-    color: var(--gm3-sys-color-on-surface);
-  }
-  .gb_ba {
-    color: var(--gm3-sys-color-on-surface);
-  }
-  .gb_Fa svg,
-  .gb_4c svg,
-  .gb_pd .gb_Od,
-  .gb_gd .gb_Od {
-    color: var(--gm3-sys-color-on-surface-variant);
-  }
-  a.gb_X,
-  span.gb_X {
-    color: var(--gm3-sys-color-on-surface);
-  }
-  .gb_Md {
+  a.gb_A {
     background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
   }
-  #gb .gb_0c a.gb_Md:not(.gb_H),
-  #gb.gb_0c a.gb_Md {
-    background: var(--gm3-sys-color-surface-container-lowest);
-    border-color: var(--gm3-sys-color-outline-variant);
-    color: var(--gm3-sys-color-primary);
-  }
-  #gb a.gb_Ua.gb_H.gb_Md {
+  .gb_H .gb_A {
     color: var(--gm3-sys-color-on-surface);
   }
-  #gb .gb_0c a.gb_Md:hover:not(.gb_H),
-  #gb.gb_0c a.gb_Md:hover {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 8%
-    );
-    border-color: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-primary-fixed-dim) 50%
-    );
-  }
-  #gb a.gb_Ua.gb_H.gb_Md:active {
-    box-shadow:
-      0 1px 2px rgba(60, 64, 67, 0.3),
-      0 2px 6px 2px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .gb_Wa {
-    border: 1px solid var(--gm3-sys-color-outline-variant);
-  }
-  .gb_Wa.gb_H {
-    border: 1px solid var(--gm3-sys-color-on-surface-variant);
-  }
-  .gb_Wa.gb_H .gb_3a {
-    background: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .gb_Wa:hover {
-    border: 1px solid
-      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%);
-  }
-  .gb_Wa.gb_H:hover {
-    border: 1px solid var(--gm3-sys-color-on-surface-variant);
-  }
-  .gb_Wa:focus-visible,
-  .gb_Wa:focus {
-    background-color: var(--gm3-sys-color-surface-container-lowest);
-    outline: 1px solid var(--gm3-sys-color-on-surface);
-    box-shadow:
-      0 1px 2px 0 rgba(60, 64, 67, 0.3),
-      0 1px 3px 1px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .gb_Wa.gb_H:focus-visible,
-  .gb_Wa.gb_H:focus {
-    outline: 1px solid
-      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
-  }
-  .gb_Wa.gb_H:active,
-  .gb_Wa.gb_8c.gb_H:focus {
-    border: 1px solid var(--gm3-sys-color-on-surface-variant);
-  }
-  .gb_4a.gb_5a {
-    background-color: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 8%
-    );
-  }
-  .gb_fb {
-    background-color: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 8%
-    );
-  }
-  .gb_gb {
-    background: var(--gm3-sys-color-surface-container-lowest);
-    box-shadow:
-      0px 1px 2px 0px rgba(60, 64, 67, 0.3),
-      0px 1px 3px 1px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .gb_mb {
-    border-top: 4px solid var(--gm3-sys-color-shadow);
-  }
-  .gb_nb.gb_eb {
-    color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  #gb#gb.gb_1.gb_1 a.gb_jb,
-  #gb#gb .gb_1.gb_1 a.gb_jb {
-    color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .gb_1.gb_1 .gb_mb {
-    border-top-color: var(--gm3-sys-color-surface-container-lowest);
+  .gb_O {
+    fill: var(--gm3-sys-color-primary);
   }
   .waffleDialogRitzImportDialogStandardDialog {
     --gm3-dialog-modal-container-color: var(
@@ -257,16 +71,25 @@
       var(--gm3-sys-color-surface-container-lowest)
     );
   }
+  .waffleDialogRitzImportDialogInfoDialogText {
+    color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
+  }
+  .waffleDialogRitzImportDialogInfoDialogFileNameLabel {
+    color: var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    );
+  }
   .waffleDialogRitzImportDialogInfoDialogFileName {
     color: var(
-      --gm3-sys-color-on-primary-container,
-      var(--gm3-sys-color-on-primary-container)
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
     );
   }
   .waffleDialogRitzImportDialogInfoDialogNote {
-    --gm3-card-filled-container-color: var(
-      --gm3-sys-color-surface-container-low,
-      var(--gm3-sys-color-surface-container-low)
+    color: var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
     );
   }
   .waffleDialogRitzImportDialogFullScreenSuccessDialog {
@@ -2330,6 +2153,9 @@
       bold
     );
   }
+  .javascriptMaterialdesignGm3WizMenu-menu--active {
+    border-radius: var(--gm3-menu-active-container-shape, 4px);
+  }
   :where(.javascriptMaterialdesignGm3WizMenu-menu)
     .javascriptMaterialdesignGm3WizListShared-list-item {
     margin-block: var(--gm3-menu-list-item-margin-block, 0);
@@ -2429,6 +2255,9 @@
       --gm3-menu-list-item-container-focus-shape,
       8px
     );
+  }
+  .javascriptMaterialdesignGm3WizMenu-menu-item__touch {
+    display: var(--gm3-menu-list-item-touch-target-display, none);
   }
   .javascriptMaterialdesignGm3WizMenu-menu-item__submenu-indicator {
     color: var(
@@ -3006,6 +2835,10 @@
       var(--gm3-sys-color-shadow, var(--gm3-sys-color-shadow))
     );
     --gm3-menu-container-shape: var(
+      --gm3-select-shared-menu-container-shape,
+      4px
+    );
+    --gm3-menu-active-container-shape: var(
       --gm3-select-shared-menu-container-shape,
       4px
     );
@@ -14619,7 +14452,15 @@
       --gm3-sys-color-on-surface-variant,
       var(--gm3-sys-color-on-surface-variant)
     );
+    --gm3-list-list-item-hover-leading-icon-icon-color: var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    );
     --gm3-list-list-item-label-text-color: var(
+      --gm3-sys-color-on-surface,
+      var(--gm3-sys-color-on-surface)
+    );
+    --gm3-list-list-item-hover-label-text-color: var(
       --gm3-sys-color-on-surface,
       var(--gm3-sys-color-on-surface)
     );
@@ -14639,6 +14480,12 @@
   }
   .waffleGemkickSuggestionsMenuButtonPromptInput:before {
     color: var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    );
+  }
+  .waffleGemkickSuggestionsMenuButtonPromptInputDisclaimerTooltip {
+    --gm3-tooltip-rich-supporting-text-color: var(
       --gm3-sys-color-on-surface-variant,
       var(--gm3-sys-color-on-surface-variant)
     );
@@ -14685,74 +14532,7 @@
     .waffle-data-validation-chips-footer {
     border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
   }
-  .waffle-griddy-suggestions-bubble {
-    background-color: var(--gm3-sys-color-surface-container-lowest);
-    box-shadow:
-      0 -3px 11px hsla(207, 5%, 52%, 0.09),
-      0 6px 11px hsla(207, 5%, 52%, 0.06),
-      0 1px 3px rgba(60, 64, 67, 0.3),
-      0 4px 8px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .waffle-griddy-suggestions-bubble.waffle-griddy-gemini-ui {
-    background-color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .waffle-griddy-suggestions-bubble.waffle-griddy-gemini-ui.waffle-griddy-suggestions-bubble-expand:hover {
-    background: var(
-      --ae-genai-generation-gradient,
-      linear-gradient(135deg, #d7e6ff, #c7e4ff, #dce2ff, #d7e6ff)
-    );
-  }
-  .waffle-griddy-suggestions-menu-item.goog-menuitem-highlight {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-primary) 8%
-    );
-  }
-  .waffle-griddy-suggestions-menu-item:focus {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-primary) 16%
-    );
-  }
-  .waffle-griddy-suggestions-bubble.waffle-griddy-gemini-ui
-    .waffle-griddy-suggestions-menu-item:focus {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-on-surface) 12%
-    );
-  }
-  .waffle-griddy-suggestions-menu-item:active {
-    background: color-mix(
-      in oklab,
-      transparent,
-      var(--gm3-sys-color-primary) 12%
-    );
-  }
-  .waffle-griddy-suggestions-bubble-collapsed-icon-container,
-  .waffle-griddy-suggestions-menu-item-icon-container {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-griddy-suggestions-bubble.waffle-griddy-gemini-ui
-    .waffle-griddy-suggestions-bubble-collapsed-icon-container,
-  .waffle-griddy-suggestions-bubble.waffle-griddy-gemini-ui
-    .waffle-griddy-suggestions-menu-item-icon-container {
-    color: var(
-      --gm3-sys-color-on-surface-variant,
-      var(--gm3-sys-color-on-surface-variant)
-    );
-  }
-  .waffle-griddy-suggestions-menu-item-header {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-griddy-suggestions-bubble.waffle-griddy-gemini-ui
-    .waffle-griddy-suggestions-menu-item-header {
-    color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
-  }
-  .waffle-griddy-suggestions-bubble-multi-suggestion-menu-button {
+  .waffleGriddySuggestionsBubbleRoot {
     --gm3-icon-button-standard-unselected-focus-icon-color: var(
       --gm3-sys-color-on-surface-variant,
       var(--gm3-sys-color-on-surface-variant)
@@ -14777,15 +14557,54 @@
       --gm3-sys-color-on-surface,
       var(--gm3-sys-color-on-surface)
     );
+    background-color: var(
+      --gm3-sys-color-surface,
+      var(--gm3-sys-color-surface-container-lowest)
+    );
+    box-shadow:
+      0 -3px 11px hsla(207, 5%, 52%, 0.09),
+      0 6px 11px hsla(207, 5%, 52%, 0.06),
+      0 1px 3px rgba(60, 64, 67, 0.3),
+      0 4px 8px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
-  .range-border.waffle-griddy-highlight-green-styled-border {
-    border-color: var(--gm3-sys-color-primary);
+  @media (forced-colors: none) {
+    .waffleGriddySuggestionsBubbleGeminiUi.waffleGriddySuggestionsBubbleExpand:hover {
+      background: var(
+        --ae-genai-generation-gradient,
+        linear-gradient(135deg, #d7e6ff, #c7e4ff, #dce2ff, #d7e6ff)
+      );
+    }
   }
-  .waffle-griddy-suggestions-disclaimer {
+  @media (forced-colors: none) and (not (prefers-reduced-motion)) {
+  }
+  .waffleGriddySuggestionsBubbleCollapsedIconContainer {
+    color: var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    );
+  }
+  .waffleGriddySuggestionsBubbleRoot
+    .waffleGriddySuggestionsBubbleMenuItem:focus {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .waffleGriddySuggestionsBubbleRoot
+    .waffleGriddySuggestionsBubbleMenuItemHeader {
+    color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
+  }
+  .waffleGriddySuggestionsBubbleRoot
+    .waffleGriddySuggestionsBubbleMenuItemIconContainer {
+    color: var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    );
+  }
+  .waffleGriddySuggestionsBubbleDisclaimer {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-griddy-suggestions-bubble-chip-feedback-divider {
-    background: var(--gm3-sys-color-outline);
   }
   .turbofill-intro-promo-base .docs-promo-header {
     color: var(--gm3-sys-color-on-surface);
@@ -15902,7 +15721,7 @@
   .waffle-dbsource-configbar-watch-tutorial-menuitem-caption {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-dbsource-configbar-advanced-modeling-menu-item-text {
+  .waffle-dbsource-configbar-advanced-analytics-menu-item-text {
     color: var(--gm3-sys-color-on-surface);
   }
   .waffle-bigquery-connection-summary-dialog-delegation-section,
@@ -23540,21 +23359,21 @@
     }
   }
   .javascriptMaterialdesignGm3WizButtonOutlined-button {
-    border-start-start-radius: var(
-      --gm3-button-outlined-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-button-outlined-container-shape-start-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-button-outlined-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-button-outlined-container-shape-start-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-button-outlined-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-button-outlined-container-shape-end-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-button-outlined-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-button-outlined-container-shape-end-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
     );
     justify-content: var(
       --gm3-button-outlined-container-justify-content,
@@ -23580,6 +23399,86 @@
       --gm3-button-outlined-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-button-outlined-container-shape-start-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-outlined-container-shape-start-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-outlined-container-shape-end-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-outlined-container-shape-end-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-button-outlined-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-button-outlined-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-button-outlined-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonOutlined-button:not(:disabled):active {
+    border-start-start-radius: min(
+      var(--gm3-button-outlined-pressed-container-shape-start-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(--gm3-button-outlined-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(--gm3-button-outlined-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(--gm3-button-outlined-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-button-outlined-pressed-container-shape-start-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-outlined-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-outlined-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-outlined-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-outlined-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonOutlined-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-button-outlined-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-button-outlined-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-button-outlined-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-button-outlined-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-button-outlined-container-shape-start-start,
       9999px
@@ -23596,20 +23495,10 @@
       --gm3-button-outlined-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-button-outlined-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-button-outlined-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-button-outlined-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonOutlined-button:not(:disabled):active {
+  .javascriptMaterialdesignGm3WizButtonOutlined-button--use-intrinsic-height:not(
+      :disabled
+    ):active {
     border-start-start-radius: var(
       --gm3-button-outlined-pressed-container-shape-start-start,
       9999px
@@ -27692,21 +27581,21 @@
     }
   }
   .javascriptMaterialdesignGm3WizButtonFilled-button {
-    border-start-start-radius: var(
-      --gm3-button-filled-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-button-filled-container-shape-start-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-button-filled-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-button-filled-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-button-filled-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-button-filled-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-button-filled-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-button-filled-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
     );
     justify-content: var(--gm3-button-filled-container-justify-content, center);
     min-inline-size: var(--gm3-button-filled-container-min-width, 64px);
@@ -27735,6 +27624,86 @@
       --gm3-button-filled-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-button-filled-container-shape-start-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-filled-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-filled-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-filled-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-button-filled-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-button-filled-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-button-filled-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonFilled-button:not(:disabled):active {
+    border-start-start-radius: min(
+      var(--gm3-button-filled-pressed-container-shape-start-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(--gm3-button-filled-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(--gm3-button-filled-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(--gm3-button-filled-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-button-filled-pressed-container-shape-start-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-filled-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-filled-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-filled-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonFilled-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-button-filled-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-button-filled-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-button-filled-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-button-filled-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-button-filled-container-shape-start-start,
       9999px
@@ -27751,20 +27720,10 @@
       --gm3-button-filled-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-button-filled-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-button-filled-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-button-filled-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonFilled-button:not(:disabled):active {
+  .javascriptMaterialdesignGm3WizButtonFilled-button--use-intrinsic-height:not(
+      :disabled
+    ):active {
     border-start-start-radius: var(
       --gm3-button-filled-pressed-container-shape-start-start,
       9999px
@@ -28019,21 +27978,21 @@
     );
   }
   .javascriptMaterialdesignGm3WizButtonText-button {
-    border-start-start-radius: var(
-      --gm3-button-text-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-button-text-container-shape-start-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-button-text-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-button-text-container-shape-start-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-button-text-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-button-text-container-shape-end-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-button-text-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-button-text-container-shape-end-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
     );
     justify-content: var(--gm3-button-text-container-justify-content, center);
     min-inline-size: var(--gm3-button-text-container-min-width, 64px);
@@ -28056,6 +28015,86 @@
       --gm3-button-text-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-button-text-container-shape-start-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-text-container-shape-start-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-text-container-shape-end-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-text-container-shape-end-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-button-text-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-button-text-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-button-text-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonText-button:not(:disabled):active {
+    border-start-start-radius: min(
+      var(--gm3-button-text-pressed-container-shape-start-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(--gm3-button-text-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(--gm3-button-text-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(--gm3-button-text-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-button-text-pressed-container-shape-start-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-text-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-text-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-text-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-text-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonText-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-button-text-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-button-text-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-button-text-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-button-text-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-button-text-container-shape-start-start,
       9999px
@@ -28072,20 +28111,10 @@
       --gm3-button-text-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-button-text-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-button-text-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-button-text-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonText-button:not(:disabled):active {
+  .javascriptMaterialdesignGm3WizButtonText-button--use-intrinsic-height:not(
+      :disabled
+    ):active {
     border-start-start-radius: var(
       --gm3-button-text-pressed-container-shape-start-start,
       9999px
@@ -28349,21 +28378,21 @@
     );
   }
   .javascriptMaterialdesignGm3WizButtonFilledTonal-button {
-    border-start-start-radius: var(
-      --gm3-button-filled-tonal-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-button-filled-tonal-container-shape-start-start, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-button-filled-tonal-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-button-filled-tonal-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-button-filled-tonal-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-button-filled-tonal-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-button-filled-tonal-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-button-filled-tonal-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
     );
     justify-content: var(
       --gm3-button-filled-tonal-container-justify-content,
@@ -28401,6 +28430,94 @@
       --gm3-button-filled-tonal-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-button-filled-tonal-container-shape-start-start, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-filled-tonal-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-filled-tonal-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-filled-tonal-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-button-filled-tonal-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-button-filled-tonal-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-button-filled-tonal-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonFilledTonal-button:not(
+      :disabled
+    ):active {
+    border-start-start-radius: min(
+      var(
+        --gm3-button-filled-tonal-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(--gm3-button-filled-tonal-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(--gm3-button-filled-tonal-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(--gm3-button-filled-tonal-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(
+        --gm3-button-filled-tonal-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-button-filled-tonal-pressed-container-shape-start-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-button-filled-tonal-pressed-container-shape-end-start, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-button-filled-tonal-pressed-container-shape-end-end, 9999px),
+      var(--gm3-button-filled-tonal-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonFilledTonal-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-button-filled-tonal-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-button-filled-tonal-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-button-filled-tonal-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-button-filled-tonal-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-button-filled-tonal-container-shape-start-start,
       9999px
@@ -28417,20 +28534,8 @@
       --gm3-button-filled-tonal-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-button-filled-tonal-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-button-filled-tonal-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-button-filled-tonal-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonFilledTonal-button:not(
+  .javascriptMaterialdesignGm3WizButtonFilledTonal-button--use-intrinsic-height:not(
       :disabled
     ):active {
     border-start-start-radius: var(
@@ -28720,21 +28825,21 @@
     );
   }
   .javascriptMaterialdesignGm3WizButtonDropdownFilled-button {
-    border-start-start-radius: var(
-      --gm3-dropdown-button-filled-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-dropdown-button-filled-container-shape-start-start, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-dropdown-button-filled-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-dropdown-button-filled-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-dropdown-button-filled-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-dropdown-button-filled-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-dropdown-button-filled-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-dropdown-button-filled-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
     );
     justify-content: var(
       --gm3-dropdown-button-filled-container-justify-content,
@@ -28769,6 +28874,106 @@
       --gm3-dropdown-button-filled-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-dropdown-button-filled-container-shape-start-start, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-dropdown-button-filled-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-dropdown-button-filled-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-dropdown-button-filled-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-dropdown-button-filled-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-dropdown-button-filled-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-dropdown-button-filled-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownFilled-button:not(
+      :disabled
+    ):active {
+    border-start-start-radius: min(
+      var(
+        --gm3-dropdown-button-filled-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(--gm3-dropdown-button-filled-pressed-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(
+        --gm3-dropdown-button-filled-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(
+        --gm3-dropdown-button-filled-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(
+        --gm3-dropdown-button-filled-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(
+        --gm3-dropdown-button-filled-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(
+        --gm3-dropdown-button-filled-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-dropdown-button-filled-pressed-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-filled-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownFilled-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-dropdown-button-filled-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-dropdown-button-filled-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-dropdown-button-filled-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-dropdown-button-filled-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-dropdown-button-filled-container-shape-start-start,
       9999px
@@ -28785,20 +28990,8 @@
       --gm3-dropdown-button-filled-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-dropdown-button-filled-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-dropdown-button-filled-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-dropdown-button-filled-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonDropdownFilled-button:not(
+  .javascriptMaterialdesignGm3WizButtonDropdownFilled-button--use-intrinsic-height:not(
       :disabled
     ):active {
     border-start-start-radius: var(
@@ -29102,21 +29295,21 @@
     block-size: var(--gm3-dropdown-button-filled-with-icon-icon-size, 22px);
   }
   .javascriptMaterialdesignGm3WizButtonDropdownOutlined-button {
-    border-start-start-radius: var(
-      --gm3-dropdown-button-outlined-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-dropdown-button-outlined-container-shape-start-start, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-dropdown-button-outlined-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-dropdown-button-outlined-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-dropdown-button-outlined-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-dropdown-button-outlined-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-dropdown-button-outlined-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-dropdown-button-outlined-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
     );
     justify-content: var(
       --gm3-dropdown-button-outlined-container-justify-content,
@@ -29151,6 +29344,112 @@
       --gm3-dropdown-button-outlined-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-dropdown-button-outlined-container-shape-start-start, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-dropdown-button-outlined-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-dropdown-button-outlined-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-dropdown-button-outlined-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-dropdown-button-outlined-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-dropdown-button-outlined-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-dropdown-button-outlined-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownOutlined-button:not(
+      :disabled
+    ):active {
+    border-start-start-radius: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-end-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(
+        --gm3-dropdown-button-outlined-pressed-container-shape-end-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-outlined-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownOutlined-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-dropdown-button-outlined-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-dropdown-button-outlined-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-dropdown-button-outlined-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-dropdown-button-outlined-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-dropdown-button-outlined-container-shape-start-start,
       9999px
@@ -29167,20 +29466,8 @@
       --gm3-dropdown-button-outlined-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-dropdown-button-outlined-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-dropdown-button-outlined-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-dropdown-button-outlined-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonDropdownOutlined-button:not(
+  .javascriptMaterialdesignGm3WizButtonDropdownOutlined-button--use-intrinsic-height:not(
       :disabled
     ):active {
     border-start-start-radius: var(
@@ -29475,21 +29762,21 @@
     block-size: var(--gm3-dropdown-button-outlined-with-icon-icon-size, 22px);
   }
   .javascriptMaterialdesignGm3WizButtonDropdownText-button {
-    border-start-start-radius: var(
-      --gm3-dropdown-button-text-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-dropdown-button-text-container-shape-start-start, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-dropdown-button-text-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-dropdown-button-text-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-dropdown-button-text-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-dropdown-button-text-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-dropdown-button-text-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-dropdown-button-text-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
     );
     justify-content: var(
       --gm3-dropdown-button-text-container-justify-content,
@@ -29515,6 +29802,94 @@
       --gm3-dropdown-button-text-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-dropdown-button-text-container-shape-start-start, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-dropdown-button-text-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-dropdown-button-text-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-dropdown-button-text-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-dropdown-button-text-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-dropdown-button-text-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-dropdown-button-text-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownText-button:not(
+      :disabled
+    ):active {
+    border-start-start-radius: min(
+      var(
+        --gm3-dropdown-button-text-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(--gm3-dropdown-button-text-pressed-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(--gm3-dropdown-button-text-pressed-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(--gm3-dropdown-button-text-pressed-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(
+        --gm3-dropdown-button-text-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-dropdown-button-text-pressed-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-dropdown-button-text-pressed-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-dropdown-button-text-pressed-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-text-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownText-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-dropdown-button-text-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-dropdown-button-text-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-dropdown-button-text-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-dropdown-button-text-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-dropdown-button-text-container-shape-start-start,
       9999px
@@ -29531,20 +29906,8 @@
       --gm3-dropdown-button-text-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-dropdown-button-text-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-dropdown-button-text-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-dropdown-button-text-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonDropdownText-button:not(
+  .javascriptMaterialdesignGm3WizButtonDropdownText-button--use-intrinsic-height:not(
       :disabled
     ):active {
     border-start-start-radius: var(
@@ -29860,21 +30223,24 @@
     );
   }
   .javascriptMaterialdesignGm3WizButtonDropdownFilledTonal-button {
-    border-start-start-radius: var(
-      --gm3-dropdown-button-filled-tonal-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-dropdown-button-filled-tonal-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-dropdown-button-filled-tonal-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-dropdown-button-filled-tonal-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-dropdown-button-filled-tonal-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-dropdown-button-filled-tonal-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-dropdown-button-filled-tonal-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
     );
     justify-content: var(
       --gm3-dropdown-button-filled-tonal-container-justify-content,
@@ -29921,6 +30287,115 @@
       --gm3-dropdown-button-filled-tonal-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-dropdown-button-filled-tonal-container-shape-start-end, 9999px),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-dropdown-button-filled-tonal-container-shape-end-start, 9999px),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-dropdown-button-filled-tonal-container-shape-end-end, 9999px),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-dropdown-button-filled-tonal-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-dropdown-button-filled-tonal-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-dropdown-button-filled-tonal-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownFilledTonal-button:not(
+      :disabled
+    ):active {
+    border-start-start-radius: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-end-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(
+        --gm3-dropdown-button-filled-tonal-pressed-container-shape-end-end,
+        9999px
+      ),
+      var(--gm3-dropdown-button-filled-tonal-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonDropdownFilledTonal-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-dropdown-button-filled-tonal-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-dropdown-button-filled-tonal-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-dropdown-button-filled-tonal-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-dropdown-button-filled-tonal-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-dropdown-button-filled-tonal-container-shape-start-start,
       9999px
@@ -29937,20 +30412,8 @@
       --gm3-dropdown-button-filled-tonal-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-dropdown-button-filled-tonal-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-dropdown-button-filled-tonal-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-dropdown-button-filled-tonal-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonDropdownFilledTonal-button:not(
+  .javascriptMaterialdesignGm3WizButtonDropdownFilledTonal-button--use-intrinsic-height:not(
       :disabled
     ):active {
     border-start-start-radius: var(
@@ -34941,15 +35404,15 @@
     -webkit-line-clamp: var(--max-lines);
     line-clamp: var(--max-lines);
   }
-  .waffleDataConnectorWizAdvancedModelingDbForecastSidebarComponentLabel {
+  .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarComponentLabel {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffleDataConnectorWizAdvancedModelingDbForecastSidebarLoadingSpinner {
+  .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarLoadingSpinner {
     --gm3-circular-progress-active-indicator-color: var(
       --gm3-sys-color-primary
     );
   }
-  .waffleDataConnectorWizAdvancedModelingDbForecastSidebarWaffleDbForecastSidebarHeader {
+  .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarWaffleDbForecastSidebarHeader {
     color: var(--gm3-sys-color-on-surface-variant);
   }
   .docsPublishingDialogSettingsButton {
@@ -37830,21 +38293,21 @@
     );
   }
   .javascriptMaterialdesignGm3WizButtonProgressFilled-button {
-    border-start-start-radius: var(
-      --gm3-progress-button-filled-container-shape-start-start,
-      9999px
+    border-start-start-radius: min(
+      var(--gm3-progress-button-filled-container-shape-start-start, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
     );
-    border-start-end-radius: var(
-      --gm3-progress-button-filled-container-shape-start-end,
-      9999px
+    border-start-end-radius: min(
+      var(--gm3-progress-button-filled-container-shape-start-end, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
     );
-    border-end-start-radius: var(
-      --gm3-progress-button-filled-container-shape-end-start,
-      9999px
+    border-end-start-radius: min(
+      var(--gm3-progress-button-filled-container-shape-end-start, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
     );
-    border-end-end-radius: var(
-      --gm3-progress-button-filled-container-shape-end-end,
-      9999px
+    border-end-end-radius: min(
+      var(--gm3-progress-button-filled-container-shape-end-end, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
     );
     justify-content: var(
       --gm3-progress-button-filled-container-justify-content,
@@ -37879,6 +38342,106 @@
       --gm3-progress-button-filled-pressed-state-layer-opacity,
       0.1
     );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(--gm3-progress-button-filled-container-shape-start-start, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(--gm3-progress-button-filled-container-shape-start-end, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(--gm3-progress-button-filled-container-shape-end-start, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-progress-button-filled-container-shape-end-end, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-color: var(
+      --gm3-progress-button-filled-focus-indicator-color,
+      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+    );
+    --gm3-focus-ring-outward-offset: var(
+      --gm3-progress-button-filled-focus-indicator-outline-offset,
+      2px
+    );
+    --gm3-focus-ring-outward-track-width: var(
+      --gm3-progress-button-filled-focus-indicator-thickness,
+      3px
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonProgressFilled-button:not(
+      :disabled
+    ):active {
+    border-start-start-radius: min(
+      var(
+        --gm3-progress-button-filled-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    border-end-end-radius: min(
+      var(--gm3-progress-button-filled-pressed-container-shape-end-end, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    border-start-end-radius: min(
+      var(
+        --gm3-progress-button-filled-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    border-end-start-radius: min(
+      var(
+        --gm3-progress-button-filled-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-start: min(
+      var(
+        --gm3-progress-button-filled-pressed-container-shape-start-start,
+        9999px
+      ),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-start-end: min(
+      var(
+        --gm3-progress-button-filled-pressed-container-shape-start-end,
+        9999px
+      ),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-start: min(
+      var(
+        --gm3-progress-button-filled-pressed-container-shape-end-start,
+        9999px
+      ),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+    --gm3-focus-ring-outward-target-shape-end-end: min(
+      var(--gm3-progress-button-filled-pressed-container-shape-end-end, 9999px),
+      var(--gm3-progress-button-filled-container-height, 40px) / 2
+    );
+  }
+  .javascriptMaterialdesignGm3WizButtonProgressFilled-button--use-intrinsic-height {
+    border-start-start-radius: var(
+      --gm3-progress-button-filled-container-shape-start-start,
+      9999px
+    );
+    border-start-end-radius: var(
+      --gm3-progress-button-filled-container-shape-start-end,
+      9999px
+    );
+    border-end-start-radius: var(
+      --gm3-progress-button-filled-container-shape-end-start,
+      9999px
+    );
+    border-end-end-radius: var(
+      --gm3-progress-button-filled-container-shape-end-end,
+      9999px
+    );
     --gm3-focus-ring-outward-target-shape-start-start: var(
       --gm3-progress-button-filled-container-shape-start-start,
       9999px
@@ -37895,20 +38458,8 @@
       --gm3-progress-button-filled-container-shape-end-end,
       9999px
     );
-    --gm3-focus-ring-outward-color: var(
-      --gm3-progress-button-filled-focus-indicator-color,
-      var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-    );
-    --gm3-focus-ring-outward-offset: var(
-      --gm3-progress-button-filled-focus-indicator-outline-offset,
-      2px
-    );
-    --gm3-focus-ring-outward-track-width: var(
-      --gm3-progress-button-filled-focus-indicator-thickness,
-      3px
-    );
   }
-  .javascriptMaterialdesignGm3WizButtonProgressFilled-button:not(
+  .javascriptMaterialdesignGm3WizButtonProgressFilled-button--use-intrinsic-height:not(
       :disabled
     ):active {
     border-start-start-radius: var(
@@ -40198,12 +40749,18 @@
     --gm3-card-elevated-container-color: var(--ae-callout-container-color);
     --gm3-checkbox-label-text-color: var(--ae-callout-content-color);
     --gm3-checkbox-unselected-outline-color: var(--ae-callout-content-color);
-    min-inline-size: var(--ae-callout-container-width, 284px);
     min-block-size: var(--ae-callout-container-height, 88px);
+    min-inline-size: var(--ae-callout-container-width, 256px);
+    width: var(--ae-callout-container-width, 300px);
+  }
+  .appsElementsCalloutRoot.appsElementsCalloutRichCallout {
+    min-inline-size: var(--ae-callout-container-width, 256px);
+    width: var(--ae-callout-container-width, 330px);
   }
   .appsElementsCalloutRoot.appsElementsCalloutHorizontalLayout {
-    min-block-size: var(--ae-callout-container-height, 155px);
-    min-inline-size: var(--ae-callout-container-width, 600px);
+    min-block-size: var(--ae-callout-container-height, 220px);
+    min-inline-size: var(--ae-callout-container-width, 700px);
+    width: var(--ae-callout-container-width, 700px);
   }
   .appsElementsCalloutRoot[data-anchor-orientation="0"],
   .appsElementsCalloutRoot[data-anchor-orientation="1"],
@@ -40254,7 +40811,6 @@
   }
   .appsElementsCalloutMiniCalloutRoot {
     --gm3-card-elevated-container-color: var(--ae-callout-container-color);
-    min-inline-size: var(--ae-callout-container-width, 200px);
   }
   .appsElementsCalloutMiniCalloutRoot[data-anchor-orientation="8"][data-is-multi-line-mini-callout="false"] {
     --gm3-card-elevated-container-color: var(--ae-callout-container-color);
@@ -42652,6 +43208,10 @@
       var(--gm3-sys-color-on-surface-variant)
     );
   }
+  .appsElementsWorkspaceRecommendationBannerContentBannerListContainer {
+    border: 1px solid
+      var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
+  }
   .appsElementsWorkspaceRecommendationBannerContentRibbon {
     background-color: var(
       --gm3-sys-color-inverse-surface,
@@ -43814,6 +44374,12 @@
     --gm3-card-outlined-container-shape-end-start: var(
       --ae-sidekick-panel-shape,
       16px
+    );
+  }
+  .appsElementsSidekickResizeHandle:is(:hover, :active):after {
+    background: var(
+      --gm3-sys-color-outline-variant,
+      var(--gm3-sys-color-outline-variant)
     );
   }
   .appsElementsSidekickContent {
@@ -45647,7 +46213,13 @@
         )
       );
   }
-  .appsElementsSidekickUserMessagePromptContent table {
+  .appsElementsSidekickUserMessageBubble {
+    background-color: var(
+      --gm3-sys-color-surface-container-high,
+      var(--gm3-sys-color-surface-container-high)
+    );
+  }
+  .appsElementsSidekickUserMessageBubble table {
     background-color: var(
       --gm3-sys-color-surface,
       var(--gm3-sys-color-surface-container-lowest)
@@ -45655,20 +46227,20 @@
     border: 1px solid
       var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
   }
-  .appsElementsSidekickUserMessagePromptContent table td,
-  .appsElementsSidekickUserMessagePromptContent table th {
+  .appsElementsSidekickUserMessageBubble table td,
+  .appsElementsSidekickUserMessageBubble table th {
     border: 1px solid
       var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
   }
-  .appsElementsSidekickUserMessagePromptContent a:-moz-any-link:not([class]) {
+  .appsElementsSidekickUserMessageBubble a:-moz-any-link:not([class]) {
     color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
   }
-  .appsElementsSidekickUserMessagePromptContent a:any-link:not([class]) {
+  .appsElementsSidekickUserMessageBubble a:any-link:not([class]) {
     color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
   }
-  .appsElementsSidekickUserMessagePromptContent a:active:not([class]),
-  .appsElementsSidekickUserMessagePromptContent a:hover:not([class]),
-  .appsElementsSidekickUserMessagePromptContent a:visited:not([class]) {
+  .appsElementsSidekickUserMessageBubble a:active:not([class]),
+  .appsElementsSidekickUserMessageBubble a:hover:not([class]),
+  .appsElementsSidekickUserMessageBubble a:visited:not([class]) {
     color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
   }
   .appsElementsSidekickUserMessagePromptCanceled {
@@ -45685,11 +46257,11 @@
     );
   }
   .appsElementsSidekickUserMessagePromptEditorContainer {
-    outline: 2px solid
+    outline: 1px solid
       var(--gm3-sys-color-outline, var(--gm3-sys-color-outline));
   }
   .appsElementsSidekickUserMessagePromptEditorContainer:focus-within {
-    outline: 2px solid
+    outline: 1px solid
       var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
   }
   .appsElementsSidekickUserMessagePromptEditorContainer:focus-within:has(
@@ -46216,71 +46788,42 @@
     border: 1px solid
       var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
   }
-  .gb_Ka {
-    box-shadow:
-      0px 1px 2px 0px rgba(60, 64, 67, 0.3),
-      0px 1px 3px 1px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  .gb_B:focus-visible {
+    outline: 1px solid var(--gm3-sys-color-on-surface);
   }
-  .gb_Ma > .gb_La {
-    fill: var(--gm3-sys-color-error);
-  }
-  .gb_Na,
-  .gb_H .gb_Ma > .gb_Na {
-    fill: var(--gm3-sys-color-on-surface);
-  }
-  .gb_Nc {
-    background: var(--gm3-sys-color-inverse-surface);
-    color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .gb_Oc > * {
-    color: var(--gm3-sys-color-outline-variant);
-  }
-  .gb_Ea:hover {
-    background-color: color-mix(
+  .gb_H .gb_B:focus-visible {
+    outline-color: color-mix(
       in oklab,
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
   }
-  .gb_Ea:focus,
-  .gb_Ea:active {
-    background-color: color-mix(
+  .gb_H .gb_A:active {
+    box-shadow:
+      0 1px 2px rgba(60, 64, 67, 0.3),
+      0 2px 6px 2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .gb_C:hover .gb_O {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+  }
+  .gb_C:active .gb_O,
+  .gb_C:focus .gb_O {
+    background: color-mix(
       in oklab,
       transparent,
       var(--gm3-sys-color-on-surface) 12%
     );
   }
-  .gb_Ea:focus-visible {
-    border-color: var(--gm3-sys-color-primary);
+  .gb_C:focus-visible .gb_O {
+    outline: 1px solid var(--gm3-sys-color-primary);
   }
-  .gb_H .gb_Ea:focus-visible {
-    border-color: var(--gm3-sys-color-inverse-primary);
-  }
-  .gb_Fa .gb_Ha {
-    color: var(--gm3-sys-color-primary);
-  }
-  .gb_Ha:hover {
-    color: var(--gm3-sys-color-on-primary-fixed-variant);
-  }
-  .gb_Ha:focus-visible {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .gb_H .gb_Ha {
-    color: var(--gm3-sys-color-inverse-primary);
-  }
-  .gb_H .gb_Ha:hover {
-    color: var(--gm3-sys-color-primary-container);
-  }
-  .gb_H .gb_Ha:focus-visible {
-    border-color: var(--gm3-sys-color-inverse-primary);
-    color: var(--gm3-sys-color-inverse-primary);
-  }
-  .gb_Ia {
-    box-shadow:
-      0 -1px 2px 0 rgba(60, 64, 67, 0.3),
-      0 -2px 6px 2px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  .gb_H .gb_C:focus-visible .gb_O {
+    outline: 1px solid var(--gm3-sys-color-inverse-primary);
   }
 
   /**** Generated code END****/
