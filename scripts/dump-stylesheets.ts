@@ -18,26 +18,6 @@ async function getSiteStyles(url: string): Promise<string> {
     height: 600
   });
 
-  if (process.env.GOOGLE_USER && process.env.GOOGLE_PWD) {
-    console.log('Logging into Google...')
-
-    await page.goto("https://accounts.google.com/signin");
-
-    await page.fill('input[type="email"]', process.env.GOOGLE_USER);
-    await page.press('input[type="email"]', 'Enter');
-
-    await page.fill('input[type="password"]', process.env.GOOGLE_PWD);
-    await page.press('input[type="password"]', 'Enter');
-
-    console.log("Waiting for Google authentication...")
-
-    await page.waitForURL(/https:\/\/myaccount\.google\.com\//);
-
-    console.log("Authenticated")
-  } else {
-    console.log("Missing enviornment tokens, skipping Google auth")
-  }
-
   await page.goto(url, { 
     timeout: 20000,
     waitUntil: 'domcontentloaded'
