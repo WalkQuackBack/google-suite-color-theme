@@ -7,37 +7,7 @@ import postcssRemoveNonVariables from './postcss-remove-non-variables.t.js';
 import postcssTrimEmpty from './postcss-trim-empty.t.js';
 import postcssMergeRules from './postcss-merge-rules.t.js';
 
-async function getSiteStyles(url: string): Promise<string> {
-  const browser = await playwright.chromium.launch({
-    headless: true
-  });
-  const page = await browser.newPage();
-  
-  await page.setViewportSize({
-    width: 800,
-    height: 600
-  });
-
-  if (process.env.GOOGLE_USER && process.env.GOOGLE_PWD) {
-    console.log('Logging into Google...')
-
-    await page.goto("https://accounts.google.com/signin");
-
-    await page.fill('input[type="email"]', process.env.GOOGLE_USER);
-    await page.press('input[type="email"]', 'Enter');
-
-    await page.fill('input[type="password"]', process.env.GOOGLE_PWD);
-    await page.press('input[type="password"]', 'Enter');
-
-    console.log("Waiting for Google authentication...")
-
-    await page.waitForURL(/https:\/\/myaccount\.google\.com\//);
-
-    console.log("Authenticated")
-  } else {
-    console.log("Missing enviornment tokens, skipping Google auth")
-  }
-
+async function getSiteStyles(page: playwright.Page, url: string): Promise<string> {
   await page.goto(url, { 
     timeout: 20000,
     waitUntil: 'domcontentloaded'
@@ -83,17 +53,15 @@ async function getSiteStyles(url: string): Promise<string> {
     .map(s => s.content)
     .join('\n');
 
-  await browser.close();
-
   return `${inlineCss}\n${linkedCss}`;
 }
 
-export async function dumpStylesheets(urls: string[]) {
+export async function dumpStylesheets(urls: string[], page: playwright.Page) {
   let combinedCss = '';
 
   console.log('Fetching stylesheets from sites...');
   for (const url of urls) {
-    const css = await getSiteStyles(url);
+    const css = await getSiteStyles(page, url);
     combinedCss += `${css}\n`;
     console.log(`Successfully fetched CSS from ${url}`);
   }
