@@ -3,4 +3,11 @@
   "extends": [
     "config:recommended"
   ]
+  "packageRules": [
+    {
+      "ignoreTests": true,
+      "matchPackageNames": ["playwright"],
+      "automerge": true
+    }
+  ]
 }
