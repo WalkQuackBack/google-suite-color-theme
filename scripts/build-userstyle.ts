@@ -68,7 +68,7 @@ async function googleAuth() {
 
 async function main() {
     browser = await chromium.launch({
-        headless: false
+        headless: true
     });
     context = await browser.newContext({
         colorScheme: 'light',
