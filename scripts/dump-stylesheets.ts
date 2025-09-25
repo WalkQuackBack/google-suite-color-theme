@@ -7,17 +7,7 @@ import postcssRemoveNonVariables from './postcss-remove-non-variables.t.js';
 import postcssTrimEmpty from './postcss-trim-empty.t.js';
 import postcssMergeRules from './postcss-merge-rules.t.js';
 
-async function getSiteStyles(url: string): Promise<string> {
-  const browser = await playwright.chromium.launch({
-    headless: true
-  });
-  const page = await browser.newPage();
-  
-  await page.setViewportSize({
-    width: 800,
-    height: 600
-  });
-
+async function getSiteStyles(page: playwright.Page, url: string): Promise<string> {
   await page.goto(url, { 
     timeout: 20000,
     waitUntil: 'domcontentloaded'
@@ -63,17 +53,15 @@ async function getSiteStyles(url: string): Promise<string> {
     .map(s => s.content)
     .join('\n');
 
-  await browser.close();
-
   return `${inlineCss}\n${linkedCss}`;
 }
 
-export async function dumpStylesheets(urls: string[]) {
+export async function dumpStylesheets(urls: string[], page: playwright.Page) {
   let combinedCss = '';
 
   console.log('Fetching stylesheets from sites...');
   for (const url of urls) {
-    const css = await getSiteStyles(url);
+    const css = await getSiteStyles(page, url);
     combinedCss += `${css}\n`;
     console.log(`Successfully fetched CSS from ${url}`);
   }
