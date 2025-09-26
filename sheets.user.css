@@ -2,7 +2,7 @@
 @name Google Sheets Color Theme
 @namespace github.com/walkquackback/google-sheets-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.9.25
+@version 2025.9.26
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/sheets.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Sheets to be themed using CSS variables. Comes by default with a dark theme.
@@ -16,16 +16,6 @@
   .gb_E,
   .gb_F {
     fill: var(--gm3-sys-color-on-surface-variant);
-  }
-  a.gb_A {
-    background: var(--gm3-sys-color-primary);
-    color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .gb_H .gb_A {
-    color: var(--gm3-sys-color-on-surface);
-  }
-  .gb_O {
-    fill: var(--gm3-sys-color-primary);
   }
   .waffleDialogRitzImportDialogStandardDialog {
     --gm3-dialog-modal-container-color: var(
@@ -46030,6 +46020,26 @@
     border: 1px solid
       var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
   }
+  .gb_La {
+    box-shadow:
+      0px 1px 2px 0px rgba(60, 64, 67, 0.3),
+      0px 1px 3px 1px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .gb_Na > .gb_Ma {
+    fill: var(--gm3-sys-color-error);
+  }
+  .gb_Oa,
+  .gb_H .gb_Na > .gb_Oa {
+    fill: var(--gm3-sys-color-on-surface);
+  }
+  .gb_Nc {
+    background: var(--gm3-sys-color-inverse-surface);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .gb_Oc > * {
+    color: var(--gm3-sys-color-outline-variant);
+  }
   .gb_B:focus-visible {
     outline: 1px solid var(--gm3-sys-color-on-surface);
   }
@@ -46066,6 +46076,52 @@
   }
   .gb_H .gb_C:focus-visible .gb_O {
     outline: 1px solid var(--gm3-sys-color-inverse-primary);
+  }
+  .gb_Fa:hover {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+  }
+  .gb_Fa:focus,
+  .gb_Fa:active {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .gb_Fa:focus-visible {
+    border-color: var(--gm3-sys-color-primary);
+  }
+  .gb_H .gb_Fa:focus-visible {
+    border-color: var(--gm3-sys-color-inverse-primary);
+  }
+  .gb_Ha .gb_Ia {
+    color: var(--gm3-sys-color-primary);
+  }
+  .gb_Ia:hover {
+    color: var(--gm3-sys-color-on-primary-fixed-variant);
+  }
+  .gb_Ia:focus-visible {
+    border-color: var(--gm3-sys-color-primary);
+  }
+  .gb_H .gb_Ia {
+    color: var(--gm3-sys-color-inverse-primary);
+  }
+  .gb_H .gb_Ia:hover {
+    color: var(--gm3-sys-color-primary-container);
+  }
+  .gb_H .gb_Ia:focus-visible {
+    border-color: var(--gm3-sys-color-inverse-primary);
+    color: var(--gm3-sys-color-inverse-primary);
+  }
+  .gb_Ja {
+    box-shadow:
+      0 -1px 2px 0 rgba(60, 64, 67, 0.3),
+      0 -2px 6px 2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
 
   /**** Generated code END****/
