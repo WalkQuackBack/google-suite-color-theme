@@ -6,7 +6,7 @@
   "packageRules": [
     {
       "ignoreTests": true,
-      "matchPackageNames": ["playwright"],
+      "matchPackageNames": ["playwright", "@playwright/test"],
       "automerge": true
     }
   ]

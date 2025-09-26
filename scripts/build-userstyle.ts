@@ -3,6 +3,7 @@ import { readFile, writeFile } from 'fs/promises';
 
 import { format } from 'prettier';
 import { chromium, type Browser, type BrowserContext } from 'playwright';
+import UserAgent from 'user-agents';
 
 const TEMPLATE_REPLACE_STRING = '/**** Generated code REPLACE ****/'
 
@@ -68,14 +69,37 @@ async function googleAuth() {
 
 async function main() {
     browser = await chromium.launch({
-        headless: true
+        headless: true,
+        args: [
+            '--disable-blink-features=AutomationControlled',
+        ]
     });
+
+    const ua = new UserAgent([
+        /Chrome/,
+        {
+            connection: {
+                type: 'wifi'
+            },
+            platform: 'Linux x86_64',
+            deviceCategory: 'desktop',
+        }
+    ])
+    
     context = await browser.newContext({
-        colorScheme: 'light',
+        userAgent: ua.toString(),
+        locale: 'en-GB',
+        screen: {
+            width: 1792,
+            height: 1120
+        },
         viewport: {
             width: 1280,
             height: 720
-        }
+        },
+        deviceScaleFactor: 2,
+        isMobile: false,
+        hasTouch: false,
     });
 
     await googleAuth()
