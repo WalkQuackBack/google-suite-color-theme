@@ -2,8 +2,7 @@ import { dumpStylesheets } from './dump-stylesheets.ts';
 import { readFile, writeFile } from 'fs/promises';
 
 import { format } from 'prettier';
-import { chromium, type Browser, type BrowserContext } from 'playwright';
-import UserAgent from 'user-agents';
+import { chromium, devices, type Browser, type BrowserContext } from 'playwright';
 
 const TEMPLATE_REPLACE_STRING = '/**** Generated code REPLACE ****/'
 
@@ -74,32 +73,11 @@ async function main() {
             '--disable-blink-features=AutomationControlled',
         ]
     });
-
-    const ua = new UserAgent([
-        /Chrome/,
-        {
-            connection: {
-                type: 'wifi'
-            },
-            platform: 'Linux x86_64',
-            deviceCategory: 'desktop',
-        }
-    ])
     
+    const device = devices['Desktop Chrome HiDPI']
     context = await browser.newContext({
-        userAgent: ua.toString(),
+        ...device,
         locale: 'en-GB',
-        screen: {
-            width: 1792,
-            height: 1120
-        },
-        viewport: {
-            width: 1280,
-            height: 720
-        },
-        deviceScaleFactor: 2,
-        isMobile: false,
-        hasTouch: false,
     });
 
     await googleAuth()
@@ -120,6 +98,7 @@ async function main() {
 
     console.log('Signed out successfully')
 
+    await context.close()
     await browser.close()
 
     console.log('Browser closed')
