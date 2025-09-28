@@ -101,10 +101,6 @@
     color: inherit !important;
   }
 
-  .kix-appview-editor {
-    background-color: transparent !important;
-  }
-
   .docs-material-color-picker-value-overlay {
     background: linear-gradient(180deg,transparent 0,#000);
   }
