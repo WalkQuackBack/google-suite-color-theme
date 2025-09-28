@@ -24,22 +24,8 @@ let context: BrowserContext;
 async function buildSite(id: string, sites: string[]) {
     const page = await context.newPage();
     const stylesheet = await dumpStylesheets(sites, page)
-    console.log('Templating stylesheets...')
     page.close();
-
-    const date = new Date()
-    const year = date.getUTCFullYear();
-    const month = date.getUTCMonth() + 1;
-    const day = date.getUTCDate();
-
-    const template: string = await readFile(`./templates/${id}.css`, 'utf8');
-
-    const output = await format(
-        template.replace(TEMPLATE_REPLACE_STRING, stylesheet)
-            .replace('<version>', `${year}.${month}.${day}`),
-        { parser: 'css' }
-    )
-    return output
+    return stylesheet
 }
 
 async function googleAuth() {
@@ -84,9 +70,28 @@ async function main() {
 
     for (const [id, sites] of Object.entries(buildList)) {
         console.log('Building site ' + sites + ' to ' + id)
-        const output = await buildSite(id, sites)
+        const stylesheet = await buildSite(id, sites)
+        
+        const date = new Date()
+        const year = date.getUTCFullYear();
+        const month = date.getUTCMonth() + 1;
+        const day = date.getUTCDate();
+
+        const template: string = await readFile(`./templates/${id}.css`, 'utf8');
+
+        const userstyle = await format(
+            template.replace(TEMPLATE_REPLACE_STRING, stylesheet)
+                .replace('<version>', `${year}.${month}.${day}`),
+            { parser: 'css' }
+        )
+        const raw = await format(
+            stylesheet,
+            { parser: 'css' }
+        )
+
         console.log('Writing output...')
-        await writeFile(id + '.user.css', output)
+        await writeFile(id + '.user.css', userstyle)
+        await writeFile(id + '.raw.css', raw)
         console.log('Wrote output\n')
     }
 
