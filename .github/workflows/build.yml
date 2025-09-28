@@ -39,7 +39,7 @@ jobs:
           ${{ runner.os }}-playwright-chromium-
 
     - name: Install Playwright Browsers
-      run: npx playwright install chromium --with-deps
+      run: npx playwright install chromium --with-deps --only-shell
       if: steps.playwright-cache.outputs.cache-hit != 'true'
 
     - name: Build artifacts
