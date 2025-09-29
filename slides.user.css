@@ -2,7 +2,7 @@
 @name Google Slides Color Theme
 @namespace github.com/walkquackback/google-slides-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.9.28
+@version 2025.9.29
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/slides.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Slides to be themed using CSS variables. Comes by default with a dark theme.
@@ -61,6 +61,8 @@
   }
   .goog-char-picker-menu {
     background-color: var(--gm3-sys-color-surface-container-lowest);
+    border-color: var(--gm3-sys-color-outline-variant) #666 #666
+      var(--gm3-sys-color-outline-variant);
   }
   .goog-char-picker-menu .goog-menuitem {
     color: var(--gm3-sys-color-shadow);
@@ -70,6 +72,9 @@
   }
   .goog-char-picker-menu .goog-subtitle {
     color: var(--gm3-sys-color-surface-container-lowest) !important;
+  }
+  .goog-char-picker-menu .goog-menuseparator {
+    border-top: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .goog-modalpopup,
   .modal-dialog {
@@ -209,6 +214,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       #e0e0e0
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
   }
   .goog-flat-menu-button-dropdown {
@@ -216,11 +222,16 @@
   }
   .goog-menu {
     background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .goog-filterobsmenuitem,
   .goog-menuitem,
   .goog-tristatemenuitem {
     color: var(--gm3-sys-color-on-surface);
+  }
+  .goog-menuitem-disabled .goog-menuitem-accel,
+  .goog-menuitem-disabled .goog-menuitem-content {
+    color: var(--gm3-sys-color-outline-variant) !important;
   }
   .goog-menuitem-highlight,
   .goog-menuitem-hover {
@@ -253,9 +264,20 @@
   }
   .ita-cp-hwt {
     background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .ita-cp-search {
+    border: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .ita-cp-search.ita-cp-focus {
     border: 1px solid var(--gm3-sys-color-primary);
+  }
+  .ita-cp-charpicker .goog-char-picker-grid-container,
+  .ita-cp-charpicker .goog-menu-button-inner-box {
+    border: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .ita-cp-charpicker .goog-char-picker-grid {
+    border: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .ita-cp-input::-moz-placeholder {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -342,6 +364,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       var(--gm3-sys-color-surface-container)
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button-contrast.jfk-button-checked,
@@ -356,6 +379,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       #e0e0e0
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button-contrast:focus {
@@ -407,6 +431,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       #e0e0e0
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button-mini:focus {
@@ -433,6 +458,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       #e0e0e0
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .jfk-slideToggle-on {
     color: var(--gm3-sys-color-surface-container-lowest);
@@ -448,9 +474,41 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       var(--gm3-sys-color-surface-container)
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .jfk-slideToggle-thumb:after {
+    background-image:
+      linear-gradient(
+        left,
+        var(--gm3-sys-color-outline-variant) 50%,
+        transparent 0
+      ),
+      linear-gradient(
+        left,
+        var(--gm3-sys-color-outline-variant) 50%,
+        transparent 0
+      ),
+      linear-gradient(
+        left,
+        var(--gm3-sys-color-outline-variant) 50%,
+        transparent 0
+      ),
+      linear-gradient(
+        left,
+        var(--gm3-sys-color-outline-variant) 50%,
+        transparent 0
+      ),
+      linear-gradient(
+        left,
+        var(--gm3-sys-color-outline-variant) 50%,
+        transparent 0
+      );
   }
   .jfk-slideToggle:focus {
     border: 1px solid var(--gm3-sys-color-primary);
+  }
+  .jfk-slideToggle.jfk-slideToggle-clearOutline {
+    border: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .jfk-button-standard {
     background-color: color-mix(
@@ -498,6 +556,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       var(--gm3-sys-color-surface-container)
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button-standard.jfk-button-checked,
@@ -512,6 +571,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       #e0e0e0
     );
+    border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button-standard:focus {
@@ -735,6 +795,9 @@
   }
   .goog-submenu-arrow {
     color: var(--gm3-sys-color-shadow);
+  }
+  .goog-menuitem-disabled .goog-submenu-arrow {
+    color: var(--gm3-sys-color-outline-variant);
   }
   .docs-abuse-warning-banner-container
     .docs-abuse-warning-banner-action-button {
@@ -1736,6 +1799,9 @@
   .picker-iframe.picker-white-callout.picker-minew .picker-min-frame-up {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
+  .picker-iframe.picker-min.goog-menu {
+    border-color: var(--gm3-sys-color-outline-variant);
+  }
   .picker-iframe.picker-minew .picker-min-arrow-up .picker-min-arrow-inner {
     border-color: var(--gm3-sys-color-surface-container) transparent;
   }
@@ -1855,6 +1921,9 @@
       transparent,
       var(--gm3-sys-color-primary-fixed-dim) 30%
     );
+  }
+  .title-bar-badge-popout-action-container.goog-flat-button-disabled {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-copydocdialog-destination-sharewarning {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -2070,6 +2139,9 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
+  }
+  .docs-invite-inviter-img {
+    border: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .docs-invite-heavy {
     color: var(--gm3-sys-color-on-surface);
@@ -3660,6 +3732,9 @@
       var(--gm3-sys-color-on-surface) 8%
     );
   }
+  .superfab-button-promo-text {
+    color: var(--gm3-sys-color-outline);
+  }
   .docs-grille-gm3 .instant-button:hover {
     background-color: color-mix(
       in oklab,
@@ -3923,6 +3998,12 @@
   .docs-gm .docs-link-searchinput-search {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .docs-gm .docs-link-searchinput-search::-moz-placeholder {
+    color: var(--gm3-sys-color-outline);
+  }
+  .docs-gm .docs-link-searchinput-search::placeholder {
+    color: var(--gm3-sys-color-outline);
+  }
   .docs-link-searchinput-search-container-focus {
     border: 1px solid var(--gm3-sys-color-primary) !important;
   }
@@ -4173,6 +4254,9 @@
   }
   .picker-urlview-close-icon svg {
     fill: var(--dt-on-background, var(--gm3-sys-color-on-surface));
+  }
+  .docs-revisions-authorwidget-hat {
+    border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .docs-action-updated-dot {
     background-color: var(--gm3-sys-color-primary);
@@ -4576,6 +4660,12 @@
       var(--gm3-sys-color-surface-container)
     );
   }
+  .goog-slider-horizontal .goog-slider-scale {
+    border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .goog-slider-vertical .goog-slider-scale {
+    border-left: 1px solid var(--gm3-sys-color-outline-variant);
+  }
   .docs-slider:focus .goog-slider-thumb {
     border-color: var(--gm3-sys-color-primary);
   }
@@ -4835,6 +4925,9 @@
   .docs-revisions-switch .apps-ui-material-slide-toggle-track {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
+  .docs-gm .docs-revisions-switch .apps-ui-material-slide-toggle-track {
+    background-color: var(--gm3-sys-color-outline);
+  }
   .docs-revisions-switch.apps-ui-material-slide-toggle-container-checked
     .apps-ui-material-slide-toggle-track {
     background-color: var(--gm3-sys-color-shadow);
@@ -4993,8 +5086,16 @@
     );
   }
   .docs-ruler-context-menu-arrow-horizontal
+    .docs-ruler-context-menu-arrow-before {
+    border-color: var(--gm3-sys-color-outline-variant) transparent;
+  }
+  .docs-ruler-context-menu-arrow-horizontal
     .docs-ruler-context-menu-arrow-after {
     border-color: var(--gm3-sys-color-surface-container-lowest) transparent;
+  }
+  .docs-ruler-context-menu-arrow-vertical
+    .docs-ruler-context-menu-arrow-before {
+    border-color: transparent var(--gm3-sys-color-outline-variant);
   }
   .docs-ruler-context-menu-arrow-vertical .docs-ruler-context-menu-arrow-after {
     border-color: transparent var(--gm3-sys-color-surface-container-lowest);
@@ -5059,6 +5160,9 @@
   .docs-spellcheckslidingdialog-buttons-white-menu.goog-flat-menu-button-disabled,
   .docs-spellcheckslidingdialog-buttons-white-menu.goog-flat-menu-button-disabled:hover {
     background: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .goog-menuitem-disabled .docs-spellcheckslidingdialog-count {
+    color: var(--gm3-sys-color-outline-variant);
   }
   .docs-spellcheckslidingdialog-replacement-input-container {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -5484,6 +5588,9 @@
   .docs-bubble {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
+  a.docs-bubble-link-disabled {
+    color: var(--gm3-sys-color-outline-variant) !important;
+  }
   .docs-bubble .docs-bubble-button.jfk-button.goog-toolbar-button-checked,
   .docs-bubble .docs-bubble-button.jfk-button:hover:active {
     background-color: var(--gm3-sys-color-primary-container);
@@ -5540,6 +5647,9 @@
   .docs-colormenuitems .jfk-palette-cell-hover {
     border: 1px solid var(--gm3-sys-color-surface-container-lowest);
     outline: 1px solid var(--gm3-sys-color-shadow);
+  }
+  .docs-colormenuitems-custom-palette .jfk-palette-cell {
+    border-color: var(--gm3-sys-color-outline-variant);
   }
   .docs-colormenuitems-custom-palette .jfk-palette-cell-selected {
     border-color: var(--gm3-sys-color-shadow);
@@ -5674,6 +5784,9 @@
   .docs-thumbnailcontrol-thumbnailcontainer {
     border: 1px solid var(--gm3-sys-color-surface-container-lowest);
   }
+  .docs-thumbnailcontrol-hover .docs-thumbnailcontrol-thumbnailcontainer {
+    outline-color: var(--gm3-sys-color-outline-variant);
+  }
   .docs-gm-thumbnailcontrol .docs-thumbnailcontrol-thumbnailcontainer {
     border: 2px solid var(--gm3-sys-color-outline-variant);
   }
@@ -5683,6 +5796,9 @@
   }
   .docs-gm-thumbnailcontrol-focused .docs-thumbnailcontrol-thumbnailcontainer {
     border-color: var(--gm3-sys-color-primary);
+  }
+  .docs-thumbnailcontrol-hover .docs-thumbnailcontrol-index {
+    background-color: var(--gm3-sys-color-outline-variant);
   }
   .docs-tiled-sidebar {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -5756,6 +5872,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       #e0e0e0
     );
+    border-color: var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
   }
   .goog-toolbar-combo-button-disabled {
@@ -5855,6 +5972,9 @@
   }
   .docs-viewer-media-custom-btn {
     background-color: var(--gm3-sys-color-inverse-primary);
+  }
+  .active-account-dialog-avatar {
+    background-color: var(--gm3-sys-color-outline);
   }
   .sketchy-audio-error-bubble-content {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -6842,6 +6962,9 @@
       var(--gm3-sys-color-on-surface) 16%
     );
   }
+  .sketchy-gradientmenuitems-custom-palette .jfk-palette-cell {
+    border-color: var(--gm3-sys-color-outline-variant);
+  }
   .docs-gm .sketchy-customgradient-label {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -7408,6 +7531,10 @@
   .docs-gm .jfk-butterBar-info .docs-butterbar-link:hover {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .docs-gm .button-disabled.docs-butterbar-butter-action,
+  .docs-gm .button-disabled.docs-butterbar-butter-action:hover {
+    color: var(--gm3-sys-color-outline-variant);
+  }
   .docs-grille-gm3 .jfk-butterBar,
   .docs-grille-gm3 .jfk-butterBar-error,
   .docs-grille-gm3 .jfk-butterBar-info,
@@ -7431,6 +7558,14 @@
     .docs-butterbar-wrap
     .docs-butterbar-link-no-pad {
     color: var(--gm3-sys-color-inverse-primary);
+  }
+  .docs-grille-gm3.docs-grille-gm3.docs-gm
+    .docs-butterbar-wrap
+    .button-disabled.docs-butterbar-butter-action,
+  .docs-grille-gm3.docs-grille-gm3.docs-gm
+    .docs-butterbar-wrap
+    .button-disabled.docs-butterbar-butter-action:hover {
+    color: var(--gm3-sys-color-outline-variant);
   }
   .docs-companion-app-switcher-container {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -7523,13 +7658,20 @@
   }
   .docs-menubar .goog-control-open {
     background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-shadow);
+  }
+  .docs-menubar .goog-control-disabled {
+    color: var(--gm3-sys-color-outline-variant);
   }
   #docs-editor.companion-enabled {
     width: calc(100% - var(--docs_companion_app_switcher_width));
   }
   #docs-menu-shield {
     background-color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .goog-menu.goog-menu-noaccel .docs-menuheader {
+    color: var(--gm3-sys-color-outline) !important;
   }
   .docs-new-badge,
   .docs-premium-badge {
@@ -7542,6 +7684,9 @@
   }
   .docs-default-badge-subtext {
     color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .goog-menuitem-disabled .docs-default-badge-subtext {
+    color: var(--gm3-sys-color-outline) !important;
   }
   body {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -7769,6 +7914,12 @@
   .companion-shell-title-text.companion-shell-title-small {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .companion-shell.companion-theme-dark
+    .companion-guest-supports-dark-theme
+    .companion-shell-title-small,
+  :not(.companion-shell).companion-theme-dark .companion-shell-title-small {
+    color: var(--gm3-sys-color-outline);
+  }
   .companion-shell-subtitle-text {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -7812,6 +7963,12 @@
   }
   .companion-shell-header-dark-background .companion-shell-header-svg-icon {
     fill: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .companion-shell.companion-theme-dark
+    .companion-guest-supports-dark-theme
+    .companion-shell-header-svg-icon,
+  :not(.companion-shell).companion-theme-dark .companion-shell-header-svg-icon {
+    fill: var(--gm3-sys-color-outline);
   }
   .goog-menu.companion-shell-drop-down-menu {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -8074,6 +8231,7 @@
     background-color: var(--gm3-sys-color-primary-container);
   }
   .docs-gm .docs-menubar .goog-control-disabled {
+    color: var(--gm3-sys-color-outline);
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm .goog-menu {
@@ -8097,6 +8255,10 @@
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
+  }
+  .docs-gm .goog-menuitem-disabled,
+  .docs-gm .goog-menuitem-disabled .goog-menuitem-content {
+    color: var(--gm3-sys-color-outline) !important;
   }
   .docs-gm .goog-menuitem-active:hover:active {
     background-color: color-mix(
@@ -8308,10 +8470,14 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
       #e0e0e0
     );
+    border-color: var(--gm3-sys-color-outline-variant);
   }
   .goog-toolbar-button-disabled,
   .goog-toolbar-menu-button-disabled {
     color: var(--gm3-sys-color-on-surface) !important;
+  }
+  .goog-toolbar-separator {
+    border-left: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .docs-material #docs-toolbar-wrapper {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -8372,6 +8538,11 @@
   .docs-material .goog-toolbar-button,
   .docs-material .goog-toolbar-menu-button {
     color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material
+    .goog-toolbar-toggle-button.goog-toolbar-button-checked
+    + .goog-toolbar-toggle-button.goog-toolbar-button-checked {
+    border-left-color: var(--gm3-sys-color-outline-variant);
   }
   .docs-gm .goog-toolbar-separator.goog-inline-block {
     border-left: 1px solid var(--gm3-sys-color-outline-variant);
@@ -9462,6 +9633,9 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)
     );
   }
+  .docs-toolbar-small-separator.goog-toolbar-separator {
+    border-left: 1px solid var(--gm3-sys-color-outline-variant);
+  }
   .docs-toolbar-split-create-button {
     background-color: color-mix(
       in oklab,
@@ -9826,6 +10000,12 @@
   }
   .clean-palette .goog-palette-cell-selected {
     background: var(--gm3-sys-color-primary-container);
+  }
+  .canvas-horiz-border {
+    border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .canvas-vert-border {
+    border-left: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .sketchy-comment-indicator-text {
     fill: var(--gm3-sys-color-surface-container-lowest);
@@ -11502,6 +11682,9 @@
   .docos-streamdocoview-timestamp {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .docos-streamdocoview-bullet {
+    color: var(--gm3-sys-color-outline-variant);
+  }
   .docos-streamdocoview-input-pane .docos-input-textarea {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -12421,6 +12604,9 @@
   .docos-comments-pe .docos-streamreplyview-origin {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .docos-streamdocoview .docos-replyview-quote {
+    border-left: 1px solid var(--gm3-sys-color-outline-variant);
+  }
   .docs-gm .docos-streamdocoview .docos-replyview-quote {
     border-left-color: var(--gm3-sys-color-primary);
   }
@@ -13282,7 +13468,7 @@
     color: var(--pkw-on-surface-variant, var(--gm3-sys-color-on-surface));
   }
   .peoplekitThemeDark .peoplekitComponentsDialogImplSublabel {
-    color: var(--pkw-on-surface-variant, #9aa0a6);
+    color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
   }
   .peoplekitComponentsDialogImplContent {
     color: var(--pkw-on-surface-variant, var(--gm3-sys-color-on-surface));
@@ -13425,7 +13611,7 @@
   .peoplekitThemeDark
     .isNotLoaded
     .peoplekitComponentsAvatarImplDefaultAvatarImage {
-    fill: var(--pkw-on-surface-variant, #9aa0a6);
+    fill: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
   }
   .peoplekitComponentsResultlistitemResultListItem {
     background: var(
@@ -13553,7 +13739,7 @@
     );
   }
   .peoplekitThemeDark .peoplekitComponentsResultlistitemSublabelText {
-    color: var(--pkw-on-surface-variant, #9aa0a6);
+    color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
   }
   .peoplekitComponentsResultlistitemAvatarSelectionOverlay {
     background-color: var(--pkw-primary, var(--gm3-sys-color-primary));
@@ -13574,7 +13760,7 @@
     );
   }
   .peoplekitThemeDark .peoplekitComponentsResultlistitemOutOfOffice {
-    color: var(--pkw-on-surface-variant, #9aa0a6);
+    color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
   }
   .peoplekitComponentsTagTag {
     background: color-mix(
@@ -13696,7 +13882,7 @@
     color: var(--pkw-on-surface, var(--gm3-sys-color-on-surface-variant));
   }
   .peoplekitThemeDark .peoplekitComponentsNoResultsMessageNoResultsMessage {
-    color: var(--pkw-on-surface, #9aa0a6);
+    color: var(--pkw-on-surface, var(--gm3-sys-color-outline));
   }
   .peoplekitComponentsAutocompletePopupContainer {
     box-shadow:
@@ -14128,6 +14314,9 @@
   }
   .docs-toolbar-mode-switcher-menu-description {
     color: var(--gm3-sys-color-outline);
+  }
+  .goog-menuitem-disabled .docs-toolbar-mode-switcher-menu-description {
+    color: var(--gm3-sys-color-outline-variant);
   }
   .docs-toolbar-mode-switcher-menu
     .current-mode
@@ -19699,6 +19888,9 @@
   .docs-mic-control-sound-detected .docs-mic-svg-icon-path {
     fill: var(--gm3-sys-color-surface-container-lowest);
   }
+  .docs-palette {
+    box-shadow: 0 2px 4px var(--gm3-sys-color-outline-variant);
+  }
   .docs-palette-close:focus {
     outline: 1px solid var(--gm3-sys-color-primary);
   }
@@ -19712,7 +19904,11 @@
       var(--gm3-sys-color-on-surface) 16%
     );
   }
+  .docs-mic-palette-focus {
+    box-shadow: 2px 2px 10px var(--gm3-sys-color-outline-variant);
+  }
   .docs-mic-palette-body-hover {
+    box-shadow: 0 3px 6px var(--gm3-sys-color-outline-variant);
     background-color: var(--gm3-sys-color-surface-container);
     background-image: linear-gradient(
       top,
@@ -19753,6 +19949,10 @@
   .docs-voice-activity-bubble,
   .docs-voice-mic-bubble {
     color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-voice-activity-bubble:focus,
+  .docs-voice-mic-bubble:focus {
+    box-shadow: 0 3px 6px var(--gm3-sys-color-outline-variant);
   }
   .appsDocsTemplatesThumbnailControlFailure {
     background-color: color-mix(
@@ -20059,6 +20259,9 @@
   .docs-hub .punch-theme-sidebar {
     border: 1px solid var(--gm3-sys-color-outline-variant);
   }
+  .punch-filmstrip-controls-view-tab-bar .goog-tab-active {
+    background: var(--gm3-sys-color-outline-variant);
+  }
   .punch-filmstrip-controls-active-indicator:after {
     background: var(--gm3-sys-color-shadow);
   }
@@ -20181,6 +20384,9 @@
   .docs-hub .punch-qanda-sidebar {
     border: 1px solid var(--gm3-sys-color-outline-variant);
   }
+  .punch-qanda-question {
+    border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
+  }
   .punch-qanda-question-user-icon-cover {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -20204,6 +20410,7 @@
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .punch-qanda-series-list-item {
+    border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-primary);
   }
   .punch-qanda-series-list-item-name {
@@ -20674,9 +20881,11 @@
   }
   .punch-grid-view-dragger-multi:before {
     background: var(--gm3-sys-color-surface-container-lowest);
+    border: 2px solid var(--gm3-sys-color-outline-variant);
   }
   .punch-grid-view-dragger:after {
     background: var(--gm3-sys-color-surface-container-lowest);
+    border: 2px solid var(--gm3-sys-color-outline-variant);
   }
   .punch-grid-view-dragger-badge {
     color: var(--gm3-sys-color-surface-container-lowest);
@@ -20696,6 +20905,9 @@
   .punch-mastersfilmstrip-selector.goog-flat-menu-button-focused {
     border-color: var(--gm3-sys-color-primary);
   }
+  .punch-mastersfilmstrip-selector .goog-flat-menu-button-dropdown {
+    border-color: var(--gm3-sys-color-outline-variant) transparent;
+  }
   .punch-mastersfilmstrip-selector.goog-flat-menu-button-hover
     .goog-flat-menu-button-dropdown {
     border-color: var(--gm3-sys-color-surface-container-lowest) transparent;
@@ -20708,6 +20920,12 @@
   }
   .punch-masterstitlebar-reapply-to-all {
     background-color: var(--gm3-sys-color-primary);
+  }
+  #punch-masterstitlebar .punch-masterstitlebar-rename.jfk-button {
+    color: var(--gm3-sys-color-outline-variant);
+  }
+  #punch-masterstitlebar .punch-masterstitlebar-rename.jfk-button-active {
+    color: var(--gm3-sys-color-outline-variant);
   }
   #punch-masterstitlebar .punch-masterstitlebar-rename.jfk-button-focused {
     border-color: var(--gm3-sys-color-primary);
@@ -20878,6 +21096,9 @@
   .punch-filmstrip-widget-container {
     background-color: var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-on-surface);
+  }
+  .punch-filmstrip-widget-button:active {
+    background-color: var(--gm3-sys-color-outline);
   }
   .punch-filmstrip-visibility-toggle-icon-container {
     background: var(--gm3-sys-color-surface-container-lowest);

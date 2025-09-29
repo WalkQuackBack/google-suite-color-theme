@@ -3200,6 +3200,7 @@
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     var(--gm3-sys-color-surface-container)
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .jfk-button-contrast.jfk-button-checked,
@@ -3214,6 +3215,7 @@
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     #e0e0e0
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .jfk-button-contrast:focus {
@@ -3265,6 +3267,7 @@
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     #e0e0e0
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .jfk-button-mini:focus {
@@ -3291,6 +3294,7 @@
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     #e0e0e0
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .jfk-slideToggle-on {
   color: var(--gm3-sys-color-surface-container-lowest);
@@ -3306,9 +3310,41 @@
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     var(--gm3-sys-color-surface-container)
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+}
+.jfk-slideToggle-thumb:after {
+  background-image:
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    );
 }
 .jfk-slideToggle:focus {
   border: 1px solid var(--gm3-sys-color-primary);
+}
+.jfk-slideToggle.jfk-slideToggle-clearOutline {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .jfk-button-standard {
   background-color: color-mix(
@@ -3356,6 +3392,7 @@
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     var(--gm3-sys-color-surface-container)
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .jfk-button-standard.jfk-button-checked,
@@ -3370,6 +3407,7 @@
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     #e0e0e0
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .jfk-button-standard:focus {
@@ -4410,6 +4448,12 @@ div.CSS_SHORTCUTS_HELP_POPUP {
 .companion-shell-title-text.companion-shell-title-small {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.companion-shell.companion-theme-dark
+  .companion-guest-supports-dark-theme
+  .companion-shell-title-small,
+:not(.companion-shell).companion-theme-dark .companion-shell-title-small {
+  color: var(--gm3-sys-color-outline);
+}
 .companion-shell-subtitle-text {
   color: var(--gm3-sys-color-on-surface);
 }
@@ -4449,6 +4493,12 @@ div.CSS_SHORTCUTS_HELP_POPUP {
 }
 .companion-shell-header-dark-background .companion-shell-header-svg-icon {
   fill: var(--gm3-sys-color-surface-container-lowest);
+}
+.companion-shell.companion-theme-dark
+  .companion-guest-supports-dark-theme
+  .companion-shell-header-svg-icon,
+:not(.companion-shell).companion-theme-dark .companion-shell-header-svg-icon {
+  fill: var(--gm3-sys-color-outline);
 }
 .goog-menu.companion-shell-drop-down-menu {
   background: var(--gm3-sys-color-surface-container-lowest);
@@ -4570,6 +4620,9 @@ div.CSS_SHORTCUTS_HELP_POPUP {
   border: 1px solid var(--gm3-sys-color-shadow);
   color: var(--gm3-sys-color-surface-container-lowest);
 }
+.goog-flat-button-disabled {
+  background-color: var(--gm3-sys-color-outline-variant);
+}
 .goog-button-disabled {
   border-color: var(--gm3-sys-color-on-surface);
   color: var(--gm3-sys-color-on-surface);
@@ -4588,6 +4641,9 @@ div.CSS_SHORTCUTS_HELP_POPUP {
 }
 .goog-submenu-arrow {
   color: var(--gm3-sys-color-shadow);
+}
+.goog-menuitem-disabled .goog-submenu-arrow {
+  color: var(--gm3-sys-color-outline-variant);
 }
 .docs-abuse-warning-banner-container .docs-abuse-warning-banner-action-button {
   color: var(--gm3-sys-color-on-surface);
@@ -4955,6 +5011,7 @@ span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined {
 }
 .goog-menu {
   background: var(--gm3-sys-color-surface-container-lowest);
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .goog-flat-menu-button {
   background-color: color-mix(
@@ -4999,6 +5056,7 @@ span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined {
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     #e0e0e0
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .goog-flat-menu-button-dropdown {
@@ -5008,6 +5066,10 @@ span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined {
 .goog-menuitem,
 .goog-tristatemenuitem {
   color: var(--gm3-sys-color-on-surface);
+}
+.goog-menuitem-disabled .goog-menuitem-accel,
+.goog-menuitem-disabled .goog-menuitem-content {
+  color: var(--gm3-sys-color-outline-variant) !important;
 }
 .goog-menuitem-highlight,
 .goog-menuitem-hover {
@@ -5374,6 +5436,9 @@ span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined {
 .picker-iframe.picker-white-callout.picker-minew .picker-min-frame-up {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
+.picker-iframe.picker-min.goog-menu {
+  border-color: var(--gm3-sys-color-outline-variant);
+}
 .picker-iframe.picker-minew .picker-min-arrow-up .picker-min-arrow-inner {
   border-color: var(--gm3-sys-color-surface-container) transparent;
 }
@@ -5650,6 +5715,9 @@ a.docs-blameview-warning-info {
     transparent,
     var(--gm3-sys-color-on-surface) 8%
   );
+}
+.superfab-button-promo-text {
+  color: var(--gm3-sys-color-outline);
 }
 .docs-grille-gm3 .instant-button:hover {
   background-color: color-mix(
@@ -6092,6 +6160,12 @@ a.docs-blameview-warning-info {
 }
 .docs-gm .docs-link-searchinput-search {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.docs-gm .docs-link-searchinput-search::-moz-placeholder {
+  color: var(--gm3-sys-color-outline);
+}
+.docs-gm .docs-link-searchinput-search::placeholder {
+  color: var(--gm3-sys-color-outline);
 }
 .docs-link-searchinput-search-container-focus {
   border: 1px solid var(--gm3-sys-color-primary) !important;
@@ -6898,6 +6972,9 @@ a.docs-blameview-warning-info {
 .docs-spellcheckslidingdialog-buttons-white-menu.goog-flat-menu-button-disabled:hover {
   background: var(--gm3-sys-color-surface-container-lowest);
 }
+.goog-menuitem-disabled .docs-spellcheckslidingdialog-count {
+  color: var(--gm3-sys-color-outline-variant);
+}
 .docs-spellcheckslidingdialog-replacement-input-container {
   background: var(--gm3-sys-color-surface-container-lowest);
 }
@@ -7390,6 +7467,12 @@ a.docs-blameview-warning-info {
     var(--gm3-sys-color-surface-container)
   );
 }
+.goog-slider-horizontal .goog-slider-scale {
+  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+}
+.goog-slider-vertical .goog-slider-scale {
+  border-left: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .docs-slider:focus .goog-slider-thumb {
   border-color: var(--gm3-sys-color-primary);
 }
@@ -7443,6 +7526,9 @@ a.docs-blameview-warning-info {
 }
 .func-entry:focus {
   border: 1px solid var(--gm3-sys-color-primary) !important;
+}
+.active-account-dialog-avatar {
+  background-color: var(--gm3-sys-color-outline);
 }
 .goog-checkbox-checked {
   background: var(--gm3-sys-color-surface-container-lowest)
@@ -7744,6 +7830,9 @@ a.docs-blameview-warning-info {
 .jfk-butterBar-warning {
   color: var(--gm3-sys-color-surface-container-lowest);
 }
+.goog-link-button-disabled {
+  color: var(--gm3-sys-color-outline-variant);
+}
 .goog-toolbar {
   background: color-mix(
     in oklab,
@@ -7757,6 +7846,12 @@ a.docs-blameview-warning-info {
   background: url(https://ssl.gstatic.com/ui/v1/disclosure/dark-grey-disclosure-arrow-down.png)
     50% no-repeat
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
+}
+.jfk-progressBar-nonBlocking .progress-bar-thumb {
+  background-color: var(--gm3-sys-color-outline-variant);
+}
+.jfk-progressbar .progress-bar-thumb {
+  background-color: var(--gm3-sys-color-outline-variant);
 }
 .jfk-radiobutton:focus .jfk-radiobutton-radio {
   border-color: var(--gm3-sys-color-primary);
@@ -7842,6 +7937,10 @@ body::-webkit-scrollbar-corner {
 .docs-gm .jfk-butterBar-error a.docs-butterbar-link:visited {
   color: var(--gm3-sys-color-primary);
 }
+.docs-gm .button-disabled.docs-butterbar-butter-action,
+.docs-gm .button-disabled.docs-butterbar-butter-action:hover {
+  color: var(--gm3-sys-color-outline-variant);
+}
 .docs-grille-gm3 .jfk-butterBar,
 .docs-grille-gm3 .jfk-butterBar-error,
 .docs-grille-gm3 .jfk-butterBar-info,
@@ -7865,6 +7964,14 @@ body::-webkit-scrollbar-corner {
   .docs-butterbar-wrap
   .docs-butterbar-link-no-pad {
   color: var(--gm3-sys-color-inverse-primary);
+}
+.docs-grille-gm3.docs-grille-gm3.docs-gm
+  .docs-butterbar-wrap
+  .button-disabled.docs-butterbar-butter-action,
+.docs-grille-gm3.docs-grille-gm3.docs-gm
+  .docs-butterbar-wrap
+  .button-disabled.docs-butterbar-butter-action:hover {
+  color: var(--gm3-sys-color-outline-variant);
 }
 #docs-chrome {
   background: var(--gm3-sys-color-surface-container-lowest);
@@ -7954,13 +8061,20 @@ body::-webkit-scrollbar-corner {
 }
 .docs-menubar .goog-control-open {
   background: var(--gm3-sys-color-surface-container-lowest);
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-shadow);
+}
+.docs-menubar .goog-control-disabled {
+  color: var(--gm3-sys-color-outline-variant);
 }
 #docs-editor.companion-enabled {
   width: calc(100% - var(--docs_companion_app_switcher_width));
 }
 #docs-menu-shield {
   background-color: var(--gm3-sys-color-surface-container-lowest);
+}
+.goog-menu.goog-menu-noaccel .docs-menuheader {
+  color: var(--gm3-sys-color-outline) !important;
 }
 .docs-new-badge,
 .docs-premium-badge {
@@ -7973,6 +8087,9 @@ body::-webkit-scrollbar-corner {
 }
 .docs-default-badge-subtext {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.goog-menuitem-disabled .docs-default-badge-subtext {
+  color: var(--gm3-sys-color-outline) !important;
 }
 body {
   background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -8110,6 +8227,7 @@ body {
   );
 }
 .docs-gm .docs-menubar .goog-control-disabled {
+  color: var(--gm3-sys-color-outline);
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
 .docs-gm .goog-menu {
@@ -8133,6 +8251,10 @@ body {
     transparent,
     var(--gm3-sys-color-on-surface) 8%
   );
+}
+.docs-gm .goog-menuitem-disabled,
+.docs-gm .goog-menuitem-disabled .goog-menuitem-content {
+  color: var(--gm3-sys-color-outline) !important;
 }
 .docs-gm .goog-menuitem-active:hover:active {
   background-color: color-mix(
@@ -8346,10 +8468,14 @@ body {
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     #e0e0e0
   );
+  border-color: var(--gm3-sys-color-outline-variant);
 }
 .goog-toolbar-button-disabled,
 .goog-toolbar-menu-button-disabled {
   color: var(--gm3-sys-color-on-surface) !important;
+}
+.goog-toolbar-separator {
+  border-left: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .docs-material #docs-toolbar-wrapper {
   background: var(--gm3-sys-color-surface-container-lowest);
@@ -8410,6 +8536,11 @@ body {
 .docs-material .goog-toolbar-button,
 .docs-material .goog-toolbar-menu-button {
   color: var(--gm3-sys-color-on-surface);
+}
+.docs-material
+  .goog-toolbar-toggle-button.goog-toolbar-button-checked
+  + .goog-toolbar-toggle-button.goog-toolbar-button-checked {
+  border-left-color: var(--gm3-sys-color-outline-variant);
 }
 .docs-gm .goog-toolbar-separator.goog-inline-block {
   border-left: 1px solid var(--gm3-sys-color-outline-variant);
@@ -9657,6 +9788,9 @@ body {
     var(--gm3-sys-color-primary-fixed-dim) 50%
   );
 }
+.title-bar-badge-popout-action-container.goog-flat-button-disabled {
+  color: var(--gm3-sys-color-outline);
+}
 .docs-copydocdialog-destination-sharewarning {
   color: var(--gm3-sys-color-on-surface-variant);
 }
@@ -9846,6 +9980,9 @@ body {
     transparent,
     var(--gm3-sys-color-on-surface) 16%
   );
+}
+.docs-invite-inviter-img {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .docs-invite-heavy {
   color: var(--gm3-sys-color-on-surface);
@@ -10126,6 +10263,9 @@ body {
     background: var(--gm3-sys-color-surface-container-lowest);
   }
 }
+.docs-revisions-authorwidget-hat {
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .docs-revisions-chromecover-content-color-default {
   background-color: var(--gm3-sys-color-surface-container-lowest);
   color: var(--gm3-sys-color-on-surface);
@@ -10332,6 +10472,9 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
 .docs-revisions-switch .apps-ui-material-slide-toggle-track {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
+.docs-gm .docs-revisions-switch .apps-ui-material-slide-toggle-track {
+  background-color: var(--gm3-sys-color-outline);
+}
 .docs-revisions-switch.apps-ui-material-slide-toggle-container-checked
   .apps-ui-material-slide-toggle-track {
   background-color: var(--gm3-sys-color-shadow);
@@ -10404,6 +10547,9 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
 .docs-bubble {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
+a.docs-bubble-link-disabled {
+  color: var(--gm3-sys-color-outline-variant) !important;
+}
 .docs-bubble .docs-bubble-button.jfk-button.goog-toolbar-button-checked,
 .docs-bubble .docs-bubble-button.jfk-button:hover:active {
   background-color: var(--gm3-sys-color-primary-container);
@@ -10442,6 +10588,9 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
 .docs-colormenuitems .jfk-palette-cell-hover {
   border: 1px solid var(--gm3-sys-color-surface-container-lowest);
   outline: 1px solid var(--gm3-sys-color-shadow);
+}
+.docs-colormenuitems-custom-palette .jfk-palette-cell {
+  border-color: var(--gm3-sys-color-outline-variant);
 }
 .docs-colormenuitems-custom-palette .jfk-palette-cell-selected {
   border-color: var(--gm3-sys-color-shadow);
@@ -10591,6 +10740,7 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
     #e0e0e0
   );
+  border-color: var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .goog-toolbar-combo-button-disabled {
@@ -11458,6 +11608,9 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
 .waffle-dbanswers-answers-bar-message {
   color: var(--gm3-sys-color-outline);
 }
+.waffle-assistant-datavalidation-rule-holder {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .waffle-assistant-datavalidation-description {
   color: var(--gm3-sys-color-on-surface);
 }
@@ -11472,8 +11625,14 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
   );
   color: var(--gm3-sys-color-on-surface);
 }
+.waffle-assistant-conditionalformat-rule-holder {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .waffle-assistant-formatting-edit-button {
   color: var(--gm3-sys-color-primary);
+}
+.waffle-assistant-pivottable-rule-holder {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .waffle-pivottable-canvas {
   background: var(--gm3-sys-color-surface-container-lowest);
@@ -11658,6 +11817,10 @@ a.waffle-blameview-image-link {
   background-color: var(--gm3-sys-color-inverse-primary);
   border-color: var(--gm3-sys-color-inverse-primary);
 }
+.freezebar-origin-ltr,
+.freezebar-origin-rtl {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .rowcol-dragger-drop-bar,
 .rowcol-dragger-handle-bar {
   background-color: var(--gm3-sys-color-outline);
@@ -11763,6 +11926,7 @@ div.addRowsText {
 }
 .waffle-formula-help-popup {
   background-color: var(--gm3-sys-color-surface-container-lowest);
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
 }
 .waffle-input-box-locator {
@@ -12438,6 +12602,9 @@ div.addRowsText {
 .docs-sheet-tab-open {
   border-top: 1px solid var(--gm3-sys-color-surface-container-lowest);
 }
+.docs-sheet-tab {
+  border-color: var(--gm3-sys-color-outline-variant);
+}
 .docs-gm .docs-sheet-tab {
   background-color: color-mix(
     in oklab,
@@ -12656,6 +12823,9 @@ div.addRowsText {
     var(--gm3-sys-color-on-surface) 12%
   );
 }
+.docs-sheet-status-container {
+  border-left: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .docs-gm .docs-sheet-status-avs .goog-flat-menu-button {
   border: 1px solid var(--gm3-sys-color-outline-variant);
   background: var(--gm3-sys-color-surface-container-lowest);
@@ -12815,6 +12985,9 @@ td.nfd-sample-label {
   border: 1px solid
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%);
 }
+#google-visualization-charteditor-panel-navigate-div {
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .google-visualization-charteditor-panel-navigation-cell.goog-tab {
   background: var(--gm3-sys-color-surface-container-lowest);
 }
@@ -12822,6 +12995,7 @@ td.nfd-sample-label {
   color: var(--gm3-sys-color-on-surface);
 }
 .google-visualization-charteditor-panel-navigation-cell.goog-tab-selected {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
   border-bottom-color: var(--gm3-sys-color-surface-container-lowest);
 }
 #google-visualization-charteditor-options-panel
@@ -12854,12 +13028,21 @@ td.nfd-sample-label {
 .google-visualization-charteditor-theme-header.goog-menuheader {
   color: var(--gm3-sys-color-on-surface);
 }
+.google-visualization-charteditor-input-disabled {
+  color: var(--gm3-sys-color-outline-variant);
+}
+.google-visualization-charteditor-input-label-disabled {
+  color: var(--gm3-sys-color-outline-variant);
+}
 .google-visualization-charteditor-glasspane {
   background-color: color-mix(
     in oklab,
     transparent,
     var(--gm3-sys-color-on-surface) 8%
   );
+}
+.google-visualization-charteditor-help-text {
+  color: var(--gm3-sys-color-outline-variant);
 }
 .google-visualization-charteditor-data-mismatch-header {
   color: var(--gm3-sys-color-shadow);
@@ -12948,6 +13131,9 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)
   );
 }
+.docs-toolbar-small-separator.goog-toolbar-separator {
+  border-left: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .docs-toolbar-split-create-button {
   background-color: color-mix(
     in oklab,
@@ -13032,6 +13218,9 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
     var(--gm3-sys-color-on-surface) 16%
   );
 }
+.google-visualization-clickeditor-bubble .goog-toolbar-separator {
+  border-color: var(--gm3-sys-color-outline-variant);
+}
 .google-visualization-clickeditor-separator {
   border: 1px solid
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
@@ -13073,6 +13262,9 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
 }
 .google-visualization-table-table {
   background: var(--gm3-sys-color-surface-container-lowest);
+}
+.google-visualization-table-sortind {
+  color: var(--gm3-sys-color-outline-variant);
 }
 .google-visualization-table-table td,
 .google-visualization-table-table th {
@@ -13199,7 +13391,7 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
   );
   box-shadow: 0 0 0 1px
     var(--pkw-outline, var(--gm3-sys-color-on-surface-variant)) inset;
-  color: var(--pkw-on-surface-variant, #9aa0a6);
+  color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
 }
 .peoplekitThemeDark .peoplekitComponentsChipChip:hover {
   background: var(
@@ -13507,7 +13699,7 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
   color: var(--pkw-on-surface-variant, var(--gm3-sys-color-on-surface-variant));
 }
 .peoplekitThemeDark .peoplekitComponentsContextmenuitemImplKeyboardShortcut {
-  color: var(--pkw-on-surface-variant, #9aa0a6);
+  color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
 }
 .peoplekitComponentsContextmenuImplMenu {
   box-shadow:
@@ -13563,7 +13755,7 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
     linear-gradient(0deg, rgba(232, 234, 237, 0.08), rgba(232, 234, 237, 0.08)),
     var(--gm3-sys-color-on-surface)
   );
-  box-shadow: 0 0 0 1px var(--pkw-outline, #9aa0a6) inset;
+  box-shadow: 0 0 0 1px var(--pkw-outline, var(--gm3-sys-color-outline)) inset;
   color: var(
     --pkw-on-surface-variant,
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)
@@ -13629,7 +13821,7 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
     linear-gradient(0deg, rgba(232, 234, 237, 0.08), rgba(232, 234, 237, 0.08)),
     var(--gm3-sys-color-on-surface)
   );
-  color: var(--pkw-on-surface-variant, #9aa0a6);
+  color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
 }
 .peoplekitComponentsTextfieldImplTextField:focus-within
   .peoplekitComponentsTextfieldImplLabel {
@@ -13729,6 +13921,13 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
     var(--gm3-sys-color-on-surface)
   );
   color: var(--pkw-on-surface, var(--gm3-sys-color-surface-container-lowest));
+}
+.peoplekitThemeDark
+  .peoplekitComponentsSearchbarImplSearchInput::-moz-placeholder {
+  color: var(--gm3-sys-color-outline);
+}
+.peoplekitThemeDark .peoplekitComponentsSearchbarImplSearchInput::placeholder {
+  color: var(--gm3-sys-color-outline);
 }
 .tablesConditionalNotificationsPromoBubbleBase.jfk-bubble.jfk-bubble-promo {
   background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -14103,6 +14302,9 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
 .waffleGriddySuggestionsBubbleDisclaimer {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.waffle-griddy-highlight-grey-styled-border.range-border {
+  border-color: var(--gm3-sys-color-outline);
+}
 .turbofill-intro-promo-base .docs-promo-header {
   color: var(--gm3-sys-color-on-surface);
 }
@@ -14475,6 +14677,9 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
 }
 .people-chip-inline-suggestion {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.waffle-condition-drag-item {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .previewableCustomColorMenuOkayButton.goog-flat-button-focused {
   background: var(--gm3-sys-color-primary);
@@ -18467,6 +18672,10 @@ a.annotation-overlaywithallowaccess-error-learn-more {
   border: 1px solid var(--gm3-sys-color-primary);
   color: var(--gm3-sys-color-shadow);
 }
+.waffle-filter-bar-name-readonly:focus,
+.waffle-filter-bar-range-readonly:focus {
+  border-color: var(--gm3-sys-color-outline-variant);
+}
 .waffle-filter-bar-close {
   color: var(--gm3-sys-color-on-surface-variant);
 }
@@ -19141,6 +19350,7 @@ a.annotation-overlaywithallowaccess-error-learn-more {
 .grid-fixed-table th,
 .waffle th {
   color: var(--gm3-sys-color-on-surface);
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .no-grid td {
   border: 1px solid var(--gm3-sys-color-surface-container-lowest);
@@ -19535,6 +19745,10 @@ th.row-headers-background {
 .waffle-verbal-highlights-container {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
+.waffle-verbal-highlights-next.goog-flat-button-disabled,
+.waffle-verbal-highlights-previous.goog-flat-button-disabled {
+  color: var(--gm3-sys-color-outline-variant);
+}
 .docs-ai-text-generator-bubble-free-form-input-textarea {
   border: 1px solid var(--gm3-sys-color-outline-variant);
   color: var(--gm3-sys-color-on-surface);
@@ -19604,16 +19818,26 @@ th.row-headers-background {
   background-color: var(--gm3-sys-color-surface-container);
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.waffleMagicPenMagicPenHighlightBorder {
+  border-color: var(--gm3-sys-color-outline);
+}
+.waffleMagicPenMagicPenHighlightRect {
+  background-color: var(--gm3-sys-color-outline);
+}
 .dlgImportPreview {
   background-color: color-mix(
     in oklab,
     transparent,
     var(--gm3-sys-color-on-surface) 8%
   );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 #waffle-import-options-custom-delimiter-label,
 .waffle-import-options-filename-header {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.dialog-publishobject-div {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .waffle-selection-dialog-error {
   color: var(--gm3-sys-color-error);
@@ -20020,6 +20244,16 @@ a.waffle-charts-alert-link-close {
     transparent,
     var(--gm3-sys-color-on-surface) 16%
   );
+}
+.formula-bar-separator > div,
+.name-box-menu-separator > div {
+  background-color: var(--gm3-sys-color-outline-variant);
+}
+div.formula-bar-disabled {
+  background-color: var(--gm3-sys-color-outline-variant);
+}
+.waffle-formulabar-cellinput-disabled {
+  background-color: var(--gm3-sys-color-outline-variant);
 }
 .docos.docs-gm .docs-material-gm-checkbox.docs-material-gm-checkbox-checked,
 .docos.docs-gm
@@ -21644,6 +21878,9 @@ a.waffle-charts-alert-link-close {
 .docos-streamdocoview-timestamp {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.docos-streamdocoview-bullet {
+  color: var(--gm3-sys-color-outline-variant);
+}
 .docos-streamdocoview-input-pane .docos-input-textarea {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
@@ -22525,6 +22762,9 @@ a.waffle-charts-alert-link-close {
 .docos-comments-pe .docos-streamreplyview-origin {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.docos-streamdocoview .docos-replyview-quote {
+  border-left: 1px solid var(--gm3-sys-color-outline-variant);
+}
 .docs-gm .docos-streamdocoview .docos-replyview-quote {
   border-left-color: var(--gm3-sys-color-primary);
 }
@@ -23366,7 +23606,7 @@ a.waffle-charts-alert-link-close {
   color: var(--pkw-on-surface-variant, var(--gm3-sys-color-on-surface));
 }
 .peoplekitThemeDark .peoplekitComponentsDialogImplSublabel {
-  color: var(--pkw-on-surface-variant, #9aa0a6);
+  color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
 }
 .peoplekitComponentsDialogImplContent {
   color: var(--pkw-on-surface-variant, var(--gm3-sys-color-on-surface));
@@ -23484,7 +23724,7 @@ a.waffle-charts-alert-link-close {
 .peoplekitThemeDark
   .isNotLoaded
   .peoplekitComponentsAvatarImplDefaultAvatarImage {
-  fill: var(--pkw-on-surface-variant, #9aa0a6);
+  fill: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
 }
 .peoplekitComponentsResultlistitemResultListItem {
   background: var(
@@ -23596,7 +23836,7 @@ a.waffle-charts-alert-link-close {
   color: var(--pkw-on-surface-variant, var(--gm3-sys-color-on-surface-variant));
 }
 .peoplekitThemeDark .peoplekitComponentsResultlistitemSublabelText {
-  color: var(--pkw-on-surface-variant, #9aa0a6);
+  color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
 }
 .peoplekitComponentsResultlistitemAvatarSelectionOverlay {
   background-color: var(--pkw-primary, var(--gm3-sys-color-primary));
@@ -23614,7 +23854,7 @@ a.waffle-charts-alert-link-close {
   color: var(--pkw-on-surface-variant, var(--gm3-sys-color-on-surface-variant));
 }
 .peoplekitThemeDark .peoplekitComponentsResultlistitemOutOfOffice {
-  color: var(--pkw-on-surface-variant, #9aa0a6);
+  color: var(--pkw-on-surface-variant, var(--gm3-sys-color-outline));
 }
 .peoplekitComponentsTagTag {
   background: color-mix(
@@ -23722,7 +23962,7 @@ a.waffle-charts-alert-link-close {
   color: var(--pkw-on-surface, var(--gm3-sys-color-on-surface-variant));
 }
 .peoplekitThemeDark .peoplekitComponentsNoResultsMessageNoResultsMessage {
-  color: var(--pkw-on-surface, #9aa0a6);
+  color: var(--pkw-on-surface, var(--gm3-sys-color-outline));
 }
 .peoplekitComponentsAutocompletePopupContainer {
   box-shadow:
@@ -24039,10 +24279,14 @@ a.waffle-charts-alert-link-close {
 }
 .waffle-conditionalformat-view-pill {
   background-color: var(--gm3-sys-color-surface-container-lowest);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .waffle-conditionalformat-add-rule-button {
   background: var(--gm3-sys-color-surface-container-lowest);
   color: var(--gm3-sys-color-primary);
+}
+.waffle-conditionalformat-drag-item {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .waffle-find-replace-active-cell-rect {
   border: 1px solid var(--gm3-sys-color-surface-container-lowest);
