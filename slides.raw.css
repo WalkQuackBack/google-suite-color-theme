@@ -3783,13 +3783,6 @@ body::-webkit-scrollbar-corner {
   .docs-link-bubble-maps-place-card-category {
   color: var(--gm3-sys-color-on-surface-variant);
 }
-.docs-gm .docs-linkbubble-multi-link-scrollable-container {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-  border-color: var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
-  box-shadow: 0 1px 3px 1px
-    color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-}
 .docs-link-bubble-third-party-privacy-promo-card-component p {
   color: var(--gm3-sys-color-on-surface-variant);
 }
@@ -6338,6 +6331,7 @@ a.docs-bubble-link-disabled {
   outline: 2px solid var(--gm3-sys-color-primary);
 }
 .appsDocsAiGenerativeaiImageGenerateImagesInputEl {
+  background-color: var(--gm3-sys-color-surface-container);
   border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .appsDocsAiGenerativeaiImageGenerateImagesInputTextInputContainer {
@@ -6548,6 +6542,16 @@ a.docs-bubble-link-disabled {
     .docs-thumbnailcontrol-thumbnailcontainer {
     border: 1px solid var(--gm3-sys-color-surface-container-lowest);
   }
+}
+.appsDocsAiGenerativeaiImageCssInspirationgalleryExample:hover
+  .appsDocsAiGenerativeaiImageCssInspirationgalleryPrompt {
+  background-color: var(--gm3-sys-color-on-surface);
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.appsDocsAiGenerativeaiImageCssInspirationgalleryExample:hover
+  .docs-gm3-button {
+  background-color: var(--gm3-sys-color-inverse-surface);
+  color: var(--gm3-sys-color-surface-container-lowest);
 }
 .appsDocsAiGenerativeaiImageCssOutpaintAspectRatioPickerAspectRatioPicker {
   color: var(--gm3-sys-color-on-surface-variant);
@@ -13371,6 +13375,20 @@ body {
 }
 .peopleKitStyleGm3 .peoplekitComponentsTagTag.isWarning {
   color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
+}
+.peoplekitComponentsTooltipImplTooltip {
+  background-color: var(--pkw-inverse-surface, var(--gm3-sys-color-on-surface));
+  color: var(
+    --pkw-inverse-on-surface,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)
+  );
+}
+.peoplekitThemeDark .peoplekitComponentsTooltipImplTooltip {
+  background-color: var(--pkw-inverse-surface, var(--gm3-sys-color-on-surface));
+  color: var(
+    --pkw-inverse-on-surface,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)
+  );
 }
 .peoplekitComponentsResultlistitemDisabledTextIndicator {
   color: var(--pkw-on-surface, var(--gm3-sys-color-on-surface-variant));
@@ -25171,6 +25189,12 @@ body {
   border-top: 1px solid
     var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
 }
+.boqAddonscardsrendererCardDividerDivider.colorInverseOnSurface {
+  border-top-color: var(
+    --gm3-sys-color-inverse-on-surface,
+    var(--gm3-sys-color-inverse-on-surface)
+  );
+}
 .boqAddonscardsrendererCardCardheaderTitleText {
   color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
 }
@@ -31688,46 +31712,73 @@ body {
 .appsElementsBadgeNotification {
   color: var(
     --ae-badge-text-color,
-    var(--gm3-sys-color-surface-container-lowest)
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
   );
 }
 .appsElementsBadgeFeature {
-  background-color: var(--ae-badge-container-color, #1967d2);
+  background-color: var(
+    --ae-badge-container-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
 }
 .appsElementsBadgeFeatureLabel {
-  color: var(--gm3-sys-color-surface-container-lowest);
+  color: var(
+    --gm3-sys-color-on-primary,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
+.appsElementsBadgeFeatureMain {
+  background-color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
 }
 .appsElementsBadgeContainer {
   border-radius: var(--ae-badge-container-shape, 4px);
 }
 .appsElementsBadgeMain {
-  --gm3-button-text-focus-label-text-color: var(--ae-badge-text-color, #174ea6);
-  --gm3-button-text-hover-label-text-color: var(--ae-badge-text-color, #174ea6);
-  --gm3-button-text-label-text-color: var(--ae-badge-text-color, #174ea6);
+  --gm3-button-text-focus-label-text-color: var(
+    --ae-badge-text-color,
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
+  );
+  --gm3-button-text-hover-label-text-color: var(
+    --ae-badge-text-color,
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
+  );
+  --gm3-button-text-label-text-color: var(
+    --ae-badge-text-color,
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
+  );
   --gm3-button-text-pressed-label-text-color: var(
     --ae-badge-text-color,
-    #174ea6
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
   );
   --gm3-button-text-with-icon-focus-icon-color: var(
     --ae-badge-text-color,
-    #174ea6
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
   );
   --gm3-button-text-with-icon-hover-icon-color: var(
     --ae-badge-text-color,
-    #174ea6
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
   );
-  --gm3-button-text-with-icon-icon-color: var(--ae-badge-text-color, #174ea6);
+  --gm3-button-text-with-icon-icon-color: var(
+    --ae-badge-text-color,
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
+  );
   --gm3-button-text-with-icon-pressed-icon-color: var(
     --ae-badge-text-color,
-    #174ea6
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
   );
 }
 .appsElementsBadgeContainer .appsElementsBadgeMain {
   background-color: var(
     --ae-badge-container-color,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)
+    var(--ws-sys-color-extended-blue-tonal, #d0e4ff)
   );
-  color: var(--ae-badge-text-color, #174ea6);
+  color: var(
+    --ae-badge-text-color,
+    var(--ws-sys-color-extended-on-blue-tonal, #1157ce)
+  );
 }
 .appsElementsBadgeBorder,
 .appsElementsBadgeContainer .appsElementsBadgeBorder {
@@ -32312,32 +32363,6 @@ body {
     var(--gm3-sys-color-outline-variant)
   );
 }
-.appsElementsEmojipickerAddEmojiButton {
-  --gm3-button-outlined-focus-outline-color: var(
-    --gm3-sys-color-primary,
-    var(--gm3-sys-color-primary)
-  );
-  --gm3-button-outlined-hover-outline-color: var(
-    --gm3-sys-color-outline-variant,
-    var(--gm3-sys-color-outline-variant)
-  );
-  --gm3-button-outlined-hover-state-layer-color: var(
-    --gm3-sys-color-primary,
-    var(--gm3-sys-color-primary)
-  );
-  --gm3-button-outlined-outline-color: var(
-    --gm3-sys-color-outline-variant,
-    var(--gm3-sys-color-outline-variant)
-  );
-  --gm3-button-outlined-pressed-outline-color: var(
-    --gm3-sys-color-primary,
-    var(--gm3-sys-color-primary)
-  );
-  --gm3-button-outlined-pressed-state-layer-color: var(
-    --gm3-sys-color-primary,
-    var(--gm3-sys-color-primary)
-  );
-}
 .appsElementsEmojipickerNoContentMessage {
   color: var(
     --hint-text-color,
@@ -32388,6 +32413,32 @@ body {
     0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   background: var(--gm3-sys-color-surface-container-lowest);
+}
+.appsElementsEmojipickerListAddEmojiButtonAddEmojiButton {
+  --gm3-button-outlined-focus-outline-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-button-outlined-hover-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
+  --gm3-button-outlined-hover-state-layer-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-button-outlined-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
+  --gm3-button-outlined-pressed-outline-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-button-outlined-pressed-state-layer-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
 }
 .appsElementsEmojipickerListAlternatepickerAlternateContainer {
   box-shadow:
@@ -34187,8 +34238,8 @@ body {
 }
 .appsElementsStepIndicatorIsDotted .appsElementsStepIndicatorItemContainer {
   background-color: var(
-    --gm3-sys-color-secondary-container,
-    var(--gm3-sys-color-secondary-container)
+    --gm3-sys-color-inverse-primary,
+    var(--gm3-sys-color-inverse-primary)
   );
 }
 .appsElementsStepIndicatorIsDotted .appsElementsStepIndicatorIsCurrent {
@@ -34210,8 +34261,8 @@ body {
 }
 .appsElementsStepIndicatorIsNumbered .appsElementsStepIndicatorIsIncomplete {
   background-color: var(
-    --gm3-sys-color-secondary-container,
-    var(--gm3-sys-color-secondary-container)
+    --gm3-sys-color-inverse-primary,
+    var(--gm3-sys-color-inverse-primary)
   );
   color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
 }
@@ -34428,6 +34479,17 @@ body {
     var(--gm3-sys-color-surface-container-highest)
   );
 }
+.appsElementsGenerativeaiAstMultiModalFormulaWrapper
+  .appsElementsGenerativeaiAstCodeContent {
+  background: var(
+    --gm3-sys-color-surface-container-highest,
+    var(--gm3-sys-color-surface-container-highest)
+  );
+}
+.appsElementsGenerativeaiAstMultiModalFormulaWrapper
+  .appsElementsGenerativeaiAstFormulaErrorLabel {
+  color: var(--gm3-sys-color-error, var(--gm3-sys-color-error));
+}
 .appsElementsGenerativeaiAstAnchorTextHighlight {
   background-color: var(
     --gm3-sys-color-surface-container-highest,
@@ -34537,32 +34599,6 @@ body {
 }
 .appsElementsGenerativeaiLoadingIndicatorLoadingSpinnerSpinnerLabel {
   color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
-}
-.appsElementsGenerativeAiChipRoot {
-  --gm3-chip-shared-with-icon-icon-size: var(
-    --ae-generative-ai-chip-icon-size,
-    16px
-  );
-  background-color: var(
-    --gm3-sys-color-surface-container,
-    var(--gm3-sys-color-surface-container)
-  );
-}
-.appsElementsGenerativeAiChipRoot
-  .javascriptMaterialdesignGm3WizChipShared-chip__graphic {
-  block-size: var(--ae-generative-ai-chip-icon-size, 16px);
-  inline-size: var(--ae-generative-ai-chip-icon-size, 16px);
-  padding-block-start: calc(
-    8px + (1.25rem - var(--ae-generative-ai-chip-icon-size, 16px)) / 2
-  );
-}
-.appsElementsGenerativeAiChipShimmer:focus,
-.appsElementsGenerativeAiChipShimmer:focus-within,
-.appsElementsGenerativeAiChipShimmer:hover {
-  background: var(
-    --ae-genai-generation-gradient,
-    linear-gradient(135deg, #d7e6ff, #c7e4ff, #dce2ff, #d7e6ff)
-  );
 }
 .appsElementsGenerativeaiCommonFeedbackSmallTitle {
   color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
@@ -34873,36 +34909,16 @@ body {
       var(--gm3-sys-color-surface-container-lowest)
     )
   );
+  border: 1px solid var(--ae-generativeai-promptbox-outline-color, transparent);
 }
-.appsElementsPromptBoxPromptBoxInput {
+.appsElementsPromptBoxInput {
   caret-color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
   color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
 }
-.appsElementsPromptBoxPromptBoxInput[style*="--ae-generativeai-promptbox-max-lines"] {
+.appsElementsPromptBoxInput[style*="--ae-generativeai-promptbox-max-lines"] {
   max-block-size: calc(
     1.5em * var(--ae-generativeai-promptbox-max-lines, 0) + 8px
   );
-}
-.quotaUpsellMessageDescription {
-  color: var(
-    --gm3-sys-color-on-surface-variant,
-    var(--gm3-sys-color-on-surface-variant)
-  );
-}
-.quotaUpsellMessageIconPromotional {
-  color: var(--gm3-sys-color-tertiary, var(--gm3-sys-color-tertiary));
-}
-.quotaUpsellMessageIconInformational {
-  color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
-}
-.appsElementsWorkspaceRecommendationDisplayImageIconCloudBlueSegment {
-  fill: var(--gm3-sys-color-primary);
-}
-.appsElementsWorkspaceRecommendationDisplayImageIconCloudYellowSegment {
-  fill: var(--gm3-sys-color-primary);
-}
-.appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
-  fill: var(--gm3-sys-color-primary);
 }
 .appsElementsRichTextScoperSingleScoperItemButton {
   --gm3-button-outlined-focus-label-text-color: var(
@@ -35210,6 +35226,27 @@ body {
     --gm3-sys-color-on-surface-variant,
     var(--gm3-sys-color-on-surface-variant)
   );
+}
+.quotaUpsellMessageDescription {
+  color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+}
+.quotaUpsellMessageIconPromotional {
+  color: var(--gm3-sys-color-tertiary, var(--gm3-sys-color-tertiary));
+}
+.quotaUpsellMessageIconInformational {
+  color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
+}
+.appsElementsWorkspaceRecommendationDisplayImageIconCloudBlueSegment {
+  fill: var(--gm3-sys-color-primary);
+}
+.appsElementsWorkspaceRecommendationDisplayImageIconCloudYellowSegment {
+  fill: var(--gm3-sys-color-primary);
+}
+.appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
+  fill: var(--gm3-sys-color-primary);
 }
 .appsElementsTreeNode {
   padding-inline: calc(var(--ae-tree-node-level, 0) * 16px) 16px;
@@ -37084,6 +37121,10 @@ body {
   color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
   fill: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
 }
+.appsElementsWorkspaceRecommendationBannerContentBannerGraphicIconError {
+  color: var(--gm3-sys-color-on-error-container, #8c1d18);
+  fill: var(--gm3-sys-color-on-error-container, #8c1d18);
+}
 .appsElementsWorkspaceRecommendationBannerContentTertiary {
   --gm3-banner-expressive-container-color: var(
     --ae-banner-container-color,
@@ -37428,6 +37469,169 @@ body {
     var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
   );
 }
+.appsElementsWorkspaceRecommendationBannerContentError {
+  --gm3-banner-expressive-container-color: var(
+    --ae-banner-container-color,
+    var(
+      --gm3-sys-color-surface-container,
+      var(--gm3-sys-color-surface-container)
+    )
+  );
+  --gm3-banner-expressive-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-banner-headline-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-banner-supporting-text-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-hover-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-focus-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-pressed-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-hover-state-layer-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-pressed-state-layer-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-button-text-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-hover-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-focus-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-pressed-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-hover-state-layer-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-pressed-state-layer-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-filled-container-color: var(
+    --ae-banner-button-filled-container-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-filled-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-hover-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-focus-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-pressed-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-hover-state-layer-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-pressed-state-layer-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --ae-banner-action-color: var(--gm3-sys-color-on-error-container, #8c1d18);
+  --ae-banner-button-filled-container-color: var(
+    --gm3-sys-color-error,
+    var(--gm3-sys-color-error)
+  );
+  --ae-banner-button-filled-text-color: var(
+    --gm3-sys-color-on-error,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+  --ae-banner-container-color: var(
+    --gm3-sys-color-error-container,
+    var(--gm3-sys-color-error-container)
+  );
+  --ae-banner-text-color: var(--gm3-sys-color-on-error-container, #8c1d18);
+  --ae-banner-text-link-color: var(--gm3-sys-color-on-error-container, #8c1d18);
+}
+.appsElementsWorkspaceRecommendationBannerContentError:link {
+  color: var(
+    --ae-banner-text-link-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+}
 .appsElementsWorkspaceRecommendationBannerContentOnSurfaceBackground {
   border: 1px solid
     var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
@@ -37718,6 +37922,12 @@ body {
   --gm3-button-filled-tonal-label-text-color: var(
     --gm3-sys-color-on-primary-container,
     var(--gm3-sys-color-on-primary-fixed-variant)
+  );
+}
+.appsElementsWorkspaceRecommendationFeatureComparisonGridContentFeatureComparisonGrid {
+  background-color: var(
+    --gm3-sys-color-surface-container-low,
+    var(--gm3-sys-color-surface-container-low)
   );
 }
 .appsElementsWorkspaceRecommendationFeatureComparisonGridContentFeatureComparisonTableContainer {
@@ -38259,14 +38469,35 @@ body {
       var(--gm3-sys-color-surface-variant, var(--gm3-sys-color-surface-variant))
     );
 }
+.appsElementsSidekickSuggestionList {
+  --gm3-list-list-item-label-text-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+}
 .appsElementsSidekickSuggestionListToggle {
   --gm3-chip-assist-flat-outline-color: var(
-    --gm3-sys-color-surface-variant,
-    var(--gm3-sys-color-surface-variant)
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
   );
 }
 .appsElementsSidekickValidityStateMessage {
   color: var(--gm3-sys-color-error, var(--gm3-sys-color-error));
+}
+.appsElementsSidekickPromptBox:not(
+  :has(.appsElementsSidekickPromptInput:focus)
+) {
+  --ae-generativeai-promptbox-background-color: var(
+    --gm3-sys-color-surface-container,
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.appsElementsSidekickPromptBox:has(.appsElementsSidekickPromptInput:focus) {
+  border: 1px solid
+    var(
+      --gm3-sys-color-surface-container-highest,
+      var(--gm3-sys-color-surface-container-highest)
+    );
 }
 .appsElementsSidekickPromptInputWrapper {
   --ae-chip-container-color: var(
@@ -38504,6 +38735,12 @@ body {
   color: var(
     --ae-banner-text-link-color,
     var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+}
+.appsElementsSidekickSuggestionIcon {
+  color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
   );
 }
 .appsElementsSidekickAgentMessageBubbleContent table {
@@ -39331,6 +39568,22 @@ body {
     var(--gm3-sys-color-surface-container)
   );
 }
+.appsElementsSidekickAgenticPlannerPlannerSection {
+  background-color: var(
+    --gm3-sys-color-surface-container,
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.appsElementsSidekickAgenticPlannerPlannerChip {
+  --gm3-chip-input-without-avatar-label-text-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  background-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
 .appsElementsSidekickAiOverviewsModule {
   --gm3-card-outlined-container-color: var(
     --ae-sidekick-container-color,
@@ -40015,6 +40268,9 @@ body {
 .appsElementsSidekickUserMessagePromptEditorContainer
   .appsElementsSidekickUserMessagePromptEditor:before {
   color: var(--ae-sidekick-prompt-input-text-placeholder-color, #5e5e5e);
+}
+.fontsBarCssMyFontsLabel {
+  color: var(--gm3-sys-color-on-surface);
 }
 .fontsListCssAllFontsListItem {
   --gm3-list-list-item-label-text-font: var(--font-family-style);
