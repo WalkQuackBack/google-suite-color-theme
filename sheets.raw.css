@@ -67,6 +67,9 @@
     var(--gm3-sys-color-on-surface-variant)
   );
 }
+.waffleDialogRitzImportDialogLoadingStatusText {
+  color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
+}
 .waffleDialogRitzImportDialogFullScreenSuccessDialog {
   --gm3-dialog-modal-container-color: var(
     --gm3-sys-color-surface,
@@ -2192,6 +2195,68 @@
 }
 .javascriptMaterialdesignGm3WizMenu-menu__item--with-one-line {
   min-height: var(--gm3-menu-list-item-container-height, 48px);
+}
+.javascriptMaterialdesignGm3WizMenu-menu-item--with-only-default-icon
+  .javascriptMaterialdesignGm3WizListShared-list-item__start {
+  display: var(--gm3-menu-list-item-default-icon-display, inline-flex);
+}
+:where(
+  .javascriptMaterialdesignGm3WizMenu-menu-item--selected
+).javascriptMaterialdesignGm3WizListShared-list-item {
+  --gm3-list-list-item-focus-label-text-color: var(
+    --gm3-menu-list-item-selected-focus-label-text-color,
+    var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface))
+  );
+  --gm3-list-list-item-hover-label-text-color: var(
+    --gm3-menu-list-item-selected-hover-label-text-color,
+    var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface))
+  );
+  --gm3-list-list-item-hover-leading-icon-icon-color: var(
+    --gm3-menu-list-item-selected-hover-leading-icon-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-list-list-item-hover-trailing-icon-icon-color: var(
+    --gm3-menu-list-item-selected-hover-trailing-icon-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-list-list-item-label-text-color: var(
+    --gm3-menu-list-item-selected-label-text-color,
+    var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface))
+  );
+  --gm3-list-list-item-leading-icon-color: var(
+    --gm3-menu-list-item-selected-with-leading-icon-trailing-icon-color,
+    var(
+      --gm3-sys-color-on-secondary-container,
+      var(--gm3-sys-color-on-secondary-container)
+    )
+  );
+  --gm3-list-list-item-supporting-text-color: var(
+    --gm3-menu-list-item-selected-supporting-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-list-list-item-trailing-icon-color: var(
+    --gm3-menu-list-item-selected-with-leading-icon-trailing-icon-color,
+    var(
+      --gm3-sys-color-on-secondary-container,
+      var(--gm3-sys-color-on-secondary-container)
+    )
+  );
+  --gm3-list-list-item-trailing-supporting-text-color: var(
+    --gm3-menu-list-item-selected-trailing-supporting-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
 }
 .javascriptMaterialdesignGm3WizMenu-menu-item--submenu-open:before {
   background-color: var(
@@ -14260,22 +14325,54 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
   );
 }
 .waffleGriddySuggestionsBubbleRoot
-  .waffleGriddySuggestionsBubbleMenuItem:focus {
-  background: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 12%
+  .waffleGriddySuggestionsBubbleSuggestionButton {
+  --gm3-button-text-label-text-color: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
   );
-}
-.waffleGriddySuggestionsBubbleRoot
-  .waffleGriddySuggestionsBubbleMenuItemHeader {
-  color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
-}
-.waffleGriddySuggestionsBubbleRoot
-  .waffleGriddySuggestionsBubbleMenuItemIconContainer {
-  color: var(
+  --gm3-button-text-focus-label-text-color: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
+  );
+  --gm3-button-text-hover-label-text-color: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
+  );
+  --gm3-button-text-pressed-label-text-color: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
+  );
+  --gm3-button-text-with-icon-icon-color: var(
     --gm3-sys-color-on-surface-variant,
     var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-button-text-with-icon-focus-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-button-text-with-icon-hover-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-button-text-with-icon-pressed-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-button-text-hover-state-layer-color: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
+  );
+  --gm3-button-text-pressed-state-layer-color: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
+  );
+}
+.waffleGriddySuggestionsBubbleGeminiUi
+  .waffleGriddySuggestionsBubbleSuggestionButton
+  .waffleGriddySuggestionsBubbleCircularProgress {
+  --gm3-circular-progress-active-indicator-color: var(
+    --gm3-sys-color-on-primary-fixed,
+    var(--gm3-sys-color-on-primary-container)
   );
 }
 .waffleGriddySuggestionsBubbleDisclaimer {
@@ -34626,8 +34723,123 @@ div.formula-bar-disabled {
   -webkit-line-clamp: var(--max-lines);
   line-clamp: var(--max-lines);
 }
+.javascriptMaterialdesignGm3WizCardFilled-card {
+  border-start-start-radius: var(
+    --gm3-card-filled-container-shape-start-start,
+    12px
+  );
+  border-start-end-radius: var(
+    --gm3-card-filled-container-shape-start-end,
+    12px
+  );
+  border-end-end-radius: var(--gm3-card-filled-container-shape-end-end, 12px);
+  border-end-start-radius: var(
+    --gm3-card-filled-container-shape-end-start,
+    12px
+  );
+  background-color: var(
+    --gm3-card-filled-container-color,
+    var(
+      --gm3-sys-color-surface-container-highest,
+      var(--gm3-sys-color-surface-container-highest)
+    )
+  );
+  --gm3-elevation-level: var(--gm3-card-filled-container-elevation, 0);
+  --gm3-elevation-shadow-color: var(
+    --gm3-card-filled-container-shadow-color,
+    var(--gm3-sys-color-shadow, var(--gm3-sys-color-shadow))
+  );
+  --gm3-focus-ring-outward-color: var(
+    --gm3-card-filled-focus-indicator-color,
+    var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
+  );
+  --gm3-focus-ring-outward-offset: var(
+    --gm3-card-filled-focus-indicator-outline-offset,
+    2px
+  );
+  --gm3-focus-ring-outward-track-width: var(
+    --gm3-card-filled-focus-indicator-thickness,
+    3px
+  );
+  --gm3-focus-ring-outward-target-shape-start-start: var(
+    --gm3-card-filled-container-shape-start-start,
+    12px
+  );
+  --gm3-focus-ring-outward-target-shape-start-end: var(
+    --gm3-card-filled-container-shape-start-end,
+    12px
+  );
+  --gm3-focus-ring-outward-target-shape-end-end: var(
+    --gm3-card-filled-container-shape-end-end,
+    12px
+  );
+  --gm3-focus-ring-outward-target-shape-end-start: var(
+    --gm3-card-filled-container-shape-end-start,
+    12px
+  );
+}
+.javascriptMaterialdesignGm3WizCardFilled-card
+  > .javascriptMaterialdesignGm3WizCard-card__primary-action,
+.javascriptMaterialdesignGm3WizCardFilled-card__content
+  > .javascriptMaterialdesignGm3WizCard-card__primary-action {
+  --gm3-ripple-hover-color: var(
+    --gm3-card-filled-hover-state-layer-color,
+    var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface))
+  );
+  --gm3-ripple-hover-opacity: var(
+    --gm3-card-filled-hover-state-layer-opacity,
+    0.08
+  );
+  --gm3-ripple-pressed-color: var(
+    --gm3-card-filled-pressed-state-layer-color,
+    var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface))
+  );
+  --gm3-ripple-pressed-opacity: var(
+    --gm3-card-filled-pressed-state-layer-opacity,
+    0.1
+  );
+  --gm3-ripple-shape-start-start: var(
+    --gm3-card-filled-container-shape-start-start,
+    12px
+  );
+  --gm3-ripple-shape-start-end: var(
+    --gm3-card-filled-container-shape-start-end,
+    12px
+  );
+  --gm3-ripple-shape-end-end: var(
+    --gm3-card-filled-container-shape-end-end,
+    12px
+  );
+  --gm3-ripple-shape-end-start: var(
+    --gm3-card-filled-container-shape-end-start,
+    12px
+  );
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarDataOutputOptionsCollapsibleList {
+  --ae-collapsible-list-detail-container-color: var(
+    --gm3-sys-color-surface-container,
+    var(--gm3-sys-color-surface-container)
+  );
+  --ae-collapsible-list-summary-container-color: var(
+    --gm3-sys-color-surface-container,
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarDataOutputOptionsCollapsibleList
+  .appsElementsCollapsibleListSummaryButtonRoot {
+  color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarDataOutputOptionPrimaryText {
+  color: var(--gm3-sys-color-on-surface);
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarDataOutputOptionSecondaryText {
+  color: var(--gm3-sys-color-on-surface-variant);
+}
 .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarComponentLabel {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarHorizonInputErrorMessage {
+  color: var(--gm3-sys-color-error, var(--gm3-sys-color-error));
 }
 .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarLoadingSpinner {
   --gm3-circular-progress-active-indicator-color: var(--gm3-sys-color-primary);
@@ -38039,98 +38251,6 @@ div.formula-bar-disabled {
     var(--gm3-sys-color-surface-container)
   );
 }
-.javascriptMaterialdesignGm3WizCardFilled-card {
-  border-start-start-radius: var(
-    --gm3-card-filled-container-shape-start-start,
-    12px
-  );
-  border-start-end-radius: var(
-    --gm3-card-filled-container-shape-start-end,
-    12px
-  );
-  border-end-end-radius: var(--gm3-card-filled-container-shape-end-end, 12px);
-  border-end-start-radius: var(
-    --gm3-card-filled-container-shape-end-start,
-    12px
-  );
-  background-color: var(
-    --gm3-card-filled-container-color,
-    var(
-      --gm3-sys-color-surface-container-highest,
-      var(--gm3-sys-color-surface-container-highest)
-    )
-  );
-  --gm3-elevation-level: var(--gm3-card-filled-container-elevation, 0);
-  --gm3-elevation-shadow-color: var(
-    --gm3-card-filled-container-shadow-color,
-    var(--gm3-sys-color-shadow, var(--gm3-sys-color-shadow))
-  );
-  --gm3-focus-ring-outward-color: var(
-    --gm3-card-filled-focus-indicator-color,
-    var(--gm3-sys-color-secondary, var(--gm3-sys-color-secondary))
-  );
-  --gm3-focus-ring-outward-offset: var(
-    --gm3-card-filled-focus-indicator-outline-offset,
-    2px
-  );
-  --gm3-focus-ring-outward-track-width: var(
-    --gm3-card-filled-focus-indicator-thickness,
-    3px
-  );
-  --gm3-focus-ring-outward-target-shape-start-start: var(
-    --gm3-card-filled-container-shape-start-start,
-    12px
-  );
-  --gm3-focus-ring-outward-target-shape-start-end: var(
-    --gm3-card-filled-container-shape-start-end,
-    12px
-  );
-  --gm3-focus-ring-outward-target-shape-end-end: var(
-    --gm3-card-filled-container-shape-end-end,
-    12px
-  );
-  --gm3-focus-ring-outward-target-shape-end-start: var(
-    --gm3-card-filled-container-shape-end-start,
-    12px
-  );
-}
-.javascriptMaterialdesignGm3WizCardFilled-card
-  > .javascriptMaterialdesignGm3WizCard-card__primary-action,
-.javascriptMaterialdesignGm3WizCardFilled-card__content
-  > .javascriptMaterialdesignGm3WizCard-card__primary-action {
-  --gm3-ripple-hover-color: var(
-    --gm3-card-filled-hover-state-layer-color,
-    var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface))
-  );
-  --gm3-ripple-hover-opacity: var(
-    --gm3-card-filled-hover-state-layer-opacity,
-    0.08
-  );
-  --gm3-ripple-pressed-color: var(
-    --gm3-card-filled-pressed-state-layer-color,
-    var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface))
-  );
-  --gm3-ripple-pressed-opacity: var(
-    --gm3-card-filled-pressed-state-layer-opacity,
-    0.1
-  );
-  --gm3-ripple-shape-start-start: var(
-    --gm3-card-filled-container-shape-start-start,
-    12px
-  );
-  --gm3-ripple-shape-start-end: var(
-    --gm3-card-filled-container-shape-start-end,
-    12px
-  );
-  --gm3-ripple-shape-end-end: var(
-    --gm3-card-filled-container-shape-end-end,
-    12px
-  );
-  --gm3-ripple-shape-end-start: var(
-    --gm3-card-filled-container-shape-end-start,
-    12px
-  );
-}
 .unsupportedOfficeFeaturesDialogContentContentText {
   color: var(
     --gm3-sys-color-on-surface-variant,
@@ -40026,21 +40146,117 @@ div.formula-bar-disabled {
     #8c1d18
   );
 }
-.appsElementsStepIndicatorIsDotted .appsElementsStepIndicatorItemContainer {
-  background-color: var(
-    --gm3-sys-color-inverse-primary,
-    var(--gm3-sys-color-inverse-primary)
+.appsElementsStepIndicatorEl {
+  --step-indicator-color-active: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
   );
-}
-.appsElementsStepIndicatorIsDotted .appsElementsStepIndicatorIsCurrent {
-  background-color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
-}
-.appsElementsStepIndicatorIsNumbered .appsElementsStepIndicatorItemContainer {
-  background-color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
-  color: var(
+  --step-indicator-on-color-active: var(
     --gm3-sys-color-on-primary,
     var(--gm3-sys-color-surface-container-lowest)
   );
+  --step-indicator-color-inactive: var(
+    --gm3-sys-color-inverse-primary,
+    var(--gm3-sys-color-inverse-primary)
+  );
+  --step-indicator-on-color-inactive: var(
+    --gm3-sys-color-on-primary-container,
+    var(--gm3-sys-color-on-primary-fixed-variant)
+  );
+}
+.appsElementsStepIndicatorThemeSecondary {
+  --step-indicator-color-active: var(
+    --gm3-sys-color-secondary,
+    var(--gm3-sys-color-secondary)
+  );
+  --step-indicator-on-color-active: var(
+    --gm3-sys-color-on-secondary,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+  --step-indicator-color-inactive: color-mix(
+    in srgb,
+    var(
+        --gm3-sys-color-on-secondary-container,
+        var(--gm3-sys-color-on-secondary-fixed-variant)
+      )
+      16%,
+    transparent
+  );
+  --step-indicator-on-color-inactive: var(
+    --gm3-sys-color-on-secondary-container,
+    var(--gm3-sys-color-on-secondary-fixed-variant)
+  );
+}
+.appsElementsStepIndicatorThemeTertiary {
+  --step-indicator-color-active: var(
+    --gm3-sys-color-tertiary,
+    var(--gm3-sys-color-tertiary)
+  );
+  --step-indicator-on-color-active: var(
+    --gm3-sys-color-on-tertiary,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+  --step-indicator-color-inactive: color-mix(
+    in srgb,
+    var(
+        --gm3-sys-color-on-tertiary-container,
+        var(--gm3-sys-color-on-tertiary-fixed-variant)
+      )
+      16%,
+    transparent
+  );
+  --step-indicator-on-color-inactive: var(
+    --gm3-sys-color-on-tertiary-container,
+    var(--gm3-sys-color-on-tertiary-fixed-variant)
+  );
+}
+.appsElementsStepIndicatorThemeWarning {
+  --step-indicator-color-active: var(
+    --ws-sys-color-extended-on-yellow-tonal,
+    #6d3a01
+  );
+  --step-indicator-on-color-active: var(
+    --ws-sys-color-extended-yellow-tonal,
+    #fff2b4
+  );
+  --step-indicator-color-inactive: color-mix(
+    in srgb,
+    var(--ws-sys-color-extended-on-yellow-tonal, #6d3a01) 16%,
+    transparent
+  );
+  --step-indicator-on-color-inactive: var(
+    --ws-sys-color-extended-on-yellow-fill,
+    #6d3a01
+  );
+}
+.appsElementsStepIndicatorThemeError {
+  --step-indicator-color-active: var(
+    --gm3-sys-color-error,
+    var(--gm3-sys-color-error)
+  );
+  --step-indicator-on-color-active: var(
+    --gm3-sys-color-on-primary,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+  --step-indicator-color-inactive: color-mix(
+    in srgb,
+    var(--gm3-sys-color-error, var(--gm3-sys-color-error)) 16%,
+    transparent
+  );
+  --step-indicator-on-color-inactive: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
+  );
+}
+.appsElementsStepIndicatorIsDotted .appsElementsStepIndicatorItemContainer {
+  background-color: var(--step-indicator-color-inactive);
+}
+.appsElementsStepIndicatorIsDotted .appsElementsStepIndicatorIsCurrent {
+  background-color: var(--step-indicator-color-active);
+}
+.appsElementsStepIndicatorIsNumbered .appsElementsStepIndicatorItemContainer {
+  background-color: var(--step-indicator-color-active);
+  color: var(--step-indicator-on-color-active);
 }
 .appsElementsStepIndicatorIsNumbered
   .appsElementsStepIndicatorItemContainer:not(:last-child):after {
@@ -40050,14 +40266,58 @@ div.formula-bar-disabled {
   );
 }
 .appsElementsStepIndicatorIsNumbered .appsElementsStepIndicatorIsIncomplete {
-  background-color: var(
-    --gm3-sys-color-inverse-primary,
-    var(--gm3-sys-color-inverse-primary)
-  );
-  color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
+  background-color: var(--step-indicator-color-inactive);
+  color: var(--step-indicator-on-color-inactive);
 }
 .appsElementsPositionedSurfaceContainer {
   z-index: var(--ae-positioned-surface-z-index, 9999);
+}
+.appsElementsCollapsibleListItemContentSection:not(
+  .appsElementsCollapsibleListTransparentBackground
+) {
+  --gm3-card-filled-container-color: var(
+    --ae-collapsible-list-detail-container-color,
+    var(
+      --gm3-sys-color-surface-container-low,
+      var(--gm3-sys-color-surface-container-low)
+    )
+  );
+}
+.appsElementsCollapsibleListSummaryButtonRoot {
+  color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  background-color: var(
+    --ae-collapsible-list-summary-container-color,
+    transparent
+  );
+}
+.appsElementsCollapsibleListSummaryButtonRoot {
+  border-start-start-radius: var(
+    --ae-collapsible-list-summary-start-start-radius,
+    12px
+  );
+  border-start-end-radius: var(
+    --ae-collapsible-list-summary-start-end-radius,
+    12px
+  );
+}
+.appsElementsCollapsibleListSummaryButtonRipple {
+  --gm3-ripple-hover-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-ripple-pressed-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+}
+.appsElementsCollapsibleListSummaryButtonLeadingIconContainer {
+  color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
 }
 .appsElementsGenerativeaiAstCardCardContainer {
   background-color: var(
@@ -40637,6 +40897,12 @@ div.formula-bar-disabled {
 }
 .appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
   fill: var(--gm3-sys-color-primary);
+}
+.appsElementsGenerativeAiSourcesPanelOtherSourcesContainer {
+  --ae-collapsible-list-summary-container-color: var(
+    --gm3-sys-color-surface-container-low,
+    var(--gm3-sys-color-surface-container-low)
+  );
 }
 .appsElementsTreeNode {
   padding-inline: calc(var(--ae-tree-node-level, 0) * 16px) 16px;
@@ -42335,9 +42601,11 @@ div.formula-bar-disabled {
     var(--gm3-sys-color-on-surface-variant)
   );
 }
-.appsElementsWorkspaceRecommendationBannerContentBannerListContainer {
-  border: 1px solid
-    var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
+.appsElementsWorkspaceRecommendationBannerContentBannerListFooter {
+  background-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
 }
 .appsElementsWorkspaceRecommendationBannerContentRibbon {
   background-color: var(
@@ -43327,10 +43595,13 @@ div.formula-bar-disabled {
   );
 }
 .appsElementsWorkspaceRecommendationFeatureComparisonGridContentFeatureTable {
-  grid-template-columns: 0.2fr 2fr repeat(calc(var(--num-cols) - 2), 1.2fr);
+  grid-template-columns: minmax(min-content, 0.2fr) minmax(
+      min-content,
+      2fr
+    ) repeat(calc(var(--num-cols) - 2), minmax(min-content, 1.2fr));
 }
 .appsElementsWorkspaceRecommendationFeatureComparisonGridContentTableRow:nth-child(
-  odd
+  2n
 ) {
   background-color: var(
     --gm3-sys-color-surface-container-low,
@@ -43338,7 +43609,7 @@ div.formula-bar-disabled {
   );
 }
 .appsElementsWorkspaceRecommendationFeatureComparisonGridContentTableRow:nth-child(
-  2n
+  odd
 ) {
   background-color: var(
     --gm3-sys-color-surface,
@@ -43353,7 +43624,7 @@ div.formula-bar-disabled {
 }
 .appsElementsWorkspaceRecommendationFeatureComparisonGridContentHighlight {
   grid-column: calc(var(--highlight-index) + 1) / var(--num-cols);
-  grid-row: 1 / calc(var(--num-rows) + 1);
+  grid-row: 1 / calc(var(--num-rows) + 2);
   background:
     linear-gradient(
         var(--gm3-sys-color-surface-container-lowest),
@@ -44856,6 +45127,102 @@ div.formula-bar-disabled {
     var(--gm3-sys-color-surface-container-lowest)
   );
 }
+.appsElementsSidekickAgenticPlannerPlannerSourceMenuChip {
+  --gm3-dropdown-button-outlined-focus-label-text-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-focus-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
+  --gm3-dropdown-button-outlined-hover-label-text-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-hover-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
+  --gm3-dropdown-button-outlined-hover-state-layer-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-label-text-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
+  --gm3-dropdown-button-outlined-pressed-label-text-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-pressed-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
+  --gm3-dropdown-button-outlined-pressed-state-layer-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-with-icon-focus-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-with-icon-hover-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-with-icon-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-dropdown-button-outlined-with-icon-pressed-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  background: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
+.appsElementsSidekickAgenticPlannerPlannerSourceMenu {
+  background-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
+.appsElementsSidekickAgenticPlannerPlannerAddSourceButton {
+  --gm3-icon-button-filled-container-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+  --gm3-icon-button-filled-focus-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-icon-button-filled-hover-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-icon-button-filled-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-icon-button-filled-pressed-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+}
+.appsElementsSidekickAgenticQuestionnaireQuestionnaireSection {
+  background-color: var(
+    --gm3-sys-color-surface-container,
+    var(--gm3-sys-color-surface-container)
+  );
+}
 .appsElementsSidekickAiOverviewsModule {
   --gm3-card-outlined-container-color: var(
     --ae-sidekick-container-color,
@@ -45064,6 +45431,44 @@ div.formula-bar-disabled {
 }
 .appsElementsSidekickHeaderIcon {
   color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
+}
+.appsElementsSidekickHeaderViewSelectorButton {
+  --gm3-dropdown-button-text-label-text-color: var(
+    --gm3-sys-color-on-surface,
+    var(--gm3-sys-color-on-surface)
+  );
+  --gm3-dropdown-button-text-with-icon-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+}
+.appsElementsSidekickHeaderViewSelectorMenu {
+  --gm3-list-list-item-selected-container-color: var(
+    --gm3-sys-color-secondary-container,
+    var(--gm3-sys-color-secondary-container)
+  );
+  --gm3-list-list-item-selected-label-text-color: var(
+    --gm3-sys-color-on-secondary-container,
+    var(--gm3-sys-color-on-secondary-fixed-variant)
+  );
+  --gm3-menu-list-item-selected-container-color: var(
+    --gm3-sys-color-secondary-container,
+    var(--gm3-sys-color-secondary-container)
+  );
+  --gm3-menu-list-item-selected-label-text-color: var(
+    --gm3-sys-color-on-secondary-container,
+    var(--gm3-sys-color-on-secondary-fixed-variant)
+  );
+}
+.appsElementsSidekickHeaderViewSelectorItem[aria-selected="true"] {
+  --gm3-list-list-item-container-color: var(
+    --gm3-sys-color-secondary-container,
+    var(--gm3-sys-color-secondary-container)
+  );
+  --gm3-list-list-item-label-text-color: var(
+    --gm3-sys-color-on-secondary-container,
+    var(--gm3-sys-color-on-secondary-fixed-variant)
+  );
 }
 .appsElementsSidekickGemManagerCreateGemButton {
   --gm3-button-filled-container-color: var(
