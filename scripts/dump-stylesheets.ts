@@ -2,7 +2,7 @@ import playwright from 'playwright';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 
-import postcssReplaceColors from './postcss-replace-colors.t.js';
+import postcssReplaceColors from './replace-colors.ts';
 import postcssRemoveNonVariables from './postcss-remove-non-variables.t.js';
 import postcssTrimEmpty from './postcss-trim-empty.t.js';
 import postcssMergeRules from './postcss-merge-rules.t.js';
@@ -10,14 +10,16 @@ import postcssMergeRules from './postcss-merge-rules.t.js';
 async function getSiteStyles(page: playwright.Page, url: string): Promise<string> {
   await page.goto(url, { 
     timeout: 20000,
-    waitUntil: 'domcontentloaded'
+    waitUntil: 'load'
   });
 
   const cssSources = await page.evaluate(() => {
     const styleTags = Array.from(document.querySelectorAll('style')).map(tag => {
+      const dataHref = tag.getAttribute('data-href');
+      const absoluteHref = dataHref && new URL(dataHref, document.baseURI).href || '';
       return {
         content: tag.textContent,
-        href: tag.getAttribute('data-href') || '',
+        href: absoluteHref,
       }
     }
   );
