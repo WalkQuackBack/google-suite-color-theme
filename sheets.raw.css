@@ -183,6 +183,12 @@
     var(--gm3-sys-color-on-surface-variant)
   );
 }
+.waffleLargeUploadsOptionsDialogLoadingSuggestion {
+  --gm3-list-list-item-disabled-label-text-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+}
 .javascriptMaterialdesignGm3WizCircularProgress-circular-progress__active-indicator {
   stroke: var(
     --gm3-circular-progress-active-indicator-color,
@@ -2779,6 +2785,10 @@
   );
 }
 .javascriptMaterialdesignGm3WizSelectShared-select__menu {
+  --gm3-list-container-shape: var(
+    --gm3-select-shared-menu-container-shape,
+    4px
+  );
   --gm3-menu-cascading-menu-indicator-icon-color: var(
     --gm3-select-shared-menu-cascading-menu-indicator-icon-color,
     var(
@@ -3194,485 +3204,6 @@
 .ritzImportFileDialogImportErrorMessageLink {
   color: var(--gm3-sys-color-primary);
 }
-.apps-ui-material-slide-toggle-thumb {
-  background-color: var(--gm3-sys-color-surface-container);
-}
-.apps-ui-material-slide-toggle-track {
-  background-color: var(--gm3-sys-color-shadow);
-}
-.ac-renderer {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-button-action {
-  background-color: var(--gm3-sys-color-primary);
-  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #4787ed);
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-button-action.jfk-button-hover {
-  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #357ae8);
-}
-.jfk-button-action:focus {
-  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
-  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
-  outline: 1px solid var(--gm3-sys-color-primary);
-}
-.jfk-button-action.jfk-button-disabled {
-  background: var(--gm3-sys-color-primary);
-}
-.jfk-button-contrast {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 16%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
-    var(--gm3-sys-color-surface-container)
-  );
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-contrast.jfk-button-clear-outline.jfk-button-hover,
-.jfk-button-contrast.jfk-button-hover {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-}
-.jfk-button-contrast.jfk-button-hover:active,
-.jfk-button-contrast:active {
-  background: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-}
-.jfk-button-contrast.jfk-button-clear-outline.jfk-button-selected,
-.jfk-button-contrast.jfk-button-selected {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-contrast.jfk-button-checked,
-.jfk-button-contrast.jfk-button-clear-outline.jfk-button-checked {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    #e0e0e0
-  );
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-contrast:focus {
-  border: 1px solid var(--gm3-sys-color-primary);
-}
-.jfk-button-contrast.jfk-button-disabled {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-button-default {
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-button-default:focus {
-  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
-  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-button-flat:focus {
-  border: 1px solid var(--gm3-sys-color-primary);
-}
-.jfk-button-mini {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 16%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
-    var(--gm3-sys-color-surface-container)
-  );
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-mini.jfk-button-clear-outline.jfk-button-hover,
-.jfk-button-mini.jfk-button-hover {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-}
-.jfk-button-mini.jfk-button-checked,
-.jfk-button-mini.jfk-button-clear-outline.jfk-button-checked {
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    #e0e0e0
-  );
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-mini:focus {
-  border: 1px solid var(--gm3-sys-color-primary);
-}
-.jfk-button-mini.jfk-button-disabled {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-button-primary {
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-button-primary:focus {
-  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
-  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-slideToggle {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 16%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    #e0e0e0
-  );
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-}
-.jfk-slideToggle-on {
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-slideToggle-thumb {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 16%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-}
-.jfk-slideToggle-thumb:after {
-  background-image:
-    linear-gradient(
-      left,
-      var(--gm3-sys-color-outline-variant) 50%,
-      transparent 0
-    ),
-    linear-gradient(
-      left,
-      var(--gm3-sys-color-outline-variant) 50%,
-      transparent 0
-    ),
-    linear-gradient(
-      left,
-      var(--gm3-sys-color-outline-variant) 50%,
-      transparent 0
-    ),
-    linear-gradient(
-      left,
-      var(--gm3-sys-color-outline-variant) 50%,
-      transparent 0
-    ),
-    linear-gradient(
-      left,
-      var(--gm3-sys-color-outline-variant) 50%,
-      transparent 0
-    );
-}
-.jfk-slideToggle:focus {
-  border: 1px solid var(--gm3-sys-color-primary);
-}
-.jfk-slideToggle.jfk-slideToggle-clearOutline {
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-}
-.jfk-button-standard {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 16%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
-    var(--gm3-sys-color-surface-container)
-  );
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-standard.jfk-button-clear-outline.jfk-button-hover,
-.jfk-button-standard.jfk-button-hover {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-}
-.jfk-button-standard.jfk-button-hover:active,
-.jfk-button-standard:active {
-  background: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-}
-.jfk-button-standard.jfk-button-clear-outline.jfk-button-selected,
-.jfk-button-standard.jfk-button-selected {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-standard.jfk-button-checked,
-.jfk-button-standard.jfk-button-clear-outline.jfk-button-checked {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    #e0e0e0
-  );
-  border: 1px solid var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
-}
-.jfk-button-standard:focus {
-  border: 1px solid var(--gm3-sys-color-primary);
-}
-.jfk-button-standard.jfk-button-disabled {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.goog-modalpopup,
-.modal-dialog {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.goog-modalpopup-bg,
-.modal-dialog-bg {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.modal-dialog {
-  color: var(--gm3-sys-color-shadow);
-}
-.modal-dialog-title {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-  color: var(--gm3-sys-color-shadow);
-}
-.modal-dialog-content {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-}
-.modal-dialog-buttons button {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 16%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
-    var(--gm3-sys-color-surface-container)
-  );
-  color: var(--gm3-sys-color-on-surface);
-}
-.modal-dialog-buttons button:hover {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-}
-.modal-dialog-buttons button:active {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-  background-image: linear-gradient(
-    top,
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
-    var(--gm3-sys-color-surface-container)
-  );
-}
-.modal-dialog-buttons button:focus {
-  border: 1px solid var(--gm3-sys-color-primary);
-}
-.modal-dialog-buttons button[disabled] {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.modal-dialog-buttons .goog-buttonset-action {
-  background-color: var(--gm3-sys-color-primary);
-  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #4787ed);
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.modal-dialog-buttons .goog-buttonset-action:hover {
-  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #357ae8);
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.modal-dialog-buttons .goog-buttonset-action:active {
-  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #357ae8);
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.modal-dialog-buttons .goog-buttonset-action:focus {
-  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
-  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
-  outline: 1px solid var(--gm3-sys-color-primary);
-}
-.modal-dialog-buttons .goog-buttonset-action[disabled] {
-  background: var(--gm3-sys-color-primary);
-  color: var(--gm3-sys-color-surface-container-lowest);
-}
-.jfk-textinput:focus {
-  border: 1px solid var(--gm3-sys-color-primary);
-}
-.apps-shortcutshelppopup-close .modal-dialog-title-close {
-  fill: var(--gm3-sys-color-on-surface-variant);
-}
-.apps-shortcutshelppopup-ac-renderer {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.apps-shortcutshelppopup-ac-renderer .ac-active {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-}
-.apps-shortcutshelpcontentimpl-container {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-}
-.apps-shortcutshelpcontentimpl-dialog-title {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-shortcutshelpcontentimpl-search-icon {
-  fill: var(--gm3-sys-color-outline);
-}
-.apps-shortcutshelpcontentimpl-hc-black
-  .apps-shortcutshelpcontentimpl-reset-search-button-icon
-  svg,
-.apps-shortcutshelpcontentimpl-hc-black
-  .apps-shortcutshelpcontentimpl-search-icon
-  svg {
-  fill: var(--gm3-sys-color-surface-container-lowest);
-}
-.apps-shortcutshelpcontentimpl-hc-white
-  .apps-shortcutshelpcontentimpl-reset-search-button-icon
-  svg,
-.apps-shortcutshelpcontentimpl-hc-white
-  .apps-shortcutshelpcontentimpl-search-icon
-  svg {
-  fill: var(--gm3-sys-color-shadow);
-}
-.apps-shortcutshelpcontentimpl-search-focused {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-}
-.apps-shortcutshelpcontentimpl-link,
-.apps-shortcutshelpcontentimpl-link:active {
-  color: var(--gm3-sys-color-primary);
-}
-.apps-shortcutshelpcontentimpl-link:visited {
-  color: var(--gm3-sys-color-primary);
-}
-.apps-shortcutshelpcontentimpl-override-banner {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-shortcutshelpcontentimpl-search-label {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-shortcutshelpcontentimpl-ac-renderer {
-  background: var(--gm3-sys-color-surface-container-lowest);
-}
-.apps-shortcutshelpcontentimpl-ac-renderer .ac-active {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-}
-.apps-shortcutshelpcontentimpl-override-label {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-shortcutshelpcontentimpl-legacy-label {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-key-focused {
-  outline: 1px solid var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-content-header {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-shortcut-desc {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-shortcut-key {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-override-keys-on {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-shortcutshelpcontentimpl-hc-black
-  .apps-actiondatawidget-override-info-svg {
-  fill: var(--gm3-sys-color-surface-container-lowest);
-}
-.apps-actiondatawidget-override-keys-on
-  .apps-actiondatawidget-override-info-svg {
-  fill: var(--gm3-sys-color-primary);
-}
-.apps-navigationwidget {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-navigationwidget-item-selected {
-  color: var(--gm3-sys-color-primary);
-}
-.apps-navigationwidget-item-hover {
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-on-surface) 8%
-  );
-}
 .companion-shell {
   background-color: var(--gm3-sys-color-surface-container-lowest);
   width: var(--companion-shell-width, 300px);
@@ -3746,13 +3277,17 @@
 .docs-gm .goog-menu .goog-menuitem.sources-menu-item-with-flat {
   color: var(--gm3-sys-color-on-surface);
 }
+.docs-gm .docs-pictor-1p5-promo-container .docs-material-gm-dialog-title-close {
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
 .docs-generativeai-onboarding-dialog-title {
   color: var(--gm3-sys-color-on-surface);
 }
 .docs-generativeai-onboarding-dialog-text {
   color: var(--gm3-sys-color-outline);
 }
-.docs-imagen-4-juno-promo-container .docs-generativeai-onboarding-dialog-text {
+.docs-pictor-1p5-promo-container .docs-generativeai-onboarding-dialog-text {
+  background-color: var(--gm3-sys-color-surface-container-low);
   color: var(--gm3-sys-color-on-surface-variant);
 }
 .docs-generativeai-onboarding-dialog-subtext {
@@ -4234,16 +3769,11 @@
 .docs-ai-labs-opt-out-dialog-learn-more-link {
   color: var(--gm3-sys-color-primary);
 }
-div.CSS_SHORTCUTS_HELP_POPUP {
-  color: var(--gm3-sys-color-surface-container-lowest);
-  text-shadow: var(--gm3-sys-color-shadow) 1px 1px 7px;
-  background: var(--gm3-sys-color-shadow) none repeat scroll 0;
+.apps-ui-material-slide-toggle-thumb {
+  background-color: var(--gm3-sys-color-surface-container);
 }
-.CSS_SHORTCUTS_HELP_POPUP_PREF_CONTENT {
-  color: var(--gm3-sys-color-shadow);
-}
-.CSS_SHORTCUTS_HELP_POPUP_PREF_ENABLED .CSS_SHORTCUTS_HELP_POPUP_PREF_CONTENT {
-  color: var(--gm3-sys-color-surface-container-lowest);
+.apps-ui-material-slide-toggle-track {
+  background-color: var(--gm3-sys-color-shadow);
 }
 .docs-save-indicator.docs-titlebar-badge.docs-save-indicator-unsaved-changes,
 .docs-save-indicator.docs-titlebar-badge.docs-save-indicator-unsaved-changes.docs-titlebar-badge-selected {
@@ -6341,39 +5871,6 @@ a.docs-blameview-warning-info {
 .docs-insert-link-bubble-back-search-text {
   color: var(--gm3-sys-color-on-surface-variant);
 }
-.docs-odp-banner-container {
-  background: var(--gm3-sys-color-primary-container);
-  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
-}
-.docs-odp-banner-message {
-  color: var(--gm3-sys-color-on-surface);
-}
-.docs-feature-level-banner-docs
-  .docs-odp-banner-primary-button-wrapper
-  .docs-material-button.docs-material-button-disabled,
-.docs-feature-level-banner-sheets
-  .docs-odp-banner-primary-button-wrapper
-  .docs-material-button.docs-material-button-disabled,
-.docs-feature-level-banner-slides
-  .docs-odp-banner-primary-button-wrapper
-  .docs-material-button.docs-material-button-disabled {
-  color: var(--gm3-sys-color-on-surface);
-}
-.docs-feature-level-banner-docs
-  .docs-odp-banner-primary-button-wrapper
-  .docs-material-button {
-  color: var(--gm3-sys-color-primary);
-}
-.docs-feature-level-banner-sheets
-  .docs-odp-banner-primary-button-wrapper
-  .docs-material-button {
-  color: var(--gm3-sys-color-primary);
-}
-.docs-feature-level-banner-slides
-  .docs-odp-banner-primary-button-wrapper
-  .docs-material-button {
-  color: var(--gm3-sys-color-on-surface);
-}
 .docs-odp-sidebar {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
@@ -6512,8 +6009,7 @@ a.docs-blameview-warning-info {
   .link-previews-broken-link#docs-linkbubble-link-text {
   color: var(--gm3-sys-color-outline) !important;
 }
-.docs-gm .docs-linkbubble-bubble,
-.docs-gm .docs-multi-linkbubble-bubble {
+.docs-gm .docs-linkbubble-bubble {
   background-color: var(--gm3-sys-color-surface-container-lowest);
   border-color: var(--gm3-sys-color-outline-variant);
   box-shadow: 0 1px 3px 1px
@@ -6909,6 +6405,89 @@ a.docs-blameview-warning-info {
 }
 .content-library.loading .picker-loading-container {
   background-color: var(--gm3-sys-color-surface-container);
+}
+.goog-modalpopup,
+.modal-dialog {
+  background: var(--gm3-sys-color-surface-container-lowest);
+}
+.goog-modalpopup-bg,
+.modal-dialog-bg {
+  background: var(--gm3-sys-color-surface-container-lowest);
+}
+.modal-dialog {
+  color: var(--gm3-sys-color-shadow);
+}
+.modal-dialog-title {
+  background-color: var(--gm3-sys-color-surface-container-lowest);
+  color: var(--gm3-sys-color-shadow);
+}
+.modal-dialog-content {
+  background-color: var(--gm3-sys-color-surface-container-lowest);
+}
+.modal-dialog-buttons button {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 16%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
+    var(--gm3-sys-color-surface-container)
+  );
+  color: var(--gm3-sys-color-on-surface);
+}
+.modal-dialog-buttons button:hover {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.modal-dialog-buttons button:active {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.modal-dialog-buttons button:focus {
+  border: 1px solid var(--gm3-sys-color-primary);
+}
+.modal-dialog-buttons button[disabled] {
+  background: var(--gm3-sys-color-surface-container-lowest);
+}
+.modal-dialog-buttons .goog-buttonset-action {
+  background-color: var(--gm3-sys-color-primary);
+  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #4787ed);
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.modal-dialog-buttons .goog-buttonset-action:hover {
+  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #357ae8);
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.modal-dialog-buttons .goog-buttonset-action:active {
+  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #357ae8);
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.modal-dialog-buttons .goog-buttonset-action:focus {
+  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
+  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
+  outline: 1px solid var(--gm3-sys-color-primary);
+}
+.modal-dialog-buttons .goog-buttonset-action[disabled] {
+  background: var(--gm3-sys-color-primary);
+  color: var(--gm3-sys-color-surface-container-lowest);
 }
 .google-picker.modal-dialog {
   background-color: var(
@@ -7858,6 +7437,48 @@ a.docs-blameview-warning-info {
   .goog-button:focus-visible {
   outline: 3px solid var(--gm3-sys-color-secondary);
 }
+.jfk-button-mini {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 16%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
+    var(--gm3-sys-color-surface-container)
+  );
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-mini.jfk-button-clear-outline.jfk-button-hover,
+.jfk-button-mini.jfk-button-hover {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.jfk-button-mini.jfk-button-checked,
+.jfk-button-mini.jfk-button-clear-outline.jfk-button-checked {
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    #e0e0e0
+  );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-mini:focus {
+  border: 1px solid var(--gm3-sys-color-primary);
+}
+.jfk-button-mini.jfk-button-disabled {
+  background: var(--gm3-sys-color-surface-container-lowest);
+}
 .jfk-checkbox-checked,
 .jfk-checkbox-undetermined {
   background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -7890,6 +7511,9 @@ a.docs-blameview-warning-info {
 }
 .goog-link-button-disabled {
   color: var(--gm3-sys-color-outline-variant);
+}
+.jfk-textinput:focus {
+  border: 1px solid var(--gm3-sys-color-primary);
 }
 .goog-toolbar {
   background: color-mix(
@@ -8153,8 +7777,244 @@ body {
   background-color: var(--gm3-sys-color-surface-container-lowest);
   color: var(--gm3-sys-color-shadow);
 }
+.jfk-button-standard {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 16%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
+    var(--gm3-sys-color-surface-container)
+  );
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-standard.jfk-button-clear-outline.jfk-button-hover,
+.jfk-button-standard.jfk-button-hover {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.jfk-button-standard.jfk-button-hover:active,
+.jfk-button-standard:active {
+  background: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+}
+.jfk-button-standard.jfk-button-clear-outline.jfk-button-selected,
+.jfk-button-standard.jfk-button-selected {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-standard.jfk-button-checked,
+.jfk-button-standard.jfk-button-clear-outline.jfk-button-checked {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    #e0e0e0
+  );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-standard:focus {
+  border: 1px solid var(--gm3-sys-color-primary);
+}
+.jfk-button-standard.jfk-button-disabled {
+  background: var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-button-action {
+  background-color: var(--gm3-sys-color-primary);
+  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #4787ed);
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-button-action.jfk-button-hover {
+  background-image: linear-gradient(top, var(--gm3-sys-color-primary), #357ae8);
+}
+.jfk-button-action:focus {
+  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
+  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
+  outline: 1px solid var(--gm3-sys-color-primary);
+}
+.jfk-button-action.jfk-button-disabled {
+  background: var(--gm3-sys-color-primary);
+}
 .share-butter-link:disabled {
   color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-contrast {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 16%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%),
+    var(--gm3-sys-color-surface-container)
+  );
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-contrast.jfk-button-clear-outline.jfk-button-hover,
+.jfk-button-contrast.jfk-button-hover {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+}
+.jfk-button-contrast.jfk-button-hover:active,
+.jfk-button-contrast:active {
+  background: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+}
+.jfk-button-contrast.jfk-button-clear-outline.jfk-button-selected,
+.jfk-button-contrast.jfk-button-selected {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-contrast.jfk-button-checked,
+.jfk-button-contrast.jfk-button-clear-outline.jfk-button-checked {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 8%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    #e0e0e0
+  );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface);
+}
+.jfk-button-contrast:focus {
+  border: 1px solid var(--gm3-sys-color-primary);
+}
+.jfk-button-contrast.jfk-button-disabled {
+  background: var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-button-default {
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-button-default:focus {
+  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
+  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-button-flat:focus {
+  border: 1px solid var(--gm3-sys-color-primary);
+}
+.jfk-button-primary {
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-button-primary:focus {
+  box-shadow: inset 0 0 0 1px var(--gm3-sys-color-surface-container-lowest);
+  border: 1px solid var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-slideToggle {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 16%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    #e0e0e0
+  );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+}
+.jfk-slideToggle-on {
+  color: var(--gm3-sys-color-surface-container-lowest);
+}
+.jfk-slideToggle-thumb {
+  background-color: color-mix(
+    in oklab,
+    transparent,
+    var(--gm3-sys-color-on-surface) 16%
+  );
+  background-image: linear-gradient(
+    top,
+    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%),
+    var(--gm3-sys-color-surface-container)
+  );
+  border: 1px solid var(--gm3-sys-color-outline-variant);
+}
+.jfk-slideToggle-thumb:after {
+  background-image:
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    ),
+    linear-gradient(
+      left,
+      var(--gm3-sys-color-outline-variant) 50%,
+      transparent 0
+    );
+}
+.jfk-slideToggle:focus {
+  border: 1px solid var(--gm3-sys-color-primary);
+}
+.jfk-slideToggle.jfk-slideToggle-clearOutline {
+  border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .inline-share-ui-overlay {
   background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -10200,52 +10060,6 @@ body {
 }
 .docs-cse-preview-banner-container .docs-material-button {
   color: var(--gm3-sys-color-primary);
-}
-.docs-aclupgrade-banner-container {
-  background: var(--gm3-sys-color-primary-container);
-}
-.docs-aclupgrade-banner-full-message {
-  color: var(--gm3-sys-color-on-surface);
-}
-.docs-aclupgrade-banner-icon {
-  color: var(--gm3-sys-color-primary);
-}
-.docs-aclupgrade-banner-reload-button-wrapper .docs-material-button {
-  color: var(--gm3-sys-color-primary);
-}
-.docs-grille-gm3 .docs-aclupgrade-banner-container {
-  background: var(--gm3-sys-color-primary-container);
-}
-.docs-grille-gm3
-  .docs-aclupgrade-banner-reload-button-wrapper
-  .docs-material-button {
-  color: var(--gm3-sys-color-primary);
-  color: var(--gm3-sys-color-on-primary-container);
-}
-.docs-grille-gm3
-  .docs-aclupgrade-banner-reload-button-wrapper
-  .docs-material-button-hover {
-  color: var(--gm3-sys-color-primary);
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-primary) 8%
-  );
-  color: var(--gm3-sys-color-on-primary-container);
-}
-.docs-grille-gm3
-  .docs-aclupgrade-banner-reload-button-wrapper
-  .docs-material-button-focused {
-  color: var(--gm3-sys-color-primary);
-  background-color: color-mix(
-    in oklab,
-    transparent,
-    var(--gm3-sys-color-primary) 12%
-  );
-  color: var(--gm3-sys-color-on-primary-container);
-}
-.docs-grille-gm3 .docs-aclupgrade-banner-full-message {
-  color: var(--gm3-sys-color-on-primary-container);
 }
 .docs-omnibox-input.jfk-textinput {
   background-color: color-mix(
@@ -24036,19 +23850,6 @@ div.formula-bar-disabled {
 .peoplekitComponentsCircularprogressColorFour {
   border-color: var(--gm3-sys-color-primary);
 }
-.peoplekitComponentsScrollboxScrollbar::-webkit-scrollbar-thumb {
-  border-bottom: 1px solid var(--gm3-sys-color-surface-container-lowest);
-  border-left: 4px solid var(--gm3-sys-color-surface-container-lowest);
-  border-right: 4px solid var(--gm3-sys-color-surface-container-lowest);
-  border-top: 1px solid var(--gm3-sys-color-surface-container-lowest);
-}
-.peoplekitComponentsScrollboxScrollbar::-webkit-scrollbar-thumb:active {
-  background: var(--gm3-sys-color-on-surface-variant);
-}
-.peoplekitComponentsScrollboxScrollbar::-webkit-scrollbar-thumb:hover,
-.peoplekitComponentsScrollboxScrollbar:hover::-webkit-scrollbar-thumb {
-  background: var(--gm3-sys-color-outline);
-}
 .peoplekitComponentsNoResultsMessageNoResultsMessage {
   color: var(--pkw-on-surface, var(--gm3-sys-color-on-surface-variant));
 }
@@ -25876,7 +25677,7 @@ div.formula-bar-disabled {
     );
   }
 }
-.javascriptMaterialdesignGm3WizBadge-badge {
+.javascriptMaterialdesignGm3WizBadgeBadge {
   background-color: var(
     --gm3-badge-color,
     var(--gm3-sys-color-error, var(--gm3-sys-color-error))
@@ -25888,7 +25689,7 @@ div.formula-bar-disabled {
   height: var(--gm3-badge-size, 6px);
   width: var(--gm3-badge-size, 6px);
 }
-.javascriptMaterialdesignGm3WizBadge-badge--large {
+.javascriptMaterialdesignGm3WizBadgeBadgeLarge {
   background-color: var(
     --gm3-badge-large-color,
     var(--gm3-sys-color-error, var(--gm3-sys-color-error))
@@ -25900,7 +25701,7 @@ div.formula-bar-disabled {
   height: var(--gm3-badge-large-size, 16px);
   min-width: var(--gm3-badge-large-size, 16px);
 }
-.javascriptMaterialdesignGm3WizBadge-badge__value {
+.javascriptMaterialdesignGm3WizBadgeBadgeValue {
   color: var(
     --gm3-badge-large-label-text-color,
     var(--gm3-sys-color-on-error, var(--gm3-sys-color-surface-container-lowest))
@@ -26664,6 +26465,12 @@ div.formula-bar-disabled {
   --gm3-button-outlined-with-icon-pressed-icon-color: var(--light-text-color);
   font-style: var(--font-style);
 }
+.boqAddonscardsrendererCardButtonOutlinedTextButton.outlineColorOutlineVariant {
+  --gm3-button-outlined-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
+}
 .boqAddonscardsrendererCardButtonFilledTextButton {
   --gm3-button-filled-container-color: var(--light-bg-color);
   --gm3-button-filled-focus-label-text-color: var(--light-text-color);
@@ -26731,6 +26538,12 @@ div.formula-bar-disabled {
     --light-text-color
   );
   font-style: var(--font-style);
+}
+.boqAddonscardsrendererCardButtonOutlinedTextDropdownButton.outlineColorOutlineVariant {
+  --gm3-dropdown-button-outlined-outline-color: var(
+    --gm3-sys-color-outline-variant,
+    var(--gm3-sys-color-outline-variant)
+  );
 }
 .boqAddonscardsrendererCardButtonFilledTextDropdownButton {
   --gm3-dropdown-button-filled-container-color: var(--light-bg-color);
@@ -32101,7 +31914,7 @@ div.formula-bar-disabled {
 .boqAddonscardsrendererCardSelectioncontrolMultiselectMultiSelectContainer:not(
     .boqAddonscardsrendererCardSelectioncontrolMultiselectMultiSelectContainer.onFocus
   ):hover {
-  border-color: var(--outline-border-color-on-hover);
+  outline-color: var(--outline-border-color-on-hover);
 }
 .boqAddonscardsrendererCardSelectioncontrolMultiselectMultiSelectContainer:not(
     .boqAddonscardsrendererCardSelectioncontrolMultiselectMultiSelectContainer.onFocus
@@ -33880,6 +33693,10 @@ div.formula-bar-disabled {
     --gm3-sys-color-error,
     var(--gm3-sys-color-error)
   );
+  --gm3-chip-input-without-avatar-focus-outline-color: var(
+    --gm3-sys-color-error,
+    var(--gm3-sys-color-error)
+  );
   --gm3-chip-input-without-avatar-pressed-label-text-color: var(
     --gm3-sys-color-error,
     var(--gm3-sys-color-error)
@@ -34815,10 +34632,22 @@ div.formula-bar-disabled {
     12px
   );
 }
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarFilterColumnSelectMenu {
+  --gm3-menu-container-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarAggregateFunctionSelectMenu {
+  --gm3-menu-container-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
 .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarDataOutputOptionsCollapsibleList {
   --ae-collapsible-list-detail-container-color: var(
-    --gm3-sys-color-surface-container,
-    var(--gm3-sys-color-surface-container)
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
   );
   --ae-collapsible-list-summary-container-color: var(
     --gm3-sys-color-surface-container,
@@ -34838,6 +34667,18 @@ div.formula-bar-disabled {
 .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarComponentLabel {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarDbForecastSidebarSheet {
+  --ae-side-sheet-container-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarGroupBySelectMenu {
+  --gm3-menu-container-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+}
 .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarHorizonInputErrorMessage {
   color: var(--gm3-sys-color-error, var(--gm3-sys-color-error));
 }
@@ -34846,6 +34687,12 @@ div.formula-bar-disabled {
 }
 .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarWaffleDbForecastSidebarHeader {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarColumnSelectMenu {
+  --gm3-menu-container-color: var(
+    --gm3-sys-color-surface,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
 }
 .docsPublishingDialogSettingsButton {
   --gm3-button-text-label-text-color: var(
@@ -39851,8 +39698,8 @@ div.formula-bar-disabled {
 .appsElementsCalloutAnchorPaddingContainer {
   color: var(--ae-callout-content-color);
   --ae-callout-container-color: var(
-    --gm3-sys-color-surface-container-low,
-    var(--gm3-sys-color-surface-container-low)
+    --gm3-sys-color-surface-container,
+    var(--gm3-sys-color-surface-container)
   );
   --ae-callout-content-color: var(
     --gm3-sys-color-on-surface,
@@ -40023,7 +39870,12 @@ div.formula-bar-disabled {
 }
 .appsElementsCalloutRoot.appsElementsCalloutRichCallout {
   min-inline-size: var(--ae-callout-container-width, 256px);
+}
+.appsElementsCalloutRoot.appsElementsCalloutLargeRichCallout {
   width: var(--ae-callout-container-width, 330px);
+}
+.appsElementsCalloutRoot.appsElementsCalloutSmallRichCallout {
+  width: var(--ae-callout-container-width, 300px);
 }
 .appsElementsCalloutRoot.appsElementsCalloutHorizontalLayout {
   min-block-size: var(--ae-callout-container-height, 220px);
@@ -40048,13 +39900,6 @@ div.formula-bar-disabled {
   --gm3-card-elevated-container-color: var(--ae-callout-container-color);
 }
 .appsElementsCalloutRoot[data-anchor-orientation="5"] {
-  --gm3-card-elevated-container-color: var(--ae-callout-container-color);
-}
-.appsElementsCalloutIsRichTooltip .appsElementsCalloutRoot {
-  --ae-callout-container-color: var(
-    --gm3-sys-color-surface-container,
-    var(--gm3-sys-color-surface-container)
-  );
   --gm3-card-elevated-container-color: var(--ae-callout-container-color);
 }
 .appsElementsCalloutIsRichTooltip .appsElementsCalloutTitle {
@@ -40491,8 +40336,6 @@ div.formula-bar-disabled {
     linear-gradient(135deg, #d7e6ff, #c7e4ff, #dce2ff, #d7e6ff)
   );
 }
-@media not (prefers-reduced-motion) {
-}
 .appsElementsModeSelectorMenuButton {
   --gm3-dropdown-button-text-label-text-color: var(
     --gm3-sys-color-on-surface,
@@ -40528,6 +40371,44 @@ div.formula-bar-disabled {
     --gm3-sys-color-on-surface-variant,
     var(--gm3-sys-color-on-surface-variant)
   );
+}
+.appsElementsModifierSelectorIconButtonSelected {
+  --gm3-icon-button-standard-selected-focus-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-icon-button-standard-selected-hover-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-icon-button-standard-selected-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-icon-button-standard-selected-pressed-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-icon-button-standard-unselected-focus-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-icon-button-standard-unselected-hover-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-icon-button-standard-unselected-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  --gm3-icon-button-standard-unselected-pressed-icon-color: var(
+    --gm3-sys-color-primary,
+    var(--gm3-sys-color-primary)
+  );
+  color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
+}
+.appsElementsModifierSelectorCheckCircleIcon {
+  color: var(--gm3-sys-color-primary, var(--gm3-sys-color-primary));
 }
 .appsElementsModifierSelectorMenu.appsElementsModifierSelectorMenu {
   --gm3-list-list-item-label-text-color: var(
@@ -40897,6 +40778,16 @@ div.formula-bar-disabled {
 }
 .appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
   fill: var(--gm3-sys-color-primary);
+}
+.appsElementsGenerativeAiSourcesPanelCard {
+  --gm3-card-outlined-container-color: var(
+    --gm3-sys-color-surface-container-low,
+    var(--gm3-sys-color-surface-container-low)
+  );
+  --gm3-card-outlined-outline-color: var(
+    --gm3-sys-color-surface-container-highest,
+    var(--gm3-sys-color-surface-container-highest)
+  );
 }
 .appsElementsGenerativeAiSourcesPanelOtherSourcesContainer {
   --ae-collapsible-list-summary-container-color: var(
@@ -42601,10 +42492,214 @@ div.formula-bar-disabled {
     var(--gm3-sys-color-on-surface-variant)
   );
 }
-.appsElementsWorkspaceRecommendationBannerContentBannerListFooter {
+.appsElementsWorkspaceRecommendationBannerContentNeutralBannerList {
   background-color: var(
     --gm3-sys-color-surface,
     var(--gm3-sys-color-surface-container-lowest)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentTertiaryBannerList {
+  --gm3-banner-expressive-container-color: var(
+    --ae-banner-container-color,
+    var(
+      --gm3-sys-color-surface-container,
+      var(--gm3-sys-color-surface-container)
+    )
+  );
+  --gm3-banner-expressive-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-banner-headline-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-banner-supporting-text-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-hover-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-focus-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-pressed-icon-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-hover-state-layer-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-icon-button-standard-unselected-pressed-state-layer-color: var(
+    --ae-banner-text-color,
+    var(
+      --gm3-sys-color-on-surface-variant,
+      var(--gm3-sys-color-on-surface-variant)
+    )
+  );
+  --gm3-button-text-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-hover-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-focus-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-pressed-label-text-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-hover-state-layer-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-text-pressed-state-layer-color: var(
+    --ae-banner-action-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-filled-container-color: var(
+    --ae-banner-button-filled-container-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+  --gm3-button-filled-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-hover-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-focus-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-pressed-label-text-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-hover-state-layer-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --gm3-button-filled-pressed-state-layer-color: var(
+    --ae-banner-button-filled-text-color,
+    var(
+      --gm3-sys-color-on-primary,
+      var(--gm3-sys-color-surface-container-lowest)
+    )
+  );
+  --ae-banner-action-color: var(
+    --gm3-sys-color-on-tertiary-container,
+    var(--gm3-sys-color-on-tertiary-fixed-variant)
+  );
+  --ae-banner-button-filled-container-color: var(
+    --gm3-sys-color-tertiary,
+    var(--gm3-sys-color-tertiary)
+  );
+  --ae-banner-button-filled-text-color: var(
+    --gm3-sys-color-on-tertiary,
+    var(--gm3-sys-color-surface-container-lowest)
+  );
+  --ae-banner-container-color: var(
+    --gm3-sys-color-tertiary-container,
+    var(--gm3-sys-color-tertiary-container)
+  );
+  --ae-banner-text-color: var(
+    --gm3-sys-color-on-tertiary-container,
+    var(--gm3-sys-color-on-tertiary-fixed-variant)
+  );
+  --ae-banner-text-link-color: var(
+    --gm3-sys-color-on-tertiary-container,
+    var(--gm3-sys-color-on-tertiary-fixed-variant)
+  );
+  --gm3-button-text-with-icon-icon-color: var(
+    --gm3-sys-color-on-tertiary-container,
+    var(--gm3-sys-color-on-tertiary-fixed-variant)
+  );
+  --gm3-button-text-with-icon-hover-icon-color: var(
+    --gm3-sys-color-on-tertiary-container,
+    var(--gm3-sys-color-on-tertiary-fixed-variant)
+  );
+  background-color: var(
+    --gm3-sys-color-tertiary-container,
+    var(--gm3-sys-color-tertiary-container)
+  );
+  color: var(
+    --gm3-sys-color-on-tertiary-container,
+    var(--gm3-sys-color-on-tertiary-fixed-variant)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentTertiaryBannerList:link {
+  color: var(
+    --ae-banner-text-link-color,
+    var(--gm3-sys-color-primary, var(--gm3-sys-color-primary))
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerListProgress {
+  --gm3-circular-progress-active-indicator-color: var(
+    --gm3-sys-color-tertiary,
+    var(--gm3-sys-color-tertiary)
+  );
+  --gm3-circular-progress-track-color: var(
+    --gm3-sys-color-surface-container-highest,
+    var(--gm3-sys-color-surface-container-highest)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerListProgressLabel {
+  color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
   );
 }
 .appsElementsWorkspaceRecommendationBannerContentRibbon {
@@ -43452,6 +43547,26 @@ div.formula-bar-disabled {
     --gm3-sys-color-on-primary-container,
     var(--gm3-sys-color-on-primary-fixed-variant)
   );
+}
+.appsElementsWorkspaceButtonActionGeminiShimmerButton {
+  --gm3-icon-button-standard-unselected-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-icon-button-standard-selected-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  --gm3-icon-button-standard-selected-pressed-icon-color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+  background: var(
+    --ae-genai-generation-gradient,
+    linear-gradient(135deg, #d7e6ff, #c7e4ff, #dce2ff, #d7e6ff)
+  );
+}
+@media not (prefers-reduced-motion) {
 }
 .appsElementsWorkspaceRecommendationContentDialogContainer {
   --gm3-dialog-container-color: var(
@@ -45127,6 +45242,18 @@ div.formula-bar-disabled {
     var(--gm3-sys-color-surface-container-lowest)
   );
 }
+.appsElementsSidekickAgenticPlannerPlannerSourceHeaderTooltipIcon {
+  color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
+}
+.appsElementsSidekickAgenticPlannerPlannerSourceHeaderTooltipIcon:hover {
+  background-color: var(
+    --gm3-sys-color-surface-variant,
+    var(--gm3-sys-color-surface-variant)
+  );
+}
 .appsElementsSidekickAgenticPlannerPlannerSourceMenuChip {
   --gm3-dropdown-button-outlined-focus-label-text-color: var(
     --gm3-sys-color-on-surface-variant,
@@ -45687,6 +45814,13 @@ div.formula-bar-disabled {
     --gm3-sys-color-on-surface-variant,
     var(--gm3-sys-color-on-surface-variant)
   );
+}
+.appsElementsSidekickNavigationViewScrollDelineation {
+  border-block-start: 1px solid
+    var(
+      --ae-sidekick-outline-color,
+      var(--gm3-sys-color-surface-variant, var(--gm3-sys-color-surface-variant))
+    );
 }
 .appsElementsSidekickNavigationViewTitle {
   color: var(--gm3-sys-color-on-surface, var(--gm3-sys-color-on-surface));
@@ -46407,16 +46541,6 @@ div.formula-bar-disabled {
     0.1
   );
 }
-.appsElementsGenerativeaiReportAbuseCommonReportHorizontalDivider {
-  border-top: 1px solid
-    var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
-}
-.appsElementsGenerativeaiReportAbuseCommonReportFooterContent {
-  color: var(
-    --gm3-sys-color-on-surface-variant,
-    var(--gm3-sys-color-on-surface-variant)
-  );
-}
 .appsElementsPasteToChipContent {
   box-shadow:
     0 1px 3px 0 rgba(60, 64, 67, 0.3),
@@ -46438,6 +46562,16 @@ div.formula-bar-disabled {
   );
   border: 1px solid
     var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
+}
+.appsElementsGenerativeaiReportAbuseCommonReportHorizontalDivider {
+  border-top: 1px solid
+    var(--gm3-sys-color-outline-variant, var(--gm3-sys-color-outline-variant));
+}
+.appsElementsGenerativeaiReportAbuseCommonReportFooterContent {
+  color: var(
+    --gm3-sys-color-on-surface-variant,
+    var(--gm3-sys-color-on-surface-variant)
+  );
 }
 .gb_La {
   box-shadow:
