@@ -1,80 +1,134 @@
-import { Declaration, Root } from "postcss";
-import { colorIndex } from "../color-index.ts";
+import valueParser, { type Node, type FunctionNode, type ParsedValue, type WordNode } from 'postcss-value-parser';
+import { type PluginCreator, type Declaration } from 'postcss';
+import { colorIndex } from '../color-index.ts';
 
-const colorRegex: RegExp = new RegExp(`(?<!\\w)(${Object.keys(colorIndex).join('|')})(?!\\w)`, 'gi');
+interface ColorIndex {
+    [key: string]: string;
+}
+const colorMap: ColorIndex = colorIndex as ColorIndex;
 
-/**
- * Recursively processes a CSS value, handling nested color functions.
- * @param value The CSS value string to process.
- * @returns The processed CSS value string.
- */
-const processValue = (value: string): string => {
-  const functionRegex = /(\w+)\(([^)]+)\)/g;
-  let processedValue = value;
-  let match;
+// Quite bad, don't use this technique
+const NAMED_COLORS: Set<string> = new Set([
+    "red", "green", "blue", "yellow", "cyan", "magenta", "black", "white", 
+    "gray", "grey", "silver", "maroon", "navy", "teal", "aqua", "fuchsia",
+    "lime", "olive", "purple", "darkgray", "lightgray", "transparent"
+]);
 
-  while ((match = functionRegex.exec(processedValue)) !== null) {
-    const fullMatch = match[0];
-    const funcName = match[1];
-    const content = match[2];
+const hexRegex = /^#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6,8})$/i;
 
-    // Split the content by commas, respecting parentheses within arguments
-    const parts = splitWithRespectToParens(content);
-    const processedParts = parts.map((part: string) => processValue(part.trim()));
-    const newContent = processedParts.join(', ');
+function isHexColor(value: string): boolean {
+  return hexRegex.test(value);
+}
 
-    // Replace the original function call with the new one
-    processedValue = processedValue.replace(fullMatch, `${funcName}(${newContent})`);
+function isNamedColor(value: string): boolean {
+    return NAMED_COLORS.has(value.toLowerCase());
+}
+
+const roundColorComponent = (component: string): string => {
+    const match = component.match(/(-?\d*\.?\d+)(%?)/);
     
-    // Reset the regex index to re-scan the modified string
-    functionRegex.lastIndex = 0;
-  }
-
-  // After processing functions, replace individual color names
-  return processedValue.replace(colorRegex, (match: string): string => {
-    return colorIndex[match.toLowerCase()] || match;
-  });
-};
-
-/**
- * Splits a string by commas, but only at the top level,
- * ignoring commas within nested parentheses.
- * @param str The string to split.
- * @returns An array of strings representing the top-level arguments.
- */
-const splitWithRespectToParens = (str: string): string[] => {
-  const result = [];
-  let balance = 0;
-  let current = '';
-
-  for (let i = 0; i < str.length; i++) {
-    const char = str[i];
-    if (char === '(') {
-      balance++;
-    } else if (char === ')') {
-      balance--;
-    } else if (char === ',' && balance === 0) {
-      result.push(current);
-      current = '';
-      continue;
+    if (match) {
+        const num = parseFloat(match[1]);
+        const unit = match[2];
+        const roundedNum = Math.round(num);
+        
+        return `${roundedNum}${unit}`;
     }
-    current += char;
-  }
-  result.push(current);
-  return result;
-};
+    return component;
+}
 
-const postcssReplaceColors = () => {
+function normalizeRgbaString(node: FunctionNode): string {
+    const rawContent = valueParser.stringify(node.nodes);
+
+    let normalizedContent = rawContent.replace(/\s+/g, ''); 
+    normalizedContent = normalizedContent.split(',').map(roundColorComponent).join(',');
+    
+    return `${node.value}(${normalizedContent})`; 
+}
+
+function normalizeHslString(node: FunctionNode): string {
+    const rawContent = valueParser.stringify(node.nodes);
+
+    let normalizedContent = rawContent.replace(/\//g, ',').replace(/\s+/g, '');
+    normalizedContent = normalizedContent.split(',').map(roundColorComponent).join(',');
+    
+    return `${node.value}(${normalizedContent})`;
+}
+
+function extractAllColors(parsedValue: ParsedValue): Map<string, string> {
+    const replacements = new Map<string, string>();
+
+    parsedValue.walk((node: Node) => {
+        const value = node.value.trim();
+        let originalColorString: string | null = null;
+        let canonicalKey: string | null = null;
+
+        if (node.type === 'word') {
+            const wordNode = node as WordNode;
+            
+            if (isHexColor(value)) {
+                canonicalKey = value.toLowerCase();
+                originalColorString = wordNode.value;
+            } else if (isNamedColor(value)) {
+                canonicalKey = value.toLowerCase();
+                originalColorString = wordNode.value;
+            }
+        } 
+        else if (node.type === 'function') {
+            const funcNode = node as FunctionNode;
+
+            if (funcNode.value === 'rgb' || funcNode.value === 'rgba') {
+                canonicalKey = normalizeRgbaString(funcNode);
+                originalColorString = valueParser.stringify(node);
+            } 
+            else if (funcNode.value === 'hsl' || funcNode.value === 'hsla') {
+                canonicalKey = normalizeHslString(funcNode);
+                originalColorString = valueParser.stringify(node);
+            }
+        }
+
+        if (canonicalKey && originalColorString) {
+            const replacement = colorMap[canonicalKey];
+            if (replacement) {
+                replacements.set(originalColorString, replacement);
+            }
+        }
+        
+        if (node.type === 'function') {
+             return false;
+        }
+    });
+
+    return replacements;
+}
+
+const pluginCreator: PluginCreator<object> = (opts = {}) => {
   return {
     postcssPlugin: 'postcss-replace-colors',
-    Once(root: Root) {
-      root.walkDecls((decl: Declaration) => {
-        decl.value = processValue(decl.value);
+
+    Declaration(decl: Declaration, postcss) {
+      const parsedValue: ParsedValue = valueParser(decl.value);
+      
+      const replacements = extractAllColors(parsedValue);
+
+      if (replacements.size === 0) {
+          return;
+      }
+
+      let newValue = decl.value;
+      
+      replacements.forEach((replacementVar, originalColorString) => {
+          const escapedColor = originalColorString.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const replaceRegex = new RegExp(escapedColor, 'g');
+          
+          newValue = newValue.replace(replaceRegex, replacementVar);
       });
+      
+      decl.value = newValue;
     },
   };
 };
 
-postcssReplaceColors.postcss = true;
+pluginCreator.postcss = true;
 
-export default postcssReplaceColors;
+export default pluginCreator;

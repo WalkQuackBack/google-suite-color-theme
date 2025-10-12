@@ -98,6 +98,38 @@ export const colorIndex: Record<string, string> = {
     "#34a853": "var(--gm3-sys-color-primary)",
     "#4f9e67": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 12%)",
 
+    // Gmail
+    "#0000CC": "var(--gm3-sys-color-primary)",
+    "#15c": "var(--gm3-sys-color-primary)",
+    "rgb(23,78,166)": "var(--gm3-sys-color-primary)",
+    "rgba(26,115,232,.8)": "color-mix(in oklab, var(--gm3-sys-color-primary), transparent 8%)",
+    "rgba(26,115,232,.12)": "color-mix(in oklab, var(--gm3-sys-color-primary), transparent 12%)",
+    "rgba(26,115,232,.16)": "color-mix(in oklab, var(--gm3-sys-color-primary), transparent 16%)",
+    "rgb(26,115,232)": "var(--gm3-sys-color-primary)",
+    "rgb(25,103,210)": "var(--gm3-sys-color-primary)",
+    "rgb(138,180,248)": "var(--gm3-sys-color-inverse-primary)",
+    "rgb(218,220,224)": "var(--gm3-sys-color-outline)",
+
+    "#f2f6fc": "var(--gm3-sys-color-surface)",
+
+    "#c2dbff": "var(--gm3-sys-color-primary-container)",
+    "#c3d9ff": "var(--gm3-sys-color-primary-container)",
+
+    "rgb(210,227,252)": "var(--gm3-sys-color-primary-container)",
+    "rgba(255,255,255,0.95)": "var(--gm3-sys-color-surface)",
+    "rgba(255,255,255,1)": "var(--gm3-sys-color-surface)",
+    "rgba(241,243,244,0.87)": "var(--gm3-sys-color-surface-container-low)",
+
+    "rgba(100,121,143,0.12)": "var(--gm3-sys-color-outline-variant)",
+    "hsl(0,0%,49%)": "var(--gm3-sys-color-on-surface-variant)",
+
+    "#dd4b39": "var(--gm3-sys-color-error)",
+    "rgb(197,34,31)": "var(--gm3-sys-color-error)",
+    // PLACEHOLDER
+    "#f0c36d": "var(--gm3-sys-color-primary)",
+    "#f9edbe": "var(--gm3-sys-color-primary-container)",
+    "#fff1a8": "var(--gm3-sys-color-primary-container)",
+
     // Main
 
     "rgba(0,0,0,.04)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 4%)",
@@ -105,16 +137,26 @@ export const colorIndex: Record<string, string> = {
     "rgba(0,0,0,.6)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.7)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.87)":  "var(--gm3-sys-color-on-surface)",
+    "rgb(32,33,36)":  "var(--gm3-sys-color-on-surface)",
+    "rgb(60,64,67)": "var(--gm3-sys-color-inverse-surface)",
+    "rgba(60,64,67,0.1)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 10%)",
     "rgba(60,64,67,.9)": "var(--gm3-sys-color-inverse-surface)",
     "rgba(60,64,67,.15)": "color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%)",
+    "rgba(60,64,67,.38)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 38%)",
     "rgba(68,71,70,.08)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "rgba(68,71,70,.12)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
+    "rgb(95,99,104)": "var(--gm3-sys-color-on-surface)",
     "#202124": "var(--gm3-sys-color-on-surface)",
     "#222": "var(--gm3-sys-color-on-surface)",
     "#333": "var(--gm3-sys-color-on-surface)",
+    "#444": "var(--gm3-sys-color-on-surface)",
     "#3c4043": "var(--gm3-sys-color-on-surface)",
+    "#5e5e5e": "var(--gm3-sys-color-on-surface-variant)",
     "#5f6368": "var(--gm3-sys-color-on-surface-variant)",
+    "#616161": "var(--gm3-sys-color-on-surface-variant)",
     "#646464": "var(--gm3-sys-color-on-surface-variant)",
+    "#666": "var(--gm3-sys-color-on-surface-variant)",
+    "#676767": "var(--gm3-sys-color-on-surface-variant)",
     "#777": "var(--gm3-sys-color-outline)",
     "#80868b": "var(--gm3-sys-color-outline)",
     "#9aa0a6": "var(--gm3-sys-color-outline)",
@@ -140,11 +182,14 @@ export const colorIndex: Record<string, string> = {
     "#e1e9f7": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 16%)",
     "#d8e5f8": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 18%)",
     "#cfdff6": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 20%)",
+    "#e1ecfe": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 18%)",
     "#e4e4e4": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
+    "#e5e5e5": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
     "#e8f0fe": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#e9f1fe": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
-    "#e1ecfe": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 18%)",
+    "#ebebeb": "var(--gm3-sys-color-outline-variant)",
     "#eee": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
+    "#eeeeee": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#edf2fa": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#e7edf8": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
     "#f1f1f1": "var(--gm3-sys-color-surface-container)",
@@ -153,7 +198,7 @@ export const colorIndex: Record<string, string> = {
     "#f5f5f5": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
     "#f8f8f8": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#f9fbfd": "var(--gm3-sys-color-surface-container-lowest)",
-
+    
     "#e8ebee": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#e1e3e6": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
     "#e8eaed": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
@@ -163,5 +208,6 @@ export const colorIndex: Record<string, string> = {
     "#f1f3f4": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "#f8fbff": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
 
-    "transparent": "var(--gm3-sys-color-transparent, transparent)"
+    "white": "var(--gm3-sys-color-surface-container-lowest)",
+    "transparent": "var(--transparent, transparent)"
 };

@@ -7,6 +7,9 @@ import { chromium, devices, type Browser, type BrowserContext } from 'playwright
 const TEMPLATE_REPLACE_STRING = '/**** Generated code REPLACE ****/'
 
 const buildList = {
+    // 'mail': [
+    //     'https://mail.google.com/mail/u/0/#inbox'
+    // ],
     'build': [
         'https://docs.google.com/document/d/1RDErYoVPRCvy2nRvWo8a1xa5m7NrxpWBzZirE97m_3g/'
     ],
