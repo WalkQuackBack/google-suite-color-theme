@@ -240,6 +240,17 @@
         color: inherit !important;
     }
 
+    /* Legacy tooltip */
+    .R8qYlc {
+        border-radius: 4px;
+        background-color: var(--gm3-sys-color-inverse-surface);
+    }
+
+    /* Prof marking UI header */
+    [style="background-color:rgba(255,255,255,1)"] {
+        background-color: var(--gm3-sys-color-surface) !important;
+    }
+
     /* Classroom colour coded icons */
     .Ag4wUb.bFjUmb-Ysl7Fe,
     .Ag4wUb .bFjUmb-Ysl7Fe {

@@ -12,6 +12,8 @@ const buildList = {
     // ],
     'classroom': [
         'https://classroom.google.com/u/0/h',
+        // Marking interface
+        'https://classroom.google.com/g/tg/ODA0MjQxNjk4ODIz/ODEyNDEyMjM5NTY2#u=NzQyMzUwOTkwNDc4&t=f'
     ],
     'build': [
         'https://docs.google.com/document/d/1RDErYoVPRCvy2nRvWo8a1xa5m7NrxpWBzZirE97m_3g/'

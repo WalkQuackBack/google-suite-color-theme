@@ -136,6 +136,13 @@ export const colorIndex: Record<string, string> = {
     "rgb(232,234,237)": "var(--gm3-sys-color-inverse-on-surface)",
     "rgba(0,0,0,.549)": "var(--gm3-sys-color-outline)",
 
+    // \/ HACK: Adjust replace-colors to have 0. prefix for matching.
+    // In addition, three digit hex codes should also match six digit hex codes
+    "rgba(0,0,0,0.87)":  "var(--gm3-sys-color-on-surface)",
+    "#ffffff":  "var(--gm3-sys-color-surface)",
+    "rgba(66,133,244,.1)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 16%)",
+    "rgb(232,240,254)": "var(--gm3-sys-color-primary-container)",
+
     // Main
 
     "rgba(0,0,0,.04)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 4%)",
