@@ -10,6 +10,9 @@ const buildList = {
     // 'mail': [
     //     'https://mail.google.com/mail/u/0/#inbox'
     // ],
+    'drawings': [
+        'https://docs.google.com/drawings/d/1ChhcY0g-A2BS_TduHVNRcm1Qe3_obgtI9G0BUh0Toag/'
+    ],
     'classroom': [
         'https://classroom.google.com/u/0/h',
         // Marking interface
