@@ -7,7 +7,8 @@ import postcssRemoveNonVariables from './postcss-remove-non-variables.t.js';
 import postcssTrimEmpty from './postcss-trim-empty.t.js';
 import postcssMergeRules from './postcss-merge-rules.t.js';
 
-async function getSiteStyles(page: playwright.Page, url: string): Promise<string> {
+// TODO: Define proper type for cssSources.
+async function getSiteStyles(page: playwright.Page, url: string): Promise<[string[], any]> {
   await page.goto(url, { 
     timeout: 20000,
     waitUntil: 'load'
@@ -34,13 +35,53 @@ async function getSiteStyles(page: playwright.Page, url: string): Promise<string
     return { styleTags, linkTags };
   });
 
-  const allHrefsToFetch: (string)[] = [
+  const stylesheetHrefs: (string)[] = [
     ...cssSources.linkTags,
     ...cssSources.styleTags.filter(s => s.href).map(s => s.href)
   ];
 
-  console.log(allHrefsToFetch)
+  return [ stylesheetHrefs, cssSources ]
+}
 
+export async function dumpStylesheets(urls: string[], page: playwright.Page) {
+  let combinedCss = '';
+
+  console.log('\n')
+
+  console.log('Extracting data from sites...');
+
+  let allHrefsToFetch: string[] = []
+
+  for (const url of urls) {
+    const siteStyles = await getSiteStyles(page, url);
+    allHrefsToFetch = allHrefsToFetch.concat(siteStyles[0])
+    const cssSources = siteStyles[1]
+    
+    const inlineCss = cssSources.styleTags
+      .filter((s: { href: any; }) => !s.href)
+      .map((s: { content: any; }) => s.content)
+      .join('\n');
+      
+      combinedCss += `${inlineCss}\n`;
+      console.log(`Combined inline styles from ${url}`);
+  }
+
+  for (let i = 0; i < allHrefsToFetch.length; i++) {
+    const href = allHrefsToFetch[i];
+    const hrefSplit = href.split('/')
+    if (hrefSplit.at(-1)?.startsWith('m=')) {
+      hrefSplit.pop()
+    }
+    allHrefsToFetch[i] = hrefSplit.join('/')
+  }
+
+  allHrefsToFetch = allHrefsToFetch.filter((element, index) => {
+    return allHrefsToFetch.indexOf(element) === index;
+  })
+
+  console.log('Deduplicated fetch list:', allHrefsToFetch)
+
+  console.log('Fetching stylesheets from sites...');
   let linkedCssPromises = allHrefsToFetch.map(href =>
     fetch(href).then(res => res.text()).catch(err => {
       console.error(`Failed to fetch CSS from ${href}:`, err);
@@ -49,24 +90,9 @@ async function getSiteStyles(page: playwright.Page, url: string): Promise<string
   );
 
   const linkedCss = (await Promise.all(linkedCssPromises)).join('\n');
-  
-  const inlineCss = cssSources.styleTags
-    .filter(s => !s.href)
-    .map(s => s.content)
-    .join('\n');
+  combinedCss += `${linkedCss}\n`
 
-  return `${inlineCss}\n${linkedCss}`;
-}
-
-export async function dumpStylesheets(urls: string[], page: playwright.Page) {
-  let combinedCss = '';
-
-  console.log('Fetching stylesheets from sites...');
-  for (const url of urls) {
-    const css = await getSiteStyles(page, url);
-    combinedCss += `${css}\n`;
-    console.log(`Successfully fetched CSS from ${url}`);
-  }
+  console.log(`Successfully fetched stylesheets from ${urls}`);
 
   console.log('Processing combined CSS with PostCSS...');
   try {

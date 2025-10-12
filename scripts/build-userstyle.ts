@@ -10,6 +10,9 @@ const buildList = {
     // 'mail': [
     //     'https://mail.google.com/mail/u/0/#inbox'
     // ],
+    'classroom': [
+        'https://classroom.google.com/u/0/h',
+    ],
     'build': [
         'https://docs.google.com/document/d/1RDErYoVPRCvy2nRvWo8a1xa5m7NrxpWBzZirE97m_3g/'
     ],
@@ -70,6 +73,7 @@ async function main() {
     });
 
     await googleAuth()
+    console.log('\n')
 
     for (const [id, sites] of Object.entries(buildList)) {
         console.log('Building site ' + sites + ' to ' + id)
