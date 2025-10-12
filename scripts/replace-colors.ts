@@ -39,9 +39,18 @@ const roundColorComponent = (component: string): string => {
 
 function normalizeRgbaString(node: FunctionNode): string {
     const rawContent = valueParser.stringify(node.nodes);
-
     let normalizedContent = rawContent.replace(/\s+/g, ''); 
-    normalizedContent = normalizedContent.split(',').map(roundColorComponent).join(',');
+    
+    const components = normalizedContent.split(',');
+    if (components.length === 4) {
+        const roundedRgb = components.slice(0, 3).map(roundColorComponent);
+        const alpha = components[3];
+
+        normalizedContent = [...roundedRgb, alpha].join(',');
+
+    } else {
+        normalizedContent = components.map(roundColorComponent).join(',');
+    }
     
     return `${node.value}(${normalizedContent})`; 
 }

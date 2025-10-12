@@ -130,9 +130,16 @@ export const colorIndex: Record<string, string> = {
     "#f9edbe": "var(--gm3-sys-color-primary-container)",
     "#fff1a8": "var(--gm3-sys-color-primary-container)",
 
+    // Google Classroom
+    "rgb(241,243,244)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
+    "rgb(248,249,250)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
+    "rgb(232,234,237)": "var(--gm3-sys-color-inverse-on-surface)",
+    "rgba(0,0,0,.549)": "var(--gm3-sys-color-outline)",
+
     // Main
 
     "rgba(0,0,0,.04)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 4%)",
+    'rgba(0,0,0,.12)': "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
     "rgba(0,0,0,.54)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.6)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.7)": "var(--gm3-sys-color-on-surface)",
@@ -157,6 +164,7 @@ export const colorIndex: Record<string, string> = {
     "#646464": "var(--gm3-sys-color-on-surface-variant)",
     "#666": "var(--gm3-sys-color-on-surface-variant)",
     "#676767": "var(--gm3-sys-color-on-surface-variant)",
+    "#70757a": "var(--gm3-sys-color-on-surface-variant)",
     "#777": "var(--gm3-sys-color-outline)",
     "#80868b": "var(--gm3-sys-color-outline)",
     "#9aa0a6": "var(--gm3-sys-color-outline)",
@@ -179,6 +187,7 @@ export const colorIndex: Record<string, string> = {
     // Disabled BG
     "rgba(31,31,31,.12)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
     "rgba(31,31,31,.38)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 38%)",
+    "#e0e0e0": "var(--gm3-sys-color-outline)",
     "#e1e9f7": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 16%)",
     "#d8e5f8": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 18%)",
     "#cfdff6": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 20%)",
