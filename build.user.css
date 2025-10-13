@@ -2,7 +2,7 @@
 @name Google Docs Color Theme
 @namespace github.com/walkquackback/google-docs-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.12
+@version 2025.10.13
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/build.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Docs to be themed using CSS variables. Comes by default with a dark theme.
@@ -4155,7 +4155,8 @@
     border-color: var(--gm3-sys-color-surface-container-highest, #dde3ea);
   }
   .appsDocssharedWizBarkickTopBox {
-    border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+    border-bottom: 1px solid
+      var(--gm3-sys-color-surface-container-highest, #dde3ea);
   }
   .appsDocssharedWizBarkickThinkingState {
     background-color: var(--gm3-sys-color-surface-container-low, #f8fafd);
@@ -13125,13 +13126,23 @@
   }
   .appsDocsAiGenerativeaiImageCssConversationalSidebarTabTab-selected {
     background: var(--gm3-sys-color-primary-container);
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .appsDocsAiGenerativeaiImageCssConversationalSidebarTabTab-hover:not(
+    .appsDocsAiGenerativeaiImageCssConversationalSidebarTabTab-selected
+  ) {
+    background: color-mix(
+      in oklab,
+      var(--gm3-sys-color-surface-container-high),
+      var(--gm3-sys-color-on-surface) 8%
+    );
   }
   .appsDocsAiGenerativeaiImageCssConversationalSidebarTabTab-selected
     .appsDocsAiGenerativeaiImageCssConversationalSidebarTabContent {
     color: var(--gm3-sys-color-on-surface);
   }
   .appsDocsAiGenerativeaiImageCssConversationalSidebarTabContent {
-    color: var(--gm3-sys-color-outline);
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .genAiImageSidebarModeToggle.docs-sidebar-toggle-tabs {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -13271,6 +13282,10 @@
     background-color: var(--gm3-sys-color-surface-container);
     border: 1px solid var(--gm3-sys-color-outline-variant);
   }
+  .genAiImageSidebarGenerationTypeTabBar-horizontal:focus-visible
+    .appsDocsAiGenerativeaiImageCssConversationalSidebarTabTab-selected {
+    outline: 1px solid var(--gm3-sys-color-primary);
+  }
   .appsDocsAiGenerativeaiImageGenerateImagesInputTextInputContainer {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -13300,14 +13315,15 @@
     color: var(--gm3-sys-color-on-surface-variant);
   }
   .appsDocsAiGenerativeaiImageGenerateImagesInputStylePickerMenu.imageGenerationStylePresetsMenu
-    .goog-menuitem.goog-menuitem-highlight
-    .appsDocsAiGenerativeaiImageGenerateImagesInputStyleMenuImage,
-  .docs-gm
-    .appsDocsAiGenerativeaiImageGenerateImagesInputStylePickerMenu.imageGenerationStylePresetsMenu
-    .goog-menuitem:focus
-    .appsDocsAiGenerativeaiImageGenerateImagesInputStyleMenuImage,
-  .imageGenerationStylePresetsMenuItemSelected
-    .appsDocsAiGenerativeaiImageGenerateImagesInputStyleMenuImage {
+    .goog-menuitem.goog-menuitem-highlight:not(
+      .imageGenerationStylePresetsMenuItemSelected
+    )
+    .appsDocsAiGenerativeaiImageGenerateImagesInputStyleMenuImageContainer {
+    outline: 2px solid var(--gm3-sys-color-outline-variant);
+  }
+  .appsDocsAiGenerativeaiImageGenerateImagesInputStylePickerMenu.imageGenerationStylePresetsMenu
+    .imageGenerationStylePresetsMenuItemSelected
+    .appsDocsAiGenerativeaiImageGenerateImagesInputStyleMenuImageContainer {
     outline: 2px solid var(--gm3-sys-color-primary);
   }
   .docs-gm
@@ -23215,16 +23231,16 @@
   .javascriptMaterialdesignGm3WizButtonDropdownFilledTonal-button:before {
     border: 1px solid var(--transparent, transparent);
   }
-  .javascriptMaterialdesignGm3WizCircularProgress-circular-progress__circle-graphic {
+  .javascriptMaterialdesignGm3WizCircularProgressCircularProgressCircleGraphic {
     fill: var(--transparent, transparent);
   }
-  .javascriptMaterialdesignGm3WizCircularProgress-circular-progress__active-indicator {
+  .javascriptMaterialdesignGm3WizCircularProgressCircularProgressActiveIndicator {
     stroke: var(
       --gm3-circular-progress-active-indicator-color,
       var(--gm3-sys-color-primary, #0b57d0)
     );
   }
-  .javascriptMaterialdesignGm3WizCircularProgress-circular-progress__track {
+  .javascriptMaterialdesignGm3WizCircularProgressCircularProgressTrack {
     stroke: var(
       --gm3-circular-progress-track-color,
       var(--gm3-sys-color-secondary-container, #c2e7ff)
@@ -23627,6 +23643,12 @@
   }
   .boqAddonscardsrendererCardErrorText {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  }
+  .boqAddonscardsrendererCardDivider:not(:first-child) {
+    border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+  }
+  .boqAddonscardsrendererCardDivider:not(:first-child).colorInverseOnSurface {
+    border-top-color: var(--gm3-sys-color-inverse-on-surface, #f2f2f2);
   }
   .boqAddonscardsrendererCardDividerDivider {
     border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
@@ -25413,7 +25435,7 @@
   .kixImageOptionsSidebarTextWrappingButtonLabel {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
-  .appsKixClientFeaturesEmbeddedobjectcontrolsWizDragPositionCard {
+  .appsKixClientFeaturesEmbeddedobjectcontrolsWizDragPositionSurfaceCard {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
   .lineNumbersSidebarHeaderText {
@@ -26194,6 +26216,16 @@
   .javascriptMaterialdesignGm3WizDatatable-data-table__scrim {
     background-color: var(--gm3-sys-color-surface, #fff);
   }
+  .appsKixClientUiWizHeaderFooterSurfaceHeaderFooterSurface {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+  }
+  .appsKixClientUiWizHeaderFooterSurfaceDescription {
+    color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  }
   .appsElementsGenerativeAiCitationsSkittle:before {
     border: 1px solid var(--transparent, transparent);
   }
@@ -26726,6 +26758,9 @@
       var(--gm3-sys-color-primary-container, #d3e3fd)
     );
   }
+  .appsDocsCowWizContextToolbarToolbarTextOutline {
+    color: var(--gm3-sys-color-outline, #747775);
+  }
   .testChooserDialogTestOptionsList {
     border: 1px solid var(--gm3-sys-color-shadow);
   }
@@ -27068,57 +27103,57 @@
   .appsElementsUdpConsentDialogFeatureIconDivider {
     background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
-  .javascriptMaterialdesignGm3WizBanner-banner--deprecated
-    .javascriptMaterialdesignGm3WizBanner-banner__fixed,
-  .javascriptMaterialdesignGm3WizBanner-banner--deprecated.javascriptMaterialdesignGm3WizBanner-banner {
+  .javascriptMaterialdesignGm3WizBannerBannerDeprecated
+    .javascriptMaterialdesignGm3WizBannerBannerFixed,
+  .javascriptMaterialdesignGm3WizBannerBannerDeprecated.javascriptMaterialdesignGm3WizBannerBanner {
     background-color: var(
       --gm3-banner-container-color,
       var(--gm3-sys-color-surface-container-low, #f8fafd)
     );
   }
-  .javascriptMaterialdesignGm3WizBanner-banner--deprecated
-    .javascriptMaterialdesignGm3WizBanner-banner__graphic {
+  .javascriptMaterialdesignGm3WizBannerBannerDeprecated
+    .javascriptMaterialdesignGm3WizBannerBannerGraphic {
     color: var(--gm3-banner-with-image-image-color, #fff);
     background-color: var(
       --gm3-banner-with-image-image-container-color,
       #6200ee
     );
   }
-  .javascriptMaterialdesignGm3WizBanner-banner--deprecated
-    .javascriptMaterialdesignGm3WizBanner-banner__text {
+  .javascriptMaterialdesignGm3WizBannerBannerDeprecated
+    .javascriptMaterialdesignGm3WizBannerBannerText {
     color: var(
       --gm3-banner-supporting-text-color,
       var(--gm3-sys-color-on-surface-variant, #444746)
     );
   }
-  .javascriptMaterialdesignGm3WizBanner-banner,
-  .javascriptMaterialdesignGm3WizBanner-banner__fixed {
+  .javascriptMaterialdesignGm3WizBannerBanner,
+  .javascriptMaterialdesignGm3WizBannerBannerFixed {
     background-color: var(
       --gm3-banner-expressive-container-color,
       var(--gm3-sys-color-primary-container, #d3e3fd)
     );
   }
   @media (forced-colors: active) {
-    .javascriptMaterialdesignGm3WizBanner-banner:not(
-        :has(.javascriptMaterialdesignGm3WizBanner-banner__fixed)
+    .javascriptMaterialdesignGm3WizBannerBanner:not(
+        :has(.javascriptMaterialdesignGm3WizBannerBannerFixed)
       ):before,
-    .javascriptMaterialdesignGm3WizBanner-banner__fixed:before {
+    .javascriptMaterialdesignGm3WizBannerBannerFixed:before {
       border: 1px solid var(--transparent, transparent);
     }
   }
-  .javascriptMaterialdesignGm3WizBanner-banner__graphic {
+  .javascriptMaterialdesignGm3WizBannerBannerGraphic {
     color: var(
       --gm3-banner-expressive-icon-color,
       var(--gm3-sys-color-on-surface-variant, #444746)
     );
   }
-  .javascriptMaterialdesignGm3WizBanner-banner__text {
+  .javascriptMaterialdesignGm3WizBannerBannerText {
     color: var(
       --gm3-banner-supporting-text-color,
       var(--gm3-sys-color-on-surface-variant, #444746)
     );
   }
-  .javascriptMaterialdesignGm3WizBanner-banner__title {
+  .javascriptMaterialdesignGm3WizBannerBannerTitle {
     color: var(
       --gm3-banner-headline-color,
       var(--gm3-sys-color-on-surface, #1f1f1f)
@@ -27341,6 +27376,17 @@
   }
   .appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
     fill: var(--gm3-sys-color-primary);
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  @media (forced-colors: active) {
+    .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+      outline: 1px solid var(--transparent, transparent);
+    }
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon:hover {
+    background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
   .appsElementsTreeNodeLabel {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
@@ -27605,7 +27651,7 @@
     background-color: var(--transparent, transparent);
   }
   .appsElementsWorkspaceRecommendationFeatureComparisonGridContentFeatureComparisonGrid {
-    background-color: var(--gm3-sys-color-surface-container-low, #f8fafd);
+    background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
   }
   .appsElementsWorkspaceRecommendationFeatureComparisonGridContentFeatureComparisonTableContainer {
     background-color: var(--gm3-sys-color-surface, #fff);
@@ -28021,6 +28067,9 @@
   .appsElementsSidekickAgenticQuestionnaireQuestionnaireSection:before {
     border: 1px solid var(--transparent, transparent);
   }
+  .appsElementsSidekickAgenticQuestionnaireCustomInputField {
+    background-color: var(--gm3-sys-color-surface, #fff);
+  }
   .appsElementsSidekickAiOverviewsModuleContent {
     background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
   }
@@ -28065,6 +28114,44 @@
   }
   .appsElementsSidekickHeaderIcon {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  }
+  .appsElementsSidekickGemTileContentListItem:before {
+    border: 1px solid var(--transparent, transparent);
+  }
+  .appsElementsSidekickGeneralFeedbackFeedbackConfirmation {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  .appsElementsSidekickGeneralFeedbackFeedbackButton:before {
+    border: 1px solid var(--transparent, transparent);
+  }
+  .appsElementsSidekickNavigationViewTitle {
+    color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  }
+  .appsElementsSidekickPromptLibraryCategoryName {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  .appsElementsSidekickPromptLibraryScrollButton {
+    box-shadow:
+      0 1px 2px 0 rgba(60, 64, 67, 0.3),
+      0 2px 6px 2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .appsElementsSidekickPromptLibraryScrollButton:before {
+    border: 1px solid var(--transparent, transparent);
+  }
+  .appsElementsSidekickPromptLibraryScrollButtonContainer:before {
+    background: linear-gradient(
+      to right,
+      var(--ae-sidekick-container-color, var(--gm3-sys-color-surface, #fff)),
+      transparent
+    );
+  }
+  .appsElementsSidekickPromptLibraryScrollButtonContainer:after {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--ae-sidekick-container-color, var(--gm3-sys-color-surface, #fff))
+    );
   }
   .appsElementsSidekickZeroStateListItem:before {
     border: 1px solid var(--transparent, transparent);
@@ -28113,44 +28200,6 @@
   }
   .appsElementsSidekickZeroStateResponseOptionsContainer {
     background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
-  }
-  .appsElementsSidekickZeroStateGreetingText {
-    color: var(--transparent, transparent);
-  }
-  .appsElementsSidekickGeneralFeedbackFeedbackConfirmation {
-    color: var(--gm3-sys-color-on-surface-variant, #444746);
-  }
-  .appsElementsSidekickGeneralFeedbackFeedbackButton:before {
-    border: 1px solid var(--transparent, transparent);
-  }
-  .appsElementsSidekickNavigationViewTitle {
-    color: var(--gm3-sys-color-on-surface, #1f1f1f);
-  }
-  .appsElementsSidekickPromptLibraryCategoryName {
-    color: var(--gm3-sys-color-on-surface-variant, #444746);
-  }
-  .appsElementsSidekickPromptLibraryScrollButton {
-    box-shadow:
-      0 1px 2px 0 rgba(60, 64, 67, 0.3),
-      0 2px 6px 2px
-        color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .appsElementsSidekickPromptLibraryScrollButton:before {
-    border: 1px solid var(--transparent, transparent);
-  }
-  .appsElementsSidekickPromptLibraryScrollButtonContainer:before {
-    background: linear-gradient(
-      to right,
-      var(--ae-sidekick-container-color, var(--gm3-sys-color-surface, #fff)),
-      transparent
-    );
-  }
-  .appsElementsSidekickPromptLibraryScrollButtonContainer:after {
-    background: linear-gradient(
-      to right,
-      transparent,
-      var(--ae-sidekick-container-color, var(--gm3-sys-color-surface, #fff))
-    );
   }
   .appsElementsPurchaseCardTitle {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
@@ -28215,10 +28264,22 @@
     .appsElementsSidekickUserMessagePromptEditor:before {
     color: var(--ae-sidekick-prompt-input-text-placeholder-color, #5e5e5e);
   }
+  .appsElementsSidekickZeroStateGreetingText {
+    color: var(--transparent, transparent);
+  }
+  .appsElementsSidekickZeroStateBannerEl:link {
+    color: var(
+      --ae-banner-text-link-color,
+      var(--gm3-sys-color-primary, #0b57d0)
+    );
+  }
   .fontsBarCssMyFontsLabel {
     color: var(--gm3-sys-color-on-surface);
   }
   .fontsListCssSelectedFontsListItem {
+    background-color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .fontsListCssLastSelectedFontsListItem {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
   .fontsListCssNoFontsFoundContainer {

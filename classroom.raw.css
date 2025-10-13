@@ -4517,6 +4517,14 @@ span.gb_Z {
 .QlQowb {
   border: 0.0625rem solid var(--gm3-sys-color-outline);
 }
+.eAjxCd {
+  border-bottom: 0.0625rem solid var(--gm3-sys-color-outline);
+  border-top: 0.0625rem solid var(--gm3-sys-color-outline);
+}
+.ex3A2d {
+  border-bottom: 0.0625rem solid var(--gm3-sys-color-outline);
+  border-top: 0.0625rem solid var(--gm3-sys-color-outline);
+}
 a.gb_Ra {
   color: var(--gm3-sys-color-primary);
 }

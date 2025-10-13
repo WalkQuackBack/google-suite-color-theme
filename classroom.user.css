@@ -2,7 +2,7 @@
 @name Google Classroom Color Theme
 @namespace github.com/walkquackback/google-classroom-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.12
+@version 2025.10.13
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/classroom.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Classroom to be themed using CSS variables. Comes by default with a dark theme.
@@ -4651,6 +4651,14 @@
   }
   .QlQowb {
     border: 0.0625rem solid var(--gm3-sys-color-outline);
+  }
+  .eAjxCd {
+    border-bottom: 0.0625rem solid var(--gm3-sys-color-outline);
+    border-top: 0.0625rem solid var(--gm3-sys-color-outline);
+  }
+  .ex3A2d {
+    border-bottom: 0.0625rem solid var(--gm3-sys-color-outline);
+    border-top: 0.0625rem solid var(--gm3-sys-color-outline);
   }
   a.gb_Ra {
     color: var(--gm3-sys-color-primary);
