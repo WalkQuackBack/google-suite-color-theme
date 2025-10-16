@@ -2,7 +2,7 @@
 @name Google Classroom Color Theme
 @namespace github.com/walkquackback/google-classroom-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.15
+@version 2025.10.16
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/classroom.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Classroom to be themed using CSS variables. Comes by default with a dark theme.
@@ -26123,6 +26123,7 @@
   }
   .V8eawc {
     color: var(--gm3-sys-color-primary, #0b57d0);
+    background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
   }
   .s0DZu {
     color: var(--gm3-sys-color-primary, #0b57d0);
@@ -26207,19 +26208,6 @@
   .pmtLvb {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
-  .mxjQEd {
-    color: var(--gm3-sys-color-on-surface-variant, #444746);
-    background-color: var(
-      --ae-collapsible-list-summary-container-color,
-      transparent
-    );
-  }
-  .mxjQEd::before {
-    border: 1px solid var(--transparent, transparent);
-  }
-  .xEyKwc {
-    color: var(--gm3-sys-color-on-surface-variant, #444746);
-  }
   .CE7gK {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
@@ -26242,6 +26230,22 @@
     color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
   .ollrGc {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  .H9mO5b {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  .mxjQEd {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+    background-color: var(
+      --ae-collapsible-list-summary-container-color,
+      transparent
+    );
+  }
+  .mxjQEd::before {
+    border: 1px solid var(--transparent, transparent);
+  }
+  .xEyKwc {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
   .cAoyid {
@@ -28071,6 +28075,9 @@
     border: 1px solid var(--gm3-sys-color-surface-container-highest, #dde3ea);
   }
   .wRKHUe {
+    border: 1px solid var(--gm3-sys-color-surface-container-highest, #dde3ea);
+  }
+  .uUCOmb {
     border: 1px solid var(--gm3-sys-color-surface-container-highest, #dde3ea);
   }
   .r2ZjL-O1htCb .rHGeGc-TkwUic {

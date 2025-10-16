@@ -226,6 +226,9 @@
 .ita-cp-input::placeholder {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.generativeAiQuotaUpsellMessageNoQuotaBackground {
+  background: var(--gm3-sys-color-inverse-on-surface);
+}
 .apps-ui-material-slide-toggle-thumb {
   background-color: var(--gm3-sys-color-surface-container);
   box-shadow:
@@ -558,41 +561,6 @@
 }
 .apps-shortcutshelpcontentimpl-legacy-label {
   color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-key-focused {
-  outline: 1px solid var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-content-header {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-content-element {
-  border-bottom: 1px solid
-    color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%);
-}
-.apps-actiondatawidget-shortcut-desc {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-shortcut-key {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-actiondatawidget-override-keys-on {
-  color: var(--gm3-sys-color-on-surface);
-}
-.apps-shortcutshelpcontentimpl-hc-black
-  .apps-actiondatawidget-override-info-svg {
-  fill: var(--gm3-sys-color-surface-container-lowest);
-}
-.apps-actiondatawidget-override-keys-on
-  .apps-actiondatawidget-override-info-svg {
-  fill: var(--gm3-sys-color-primary);
-}
-.apps-actiondatawidget-override-info-icon-tooltip
-  .jfk-tooltip-arrowdown
-  .jfk-tooltip-arrowimplafter {
-  border-color: #727272 var(--transparent, transparent);
-}
-.generativeAiQuotaUpsellMessageNoQuotaBackground {
-  background: var(--gm3-sys-color-inverse-on-surface);
 }
 .add-on-host-client-not-supported,
 .add-on-host-failure,
@@ -1718,6 +1686,12 @@ span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined {
 .docs-copydocdialog-destination-button.jfk-button-focused {
   border: 1px solid var(--gm3-sys-color-primary);
 }
+.appsDocsChromeSaveWizSaveindicatorPopupHeader {
+  background-color: var(--gm3-sys-color-primary-container, #d3e3fd);
+}
+.appsDocsChromeSaveWizSaveindicatorPopupSubtitle {
+  color: var(--gm3-sys-color-on-surface-variant, #444746);
+}
 ::-webkit-scrollbar-track {
   border: solid var(--transparent, transparent);
 }
@@ -2601,7 +2575,7 @@ body::-webkit-scrollbar-corner {
 }
 .docs-contentembedding-sidebar-zero-state
   .docs-contentembedding-sidebar-zero-state-header {
-  color: var(--gm3-sys-color-on-surface);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
 .docs-contentembedding-sidebar-zero-state
   .docs-contentembedding-sidebar-zero-state-body {
@@ -3501,7 +3475,10 @@ body::-webkit-scrollbar-corner {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
 .docs-docos-activity-sidebar-header {
-  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  background-color: var(--gm3-sys-color-surface, #fff);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+  border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .docos-comments-pe .docs-docos-activity-sidebar-header-title {
   color: var(--gm3-sys-color-on-surface-variant);
@@ -4399,7 +4376,7 @@ body::-webkit-scrollbar-corner {
   }
 }
 .docs-material-gm-dialog {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   border: 1px solid var(--transparent, transparent);
   box-shadow: 0 4px 8px 3px
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
@@ -4492,7 +4469,7 @@ body::-webkit-scrollbar-corner {
 }
 .docs-revisions-chromecover-content-color-default {
   background-color: var(--gm3-sys-color-surface-container-lowest);
-  color: var(--gm3-sys-color-on-surface);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
 .docs-body-pageless .docs-revisions-chromecover-content-color-default {
   background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -4602,9 +4579,9 @@ body::-webkit-scrollbar-corner {
   color: var(--gm3-sys-color-primary);
 }
 .docs-gm .docs-revisions-sidebar-header {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
+  background-color: var(--gm3-sys-color-surface, #fff);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
 .docs-grille-version-history .docs-revisions-sidebar-header {
   background-color: var(--gm3-sys-color-surface-container);
@@ -4619,7 +4596,7 @@ body::-webkit-scrollbar-corner {
   color: var(--gm3-sys-color-shadow);
 }
 .docs-gm .docs-revisions-sidebar-name-filter-switch-container {
-  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .docs-revisions-sidebar-name-filter-switch-container label {
   color: var(--gm3-sys-color-shadow);
@@ -5249,7 +5226,7 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
 }
 .docs-smart-canvas-scrollable-inputless-insert-menu
   .docs-inline-insert-menu-item-title {
-  color: var(--gm3-sys-color-on-surface);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
 .docs-smart-canvas-scrollable-inputless-insert-menu
   .docs-inline-insert-menu-item-subtext {
@@ -5491,7 +5468,7 @@ a.docs-bubble-link-disabled {
   color: var(--gm3-sys-color-on-surface);
 }
 .docs-gm .docs-colormenuitems .docs-text-color-state-change-button.jfk-button {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
+  background-color: var(--gm3-sys-color-surface, #fff);
   color: var(--gm3-sys-color-on-surface-variant);
 }
 .docs-gm
@@ -6298,6 +6275,17 @@ a.docs-bubble-link-disabled {
 .appsDocsAiGenerativeaiImageCssConversationalSidebarTabContent {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.appsDocsAiGenerativeaiImageCssConversationalsidebartabbarTabBar-horizontal:focus-visible
+  .appsDocsAiGenerativeaiImageCssConversationalSidebarTabTab-hover {
+  outline: 1px solid var(--gm3-sys-color-primary);
+}
+.appsDocsAiGenerativeaiImageCssConversationalsidebartabbarScrollButton {
+  background-color: var(--gm3-sys-color-surface-container-low);
+}
+.appsDocsAiGenerativeaiImageCssConversationalsidebartabbarScrollButton.docs-gm3-button-focused,
+.appsDocsAiGenerativeaiImageCssConversationalsidebartabbarScrollButton.docs-gm3-button-hover {
+  background-color: var(--gm3-sys-color-surface-container-high);
+}
 .genAiImageSidebarModeToggle.docs-sidebar-toggle-tabs {
   color: var(--gm3-sys-color-on-surface-variant);
 }
@@ -6426,10 +6414,6 @@ a.docs-bubble-link-disabled {
   background-color: var(--gm3-sys-color-surface-container);
   border: 1px solid var(--gm3-sys-color-outline-variant);
 }
-.genAiImageSidebarGenerationTypeTabBar-horizontal:focus-visible
-  .appsDocsAiGenerativeaiImageCssConversationalSidebarTabTab-selected {
-  outline: 1px solid var(--gm3-sys-color-primary);
-}
 .appsDocsAiGenerativeaiImageGenerateImagesInputTextInputContainer {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
@@ -6454,9 +6438,16 @@ a.docs-bubble-link-disabled {
   .docs-material-gm-select-outer-box {
   outline: 1px solid var(--gm3-sys-color-primary);
 }
-.appsDocsAiGenerativeaiImageGenerateImagesInputStyleMenuImageTitle,
-.appsDocsAiGenerativeaiImageGenerateImagesInputStylePickerMenuTitle {
+.appsDocsAiGenerativeaiImageGenerateImagesInputAspectRatioMenuItem,
+.appsDocsAiGenerativeaiImageGenerateImagesInputPickerMenuTitle,
+.appsDocsAiGenerativeaiImageGenerateImagesInputStyleMenuImageTitle {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.appsDocsAiGenerativeaiImageGenerateImagesInputAspectRatioMenu
+  .appsDocsAiGenerativeaiImageGenerateImagesInputAspectRatioMenuItemSelected,
+.appsDocsAiGenerativeaiImageGenerateImagesInputAspectRatioMenu
+  .appsDocsAiGenerativeaiImageGenerateImagesInputAspectRatioMenuItemSelected.goog-menuitem-highlight {
+  background-color: var(--gm3-sys-color-secondary-container);
 }
 .appsDocsAiGenerativeaiImageGenerateImagesInputStylePickerMenu.imageGenerationStylePresetsMenu
   .goog-menuitem.goog-menuitem-highlight:not(
@@ -6507,6 +6498,15 @@ a.docs-bubble-link-disabled {
 }
 .appsDocsAiGenerativeaiImageHistoryViewLoadingText {
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.appsDocsAiGenerativeaiImageHistoryViewLoadingImage {
+  background: linear-gradient(
+    90deg,
+    var(--gm3-sys-color-surface-container, #f0f4f9) 20%,
+    var(--gm3-sys-color-surface-container, #f0f4f9),
+    var(--gm3-sys-color-surface-dim, #d3dbe5),
+    var(--gm3-sys-color-surface-container, #f0f4f9)
+  );
 }
 @media screen and (forced-colors: active) {
   .appsDocsAiGenerativeaiImageGenerationColorPaletteContainer {
@@ -6717,7 +6717,7 @@ a.docs-bubble-link-disabled {
 }
 .docs-gm .sketchy-diagrams-thumbnail-select-toolbar {
   background-color: var(--gm3-sys-color-surface-container-lowest);
-  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .sketchy-diagrams-thumbnail-select-shadow {
   box-shadow:
@@ -6733,10 +6733,10 @@ a.docs-bubble-link-disabled {
   color: var(--gm3-sys-color-surface-container-lowest);
 }
 .docs-gm .sketchy-diagrams-sidebar-title {
-  color: var(--gm3-sys-color-on-surface);
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
-  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  background-color: var(--gm3-sys-color-surface, #fff);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+  border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .sketchy-diagrams-sidebar-title-close-icon:focus {
   border: 1px solid var(--gm3-sys-color-on-surface-variant);
@@ -6844,7 +6844,7 @@ a.docs-bubble-link-disabled {
   border: 1px solid var(--transparent, transparent);
 }
 .docs-gm .goog-zippy-expanded.docs-sidebar-tile-header {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
+  background-color: var(--gm3-sys-color-surface, #fff);
 }
 .docs-sidebar-tile-header.docs-sidebar-tile-header-disabled {
   background-color: var(--transparent, transparent);
@@ -6853,7 +6853,7 @@ a.docs-bubble-link-disabled {
   color: var(--gm3-sys-color-on-surface-variant);
 }
 .docs-gm .docs-sidebar-tile-controls {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
+  background-color: var(--gm3-sys-color-surface, #fff);
 }
 .docs-sidebar-tile-input-label {
   color: var(--gm3-sys-color-on-surface-variant);
@@ -6986,7 +6986,7 @@ a.docs-bubble-link-disabled {
 .docs-gm
   .sketchy-gradientmenuitems
   .sketchy-fill-type-state-change-button.jfk-button {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
+  background-color: var(--gm3-sys-color-surface, #fff);
   color: var(--gm3-sys-color-on-surface-variant);
 }
 .docs-gm
@@ -9143,7 +9143,7 @@ a:link {
 .docs-gm .docs-sync-indicator-popup.jfk-bubble,
 .docs-gm .modal-dialog,
 .docs-gm .modal-dialog.google-url-picker {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   border: 1px solid var(--transparent, transparent);
   box-shadow: 0 4px 8px 3px
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
@@ -14237,7 +14237,7 @@ a:link {
   background: var(--gm3-sys-color-primary);
 }
 .docs-material-promo-walkthrough-bubble {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   border: 1px solid var(--transparent, transparent);
   box-shadow: 0 4px 8px 3px
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
@@ -15461,21 +15461,6 @@ a:link {
     rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0)
   );
 }
-.javascriptMaterialdesignGm3WizBadgeBadge {
-  background-color: var(--gm3-badge-color, var(--gm3-sys-color-error, #b3261e));
-}
-.javascriptMaterialdesignGm3WizBadgeBadgeLarge {
-  background-color: var(
-    --gm3-badge-large-color,
-    var(--gm3-sys-color-error, #b3261e)
-  );
-}
-.javascriptMaterialdesignGm3WizBadgeBadgeValue {
-  color: var(
-    --gm3-badge-large-label-text-color,
-    var(--gm3-sys-color-on-error, #fff)
-  );
-}
 .javascriptMaterialdesignGm3WizFocusRingInward-focusringinward {
   border-color: var(
     --gm3-focus-ring-inward-color,
@@ -15773,6 +15758,21 @@ a:link {
     var(--gm3-sys-color-on-surface, #1f1f1f)
   );
 }
+.javascriptMaterialdesignGm3WizBadgeBadge {
+  background-color: var(--gm3-badge-color, var(--gm3-sys-color-error, #b3261e));
+}
+.javascriptMaterialdesignGm3WizBadgeBadgeLarge {
+  background-color: var(
+    --gm3-badge-large-color,
+    var(--gm3-sys-color-error, #b3261e)
+  );
+}
+.javascriptMaterialdesignGm3WizBadgeBadgeValue {
+  color: var(
+    --gm3-badge-large-label-text-color,
+    var(--gm3-sys-color-on-error, #fff)
+  );
+}
 .javascriptMaterialdesignGm3WizMenuSurface-menu-surface {
   background-color: var(
     --gm3-menu-surface-container-color,
@@ -15834,6 +15834,7 @@ a:link {
 }
 .javascriptMaterialdesignGm3WizCheckbox-checkbox__background {
   background-color: var(--transparent, transparent);
+  border: var(--gm3-checkbox-unselected-outline-width, 2px) solid currentColor;
 }
 .javascriptMaterialdesignGm3WizCheckbox-checkbox__native-control:enabled
   ~ .javascriptMaterialdesignGm3WizCheckbox-checkbox__background
@@ -17031,7 +17032,7 @@ a:link {
   border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .punch-theme-colors-palette-section {
-  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .punch-theme-colors-preview-section {
   box-shadow: 0 2px 6px 2px
@@ -17055,7 +17056,7 @@ a:link {
     transparent,
     var(--gm3-sys-color-on-surface) 8%
   );
-  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
   color: var(--gm3-sys-color-on-surface);
 }
 .punch-theme-sidebar-in-presentation-header.goog-zippy-collapsed {
@@ -18278,7 +18279,7 @@ a:link {
   color: var(--gm3-sys-color-on-surface);
 }
 .google-picker.modal-dialog {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   border: 1px solid var(--transparent, transparent);
   box-shadow: 0 4px 8px 3px
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
@@ -21979,6 +21980,9 @@ a:link {
   border-bottom: 1px solid
     var(--gm3-sys-color-surface-container-highest, #dde3ea);
 }
+.appsDocssharedWizBarkickPromptBoxContainer .appsElementsPromptBoxInput {
+  caret-color: var(--gm3-sys-color-shadow);
+}
 .appsDocssharedWizBarkickThinkingState {
   background-color: var(--gm3-sys-color-surface-container-low, #f8fafd);
 }
@@ -22357,6 +22361,9 @@ a:link {
 .appsElementsGenerativeaiLoadingIndicatorGridImageContainer:before {
   border: 1px solid var(--transparent, transparent);
 }
+.appsElementsModeSelectorSingleModeLabel {
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+}
 .appsElementsGenerativeAiNudgeButtonNudgeRoot {
   background-color: var(
     --ae-button-nudge-container-color,
@@ -22732,7 +22739,7 @@ a:link {
     var(--gm3-sys-color-primary, #0b57d0)
   );
 }
-.appsElementsWorkspaceRecommendationBannerContentBannerListProgressLabel {
+.appsElementsWorkspaceRecommendationBannerContentBannerListHeader {
   color: var(--gm3-sys-color-on-surface-variant, #444746);
 }
 .appsElementsWorkspaceRecommendationBannerContentContentWrapper {
@@ -22893,7 +22900,7 @@ a:link {
   color: var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .appsElementsWorkspaceRecommendationFeatureComparisonGridContentHighlight {
-  border: 2px solid var(--transparent, transparent);
+  border: 3px solid var(--transparent, transparent);
 }
 .appsElementsWorkspaceRecommendationValuePropCardContainer {
   background-color: var(--gm3-sys-color-surface, #fff);
@@ -23263,6 +23270,12 @@ a:link {
 .appsElementsSidekickUiKitScrim:not([data-scrim="hidden"]) {
   background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
 }
+.appsElementsSidekickAgenticStepsSteps {
+  background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
+}
+.appsElementsSidekickAgenticStepsLoadingIndicatorIcon {
+  stroke: var(--gm3-sys-color-on-surface-variant, #444746);
+}
 .appsElementsSidekickAgenticPlannerPlannerSection {
   background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
 }
@@ -23343,13 +23356,17 @@ a:link {
 .appsElementsSidekickHeaderIcon {
   color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
-.appsElementsSidekickGemTileContentListItem:before {
-  border: 1px solid var(--transparent, transparent);
-}
 .appsElementsSidekickGeneralFeedbackFeedbackConfirmation {
   color: var(--gm3-sys-color-on-surface-variant, #444746);
+  border: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+}
+.appsElementsSidekickGeneralFeedbackFeedbackConfirmation:before {
+  border: 1px solid var(--transparent, transparent);
 }
 .appsElementsSidekickGeneralFeedbackFeedbackButton:before {
+  border: 1px solid var(--transparent, transparent);
+}
+.appsElementsSidekickGemTileContentListItem:before {
   border: 1px solid var(--transparent, transparent);
 }
 .appsElementsSidekickNavigationViewTitle {
