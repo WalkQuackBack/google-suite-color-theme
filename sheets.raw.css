@@ -2857,6 +2857,12 @@ span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined {
 .driveLockingUnlockcontent-text {
   color: var(--dt-on-surface-variant, #5f6368);
 }
+.appsDocsChromeSaveWizSaveindicatorPopupHeader {
+  background-color: var(--gm3-sys-color-primary-container, #d3e3fd);
+}
+.appsDocsChromeSaveWizSaveindicatorPopupSubtitle {
+  color: var(--gm3-sys-color-on-surface-variant, #444746);
+}
 .docs-common-banner-buttons .docs-material-button {
   outline: 1px solid var(--transparent, transparent);
 }
@@ -3160,7 +3166,10 @@ a.docs-blameview-warning-info {
   background-color: var(--gm3-sys-color-surface-container-lowest);
 }
 .docs-docos-activity-sidebar-header {
-  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  background-color: var(--gm3-sys-color-surface, #fff);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+  border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .docos-comments-pe .docs-docos-activity-sidebar-header-title {
   color: var(--gm3-sys-color-on-surface-variant);
@@ -3471,7 +3480,7 @@ a.docs-blameview-warning-info {
   background: var(--gm3-sys-color-primary);
 }
 .docs-material-promo-walkthrough-bubble {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   border: 1px solid var(--transparent, transparent);
   box-shadow: 0 4px 8px 3px
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
@@ -4839,7 +4848,7 @@ a.docs-blameview-warning-info {
   border: 1px solid var(--transparent, transparent);
 }
 .docs-gm .goog-zippy-expanded.docs-sidebar-tile-header {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
+  background-color: var(--gm3-sys-color-surface, #fff);
 }
 .docs-sidebar-tile-header.docs-sidebar-tile-header-disabled {
   background-color: var(--transparent, transparent);
@@ -4848,7 +4857,7 @@ a.docs-blameview-warning-info {
   color: var(--gm3-sys-color-on-surface-variant);
 }
 .docs-gm .docs-sidebar-tile-controls {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
+  background-color: var(--gm3-sys-color-surface, #fff);
 }
 .docs-sidebar-tile-input-label {
   color: var(--gm3-sys-color-on-surface-variant);
@@ -6999,7 +7008,7 @@ body {
 .docs-gm .docs-sync-indicator-popup.jfk-bubble,
 .docs-gm .modal-dialog,
 .docs-gm .modal-dialog.google-url-picker {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   border: 1px solid var(--transparent, transparent);
   box-shadow: 0 4px 8px 3px
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
@@ -7904,7 +7913,7 @@ body {
 }
 .docs-smart-canvas-scrollable-inputless-insert-menu
   .docs-inline-insert-menu-item-title {
-  color: var(--gm3-sys-color-on-surface);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
 .docs-smart-canvas-scrollable-inputless-insert-menu
   .docs-inline-insert-menu-item-subtext {
@@ -8412,7 +8421,7 @@ body {
 }
 .docs-revisions-chromecover-content-color-default {
   background-color: var(--gm3-sys-color-surface-container-lowest);
-  color: var(--gm3-sys-color-on-surface);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
 .docs-body-pageless .docs-revisions-chromecover-content-color-default {
   background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -8522,9 +8531,9 @@ body {
   color: var(--gm3-sys-color-primary);
 }
 .docs-gm .docs-revisions-sidebar-header {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
-  border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
-  color: var(--gm3-sys-color-on-surface);
+  background-color: var(--gm3-sys-color-surface, #fff);
+  border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
 .docs-grille-version-history .docs-revisions-sidebar-header {
   background-color: var(--gm3-sys-color-surface-container);
@@ -8539,7 +8548,7 @@ body {
   color: var(--gm3-sys-color-surface-container-lowest);
 }
 .docs-gm .docs-revisions-sidebar-name-filter-switch-container {
-  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .docs-revisions-sidebar-name-filter-switch-container label {
   color: var(--gm3-sys-color-surface-container-lowest);
@@ -8769,7 +8778,7 @@ a.docs-bubble-link-disabled {
   color: var(--gm3-sys-color-on-surface);
 }
 .docs-gm .docs-colormenuitems .docs-text-color-state-change-button.jfk-button {
-  background-color: var(--gm3-sys-color-surface-container-lowest);
+  background-color: var(--gm3-sys-color-surface, #fff);
   color: var(--gm3-sys-color-on-surface-variant);
 }
 .docs-gm
@@ -8976,7 +8985,7 @@ a.docs-bubble-link-disabled {
   border: 1px solid var(--gm3-sys-color-primary) !important;
 }
 .docs-material-gm-dialog {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   border: 1px solid var(--transparent, transparent);
   box-shadow: 0 4px 8px 3px
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
@@ -9462,7 +9471,7 @@ a.docs-bubble-link-disabled {
     color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
 }
 .waffle-assistant-popup-suggestion {
-  background: var(--gm3-sys-color-surface-container-lowest);
+  background: var(--gm3-sys-color-surface, #fff);
   color: var(--gm3-sys-color-on-surface);
 }
 .waffle-assistant-popup-suggestion:active {
@@ -16941,7 +16950,7 @@ a.annotation-overlaywithallowaccess-error-learn-more {
 }
 .waffle-timeline-settings-sidebar-footer-wrapper {
   background-color: var(--gm3-sys-color-surface-container-lowest);
-  border-top: 1px solid var(--gm3-sys-color-outline-variant);
+  border-top: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .waffle-timeline-settings-sidebar-section-header-title {
   color: var(--gm3-sys-color-on-surface);
@@ -23464,6 +23473,7 @@ div.formula-bar-disabled {
 }
 .javascriptMaterialdesignGm3WizCheckbox-checkbox__background {
   background-color: var(--transparent, transparent);
+  border: var(--gm3-checkbox-unselected-outline-width, 2px) solid currentColor;
 }
 .javascriptMaterialdesignGm3WizCheckbox-checkbox__native-control:enabled
   ~ .javascriptMaterialdesignGm3WizCheckbox-checkbox__background
@@ -26566,6 +26576,12 @@ div.formula-bar-disabled {
 .boqAddonscardsrendererCardTextparagraphTextParagraph {
   color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
+.waffleDataConnectorWizDbFiltersBytesEstimateErrorText {
+  color: var(--gm3-sys-color-error, #b3261e);
+}
+.waffleDataConnectorWizDbFiltersBytesEstimateText {
+  color: var(--gm3-sys-color-outline, #747775);
+}
 .javascriptMaterialdesignGm3WizCardFilled-card {
   background-color: var(
     --gm3-card-filled-container-color,
@@ -28080,6 +28096,9 @@ div.formula-bar-disabled {
 .appsElementsGenerativeaiLoadingIndicatorGridImageContainer:before {
   border: 1px solid var(--transparent, transparent);
 }
+.appsElementsModeSelectorSingleModeLabel {
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+}
 .appsElementsModifierSelectorIconButtonSelected {
   color: var(--gm3-sys-color-primary, #0b57d0);
 }
@@ -28436,7 +28455,7 @@ div.formula-bar-disabled {
     var(--gm3-sys-color-primary, #0b57d0)
   );
 }
-.appsElementsWorkspaceRecommendationBannerContentBannerListProgressLabel {
+.appsElementsWorkspaceRecommendationBannerContentBannerListHeader {
   color: var(--gm3-sys-color-on-surface-variant, #444746);
 }
 .appsElementsWorkspaceRecommendationBannerContentContentWrapper {
@@ -28597,7 +28616,7 @@ div.formula-bar-disabled {
   color: var(--gm3-sys-color-outline-variant, #c4c7c5);
 }
 .appsElementsWorkspaceRecommendationFeatureComparisonGridContentHighlight {
-  border: 2px solid var(--transparent, transparent);
+  border: 3px solid var(--transparent, transparent);
 }
 .appsElementsWorkspaceRecommendationValuePropCardContainer {
   background-color: var(--gm3-sys-color-surface, #fff);
@@ -28961,6 +28980,12 @@ div.formula-bar-disabled {
 .appsElementsSidekickUiKitScrim:not([data-scrim="hidden"]) {
   background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
 }
+.appsElementsSidekickAgenticStepsSteps {
+  background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
+}
+.appsElementsSidekickAgenticStepsLoadingIndicatorIcon {
+  stroke: var(--gm3-sys-color-on-surface-variant, #444746);
+}
 .appsElementsSidekickAgenticPlannerPlannerSection {
   background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
 }
@@ -29041,13 +29066,17 @@ div.formula-bar-disabled {
 .appsElementsSidekickHeaderIcon {
   color: var(--gm3-sys-color-on-surface, #1f1f1f);
 }
-.appsElementsSidekickGemTileContentListItem:before {
-  border: 1px solid var(--transparent, transparent);
-}
 .appsElementsSidekickGeneralFeedbackFeedbackConfirmation {
   color: var(--gm3-sys-color-on-surface-variant, #444746);
+  border: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+}
+.appsElementsSidekickGeneralFeedbackFeedbackConfirmation:before {
+  border: 1px solid var(--transparent, transparent);
 }
 .appsElementsSidekickGeneralFeedbackFeedbackButton:before {
+  border: 1px solid var(--transparent, transparent);
+}
+.appsElementsSidekickGemTileContentListItem:before {
   border: 1px solid var(--transparent, transparent);
 }
 .appsElementsSidekickNavigationViewTitle {
