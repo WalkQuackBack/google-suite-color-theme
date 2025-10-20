@@ -2,7 +2,7 @@
 @name Google Slides Color Theme
 @namespace github.com/walkquackback/google-slides-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.19
+@version 2025.10.20
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/slides.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Slides to be themed using CSS variables. Comes by default with a dark theme.
@@ -19,6 +19,105 @@
   }
   .gb_B {
     background-color: var(--transparent, transparent);
+  }
+  @keyframes enter-morph {
+    0% {
+      background: var(--gm3-sys-color-surface-container);
+    }
+    to {
+      background: var(--gm3-sys-color-primary-container);
+    }
+  }
+  @keyframes exit-morph {
+    0% {
+      background: var(--gm3-sys-color-primary-container);
+    }
+    to {
+      background: var(--gm3-sys-color-surface-container);
+    }
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewButton {
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 2px solid var(--transparent, transparent);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewButtonContent {
+    background: var(--gm3-sys-color-surface-container);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewButton:hover
+    .appsDocsGettingStartedEntryPointSelectionViewButtonContent,
+  .appsDocsGettingStartedEntryPointSelectionViewButton:hover
+    .appsDocsGettingStartedEntryPointSelectionViewTextContainer {
+    background:
+      linear-gradient(0deg, rgba(11, 87, 208, 0.08), rgba(11, 87, 208, 0.08)),
+      var(--gm3-sys-color-surface-container);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewButton:active
+    .appsDocsGettingStartedEntryPointSelectionViewButtonContent,
+  .appsDocsGettingStartedEntryPointSelectionViewButton:active
+    .appsDocsGettingStartedEntryPointSelectionViewTextContainer,
+  .appsDocsGettingStartedEntryPointSelectionViewButton:focus
+    .appsDocsGettingStartedEntryPointSelectionViewButtonContent,
+  .appsDocsGettingStartedEntryPointSelectionViewButton:focus
+    .appsDocsGettingStartedEntryPointSelectionViewTextContainer {
+    background:
+      linear-gradient(0deg, rgba(11, 87, 208, 0.12), rgba(11, 87, 208, 0.12)),
+      var(--gm3-sys-color-surface-container);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewTextContainer {
+    background: var(--gm3-sys-color-surface-container);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewLabel {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewDescription {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewGreetingTitleSecondary {
+    color: var(--gm3-sys-color-outline);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCard {
+    color: var(--gm3-sys-color-on-surface-variant);
+    fill: var(--gm3-sys-color-on-surface-variant);
+    background: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCard:active,
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCard:focus,
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCard:hover {
+    background: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCard:hover
+    .appsDocsGettingStartedEntryPointSelectionViewBlankCardText {
+    color: var(--gm3-sys-color-on-primary-fixed-variant);
+    fill: var(--gm3-sys-color-on-primary-fixed-variant);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCardShape {
+    background: var(--gm3-sys-color-surface-container);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCardShapeEnterAnimation {
+    background: var(--gm3-sys-color-primary-container);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewBlankCardShapeExitAnimation {
+    background: var(--gm3-sys-color-surface-container);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewContainer
+    .appsDocsGettingStartedEntryPointSelectionViewBrandingTitle {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewLoadingView
+    .docs-spinner
+    .spinner-layer {
+    border-color: var(--gm3-sys-color-primary);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewAspectRatioOption {
+    border: 1px solid var(--transparent, transparent);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewSelectedAspectRatioOption {
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .appsDocsGettingStartedEntryPointSelectionViewUnselectedAspectRatioOption {
+    background: var(--gm3-sys-color-primary-container);
+    color: var(--gm3-sys-color-on-primary-container);
   }
   .helpMeDesignShimmerAnimationContainer:after {
     background: conic-gradient(
@@ -14325,6 +14424,7 @@
   }
   .appsElementsModifierSelectorIconButtonSelected {
     color: var(--gm3-sys-color-primary, #0b57d0);
+    background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
   }
   .appsElementsModifierSelectorCheckCircleIcon {
     color: var(--gm3-sys-color-primary, #0b57d0);
@@ -16165,22 +16265,13 @@
     );
   }
   .javascriptMaterialdesignGm3WizBadgeBadge {
-    background-color: var(
-      --gm3-badge-color,
-      var(--gm3-sys-color-error, #b3261e)
-    );
+    background-color: var(--KoO2Cf, var(--gm3-sys-color-error, #b3261e));
   }
   .javascriptMaterialdesignGm3WizBadgeBadgeLarge {
-    background-color: var(
-      --gm3-badge-large-color,
-      var(--gm3-sys-color-error, #b3261e)
-    );
+    background-color: var(--M4R9Bb, var(--gm3-sys-color-error, #b3261e));
   }
   .javascriptMaterialdesignGm3WizBadgeBadgeValue {
-    color: var(
-      --gm3-badge-large-label-text-color,
-      var(--gm3-sys-color-on-error, #fff)
-    );
+    color: var(--xTmMle, var(--gm3-sys-color-on-error, #fff));
   }
   .javascriptMaterialdesignGm3WizMenuSurface-menu-surface {
     background-color: var(
@@ -22308,29 +22399,23 @@
     .javascriptMaterialdesignGm3WizBannerBannerFixed,
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated.javascriptMaterialdesignGm3WizBannerBanner {
     background-color: var(
-      --gm3-banner-container-color,
+      --Xwgg5d,
       var(--gm3-sys-color-surface-container-low, #f8fafd)
     );
   }
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated
     .javascriptMaterialdesignGm3WizBannerBannerGraphic {
-    color: var(--gm3-banner-with-image-image-color, #fff);
-    background-color: var(
-      --gm3-banner-with-image-image-container-color,
-      #6200ee
-    );
+    color: var(--BMRrs, #fff);
+    background-color: var(--TOBIqc, #6200ee);
   }
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated
     .javascriptMaterialdesignGm3WizBannerBannerText {
-    color: var(
-      --gm3-banner-supporting-text-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBanner,
   .javascriptMaterialdesignGm3WizBannerBannerFixed {
     background-color: var(
-      --gm3-banner-expressive-container-color,
+      --leFxrb,
       var(--gm3-sys-color-primary-container, #d3e3fd)
     );
   }
@@ -22343,22 +22428,13 @@
     }
   }
   .javascriptMaterialdesignGm3WizBannerBannerGraphic {
-    color: var(
-      --gm3-banner-expressive-icon-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--BK3ddb, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBannerText {
-    color: var(
-      --gm3-banner-supporting-text-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBannerTitle {
-    color: var(
-      --gm3-banner-headline-color,
-      var(--gm3-sys-color-on-surface, #1f1f1f)
-    );
+    color: var(--nHWRyc, var(--gm3-sys-color-on-surface, #1f1f1f));
   }
   .appsDocsUiWizBannerBase:link {
     color: var(
@@ -22436,8 +22512,11 @@
   .appsDocssharedWizBarkickPromptBoxContainer .appsElementsPromptBoxInput {
     caret-color: var(--gm3-sys-color-shadow);
   }
+  .appsDocssharedWizBarkickBarkick .appsElementsPromptBoxInput:empty:before {
+    color: var(--gm3-sys-color-outline, #747775);
+  }
   .appsDocssharedWizBarkickThinkingState {
-    background-color: var(--gm3-sys-color-surface-container-low, #f8fafd);
+    background-color: var(--gm3-sys-color-surface-container-lowest, #fff);
   }
   .appsElementsBrowserSupportBannerRoot {
     background-color: var(--gm3-sys-color-primary, #0b57d0);
@@ -22914,16 +22993,8 @@
   .appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
     fill: var(--gm3-sys-color-primary);
   }
-  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+  .appsElementsGenerativeAiSourcesCitationsPanelSubHeaderTitle {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
-  }
-  @media (forced-colors: active) {
-    .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
-      outline: 1px solid var(--transparent, transparent);
-    }
-  }
-  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon:hover {
-    background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
   .appsElementsTreeNodeLabel {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
@@ -22948,6 +23019,17 @@
   }
   .appsElementsTreeMultiSelectSubText {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  @media (forced-colors: active) {
+    .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+      outline: 1px solid var(--transparent, transparent);
+    }
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon:hover {
+    background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
   .javascriptMaterialdesignGm3WizTextFieldFilled-text-field__affix--prefix {
     color: var(--gm3-text-field-filled-input-text-prefix-color, #5f6368);
@@ -23394,8 +23476,7 @@
   .appsElementsSidekickFeed {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
   }
-  .appsElementsSidekickFeedDisclaimer,
-  .appsElementsSidekickQuotaMessage {
+  .appsElementsSidekickFeedDisclaimer {
     color: var(--gm3-sys-color-outline, #747775);
   }
   .appsElementsSidekickLearnMoreLink:active,
@@ -23820,6 +23901,9 @@
   }
   .appsElementsSidekickGeneralFeedbackFeedbackButton:before {
     border: 1px solid var(--transparent, transparent);
+  }
+  .appsElementsSidekickQuotaMessageRoot {
+    color: var(--gm3-sys-color-outline, #747775);
   }
   .appsElementsSidekickGemTileContentListItem:before {
     border: 1px solid var(--transparent, transparent);

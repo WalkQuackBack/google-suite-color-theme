@@ -2,7 +2,7 @@
 @name Google Docs Color Theme
 @namespace github.com/walkquackback/google-docs-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.19
+@version 2025.10.20
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/build.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Docs to be themed using CSS variables. Comes by default with a dark theme.
@@ -4161,8 +4161,11 @@
   .appsDocssharedWizBarkickPromptBoxContainer .appsElementsPromptBoxInput {
     caret-color: var(--gm3-sys-color-shadow);
   }
+  .appsDocssharedWizBarkickBarkick .appsElementsPromptBoxInput:empty:before {
+    color: var(--gm3-sys-color-outline, #747775);
+  }
   .appsDocssharedWizBarkickThinkingState {
-    background-color: var(--gm3-sys-color-surface-container-low, #f8fafd);
+    background-color: var(--gm3-sys-color-surface-container-lowest, #fff);
   }
   .suggestionNudgePluginContainer {
     background: color-mix(
@@ -21938,22 +21941,13 @@
     }
   }
   .javascriptMaterialdesignGm3WizBadgeBadge {
-    background-color: var(
-      --gm3-badge-color,
-      var(--gm3-sys-color-error, #b3261e)
-    );
+    background-color: var(--KoO2Cf, var(--gm3-sys-color-error, #b3261e));
   }
   .javascriptMaterialdesignGm3WizBadgeBadgeLarge {
-    background-color: var(
-      --gm3-badge-large-color,
-      var(--gm3-sys-color-error, #b3261e)
-    );
+    background-color: var(--M4R9Bb, var(--gm3-sys-color-error, #b3261e));
   }
   .javascriptMaterialdesignGm3WizBadgeBadgeValue {
-    color: var(
-      --gm3-badge-large-label-text-color,
-      var(--gm3-sys-color-on-error, #fff)
-    );
+    color: var(--xTmMle, var(--gm3-sys-color-on-error, #fff));
   }
   .javascriptMaterialdesignGm3WizMenu-menu {
     background-color: var(
@@ -25692,6 +25686,23 @@
   .appsDocsColorUiWizPreviewableColorpickerPreviewTitle {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
+  .appsKixClientFeaturesSmartcanvasRichlinkDurationTimerWizTimerDetailsSurfaceDurationDisplayContainer,
+  .appsKixClientFeaturesSmartcanvasRichlinkDurationTimerWizTimerDetailsSurfaceTimerInput {
+    border: 1px solid var(--gm3-sys-color-outline, #747775);
+  }
+  .appsKixClientFeaturesSmartcanvasRichlinkDurationTimerWizTimerDetailsSurfaceDurationDisplayContainer:hover {
+    border: 1px solid var(--gm3-sys-color-on-surface, #1f1f1f);
+  }
+  .appsKixClientFeaturesSmartcanvasRichlinkDurationTimerWizTimerDetailsSurfaceTimerInputCursor {
+    background-color: var(--gm3-sys-color-primary, #0b57d0);
+  }
+  .appsKixClientFeaturesSmartcanvasRichlinkDurationTimerWizTimerDetailsSurfaceTimerInput:focus,
+  .appsKixClientFeaturesSmartcanvasRichlinkDurationTimerWizTimerDetailsSurfaceTimerInput:focus-within {
+    border: 2px solid var(--gm3-sys-color-primary, #0b57d0);
+  }
+  .appsKixClientFeaturesSmartcanvasRichlinkDurationTimerWizTimerDetailsSurfacePlaceholderDisplayValue {
+    color: var(--gm3-sys-color-outline, #747775);
+  }
   .snippetBookDialogDialogMessage {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
   }
@@ -25911,6 +25922,53 @@
   }
   .appsElementsCollapsibleListSummaryButtonLeadingIconContainer {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  :is(
+      .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker--month-listbox-open,
+      .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker--year-listbox-open
+    )
+    .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__calendar-header:before {
+    border-bottom: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+  }
+  .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__weekday-header {
+    color: var(
+      --gm3-datepicker-weekdays-label-text-color,
+      var(--gm3-sys-color-on-surface, #1f1f1f)
+    );
+  }
+  .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__month-only-control-group {
+    color: var(
+      --gm3-datepicker-header-label-text-color,
+      var(--gm3-sys-color-on-surface-variant, #444746)
+    );
+  }
+  :is(
+      .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker--month-listbox-open,
+      .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker--year-listbox-open
+    )
+    .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__control-listbox-trigger:not(
+      :disabled
+    ) {
+    background-color: var(--transparent, transparent);
+  }
+  .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__date-button--today,
+  .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__date-button--today.javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__date-button--dimmed {
+    outline: var(--gm3-datepicker-date-today-container-outline-width, 1px) solid
+      var(
+        --gm3-datepicker-date-today-container-outline-color,
+        var(--gm3-sys-color-primary, #0b57d0)
+      );
+  }
+  .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__date-button--selected,
+  .javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__date-button--selected.javascriptMaterialdesignGm3WizDatepickerCalendar-datepicker__date-button--dimmed {
+    background: var(
+      --gm3-datepicker-date-selected-container-color,
+      var(--gm3-sys-color-primary, #0b57d0)
+    );
+  }
+  .javascriptMaterialdesignGm3WizDatepickerOutlined-datepicker--menu-open
+    .javascriptMaterialdesignGm3WizDatepickerOutlined-datepicker__calendar-toggle:before {
+    background-color: var(--gm3-sys-color-on-surface-variant, #444746);
   }
   .kixTocSidebarCheckboxLabel {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
@@ -27117,29 +27175,23 @@
     .javascriptMaterialdesignGm3WizBannerBannerFixed,
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated.javascriptMaterialdesignGm3WizBannerBanner {
     background-color: var(
-      --gm3-banner-container-color,
+      --Xwgg5d,
       var(--gm3-sys-color-surface-container-low, #f8fafd)
     );
   }
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated
     .javascriptMaterialdesignGm3WizBannerBannerGraphic {
-    color: var(--gm3-banner-with-image-image-color, #fff);
-    background-color: var(
-      --gm3-banner-with-image-image-container-color,
-      #6200ee
-    );
+    color: var(--BMRrs, #fff);
+    background-color: var(--TOBIqc, #6200ee);
   }
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated
     .javascriptMaterialdesignGm3WizBannerBannerText {
-    color: var(
-      --gm3-banner-supporting-text-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBanner,
   .javascriptMaterialdesignGm3WizBannerBannerFixed {
     background-color: var(
-      --gm3-banner-expressive-container-color,
+      --leFxrb,
       var(--gm3-sys-color-primary-container, #d3e3fd)
     );
   }
@@ -27152,22 +27204,13 @@
     }
   }
   .javascriptMaterialdesignGm3WizBannerBannerGraphic {
-    color: var(
-      --gm3-banner-expressive-icon-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--BK3ddb, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBannerText {
-    color: var(
-      --gm3-banner-supporting-text-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBannerTitle {
-    color: var(
-      --gm3-banner-headline-color,
-      var(--gm3-sys-color-on-surface, #1f1f1f)
-    );
+    color: var(--nHWRyc, var(--gm3-sys-color-on-surface, #1f1f1f));
   }
   .appsDocsUiWizBannerBase:link {
     color: var(
@@ -27340,6 +27383,7 @@
   }
   .appsElementsModifierSelectorIconButtonSelected {
     color: var(--gm3-sys-color-primary, #0b57d0);
+    background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
   }
   .appsElementsModifierSelectorCheckCircleIcon {
     color: var(--gm3-sys-color-primary, #0b57d0);
@@ -27390,16 +27434,8 @@
   .appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
     fill: var(--gm3-sys-color-primary);
   }
-  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+  .appsElementsGenerativeAiSourcesCitationsPanelSubHeaderTitle {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
-  }
-  @media (forced-colors: active) {
-    .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
-      outline: 1px solid var(--transparent, transparent);
-    }
-  }
-  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon:hover {
-    background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
   .appsElementsTreeNodeLabel {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
@@ -27424,6 +27460,17 @@
   }
   .appsElementsTreeMultiSelectSubText {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  @media (forced-colors: active) {
+    .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+      outline: 1px solid var(--transparent, transparent);
+    }
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon:hover {
+    background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
   .appsElementsKeyboardShortcutsDialogFooter:before {
     border: 1px solid var(--transparent, transparent);
@@ -27723,8 +27770,7 @@
   .appsElementsSidekickFeed {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
   }
-  .appsElementsSidekickFeedDisclaimer,
-  .appsElementsSidekickQuotaMessage {
+  .appsElementsSidekickFeedDisclaimer {
     color: var(--gm3-sys-color-outline, #747775);
   }
   .appsElementsSidekickLearnMoreLink:active,
@@ -28143,6 +28189,9 @@
   }
   .appsElementsSidekickGeneralFeedbackFeedbackButton:before {
     border: 1px solid var(--transparent, transparent);
+  }
+  .appsElementsSidekickQuotaMessageRoot {
+    color: var(--gm3-sys-color-outline, #747775);
   }
   .appsElementsSidekickGemTileContentListItem:before {
     border: 1px solid var(--transparent, transparent);
