@@ -4055,8 +4055,8 @@
   .docs-link-smartinsertlinkbubble-apply-button:hover {
     background: color-mix(
       in oklab,
-      var(--gm3-sys-color-primary),
-      transparent 4%
+      transparent,
+      var(--gm3-sys-color-primary) 4%
     );
   }
   .docs-link-back-to-search-icon-button {

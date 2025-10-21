@@ -3970,7 +3970,7 @@ body::-webkit-scrollbar-corner {
 }
 .docs-link-smartinsertlinkbubble-apply-button.jfk-button.jfk-button-standard:hover,
 .docs-link-smartinsertlinkbubble-apply-button:hover {
-  background: color-mix(in oklab, var(--gm3-sys-color-primary), transparent 4%);
+  background: color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 4%);
 }
 .docs-link-back-to-search-icon-button {
   color: var(--gm3-sys-color-outline);

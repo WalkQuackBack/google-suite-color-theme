@@ -3693,7 +3693,7 @@ a.docs-blameview-warning-info {
 }
 .docs-link-smartinsertlinkbubble-apply-button.jfk-button.jfk-button-standard:hover,
 .docs-link-smartinsertlinkbubble-apply-button:hover {
-  background: color-mix(in oklab, var(--gm3-sys-color-primary), transparent 4%);
+  background: color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 4%);
 }
 .docs-link-back-to-search-icon-button {
   color: var(--gm3-sys-color-outline);
@@ -15550,13 +15550,13 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
   background: var(--gm3-sys-color-primary) !important;
 }
 .waffle-gridpill-button-blue.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-hover {
-  background: color-mix(in oklab, var(--gm3-sys-color-primary), transparent 4%);
+  background: color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 4%);
 }
 .waffle-gridpill-button-blue.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-focused {
   background: color-mix(
     in oklab,
-    var(--gm3-sys-color-primary),
-    transparent 12%
+    transparent,
+    var(--gm3-sys-color-primary) 12%
   );
 }
 .waffle-namedtable-gridpill-table-conditional-notifications-button-wrapper

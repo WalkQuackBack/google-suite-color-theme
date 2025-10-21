@@ -3801,8 +3801,8 @@
   .docs-link-smartinsertlinkbubble-apply-button:hover {
     background: color-mix(
       in oklab,
-      var(--gm3-sys-color-primary),
-      transparent 4%
+      transparent,
+      var(--gm3-sys-color-primary) 4%
     );
   }
   .docs-link-back-to-search-icon-button {
@@ -15962,15 +15962,15 @@
   .waffle-gridpill-button-blue.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-hover {
     background: color-mix(
       in oklab,
-      var(--gm3-sys-color-primary),
-      transparent 4%
+      transparent,
+      var(--gm3-sys-color-primary) 4%
     );
   }
   .waffle-gridpill-button-blue.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-focused {
     background: color-mix(
       in oklab,
-      var(--gm3-sys-color-primary),
-      transparent 12%
+      transparent,
+      var(--gm3-sys-color-primary) 12%
     );
   }
   .waffle-namedtable-gridpill-table-conditional-notifications-button-wrapper

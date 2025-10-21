@@ -17428,8 +17428,8 @@ input:disabled.kix-variables-sidebar-variable-value-input-field {
   color: var(--gm3-sys-color-primary);
   background-color: color-mix(
     in oklab,
-    var(--gm3-sys-color-primary),
-    transparent 4%
+    transparent,
+    var(--gm3-sys-color-primary) 4%
   );
 }
 .kix-citations-add-source-button.goog-flat-button-focused,
@@ -17443,8 +17443,8 @@ input:disabled.kix-variables-sidebar-variable-value-input-field {
   color: var(--gm3-sys-color-primary);
   background-color: color-mix(
     in oklab,
-    var(--gm3-sys-color-primary),
-    transparent 12%
+    transparent,
+    var(--gm3-sys-color-primary) 12%
   );
 }
 .kix-citations-add-source-button.goog-flat-button-active,
@@ -18424,7 +18424,7 @@ input:disabled.kix-variables-sidebar-variable-value-input-field {
 }
 .docs-link-smartinsertlinkbubble-apply-button.jfk-button.jfk-button-standard:hover,
 .docs-link-smartinsertlinkbubble-apply-button:hover {
-  background: color-mix(in oklab, var(--gm3-sys-color-primary), transparent 4%);
+  background: color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 4%);
 }
 .docs-link-back-to-search-icon-button {
   color: var(--gm3-sys-color-outline);

@@ -18000,8 +18000,8 @@
     color: var(--gm3-sys-color-primary);
     background-color: color-mix(
       in oklab,
-      var(--gm3-sys-color-primary),
-      transparent 4%
+      transparent,
+      var(--gm3-sys-color-primary) 4%
     );
   }
   .kix-citations-add-source-button.goog-flat-button-focused,
@@ -18015,8 +18015,8 @@
     color: var(--gm3-sys-color-primary);
     background-color: color-mix(
       in oklab,
-      var(--gm3-sys-color-primary),
-      transparent 12%
+      transparent,
+      var(--gm3-sys-color-primary) 12%
     );
   }
   .kix-citations-add-source-button.goog-flat-button-active,
@@ -19030,8 +19030,8 @@
   .docs-link-smartinsertlinkbubble-apply-button:hover {
     background: color-mix(
       in oklab,
-      var(--gm3-sys-color-primary),
-      transparent 4%
+      transparent,
+      var(--gm3-sys-color-primary) 4%
     );
   }
   .docs-link-back-to-search-icon-button {
