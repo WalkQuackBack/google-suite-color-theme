@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 import { dumpStylesheets } from './dump-stylesheets.ts';
 import { readFile, writeFile } from 'fs/promises';
 
