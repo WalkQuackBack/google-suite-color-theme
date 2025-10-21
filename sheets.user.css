@@ -2,7 +2,7 @@
 @name Google Sheets Color Theme
 @namespace github.com/walkquackback/google-sheets-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.20
+@version 2025.10.21
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/sheets.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Sheets to be themed using CSS variables. Comes by default with a dark theme.
@@ -790,6 +790,9 @@
   .ritzImportFileDialogFileName {
     color: var(--gm3-sys-color-on-surface);
   }
+  .ritzImportFileDialogFileNameInfo {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .ritzImportFileDialogImportSuccessContainer {
     background: var(--gm3-sys-color-surface-container-low, #f8fafd);
   }
@@ -1066,6 +1069,13 @@
       var(--gm3-sys-color-primary) 12%
     );
   }
+  .docs-material-button-hover.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 4%
+    );
+  }
   .docs-material-button-focused.docs-material-button-text-default {
     background-color: color-mix(
       in oklab,
@@ -1077,7 +1087,7 @@
     background-color: color-mix(
       in oklab,
       transparent,
-      var(--gm3-sys-color-primary) 16%
+      var(--gm3-sys-color-primary) 10%
     );
   }
   .docs-material-button-flat-dark.docs-material-button-focused {
@@ -1128,7 +1138,7 @@
     background-color: color-mix(
       in oklab,
       transparent,
-      var(--gm3-sys-color-primary) 16%
+      var(--gm3-sys-color-primary) 10%
     );
   }
   .docs-material-button-raised-default > .docs-material-button-ripple-element {
@@ -1142,7 +1152,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docs-material-button-text-default.docs-material-button {
     color: var(--gm3-sys-color-primary);
@@ -1151,7 +1160,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface-variant);
   }
   .docs-material-button-hairline-default.docs-material-button-hover,
@@ -1216,43 +1224,27 @@
   }
   .docs-material-button-fill-primary.docs-material-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-material-button-fill-primary.docs-material-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-material-button-fill-primary.docs-material-button-focused,
   .docs-material-button-fill-primary.docs-material-button-focused.docs-material-button-no-focus-border {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .docs-material-button-fill-primary.docs-material-button-hover.docs-material-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-material-button-fill-primary.docs-material-button-active {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-material-button-fill-primary.docs-material-button-disabled {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
     background: color-mix(
       in oklab,
@@ -1552,9 +1544,6 @@
   .docs-gm .docs-save-indicator-popup-header {
     background-color: var(--gm3-sys-color-primary-container);
   }
-  .docs-material .docs-save-indicator-popup-title {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-save-indicator-popup-subtitle {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -1617,6 +1606,9 @@
   .companion-theme-dark.companion-app-switcher-container,
   .companion-theme-light.companion-app-switcher-container {
     background-color: var(--transparent, transparent);
+  }
+  .companion-app-switcher-loading-indicator-dot {
+    background-color: var(--gm3-sys-color-on-surface-variant);
   }
   .companion-theme-dark .companion-app-switcher-loading-indicator-dot {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -1793,12 +1785,6 @@
   .agca-gab-blue .agca-gab-icon-selection-indicator {
     background-color: var(--gm3-sys-color-primary);
   }
-  .agca-gab-green .agca-gab-icon-selection-indicator {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .agca-gab-yellow .agca-gab-icon-selection-indicator {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .companion-shell-header {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     border-bottom: 1px solid
@@ -1955,26 +1941,6 @@
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .app-switcher-notification-bubble
-    .app-switcher-notification-bubble-call-to-action-button {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .app-switcher-notification-bubble
-    .app-switcher-notification-bubble-call-to-action-button.jfk-button-hover {
-    background-color: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
-  }
-  .app-switcher-notification-bubble
-    .app-switcher-notification-bubble-call-to-action-button.jfk-button-focused {
-    background-color: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
-  }
-  .app-switcher-notification-bubble
     .app-switcher-notification-bubble-dismiss-button {
     background-color: var(--gm3-sys-color-error);
   }
@@ -2051,11 +2017,6 @@
     .docs-material-button-flat-default.docs-material-button-focused {
     outline: 1px solid
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%);
-  }
-  .docs-abuse-abusive-file-warning-banner-container,
-  .docs-abuse-abusive-file-warning-banner-container
-    .docs-abuse-warning-banner-flex-wrap {
-    background-color: var(--gm3-sys-color-primary);
   }
   .docs-abuse-warning-banner-not-spam-button .docs-material-button-content {
     box-shadow: 0 0 0 1px var(--gm3-sys-color-on-surface);
@@ -2146,9 +2107,6 @@
   .activity-event-people-names {
     color: var(--dt-on-surface, #3c4043);
   }
-  .activity-event-approval-approved {
-    color: var(--gm3-sys-color-primary);
-  }
   .activity-event-section-heading {
     color: var(--dt-on-surface, #3c4043);
   }
@@ -2172,10 +2130,29 @@
     border: 1px solid var(--transparent, transparent);
     color: var(--dt-primary, #1a73e8);
   }
+  .activity-event-toggle-button-hover {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 4%
+    );
+  }
   .activity-event-toggle-button-focused {
     background-color: var(--dt-primary-container, #e8f0fe);
   }
+  .activity-event-toggle-button-hover.activity-event-toggle-button-focused {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
   .activity-event-toggle-button-active {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
     box-shadow:
       0 1px 2px 0 rgba(60, 64, 67, 0.3),
       0 1px 3px 1px
@@ -2214,30 +2191,14 @@
   span.docs-material-gm-checkbox {
     border: 2px solid var(--gm3-sys-color-on-surface-variant);
   }
-  div.docs-material-gm-checkbox-checked,
-  div.docs-material-gm-checkbox-undetermined,
-  span.docs-material-gm-checkbox-checked,
-  span.docs-material-gm-checkbox-undetermined {
-    background-color: var(--gm3-sys-color-primary);
-    border: 2px solid var(--gm3-sys-color-primary);
-  }
   div.docs-material-gm-checkbox-undetermined:before,
   span.docs-material-gm-checkbox-undetermined:before {
     border-top: 2px solid var(--gm3-sys-color-surface-container-lowest);
-  }
-  div.docs-material-gm-checkbox-focused,
-  span.docs-material-gm-checkbox-focused {
-    border: 2px solid var(--gm3-sys-color-primary);
   }
   div.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-checked,
   span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-checked {
     background-color: var(--gm3-sys-color-on-surface-variant);
     border-color: var(--gm3-sys-color-on-surface-variant);
-  }
-  div.docs-material-gm-checkbox-checked.docs-material-gm-checkbox-focused,
-  span.docs-material-gm-checkbox-checked.docs-material-gm-checkbox-focused {
-    background-color: var(--gm3-sys-color-primary);
-    border: 2px solid var(--gm3-sys-color-primary);
   }
   div.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined,
   span.docs-material-gm-checkbox-disabled.docs-material-gm-checkbox-undetermined {
@@ -2246,11 +2207,6 @@
   }
   .docs-material-gm-labeled-checkbox-checkbox {
     border: 2px solid var(--gm3-sys-color-on-surface-variant);
-  }
-  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-checked,
-  .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-undetermined {
-    background-color: var(--gm3-sys-color-primary);
-    border: 2px solid var(--gm3-sys-color-primary);
   }
   .docs-material-gm-labeled-checkbox-checkbox.docs-material-gm-labeled-checkbox-undetermined:before {
     border-top: 2px solid var(--gm3-sys-color-surface-container-lowest);
@@ -2274,21 +2230,6 @@
     background-color: var(--gm3-sys-color-on-surface-variant);
     border-color: var(--gm3-sys-color-on-surface-variant);
   }
-  .docs-material-gm-labeled-checkbox-hover
-    .docs-material-gm-labeled-checkbox-checked
-    + .docs-material-gm-labeled-checkbox-circle {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .docs-material-gm-labeled-checkbox-focused
-    .docs-material-gm-labeled-checkbox-checked
-    + .docs-material-gm-labeled-checkbox-circle {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .docs-material-gm-labeled-checkbox-active
-    .docs-material-gm-labeled-checkbox-checked
-    + .docs-material-gm-labeled-checkbox-circle {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .docs-material-gm-labeled-checkbox .docs-material-gm-labeled-checkbox-label {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -2298,13 +2239,6 @@
   }
   .docs-material-gm-unlabeled-checkbox-checkbox {
     border: 2px solid var(--gm3-sys-color-on-surface-variant);
-  }
-  .docs-material-gm-unlabeled-checkbox-checked
-    .docs-material-gm-unlabeled-checkbox-checkbox,
-  .docs-material-gm-unlabeled-checkbox-undetermined
-    .docs-material-gm-unlabeled-checkbox-checkbox {
-    background-color: var(--gm3-sys-color-primary);
-    border: 2px solid var(--gm3-sys-color-primary);
   }
   .docs-material-gm-unlabeled-checkbox-undetermined
     .docs-material-gm-unlabeled-checkbox-checkbox:before {
@@ -2328,18 +2262,6 @@
     .docs-material-gm-unlabeled-checkbox-checkbox {
     background-color: var(--gm3-sys-color-on-surface-variant);
     border-color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .docs-material-gm-unlabeled-checkbox-hover.docs-material-gm-unlabeled-checkbox-checked
-    .docs-material-gm-unlabeled-checkbox-circle {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .docs-material-gm-unlabeled-checkbox-focused.docs-material-gm-unlabeled-checkbox-checked
-    .docs-material-gm-unlabeled-checkbox-circle {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .docs-material-gm-unlabeled-checkbox-active.docs-material-gm-unlabeled-checkbox-checked
-    .docs-material-gm-unlabeled-checkbox-circle {
-    background-color: var(--gm3-sys-color-primary);
   }
   .docs-tabbar-tab {
     border-bottom: 2px solid var(--transparent, transparent);
@@ -2438,6 +2360,7 @@
   }
   .goog-flat-menu-button-disabled {
     background-color: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .goog-flat-menu-button.goog-flat-menu-button-hover {
     background-color: color-mix(
@@ -2599,37 +2522,21 @@
   }
   .analytics-btn-fill.jfk-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .analytics-btn-fill.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .analytics-btn-fill.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .analytics-btn-fill.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .analytics-btn-fill.jfk-button-focused.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .analytics-btn-fill.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
     background: color-mix(
       in oklab,
@@ -2642,7 +2549,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .analytics-btn-hairline.jfk-button-hover {
     background: color-mix(
@@ -2696,7 +2602,6 @@
   .analytics-btn-text.jfk-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .analytics-btn-text.jfk-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
@@ -2705,7 +2610,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .analytics-btn-text.jfk-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
@@ -2714,7 +2618,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .analytics-btn-text.jfk-button-focused.jfk-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
@@ -2723,7 +2626,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .analytics-btn-text.jfk-button-focused.jfk-button-active {
     border: 1px solid var(--transparent, transparent) !important;
@@ -2732,14 +2634,12 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
   .analytics-btn-text.jfk-button-disabled {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .analytics-dialog-bg,
@@ -2803,11 +2703,6 @@
     .docs-material-button {
     color: var(--gm3-sys-color-primary);
   }
-  .docs-feature-level-banner-sheets
-    .docs-approvals-banner-non-primary-button-wrapper
-    .docs-material-button {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-feature-level-banner-slides
     .docs-approvals-banner-non-primary-button-wrapper
     .docs-material-button {
@@ -2821,11 +2716,6 @@
       transparent,
       var(--gm3-sys-color-primary) 16%
     );
-  }
-  .docs-feature-level-banner-sheets
-    .docs-approvals-banner-icon
-    .docs-approvals-banner-icon-path {
-    fill: var(--gm3-sys-color-primary);
   }
   .docs-feature-level-banner-slides
     .docs-approvals-banner-icon
@@ -3056,9 +2946,6 @@
   .docs-google-finance-chip-percent-delta-bubble.docs-google-finance-chip-delta-positive {
     background-color: var(--gm3-sys-color-primary-container);
   }
-  .docs-google-finance-chip-delta-positive {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-google-finance-chip-secondary-metric {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -3141,7 +3028,6 @@
     border-color: var(--transparent, transparent) #fafafa;
   }
   .docs-gm-promo.jfk-bubble.docs-promo-bubble {
-    background-color: var(--gm3-sys-color-primary);
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -3155,7 +3041,7 @@
   .docs-gm-promo.jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowup
     .jfk-bubble-arrowimplafter {
-    border-color: var(--gm3-sys-color-primary) var(--transparent, transparent);
+    border-color: #188038 var(--transparent, transparent);
   }
   .docs-gm-promo.jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowleft
@@ -3163,7 +3049,7 @@
   .docs-gm-promo.jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowright
     .jfk-bubble-arrowimplafter {
-    border-color: var(--transparent, transparent) var(--gm3-sys-color-primary);
+    border-color: var(--transparent, transparent) #188038;
   }
   .docs-promo-header {
     color: var(--gm3-sys-color-shadow);
@@ -3199,9 +3085,6 @@
   }
   .docs-gm-promo .docs-promo-action-container:focus {
     outline-color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .docs-gm .docs-gm-sidebar-icon-path {
-    fill: var(--gm3-sys-color-primary);
   }
   .docs-sidebar-gm-titlebar-icon-button {
     background-color: var(--transparent, transparent);
@@ -3324,9 +3207,6 @@
   .docs-callout-important {
     background: var(--gm3-sys-color-primary-container);
   }
-  .docs-callout-warning {
-    background: var(--gm3-sys-color-primary);
-  }
   .docs-callout-message {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -3359,7 +3239,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .embedded-youtube-player-load-error .retry-button:hover {
     background: color-mix(
@@ -3570,9 +3449,6 @@
       var(--gm3-sys-color-on-surface) 16%
     );
   }
-  .promo-bubble-dotted-progressbar-dot-highlighted {
-    background: var(--gm3-sys-color-primary);
-  }
   .docs-material-promo-walkthrough-bubble {
     background: var(--gm3-sys-color-surface, #fff);
     border: 1px solid var(--transparent, transparent);
@@ -3622,9 +3498,6 @@
   .docs-hc-gecko.docs-incompatibility-banner
     .docs-incompatibility-banner-view-details-button {
     border: 1px solid var(--transparent, transparent);
-  }
-  .docs-incompatibility-banner-view-details-button {
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm .docs-embedded-file-bubble {
     border-color: var(--gm3-sys-color-outline-variant);
@@ -3735,35 +3608,20 @@
   }
   .gwef-promo-cta-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .gwef-promo-cta-button:hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .gwef-promo-cta-button:active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .gwef-promo-cta-button:focus {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .gwef-promo-dismiss-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .gwef-promo-dismiss-button:active,
   .gwef-promo-dismiss-button:focus,
@@ -3939,6 +3797,14 @@
       var(--gm3-sys-color-on-surface) 38%
     );
   }
+  .docs-link-smartinsertlinkbubble-apply-button.jfk-button.jfk-button-standard:hover,
+  .docs-link-smartinsertlinkbubble-apply-button:hover {
+    background: color-mix(
+      in oklab,
+      var(--gm3-sys-color-primary),
+      transparent 4%
+    );
+  }
   .docs-link-back-to-search-icon-button {
     color: var(--gm3-sys-color-outline);
   }
@@ -4002,6 +3868,9 @@
   }
   .docs-gm .pub-dialog-state-published.pub-dialog-info {
     color: var(--gm3-sys-color-primary);
+  }
+  .goog-tab-bar.pub-dialog-tab-bar .goog-tab.pub-dialog-tab {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-gm .goog-tab-bar.pub-dialog-tab-bar .goog-tab.pub-dialog-tab {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -4087,11 +3956,6 @@
   .docs-linkbubble-link-preview
     .docs-link-bubble-card-component.docs-link-bubble-action-card-component.add-on-install-prompt-card-container {
     background-color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .docs-linkbubble-link-preview .docs-link-bubble-abuse-card-component:before,
-  .docs-linkbubble-link-preview
-    .docs-link-bubble-card-component.docs-link-bubble-abuse-card-component {
-    background-color: var(--gm3-sys-color-primary);
   }
   .docs-linkbubble-link-preview
     .docs-link-bubble-card-component.docs-link-bubble-extract-card-component,
@@ -4182,9 +4046,6 @@
     .docs-link-bubble-calendar-attach-document.jfk-button-disabled:hover {
     background-color: var(--transparent, transparent);
   }
-  .docs-link-bubble-card-component .link-bubble-text-button-text {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-link-bubble-action-card-component.link-bubble-acl-fixer-card-component
     .link-bubble-text-button-text.link-bubble-text-button-text-disabled {
     color: var(--gm3-sys-color-outline);
@@ -4227,7 +4088,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docs-link-bubble-third-party-privacy-promo-card-component
     .jfk-button-standard.jfk-button-hover,
@@ -4243,7 +4103,6 @@
         transparent,
         var(--gm3-sys-color-primary-fixed-dim) 30%
       ) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docs-link-bubble-third-party-privacy-promo-card-component
     .jfk-button-standard.jfk-button-focused,
@@ -4564,6 +4423,7 @@
   }
   .modal-dialog-buttons button[disabled] {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .modal-dialog-buttons .goog-buttonset-action {
     background-color: var(--gm3-sys-color-primary);
@@ -4720,27 +4580,8 @@
   }
   .docs-gm #docs-spellcheckslidingdialog-button-change,
   .docs-gm #docs-spellcheckslidingdialog-button-change-menu {
-    background: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent);
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .docs-gm
-    #docs-spellcheckslidingdialog-button-change-menu.goog-flat-menu-button-hover,
-  .docs-gm #docs-spellcheckslidingdialog-button-change.jfk-button-hover {
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
-  }
-  .docs-gm
-    #docs-spellcheckslidingdialog-button-change-menu.goog-flat-menu-button-focused,
-  .docs-gm #docs-spellcheckslidingdialog-button-change.jfk-button-focused {
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .docs-gm
     #docs-spellcheckslidingdialog-button-change-menu.goog-flat-menu-button-disabled,
@@ -4758,7 +4599,6 @@
   .docs-gm #docs-spellcheckslidingdialog-button-ignore-menu {
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant);
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm
     #docs-spellcheckslidingdialog-button-dictionary-menu.goog-flat-menu-button-hover,
@@ -4876,35 +4716,21 @@
   }
   .docs-gm #docs-spellcheckslidingdialog-no-misspellings-footer .jfk-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm
@@ -4913,7 +4739,6 @@
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-active.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-alt-text-tile-description-text-field {
@@ -4983,9 +4808,16 @@
   }
   .docs-sidebar-tile-header.docs-sidebar-tile-header-disabled {
     background-color: var(--transparent, transparent);
+    color: var(--gm3-sys-color-outline);
+  }
+  .docs-sidebar-tile-section-disabled .docs-sidebar-tile-section-title {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-sidebar-tile-label {
     color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .docs-sidebar-tile-controls-disabled .docs-sidebar-tile-label {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-gm .docs-sidebar-tile-controls {
     background-color: var(--gm3-sys-color-surface, #fff);
@@ -5041,9 +4873,6 @@
   .docs-sidebar-toggle-tabs {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
-  .docs-sidebar-toggle-tabs .jfk-button.docs-sidebar-toggle-tab-active {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-sidebar-toggle-tabs .jfk-button.docs-sidebar-toggle-tab-inactive {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -5067,11 +4896,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 12%
     );
-  }
-  .docs-sidebar-toggle-tabs
-    .jfk-button.docs-sidebar-toggle-tab-active
-    > div:after {
-    border-top: 3px solid var(--gm3-sys-color-primary);
   }
   .docs-white-circle {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -5253,6 +5077,15 @@
   }
   .docs-material-slider-track-on {
     background-color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-slider-track-off {
+    background-color: var(--gm3-sys-color-outline);
+  }
+  .docs-material-slider.goog-slider-disabled
+    .docs-material-slider-thumb-grabber,
+  .docs-material-slider.goog-slider-disabled .docs-material-slider-track-on {
+    background-color: var(--gm3-sys-color-outline);
+    border-color: var(--gm3-sys-color-outline);
   }
   .addon-sidebar {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -5578,6 +5411,7 @@
   }
   .jfk-button-mini.jfk-button-disabled {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .jfk-checkbox-checked,
   .jfk-checkbox-undetermined {
@@ -5663,6 +5497,13 @@
   .jfk-radiobutton-disabled .jfk-radiobutton-radio {
     border-color: var(--gm3-sys-color-surface-container);
   }
+  .jfk-radiobutton-disabled.jfk-radiobutton-checked
+    .jfk-radiobutton-radio:after {
+    background: var(--gm3-sys-color-outline);
+  }
+  .jfk-radiobutton-disabled .jfk-radiobutton-label {
+    color: var(--gm3-sys-color-outline);
+  }
   .jfk-radiobutton-disabled:active .jfk-radiobutton-radio,
   .jfk-radiobutton-disabled:hover .jfk-radiobutton-radio {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -5747,16 +5588,6 @@
   a.docs-butterbar-link:visited {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .docs-gm .jfk-butterBar-info .docs-butterbar-butter-action,
-  .docs-gm .jfk-butterBar-info .docs-butterbar-dismiss,
-  .docs-gm .jfk-butterBar-info .docs-butterbar-link,
-  .docs-gm .jfk-butterBar-info .docs-butterbar-link-no-pad,
-  .docs-gm .jfk-butterBar-info a.docs-butterbar-link-no-pad:link,
-  .docs-gm .jfk-butterBar-info a.docs-butterbar-link-no-pad:visited,
-  .docs-gm .jfk-butterBar-info a.docs-butterbar-link:link,
-  .docs-gm .jfk-butterBar-info a.docs-butterbar-link:visited {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-gm .jfk-butterBar-warning .docs-butterbar-butter-action,
   .docs-gm .jfk-butterBar-warning .docs-butterbar-dismiss,
   .docs-gm .jfk-butterBar-warning .docs-butterbar-link,
@@ -5766,16 +5597,6 @@
   .docs-gm .jfk-butterBar-warning a.docs-butterbar-link:link,
   .docs-gm .jfk-butterBar-warning a.docs-butterbar-link:visited {
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .docs-gm .jfk-butterBar-error .docs-butterbar-butter-action,
-  .docs-gm .jfk-butterBar-error .docs-butterbar-dismiss,
-  .docs-gm .jfk-butterBar-error .docs-butterbar-link,
-  .docs-gm .jfk-butterBar-error .docs-butterbar-link-no-pad,
-  .docs-gm .jfk-butterBar-error a.docs-butterbar-link-no-pad:link,
-  .docs-gm .jfk-butterBar-error a.docs-butterbar-link-no-pad:visited,
-  .docs-gm .jfk-butterBar-error a.docs-butterbar-link:link,
-  .docs-gm .jfk-butterBar-error a.docs-butterbar-link:visited {
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm .button-disabled.docs-butterbar-butter-action,
   .docs-gm .button-disabled.docs-butterbar-butter-action:hover {
@@ -5873,10 +5694,8 @@
   .docs-gm .docs-titlebar-badge.docs-titlebar-badge-selected,
   .docs-gm .docs-titlebar-badge:active {
     background-color: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .office-editing-file-extension {
-    background-color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -5887,7 +5706,6 @@
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-external-badge {
-    background-color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent);
   }
   .docs-external-badge-text-expanded {
@@ -5938,7 +5756,6 @@
   }
   .docs-new-badge,
   .docs-premium-badge {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-default-badge {
@@ -6004,6 +5821,7 @@
   }
   .jfk-button-standard.jfk-button-disabled {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .jfk-button-action {
     background-color: var(--gm3-sys-color-primary);
@@ -6075,6 +5893,7 @@
   }
   .jfk-button-contrast.jfk-button-disabled {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .jfk-button-default {
     color: var(--gm3-sys-color-surface-container-lowest);
@@ -6554,11 +6373,9 @@
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
     background: color-mix(
       in oklab,
@@ -6568,33 +6385,19 @@
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button:focus {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
     border-color: var(--transparent, transparent) !important;
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-gm
     #docs-titlebar-share-client-button
     .jfk-button.jfk-button-hover:focus {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button.jfk-button-active,
   .docs-gm #docs-titlebar-share-client-button .jfk-button.jfk-button-checked {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .goog-toolbar-button,
@@ -6728,7 +6531,6 @@
   .docs-gm .docs-material .goog-toolbar-menu-button-open,
   .docs-gm .docs-material.trix-palette .goog-palette-cell-selected {
     background-color: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .docs-material .goog-toolbar-button,
   .docs-material .goog-toolbar-menu-button {
@@ -6866,7 +6668,6 @@
   .punch-animation-sidebar-stop.jfk-button,
   .waffle-filterbox-button-container .jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-hover,
@@ -6875,13 +6676,7 @@
   .punch-animation-sidebar-play.jfk-button-hover,
   .punch-animation-sidebar-stop.jfk-button-hover,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-focused,
   .docs-suggestiondialog-accept-container .goog-flat-menu-button-focused,
@@ -6889,13 +6684,7 @@
   .punch-animation-sidebar-play.jfk-button-focused,
   .punch-animation-sidebar-stop.jfk-button-focused,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .docs-offline-optinpromo-buttons
     .jfk-button-action.jfk-button-hover.jfk-button-focused,
@@ -6906,7 +6695,6 @@
   .punch-animation-sidebar-stop.jfk-button-hover.jfk-button-focused,
   .waffle-filterbox-button-container
     .jfk-button-action.jfk-button-hover.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-pressed,
@@ -6915,7 +6703,6 @@
   .punch-animation-sidebar-play.jfk-button-pressed,
   .punch-animation-sidebar-stop.jfk-button-pressed,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-pressed {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-disabled,
@@ -6924,7 +6711,6 @@
   .punch-animation-sidebar-play.jfk-button-disabled,
   .punch-animation-sidebar-stop.jfk-button-disabled,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
     background: color-mix(
       in oklab,
@@ -6940,7 +6726,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm .docs-image-effect-adjustment-reset-button.jfk-button-hover,
   .docs-offline-optinpromo-buttons .jfk-button-standard.jfk-button-hover,
@@ -7026,7 +6811,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm .modal-dialog .jfk-button-standard.jfk-button-hover,
   .docs-gm .modal-dialog button:hover {
@@ -7092,30 +6876,17 @@
   .docs-gm .modal-dialog .goog-buttonset-action,
   .docs-gm .modal-dialog .jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-hover,
   .docs-gm .modal-dialog .goog-buttonset-action:hover,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-focused,
   .docs-gm .modal-dialog .goog-buttonset-action:focus,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .docs-gm
     .docs-material-bubble
@@ -7124,7 +6895,6 @@
   .docs-gm
     .modal-dialog
     .jfk-button-action.jfk-button-hover.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-active,
@@ -7135,13 +6905,11 @@
   .docs-gm .modal-dialog .goog-buttonset-action:focus:active,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-active,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-focus.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-disabled,
   .docs-gm .modal-dialog .goog-buttonset-action[disabled],
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
     background: color-mix(
       in oklab,
@@ -7363,18 +7131,11 @@
   .docs-gm .modal-dialog .jfk-radiobutton-disabled .jfk-radiobutton-label {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .docs-gm .share-butter-link,
-  .docs-gm .share-butter-link:visited {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-grille-gm3.docs-gm .share-butter-link,
   .docs-grille-gm3.docs-gm .share-butter-link:active,
   .docs-grille-gm3.docs-gm .share-butter-link:hover,
   .docs-grille-gm3.docs-gm .share-butter-link:visited {
     color: var(--gm3-sys-color-inverse-primary);
-  }
-  .docs-gm .share-butter-link:disabled {
-    color: var(--gm3-sys-color-primary);
   }
   #docs-chrome:not(.docs-hub-chrome) {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -7985,9 +7746,6 @@
     box-shadow: 0 -2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
-  .docs-chat-not-encrypted-warning-container {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .docs-chat-not-encrypted-warning-label {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -8368,9 +8126,6 @@
   }
   .docs-invite-heavy {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .docs-hub-appbar #titlebar-mode-indicator-container > div {
-    color: var(--gm3-sys-color-primary);
   }
   #titlebar-mode-indicator-container > .docs-material-menu-button-flat-primary,
   .kix-titlebar-approvals-button.docs-material-button,
@@ -8854,6 +8609,9 @@
     > .apps-ui-material-slide-toggle-track {
     border: 1px solid var(--gm3-sys-color-surface-container-lowest);
   }
+  .docs-revisions-switch .apps-ui-material-slide-toggle-thumb {
+    background-color: var(--gm3-sys-color-outline);
+  }
   .docs-gm .docs-revisions-switch .apps-ui-material-slide-toggle-thumb {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -8927,9 +8685,6 @@
   }
   .docs-revisions-tile-text-box:disabled {
     color: var(--gm3-sys-color-shadow);
-  }
-  .docs-gm .docs-revisions-tile-selected .docs-revisions-tile-text-box {
-    color: var(--gm3-sys-color-primary);
   }
   .docs-grille-version-history
     .docs-revisions-tile-selected
@@ -9143,9 +8898,6 @@
   .docs-ui-toast-content a {
     color: var(--gm3-sys-color-inverse-primary);
   }
-  .docs-gm .docs-ui-toast-control-bar {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-grille-gm3 .docs-ui-toast-control {
     color: var(--gm3-sys-color-inverse-primary);
   }
@@ -9283,15 +9035,23 @@
     .docs-material-button {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .waffle-assistant-overlay-recommendation-card-menu-button.docs-material-menu-button-flat-default-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
+  }
   .waffle-assistant-overlay-recommendation-card-menu-button.docs-material-menu-button-flat-default-focused {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
     border-color: var(--transparent, transparent);
   }
   .waffle-assistant-overlay-recommendation-card-title {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-assistant-overlay-recommendation-card-formula-corrections-recommendation,
-  .waffle-assistant-overlay-recommendation-card-recommendation {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-assistant-overlay-recommendation-card-additional-information,
   .waffle-assistant-overlay-recommendation-card-error-additional-information,
@@ -9334,9 +9094,6 @@
   }
   .waffle-assistant-overlay-recommendation-card-diff-information-error {
     color: var(--gm3-sys-color-error);
-  }
-  .waffle-assistant-overlay-recommendation-card-diff-information-fix {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-assistant-overlay-recommendation-card-reject-button {
     border: 1px solid var(--gm3-sys-color-outline-variant);
@@ -9386,9 +9143,6 @@
       var(--gm3-sys-color-primary) 8%
     );
   }
-  .waffle-assistant-overlay-recommendation-card-view-suggestion {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-menu-button-inactive {
     border-left: 1px solid var(--transparent, transparent);
     background-color: var(--transparent, transparent);
@@ -9435,6 +9189,13 @@
   }
   .waffle-assistant-empty-list {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .waffle-assistant-empty-list-title {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .waffle-assistant-empty-list-body {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-assistant-empty-list-link a,
   .waffle-assistant-empty-list-link span {
@@ -9488,6 +9249,7 @@
   }
   .waffle-assistant-quicksum-entry {
     border: 1px solid var(--transparent, transparent);
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-assistant-quicksum-panel-readonly
     .waffle-assistant-quicksum-entry:focus,
@@ -9497,18 +9259,6 @@
   }
   .waffle-assistant-quicksum-panel-readonly .waffle-assistant-quicksum-entry {
     border: 1px solid var(--transparent, transparent);
-  }
-  .waffle-assistant-highlight-styled-rect {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .range-border.waffle-assistant-highlight-styled-border {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .waffle-assistant-mouseover-highlight-styled-rect {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .range-border.waffle-assistant-mouseover-highlight-styled-border {
-    border-color: var(--gm3-sys-color-primary);
   }
   .waffle-inline-assistant-refresh-banner {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -9525,16 +9275,6 @@
   }
   .waffle-inline-assistant-refresh-text-container {
     background: var(--gm3-sys-color-primary-container);
-  }
-  .waffle-sidebar-container
-    .waffle-inline-assistant-refresh-button.jfk-button-standard,
-  .waffle-sidebar-container
-    .waffle-inline-assistant-refresh-button.jfk-button-standard.jfk-button-focused,
-  .waffle-sidebar-container
-    .waffle-inline-assistant-refresh-button.jfk-button-standard.jfk-button-hover,
-  .waffle-sidebar-container
-    .waffle-inline-assistant-refresh-button.jfk-button-standard.jfk-button-hover.jfk-button-focused {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-inline-assistant-sidebar-category-cards {
     color: var(--gm3-sys-color-on-surface);
@@ -9611,9 +9351,6 @@
   }
   .waffle-inline-assistant-nf-suggestion-description {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-inline-assistant-nf-suggested-preview {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-inline-assistant-nf-check:active {
     background: color-mix(
@@ -9697,9 +9434,6 @@
   .docs-material-gm-checkbox.waffle-assistant-card-checkbox {
     border: 2px solid var(--gm3-sys-color-outline);
   }
-  .docs-material-gm-checkbox-checked.waffle-assistant-card-checkbox {
-    border: 2px solid var(--gm3-sys-color-primary);
-  }
   .waffle-inline-assistant-sidebar-survey-container {
     background-color: color-mix(
       in oklab,
@@ -9728,9 +9462,19 @@
     .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-menu-button-disabled {
     background: var(--gm3-sys-color-outline-variant);
   }
-  .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-menu-button-active
-    .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-button-label {
-    color: var(--gm3-sys-color-primary);
+  .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-bubble
+    .jfk-bubble-closebtn:focus,
+  .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-bubble
+    .jfk-bubble-closebtn:hover,
+  .waffle-assistant-data-cleanup-suggestions-hint-icon-bubble
+    .jfk-bubble-closebtn:focus,
+  .waffle-assistant-data-cleanup-suggestions-hint-icon-bubble
+    .jfk-bubble-closebtn:hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
   }
   .waffle-assistant-card-text {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -9758,12 +9502,6 @@
   .waffle-inline-assistant-sidebar-divider {
     border-top: 1px solid var(--gm3-sys-color-outline-variant);
   }
-  .waffle-inline-assistant-sidebar-category-header {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-inline-assistant-rec-range {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-inline-assistant-rec-range-red {
     color: var(--gm3-sys-color-error);
   }
@@ -9772,36 +9510,21 @@
   }
   .jfk-button-action.waffle-assistant-popup-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .jfk-button-action.waffle-assistant-popup-button.goog-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .jfk-button-action.waffle-assistant-popup-button.goog-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .jfk-button-action.waffle-assistant-popup-button.goog-button-hover.goog-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .jfk-button-standard.waffle-assistant-popup-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .jfk-button-standard.waffle-assistant-popup-button.goog-button-hover {
     background: color-mix(
@@ -9885,7 +9608,6 @@
   }
   .waffle-assistant-card-apply-all {
     background-color: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-assistant-card-apply-all-focused {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -9928,6 +9650,13 @@
   }
   .waffle-assistant-icon-button {
     background: var(--transparent, transparent);
+  }
+  .goog-grey.waffle-assistant-icon-button:hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
   }
   .waffle-assistant-input-return-icon.waffle-assistant-icon-button:focus {
     background: color-mix(
@@ -9988,9 +9717,6 @@
   .waffle-inline-assistant-bulk-action-button {
     background: var(--gm3-sys-color-surface-container-lowest);
   }
-  .waffle-inline-assistant-bulk-action-buttons-description {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-assistant-chart-preview.waffle-assistant-dragged-card {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline);
@@ -9998,8 +9724,14 @@
   .waffle-assistant-chart-highlights {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .waffle-assistant-facet-top-text {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .waffle-assistant-facet-toggle {
     color: var(--gm3-sys-color-primary);
+  }
+  .waffle-assistant-single-facet-title {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-assistant-faceted-chart {
     border: 1px solid var(--gm3-sys-color-outline);
@@ -10010,6 +9742,9 @@
   .waffle-assistant-word-cloud-content-container {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     color: var(--gm3-sys-color-on-surface);
+  }
+  .waffle-assistant-word-cloud-title {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-assistant-range-action-parent {
     background-color: color-mix(
@@ -10055,6 +9790,9 @@
   }
   .waffle-assistant-answers-logging-message-container {
     background: var(--gm3-sys-color-surface-container);
+  }
+  .waffle-assistant-answers-logging-message {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-assistant-answers-logging-opt-out {
     border-left: 1px solid
@@ -10138,6 +9876,12 @@
       var(--gm3-sys-color-on-surface) 16%
     );
   }
+  .waffle-assistant-answercard-content {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .waffle-assistant-answercard-question-container.waffle-assistant-button {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .waffle-assistant-answercard-question-container.waffle-assistant-button-focused,
   .waffle-assistant-answercard-question-container.waffle-assistant-button-hover {
     background-color: color-mix(
@@ -10152,6 +9896,9 @@
   .waffle-assistant-answercard-answer {
     color: var(--gm3-sys-color-on-surface);
   }
+  .waffle-assistant-answercard-formula-holder {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .waffle-assistant-answercard-formula {
     border: 1px solid var(--gm3-sys-color-primary);
   }
@@ -10161,6 +9908,10 @@
   .waffle-assistant-answercard-formula-help {
     background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .waffle-assistant-answercard-hide-formula-link,
+  .waffle-assistant-answercard-see-formula-link {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-assistant-answercard-formula-icon {
     background: color-mix(
@@ -10178,6 +9929,12 @@
   }
   .waffle-assistant-answercard-feedback-container {
     border-top: 1px dashed var(--gm3-sys-color-outline);
+  }
+  .waffle-assistant-answercard-feedback-link {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .waffle-assistant-answers-suggestioncard {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-pivottable-pivot-canvas {
     border: 1px solid
@@ -10286,14 +10043,21 @@
   .waffle-assistant-conditionalformat-format-preview {
     border: 1px solid var(--transparent, transparent);
   }
+  .waffle-assistant-conditionalformat-description {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .waffle-assistant-banding-range-wrapper {
     border: 1px solid var(--transparent, transparent);
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-assistant-formatting-edit-button {
     color: var(--gm3-sys-color-primary);
   }
   .waffle-assistant-pivottable-rule-holder {
     border: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .waffle-assistant-pivottable-description {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-pivottable-canvas {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -10668,10 +10432,6 @@
       var(--gm3-sys-color-on-surface) 16%
     );
   }
-  .apps-ui-material-slide-toggle-container-checked
-    .apps-ui-material-slide-toggle-thumb {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .waffle-rich-text-link,
   a.waffle-rich-text-link {
     color: var(--gm3-sys-color-primary);
@@ -10690,7 +10450,6 @@
       transparent,
       var(--gm3-sys-color-primary) 8%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-menu-button-active:focus {
     background: color-mix(
@@ -10698,8 +10457,6 @@
       transparent,
       var(--gm3-sys-color-primary) 12%
     );
-    border: 1px solid var(--gm3-sys-color-primary);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-assistant-data-cleanup-suggestions-bottom-entry-point-menu-button-inactive:focus {
     border: 1px solid var(--gm3-sys-color-on-surface);
@@ -10760,13 +10517,9 @@
   .waffle-assistant-data-cleanup-suggestions-hint-icon-bubble-feedback-button.waffle-ui-text-link-button {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-assistant-data-cleanup-suggestions-hint-icon-bubble-disable-button {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-ui-text-link-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-ui-text-link-button-hover {
     background: color-mix(
@@ -10800,9 +10553,19 @@
     color: var(--gm3-sys-color-on-surface-variant);
   }
   .goog-grey.waffle-ui-text-link-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
     color: var(--gm3-sys-color-on-surface);
   }
   .goog-grey.waffle-ui-text-link-button-focused {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
     color: var(--gm3-sys-color-on-surface);
   }
   .goog-grey.waffle-ui-text-link-button-active {
@@ -10932,9 +10695,6 @@
   [class*="docs-hc"] .docs-action-badge {
     border: 1px solid var(--transparent, transparent);
   }
-  .docs-action-updated-dot {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .docs-charts-editor
     .docs-charts-editor-scroll-pane
     .docs-charts-editor-customize-tab {
@@ -10988,10 +10748,6 @@
     .docs-material-gm-labeled-select-outer-box {
     box-shadow: 0 1px 3px 1px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .docs-charts-editor-selector-bundle-selector
-    .docs-material-gm-labeled-select-caption {
-    color: var(--gm3-sys-color-primary);
   }
   .docs-charts-editor-selector-bundle-selector
     .docs-material-gm-labeled-select-focused
@@ -11051,6 +10807,9 @@
       0 2px 4px -1px rgba(0, 0, 0, 0.2);
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
+  .docs-charts-editor-charttype-option {
+    border: 1px solid var(--gm3-sys-color-outline);
+  }
   .docs-charts-editor-palette-label {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -11088,6 +10847,9 @@
   }
   .docs-charts-editor-textstyle-separator {
     border-left: 1px solid var(--gm3-sys-color-outline-variant);
+  }
+  .docs-charts-editor-series-item-selection-dialog-input-default-caption {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-charts-editor-waterfall-add-total-button {
     color: var(--gm3-sys-color-primary);
@@ -11130,9 +10892,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
-  }
-  .waffle-charteditor-add-multiple-domains-button-label {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-charteditor-multiple-domains-component-header-label {
     color: var(--gm3-sys-color-on-surface);
@@ -11213,7 +10972,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    border: 1px solid var(--gm3-sys-color-primary);
     box-shadow: 0 1px 3px 1px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -11232,7 +10990,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    border: 1px solid var(--gm3-sys-color-primary);
     box-shadow: 0 1px 3px 1px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -11264,6 +11021,9 @@
     .companion-collapser-button.app-switcher-button-hover.app-switcher-button-checked
     .app-switcher-button-icon-background {
     background-color: var(--transparent, transparent);
+  }
+  .waffle-dashboard-fab-buttons {
+    box-shadow: 0 10px 10px var(--gm3-sys-color-outline);
   }
   .waffle-dashboard-fab-buttons:focus,
   .waffle-dashboard-fab-buttons:hover {
@@ -11302,9 +11062,6 @@
     color: var(--gm3-sys-color-on-surface);
   }
   .waffle-dataconnector-pill-spinner {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-dataconnector-pill-gm .waffle-dataconnector-pill-spinner {
     color: var(--gm3-sys-color-primary);
   }
   .waffle-dataconnector-pill-spinner:before {
@@ -11563,9 +11320,6 @@
   .docs-grille-gm3 .docs-sheet-tab:focus .docs-sheet-tab-name {
     color: var(--gm3-sys-color-on-surface);
   }
-  .docs-gm .docs-sheet-active-tab .docs-sheet-tab-name {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-grille-gm3 .docs-sheet-active-tab .docs-sheet-tab-name,
   .docs-grille-gm3 .docs-sheet-active-tab:focus .docs-sheet-tab-name {
     color: var(--gm3-sys-color-primary);
@@ -11802,7 +11556,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .nfd-input .goog-flat-menu-button.goog-flat-menu-button-hover {
@@ -11906,6 +11659,10 @@
   .google-visualization-charteditor-combobox.google-visualization-charteditor-combobox-disabled {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-inverse-on-surface);
+  }
+  .google-visualization-charteditor-combobox-disabled
+    .goog-toolbar-combo-button-input {
+    color: var(--gm3-sys-color-outline);
   }
   .google-visualization-charteditor-checkbox-disabled {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -12080,7 +11837,7 @@
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
   }
   .goog-flat-menu-button-disabled .goog-flat-menu-button-dropdown {
-    border-color: #b8b8b8 var(--transparent, transparent);
+    border-color: var(--gm3-sys-color-outline) var(--transparent, transparent);
   }
   .google-visualization-clickeditor-header {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -13028,7 +12785,19 @@
   .waffleGriddySuggestionsBubbleMenuButton.docs-material-menu-button-flat-default:before {
     border: 1px solid var(--transparent, transparent);
   }
+  .waffleGriddySuggestionsBubbleMenuButton.docs-material-menu-button-flat-default.docs-material-menu-button-flat-default-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
+  }
   .waffleGriddySuggestionsBubbleMenuButton.docs-material-menu-button-flat-default.docs-material-menu-button-flat-default-focused {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
     border-color: var(--transparent, transparent);
   }
   .waffleGriddySuggestionsBubbleDisclaimer {
@@ -13160,9 +12929,6 @@
   .waffle-chip-extraction-prompt-content {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
-  .waffle-chip-extraction-prompt-title {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-chip-extraction-prompt-body {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -13224,10 +12990,6 @@
     );
     color: var(--gm3-sys-color-on-surface);
   }
-  a.waffle-chip-extraction-sidebar-zero-state-learn-more:link,
-  a.waffle-chip-extraction-sidebar-zero-state-learn-more:visited {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-chip-extraction-sidebar-extract-view-list-label,
   .waffle-chip-extraction-sidebar-pending-view-list-label {
     background-color: color-mix(
@@ -13249,9 +13011,6 @@
       0 2px 6px 2px
         color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
-  .waffle-chip-info-bubble-buttons {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-chip-info-bubble-button:hover {
     background: color-mix(
       in oklab,
@@ -13272,7 +13031,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-chips-sharing-prompt-buttons-container
     .jfk-button-standard.jfk-button-focused {
@@ -13315,39 +13073,22 @@
   }
   .waffle-chips-sharing-prompt-buttons-container .jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-chips-sharing-prompt-buttons-container
     .jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .waffle-chips-sharing-prompt-buttons-container
     .jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .waffle-chips-sharing-prompt-buttons-container
     .jfk-button-action.jfk-button-focused.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-chip-simple-promo-content {
     background-color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .waffle-chip-simple-promo-title {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-chip-promo-button-accept {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -13370,9 +13111,6 @@
   }
   .waffle-chip-simple-promo-additional-information {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-chip-column-conversion-range-highlighter-border {
-    border-color: var(--gm3-sys-color-primary);
   }
   .waffle-chip-column-conversion-range-highlighter-rect {
     background-color: var(--gm3-sys-color-primary-container);
@@ -13411,13 +13149,10 @@
   .dropdown-chip-intro-promo-base
     .docs-promo-action-row
     .docs-promo-action-button-right {
-    background: var(--gm3-sys-color-primary);
-    border: 1px solid var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .dropdown-chip-intro-promo-base .docs-promo-action-button-left {
     background-color: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .finance-chip-promo-base .docs-promo-header {
     color: var(--gm3-sys-color-on-surface);
@@ -13428,13 +13163,10 @@
   .finance-chip-promo-base
     .docs-promo-action-row
     .docs-promo-action-button-right {
-    background: var(--gm3-sys-color-primary);
-    border: 1px solid var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .finance-chip-promo-base .docs-promo-action-button-left {
     background-color: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-chip-promo-base.jfk-bubble.docs-promo-bubble {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -13452,7 +13184,6 @@
       var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-chip-walkthrough-promo-close {
-    color: var(--gm3-sys-color-primary);
     background-color: var(--transparent, transparent);
   }
   .people-chip-inline-suggestion {
@@ -13462,13 +13193,7 @@
     border: 1px solid var(--gm3-sys-color-outline-variant);
   }
   .previewableCustomColorMenuOkayButton.goog-flat-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .previewableCustomColorMenuCancelButton.goog-flat-button-focused {
     background: color-mix(
@@ -13540,18 +13265,13 @@
   .waffle-looker-studio-sidebar-tips {
     background-color: var(--gm3-sys-color-primary-container);
   }
-  .waffle-looker-studio-sidebar-tips-title {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-looker-studio-sidebar-tips-footer a {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-looker-studio-sidebar-tips-footer a:hover {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-looker-studio-sidebar-tips-footer a:focus,
   .waffle-looker-studio-sidebar-tips-footer a:hover:focus {
@@ -13561,7 +13281,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-looker-studio-sidebar-tips-footer a:active,
   .waffle-looker-studio-sidebar-tips-footer a:hover:active {
@@ -13571,7 +13290,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
     box-shadow: 0 1px 3px 1px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -13631,9 +13349,6 @@
   .waffle-filter-by-value-sort-by-frequency-desc-button,
   .waffle-filter-by-value-sort-by-value-asc-button {
     border-right: 1px solid var(--gm3-sys-color-outline-variant);
-  }
-  .waffle-filter-by-value-menu-checked-buttons .goog-link-button {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-filter-by-value-clear-button {
     border-left: 1px solid var(--gm3-sys-color-outline-variant);
@@ -13779,10 +13494,6 @@
     background-color: var(--gm3-sys-color-surface-container-lowest);
     border-top: 1px solid var(--gm3-sys-color-outline-variant);
   }
-  .waffleDataConnectorDbrefreshCancelAllWidgetButtonWrapper
-    .docs-material-button-flat-default {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-dataconnector-refresh-day-of-month-widget-chip-container
     .waffle-removable-chip-button {
     background-color: var(--transparent, transparent);
@@ -13822,7 +13533,6 @@
     .goog-button {
     background-color: var(--transparent, transparent);
     border-color: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-dataconnector-refresh-day-of-month-widget
     .waffle-dataconnector-refresh-day-of-month-widget-add-day-select
@@ -13836,7 +13546,6 @@
       var(--gm3-sys-color-on-surface) 16%
     );
     border-color: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-dataconnector-refresh-all-dbobject-item-enabled.valid-highlight:hover {
     background-color: color-mix(
@@ -13934,9 +13643,6 @@
   .waffle-dataconnector-refresh-schedules-new-fullview-text {
     color: var(--gm3-sys-color-on-surface);
   }
-  .waffle-dataconnector-refresh-schedules-new-header .goog-link-button {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-dataconnector-refresh-schedules-new-header-title {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -14015,9 +13721,6 @@
   .waffle-dataconnector-refresh-weekday-toggle-checked {
     color: var(--gm3-sys-color-surface-container-lowest);
   }
-  .waffle-dataconnector-refresh-weekday-toggle-checked.waffle-dataconnector-refresh-weekday-toggle-focused {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .waffle-bigquery-change-billing-project-dialog-project-header {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -14089,7 +13792,6 @@
   .waffle-bigquerytablepickermodal-write-query-button .goog-flat-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-bigquerytablepickermodal-write-query-button .goog-flat-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
@@ -14098,7 +13800,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-bigquerytablepickermodal-write-query-button .goog-flat-button-active {
     border: 1px solid var(--transparent, transparent) !important;
@@ -14107,7 +13808,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -14119,16 +13819,9 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-bigquerywrongskudialog-message {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .waffle-dbsource-flat-default {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-dbsource-flat-default.docs-material-button-flat-default.docs-material-button.docs-material-button-active {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-dbsource-flat-default-grey {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -14208,10 +13901,6 @@
   }
   .waffle-dbsource-configbar-schedules-widget {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .waffle-dbsource-configbar-schedules-widget-edit-button-wrapper
-    .goog-link-button {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-dbsource-configbar-schedules-widget-highlight {
     background-color: color-mix(
@@ -14322,9 +14011,6 @@
   .waffle-bigquery-connection-summary-dialog-detail-title {
     color: var(--gm3-sys-color-on-surface);
   }
-  .waffle-bigquery-connection-summary-dialog-detail-title .goog-link-button {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-bigquery-connection-detail-item-title {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -14370,9 +14056,6 @@
   }
   .waffle-create-datasource-sheet-success-dialog-success-description {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-create-datasource-sheet-success-dialog-datasource-info {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-create-datasource-sheet-success-dialog-watch-tutorial {
     color: var(--gm3-sys-color-primary);
@@ -14613,14 +14296,6 @@
   .waffle-dataconnector-tablepicker-menu-loading-bar-wrapper
     .docs-indeterminate-loading-bar {
     background-color: var(--gm3-sys-color-primary-container);
-  }
-  .waffle-dataconnector-tablepicker-menu-loading-bar-wrapper
-    .docs-indeterminate-loading-bar
-    > div {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .waffle-dataconnector-tablepicker-paginated-menu-loading-msg {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-dataconnector-tablepicker-menu-error-message,
   .waffle-dataconnector-tablepicker-menu-listing-projects-failed-error-message {
@@ -14958,9 +14633,6 @@
   .waffle-dataconnector-bigquery-script-widget-selected-saved-query-last-updated-time {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-dataconnector-bigquery-script-widget-saved-query-content-loading-text {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-dataconnector-bigquery-script-widget-projects-error-text,
   .waffle-dataconnector-bigquery-script-widget-saved-queries-error-button {
     color: var(--gm3-sys-color-error);
@@ -15160,9 +14832,6 @@
       var(--gm3-sys-color-on-surface) 16%
     );
   }
-  .trix-data-prep-sidebar-survey-link {
-    color: var(--gm3-sys-color-primary) !important;
-  }
   .trix-data-prep-sidebar-survey-container:active {
     background: color-mix(
       in oklab,
@@ -15208,9 +14877,6 @@
   .trix-data-prep-insights-frequency-table-header-labels {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .trix-data-prep-insights-label-active {
-    color: var(--gm3-sys-color-primary);
-  }
   .trix-data-prep-insights-label-inactive {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -15251,6 +14917,9 @@
   .trix-data-prep-db-insights .trix-data-prep-insights-frequency-row:hover {
     background: var(--gm3-sys-color-surface-container-lowest);
   }
+  .trix-column-insights-sidebar-column-selector-menuitem-accel {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .trix-data-prep-column-insights-sidebar-refresh-label {
     border-top: 1px solid var(--gm3-sys-color-outline-variant);
   }
@@ -15269,7 +14938,6 @@
     );
   }
   .trix-data-prep-column-insights-sidebar-refresh-label-button {
-    color: var(--gm3-sys-color-primary);
     background-color: var(--transparent, transparent);
   }
   .trix-data-prep-column-insights-sidebar-refresh-label-separator {
@@ -15281,9 +14949,6 @@
   .trix-data-prep-column-insights-sidebar-refresh-label-filters-changed-banner-msg {
     color: var(--gm3-sys-color-on-surface);
   }
-  .trix-data-prep-column-insights-sidebar-refresh-label-filters-changed-banner-refresh-button.docs-material-button {
-    color: var(--gm3-sys-color-primary);
-  }
   .trix-data-prep-db-insights-unavailable-alert-message {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -15292,14 +14957,10 @@
   }
   .trix-data-prep-db-insights-promo-sidebar-refresh-overlay-view-button.docs-material-button,
   .trix-data-prep-db-insights-unavailable-refresh-button.docs-material-button {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .trix-data-prep-column-insights-refresh-placeholder-load-time-msg {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .trix-data-prep-column-insights-refresh-placeholder-retrieving-data-msg {
-    color: var(--gm3-sys-color-primary);
   }
   .trix-data-prep-insights-column-chart-label:focus,
   .trix-data-prep-insights-histogram-chart-label:focus,
@@ -15330,10 +14991,6 @@
     );
   }
   .trix-data-prep-column-insights-butter-container
-    .trix-data-prep-column-insights-butter-action-button {
-    color: var(--gm3-sys-color-primary);
-  }
-  .trix-data-prep-column-insights-butter-container
     .trix-data-prep-column-insights-butter-close-button:hover {
     background-color: color-mix(
       in oklab,
@@ -15356,6 +15013,11 @@
   .docs-material-button-hairline-primary.docs-material-button.waffle-datavalidation-delete-all-button {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .waffle-datavalidation-edit-pill-dropdown-render-type-buttons
+    .jfk-radiobutton-disabled
+    .jfk-radiobutton-label {
+    color: var(--gm3-sys-color-outline);
+  }
   .waffle-datavalidation-edit-pill-button-bar {
     border-top: 1px solid var(--gm3-sys-color-outline-variant);
   }
@@ -15369,7 +15031,6 @@
   }
   .waffle-datavalidation-edit-pill-advanced-options-title {
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent) !important;
   }
   .waffle-datavalidation-edit-pill-advanced-options-title:hover {
@@ -15378,7 +15039,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
-    color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent) !important;
   }
   .waffle-datavalidation-edit-pill-advanced-options-title:focus {
@@ -15387,7 +15047,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent) !important;
   }
   .waffle-datavalidation-edit-pill-advanced-options-title:hover:focus {
@@ -15396,7 +15055,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent) !important;
   }
   .waffle-datavalidation-edit-pill-advanced-options-title:active {
@@ -15405,7 +15063,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
     border: 1px solid var(--transparent, transparent) !important;
@@ -15447,12 +15104,6 @@
   }
   .waffle-datavalidation-view-pill-range {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .range-border.waffle-datavalidation-view-pill-highlight-styled-border {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .waffle-datavalidation-view-pill-highlight-styled-rect {
-    background-color: var(--gm3-sys-color-primary);
   }
   .waffle-datavalidation-edit-pill-boolean-condition-picker-body
     .waffle-conditionalformat-edit-pill-section-body
@@ -15501,9 +15152,6 @@
   .waffle-automated-actions-condition-column-picker-wrapper
     .waffle-automated-actions-trigger-table-section-label {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .waffle-automated-actions-action-email-example-title {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-automated-actions-action-recipient-info {
     color: var(--gm3-sys-color-on-surface);
@@ -15586,24 +15234,7 @@
   }
   .waffle-automated-actions-sidebar-view-rule-empty-add-new-rule-button
     .docs-material-button-hairline-primary.docs-material-button {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .waffle-automated-actions-sidebar-view-rule-empty-add-new-rule-button
-    .docs-material-button-hairline-primary.docs-material-button.docs-material-button-focused {
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
-  }
-  .waffle-automated-actions-sidebar-view-rule-empty-add-new-rule-button
-    .docs-material-button-hairline-primary.docs-material-button.docs-material-button-hover {
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .waffle-automated-actions-sidebar-view-only-message-wrapper {
     background-color: var(--gm3-sys-color-error-container);
@@ -15623,9 +15254,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 12%
     );
-  }
-  .waffle-automated-actions-trigger-history-empty-view-button.waffle-ui-text-link-button {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-automated-actions-view-pill-summary {
     border: 1px solid var(--gm3-sys-color-outline-variant);
@@ -15668,9 +15296,6 @@
   .waffle-automated-actions-trigger-history-details-timestamp {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-autofill-previews-range-highlighter-border {
-    border-color: var(--gm3-sys-color-primary);
-  }
   .waffle-autofill-previews-range-highlighter-rect {
     background-color: var(--gm3-sys-color-primary-container);
   }
@@ -15700,9 +15325,6 @@
       0 4px 8px
         color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
-  .waffle-assistant-overlay-informational-card-headline-message {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-assistant-overlay-informational-card-send-feedback-cta {
     color: var(--gm3-sys-color-outline);
   }
@@ -15710,17 +15332,10 @@
     background: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-assistant-overlay-informational-decorator {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .waffle-assistant-overlay-informational-range-highlighter-border {
-    border-color: var(--gm3-sys-color-primary);
   }
   .waffle-assistant-overlay-informational-range-highlighter-rect {
     background-color: var(--gm3-sys-color-primary-container);
-  }
-  .waffle-suggestion-preview-range-highlighter-after-border {
-    border-color: var(--gm3-sys-color-primary);
   }
   .waffle-suggestion-preview-range-highlighter-after-rect {
     background-color: var(--gm3-sys-color-primary-container);
@@ -15740,9 +15355,6 @@
   .waffle-dialog-automated-actions-label {
     color: var(--gm3-sys-color-on-surface);
   }
-  .waffle-dialog-automated-actions-label-selected {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-dialog-automated-actions-description {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -15758,15 +15370,6 @@
   .waffle-db-object-formula-tooltip-help-button-active,
   .waffle-db-object-formula-tooltip-help-button-focused {
     background: var(--gm3-sys-color-primary-container);
-  }
-  .waffle-db-object-formula-tooltip-help-bubble-visible
-    .waffle-db-object-formula-tooltip-help-button
-    .waffle-db-object-formula-tooltip-help-icon,
-  .waffle-db-object-formula-tooltip-help-button-active
-    .waffle-db-object-formula-tooltip-help-icon,
-  .waffle-db-object-formula-tooltip-help-button-focused
-    .waffle-db-object-formula-tooltip-help-icon {
-    fill: var(--gm3-sys-color-primary);
   }
   .waffle-db-object-formula-tooltip-help-bubble {
     box-shadow: 0 4px 8px 3px
@@ -15807,19 +15410,6 @@
   .docs-dialog.waffle-db-object-formula-dialog
     .waffle-db-object-formula-display-name-error {
     color: var(--gm3-sys-color-error);
-  }
-  .waffle-db-object-formula-dialog
-    .waffle-db-object-formula-toggle-tabs.waffle-gm-sidebar
-    .docs-sidebar-toggle-tabs
-    .jfk-button.docs-sidebar-toggle-tab-active {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-db-object-formula-dialog
-    .waffle-db-object-formula-toggle-tabs.waffle-gm-sidebar
-    .docs-sidebar-toggle-tabs
-    .jfk-button-focused.docs-sidebar-toggle-tab-inactive
-    > div:after {
-    border-bottom: 2px dotted var(--gm3-sys-color-primary);
   }
   .docs-dialog.waffle-db-object-formula-dialog
     .waffle-db-object-formula-column-menu-tab
@@ -15880,11 +15470,6 @@
     .waffle-arguments-help-section-title {
     color: var(--gm3-sys-color-on-surface);
   }
-  .waffle-arguments-parameter-help-section
-    .waffle-arguments-help-section-active
-    .waffle-arguments-help-section-title {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-arguments-help-parameter-content {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -15901,16 +15486,11 @@
   }
   .waffle-arguments-help-parameter-active {
     background-color: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-unified-formula-help-wrapper
     .waffle-arguments-help-title
     .waffle-arguments-help-parameter-active {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .waffle-unified-formula-help-wrapper .waffle-arguments-help-formula {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-unified-formula-help-argument-help-container
     .waffle-arguments-help-title,
@@ -15985,9 +15565,6 @@
   #waffle-arguments-help-learn-more {
     color: var(--gm3-sys-color-primary);
   }
-  .waffle-unified-formula-help-wrapper-v2ui #waffle-arguments-help-learn-more {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-unified-formula-help-disclaimer {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -16017,9 +15594,6 @@
   }
   .waffle-arguments-help-arg-suggestions-section {
     background: var(--gm3-sys-color-primary-container);
-  }
-  .waffle-arguments-help-arg-suggestions-title-container {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-arguments-help-arg-suggestions-v1-ui
     .waffle-arguments-help-arg-suggestions-title-container {
@@ -16318,11 +15892,21 @@
   }
   .waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-hover,
   .waffle-gridpill-button.docs-material-menu-button-flat-default.docs-material-menu-button-flat-default-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
     color: var(--gm3-sys-color-on-surface);
     fill: var(--gm3-sys-color-on-surface);
   }
   .waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-focused,
   .waffle-gridpill-button.docs-material-menu-button-flat-default.docs-material-menu-button-flat-default-focused {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
     color: var(--gm3-sys-color-on-surface);
     fill: var(--gm3-sys-color-on-surface);
   }
@@ -16330,10 +15914,6 @@
   .waffle-gridpill-button.docs-material-menu-button-flat-default.docs-material-menu-button-flat-default-active {
     color: var(--gm3-sys-color-on-surface);
     fill: var(--gm3-sys-color-on-surface);
-  }
-  .waffle-gridpill-button-green.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button {
-    color: var(--gm3-sys-color-primary);
-    fill: var(--gm3-sys-color-primary);
   }
   .waffle-gridpill-button-green.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-hover {
     background: color-mix(
@@ -16378,6 +15958,13 @@
     color: var(--gm3-sys-color-surface-container-lowest) !important;
     fill: var(--gm3-sys-color-surface-container-lowest) !important;
     background: var(--gm3-sys-color-primary) !important;
+  }
+  .waffle-gridpill-button-blue.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      var(--gm3-sys-color-primary),
+      transparent 4%
+    );
   }
   .waffle-gridpill-button-blue.waffle-gridpill-button.docs-material-button-flat-default.docs-material-button.docs-material-button-focused {
     background: color-mix(
@@ -16472,17 +16059,10 @@
   .waffle-gridpill-dismiss-menu-footnote {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-dbobject-gridpill-collapsed-loading-wrapper
-    .waffle-dataconnector-pill-spinner {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-gridpill-collapsed-content-v2
     .waffle-dbobject-gridpill-collapsed-loading-wrapper
     .waffle-dataconnector-pill-spinner {
     color: var(--gm3-sys-color-primary);
-  }
-  .waffle-dbobject-gridpill-collapsed-refresh-wrapper svg {
-    fill: var(--gm3-sys-color-primary);
   }
   .waffle-gridpill-collapsed-content-v2 svg {
     fill: var(--gm3-sys-color-primary);
@@ -16511,11 +16091,6 @@
   }
   .waffle-dbobject-gridpill-timestamp {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-dbobject-gridpill-progress
-    .waffle-dbobject-gridpill-progress-green-spinner
-    .waffle-dataconnector-pill-spinner {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-dbobject-gridpill-progress
     .waffle-dbobject-gridpill-progress-blue-spinner
@@ -16574,21 +16149,11 @@
   .waffle-dbobject-gridpill-menuitem-refreshquery-info-message {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-legacy-gridpill-collapsed-loading-wrapper
-    .waffle-dataconnector-pill-spinner {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-legacy-gridpill-collapsed-refresh-wrapper svg {
-    fill: var(--gm3-sys-color-primary);
-  }
   .waffle-legacy-gridpill-collapsed-showerror-wrapper svg {
     fill: var(--gm3-sys-color-error);
   }
   .waffle-legacy-gridpill-timestamp {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-legacy-gridpill-progress .waffle-dataconnector-pill-spinner {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-legacy-gridpill-progress-message {
     color: var(--gm3-sys-color-on-surface);
@@ -16688,9 +16253,6 @@
   }
   .waffle-named-formulas-sidebar-list-view-card-description {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .waffle-named-formulas-sidebar-list-view-add-named-formula-button-message {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-named-formulas-sidebar-separator {
     box-shadow: 0 1px 3px 1px
@@ -16855,13 +16417,6 @@
   .waffle-named-formulas-sidebar-create-step-b-overview-details-container {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-named-formulas-sidebar-create-step-a-overview-details-container a,
-  .waffle-named-formulas-sidebar-create-step-a-overview-details-container
-    a:link,
-  .waffle-named-formulas-sidebar-create-step-a-overview-details-container
-    a:visited {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-named-formulas-sidebar-zero-state-promo-msg {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -16918,6 +16473,9 @@
       transparent,
       var(--gm3-sys-color-on-surface) 12%
     );
+  }
+  .waffle-db-column-insights-menuitem-accel {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .goog-menuitem.ai-priority-menu-item:not(.goog-menuitem-highlight) {
     background: var(
@@ -16981,7 +16539,6 @@
     );
   }
   .waffle-performancetool-landingpage-next-button {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-performancetool-analysis-body {
@@ -17033,7 +16590,6 @@
   }
   .waffle-performancetool-sidebar-refresh-label-button {
     background: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-performancetool-sidebar-refresh-label-last-loaded {
     border-right: 1px solid var(--gm3-sys-color-outline-variant);
@@ -17197,9 +16753,6 @@
   .waffle-usage-bar-caption {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .waffle-usage-bar-fill {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .waffle-usage-bar-heading {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -17230,36 +16783,19 @@
   }
   .annotation-overlaywithallowaccess-error-links .jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .annotation-overlaywithallowaccess-error-links
     .jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .annotation-overlaywithallowaccess-error-links
     .jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .annotation-overlaywithallowaccess-error-links
     .jfk-button-action.jfk-button-focus.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  a.annotation-overlaywithallowaccess-error-learn-more {
-    color: var(--gm3-sys-color-primary);
   }
   .people-chip-column-conversion-overlay {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -17335,9 +16871,6 @@
   .waffle-column-suggestion-button-shim {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
-  .waffle-column-suggestion-button-ripple {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .waffle-column-error-button-hover,
   .waffle-column-suggestion-button-hover {
     box-shadow: 0 4px 8px 3px
@@ -17397,9 +16930,19 @@
     color: var(--gm3-sys-color-on-surface-variant);
   }
   .waffle-timeline-settings-sidebar-feedback.docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
     color: var(--gm3-sys-color-on-surface);
   }
   .waffle-timeline-settings-sidebar-feedback.docs-material-button-focused {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
     color: var(--gm3-sys-color-on-surface);
   }
   .waffle-timeline-settings-sidebar-feedback.docs-material-button-active {
@@ -17424,13 +16967,10 @@
   .timeline-intro-promo-base
     .docs-promo-action-row
     .docs-promo-action-button-right {
-    background: var(--gm3-sys-color-primary);
-    border: 1px solid var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .timeline-intro-promo-base .docs-promo-action-button-left {
     background-color: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .timeline-walkthrough-promo-base .timeline-walkthrough-promo-text {
     color: var(--gm3-sys-color-surface-container-lowest);
@@ -17483,10 +17023,6 @@
   .waffle-record-view-sidebar-footer-container {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     border-top: 1px solid var(--gm3-sys-color-outline-variant);
-  }
-  .waffle-record-view-sidebar-edit-color-settings-button.waffle-ui-text-link-button,
-  .waffle-record-view-sidebar-edit-formatting-rule-button.waffle-ui-text-link-button {
-    color: var(--gm3-sys-color-primary);
   }
   .building-blocks-intro-promo-base.jfk-bubble.docs-promo-bubble {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -17587,24 +17123,16 @@
   }
   .docs-ml-promotion-action-button.docs-ml-promotion-yes-button.docs-ml-promotion-app-themed {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-ml-promotion-action-button.docs-ml-promotion-no-button.docs-ml-promotion-app-themed {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docs-ml-promotion-action-button-wrapper:focus
     .docs-ml-promotion-action-button.docs-ml-promotion-yes-button.docs-ml-promotion-app-themed {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .docs-ml-promotion-action-button-wrapper:focus
     .docs-ml-promotion-action-button.docs-ml-promotion-no-button.docs-ml-promotion-app-themed {
@@ -17629,9 +17157,6 @@
   .previewableColorMenuHeader {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .previewableColorMenuCustomizeButton {
-    color: var(--gm3-sys-color-primary);
-  }
   .previewableColorMenuResetButton
     .previewableColorMenuResetButton.goog-menuitem-highlight {
     border: 1px solid var(--gm3-sys-color-outline-variant);
@@ -17650,9 +17175,6 @@
     .docs-tabbar-tablabel {
     color: var(--gm3-sys-color-primary);
   }
-  .previewableCustomColorMenuTabBar .docs-tabbar-tab-selected:before {
-    border-top: 3px solid var(--gm3-sys-color-primary);
-  }
   .previewableCustomColorMenuTabBar .docs-tabbar-tab-active,
   .previewableCustomColorMenuTabBar .docs-tabbar-tab-hover {
     background: color-mix(
@@ -17663,7 +17185,6 @@
   }
   .previewableCustomColorMenuCancelButton {
     border: 1px solid var(--gm3-sys-color-outline-variant);
-    color: var(--gm3-sys-color-primary);
   }
   .previewableCustomColorMenuCancelButton.goog-flat-button-hover {
     background-color: color-mix(
@@ -17673,7 +17194,6 @@
     );
   }
   .previewableCustomColorMenuOkayButton {
-    background-color: var(--gm3-sys-color-primary);
     border: 1px solid var(--gm3-sys-color-outline-variant);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -17800,9 +17320,6 @@
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
   }
-  .waffle-autofilter-border {
-    border-color: var(--gm3-sys-color-primary);
-  }
   .waffle-autovis-lightbox {
     background-color: var(--gm3-sys-color-on-surface);
   }
@@ -17822,10 +17339,6 @@
   }
   .waffle-autovis-lightbox-buttons-wrapper {
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .goog-date-picker-today:before,
-  .goog-date-picker-today:hover:before {
-    border: 1px solid var(--gm3-sys-color-primary);
   }
   .waffle-filter-bar {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -17922,9 +17435,7 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
     border: var(--transparent, transparent);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-pivot-add-button:hover {
     background: color-mix(
@@ -18080,10 +17591,8 @@
   .waffle-pivot-clear-all-button .goog-link-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
     border: var(--transparent, transparent);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-pivot-clear-all-button .goog-link-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
@@ -18204,7 +17713,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    border-color: var(--gm3-sys-color-primary);
   }
   .waffle-pivot-sidebar-column-names-enabled.waffle-pill-during-dragging.goog-menuitem {
     background: color-mix(
@@ -18367,6 +17875,9 @@
   .waffle-printing-custom-headers-footers-section {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
+  .waffle-printing-custom-headers-footers-section-inactive {
+    border: 1px dotted var(--gm3-sys-color-outline);
+  }
   .waffle-printing-custom-headers-footers-section-inactive:hover {
     border-color: var(--transparent, transparent);
     border-bottom: 1px solid var(--gm3-sys-color-on-surface);
@@ -18454,7 +17965,6 @@
     color: var(--gm3-sys-color-on-surface);
   }
   .waffle-promo {
-    background: var(--gm3-sys-color-primary) !important;
     box-shadow:
       0 2px 6px
         color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%),
@@ -18473,13 +17983,13 @@
   .waffle-promo .jfk-bubble-arrowdown .jfk-bubble-arrowimplbefore,
   .waffle-promo .jfk-bubble-arrowup .jfk-bubble-arrowimplafter,
   .waffle-promo .jfk-bubble-arrowup .jfk-bubble-arrowimplbefore {
-    border-color: var(--gm3-sys-color-primary) var(--transparent, transparent) !important;
+    border-color: #188038 var(--transparent, transparent) !important;
   }
   .waffle-promo .jfk-bubble-arrowleft .jfk-bubble-arrowimplafter,
   .waffle-promo .jfk-bubble-arrowleft .jfk-bubble-arrowimplbefore,
   .waffle-promo .jfk-bubble-arrowright .jfk-bubble-arrowimplafter,
   .waffle-promo .jfk-bubble-arrowright .jfk-bubble-arrowimplbefore {
-    border-color: var(--transparent, transparent) var(--gm3-sys-color-primary) !important;
+    border-color: var(--transparent, transparent) #188038 !important;
   }
   .waffle-shortcut-override-outside-promo-description {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -18548,34 +18058,20 @@
   .waffle-countdown-bubble-body .jfk-button-action,
   .waffle-sidebar-container .jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-countdown-bubble-body .jfk-button-action.jfk-button-hover,
   .waffle-sidebar-container .jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .waffle-countdown-bubble-body .jfk-button-action.jfk-button-focused,
   .waffle-sidebar-container .jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .waffle-countdown-bubble-body
     .jfk-button-action.jfk-button-hover.jfk-button-focused,
   .waffle-sidebar-container
     .jfk-button-action.jfk-button-hover.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-countdown-bubble-body .jfk-button-action.jfk-button-active,
@@ -18584,12 +18080,10 @@
   .waffle-sidebar-container .jfk-button-action.jfk-button-active,
   .waffle-sidebar-container
     .jfk-button-action.jfk-button-focus.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-countdown-bubble-body .jfk-button-action.jfk-button-disabled,
   .waffle-sidebar-container .jfk-button-action.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
     background: color-mix(
       in oklab,
@@ -18603,7 +18097,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-countdown-bubble-body .jfk-button-standard.jfk-button-hover,
   .waffle-sidebar-container .jfk-button-standard.jfk-button-hover {
@@ -18754,7 +18247,6 @@
       0 3px 1px -2px
         color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
       0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--gm3-sys-color-primary);
   }
   .waffle-theme-container-element {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -18809,16 +18301,6 @@
   }
   .waffle-record-script-dialog .waffle-record-script-dialog-label {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .waffle-recording-toast .jfk-radiobutton-radio:after {
-    background: var(--gm3-sys-color-primary);
-    border: 4px solid var(--gm3-sys-color-primary);
-  }
-  .waffle-recording-toast .jfk-radiobutton-checked .jfk-radiobutton-radio,
-  .waffle-recording-toast-relativity-split
-    .jfk-radiobutton-focused
-    .jfk-radiobutton-radio {
-    border: 2px solid var(--gm3-sys-color-primary);
   }
   .waffle-recording-toast-relativity-info {
     color: var(--gm3-sys-color-surface-container-lowest);
@@ -18887,7 +18369,6 @@
   .waffle-recording-toast-stop.goog-flat-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-import-custom-function-add-function .goog-flat-button-hover,
   .waffle-recording-toast-stop.goog-flat-button-hover {
@@ -18897,7 +18378,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-import-custom-function-add-function .goog-flat-button-focused,
   .waffle-recording-toast-stop.goog-flat-button-focused {
@@ -18907,7 +18387,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-import-custom-function-add-function .goog-flat-button-active,
   .waffle-recording-toast-stop.goog-flat-button-active {
@@ -18917,7 +18396,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -19292,6 +18770,9 @@
     background-color: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline);
   }
+  .waffle-dv-no-suggestions {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .waffle-range-selection-error {
     border: 1px solid var(--gm3-sys-color-error);
   }
@@ -19304,7 +18785,6 @@
   .waffle-notifications-dialog .goog-link-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-notification-rule-separator {
     border-bottom: 1px solid var(--gm3-sys-color-outline-variant);
@@ -19330,24 +18810,8 @@
       var(--gm3-sys-color-on-surface) 12%
     );
   }
-  .jfk-radiobutton-checked .jfk-radiobutton-radio:after {
-    background: var(--gm3-sys-color-primary);
-    border: 4px solid var(--gm3-sys-color-primary);
-  }
-  .jfk-radiobutton-checked.jfk-radiobutton:hover .jfk-radiobutton-radio {
-    border: 2px solid var(--gm3-sys-color-primary);
-  }
-  .jfk-radiobutton-checked .jfk-radiobutton-radio {
-    border: 2px solid var(--gm3-sys-color-primary);
-  }
-  .jfk-radiobutton:focus .jfk-radiobutton-radio {
-    border: 2px solid var(--gm3-sys-color-primary);
-  }
   .waffle-pivot-histogram-dialog-caption {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .waffle-rd-expand-to-range {
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-dialog-range-suggestion-pill:hover {
     background: color-mix(
@@ -19420,37 +18884,22 @@
   }
   #docs-access-level-indicator.goog-flat-menu-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   #docs-access-level-indicator.goog-flat-menu-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   #docs-access-level-indicator.goog-flat-menu-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   #docs-access-level-indicator.goog-flat-menu-button-hover.goog-flat-menu-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   #docs-access-level-indicator.goog-flat-menu-button-disabled {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   #docs-access-level-indicator.goog-flat-menu-button-focused.goog-flat-menu-button-open,
@@ -19459,7 +18908,6 @@
   #docs-access-level-indicator.goog-flat-menu-button-pressed,
   #docs-access-level-indicator.goog-flat-menu-button:active {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-grille-gm3 #docs-access-level-indicator.goog-flat-menu-button {
@@ -19554,9 +19002,6 @@
       var(--gm3-sys-color-primary-container),
       var(--gm3-sys-color-on-primary-container) 16%
     );
-  }
-  #docs-primary-toolbars .docs-approval-status-indicator {
-    color: var(--gm3-sys-color-primary);
   }
   #docs-primary-toolbars
     #docs-approvals-locked-menu-button.goog-toolbar-menu-button-disabled {
@@ -19731,9 +19176,6 @@
   #t-formula-bar-progress-bar .progress-bar-horizontal {
     background-color: var(--gm3-sys-color-surface-variant);
   }
-  #t-formula-bar-progress-bar .progress-bar-thumb {
-    background-color: var(--gm3-sys-color-primary);
-  }
   #t-formula-bar-progress-bar .progress-bar-horizontal .progress-bar-thumb {
     background-color: var(--gm3-sys-color-primary);
   }
@@ -19784,7 +19226,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docos.docs-gm .jfk-button.jfk-button-standard.jfk-button-disabled {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -19839,11 +19280,9 @@
   }
   .docos.docs-gm .jfk-button.jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docos.docs-gm .jfk-button.jfk-button-action.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
     background: color-mix(
       in oklab,
@@ -19853,31 +19292,17 @@
     color: var(--gm3-sys-color-on-surface);
   }
   .docos.docs-gm .jfk-button.jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .docos.docs-gm .jfk-button.jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docos.docs-gm
     .jfk-button.jfk-button-action.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docos.docs-gm
     .jfk-button.jfk-button-action.jfk-button-focused.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-grille-gm3.docos .jfk-button.jfk-button-action,
@@ -20117,12 +19542,6 @@
   .docos-comments-pe .docos-anchoreddocoview .docos-input-static-message {
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .docs-gm
-    .docos-layout-vertical
-    .docos-anchoreddocoview
-    .docos-anchoreddocoview-arrow-inner.docos-assignee-you {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .docs-grille-gm3.docs-gm .docos-input-at-reply-message {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -20246,10 +19665,6 @@
   .docs-gm .docos-docoview-replycontainer:not(:hover) .docos-new-message {
     color: var(--transparent, transparent);
   }
-  .docos.docs-gm .docos-accept-suggestion path,
-  .docos.docs-gm .docos-reject-suggestion path {
-    fill: var(--gm3-sys-color-primary);
-  }
   .docos.docs-gm .docos-accept-suggestion.jfk-button-disabled path,
   .docos.docs-gm .docos-reject-suggestion.jfk-button-disabled path {
     fill: var(--gm3-sys-color-on-surface);
@@ -20349,7 +19764,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm .docos-replyview-resolve-button-original:hover {
     background: color-mix(
@@ -20753,16 +20167,10 @@
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docos.docs-gm .docos-assigneeview.docos-assignee-you {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docos-assigneeview .docos-mark-done-button-white:hover {
     border: 1px solid var(--gm3-sys-color-surface-container-lowest);
-  }
-  .docos-xeditor
-    .docos-streamdocoview-content
-    .docos-assigneeview.docos-assignee-other {
-    color: var(--gm3-sys-color-primary);
   }
   .docs-grille-gm3 .docos .docos-assigneeview.docos-assignee-you {
     background-color: var(--gm3-sys-color-primary-container);
@@ -21324,6 +20732,22 @@
       in oklab,
       transparent,
       var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docos-navigation-bar-next:hover,
+  .docos-navigation-bar-previous:hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
+  }
+  .docos-navigation-bar-next:focus,
+  .docos-navigation-bar-previous:focus {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
     );
   }
   .docs-grille-gm3 .docos-navigation-bar {
@@ -22184,7 +21608,6 @@
     .docos-filter-settings
     .docs-material-menu-button-flat-default.filter-applied {
     background-color: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm
     .docos-filter-settings
@@ -22238,12 +21661,6 @@
     .docos-filter-settings
     .docs-material-menu-button-flat-default-dropdown-icon {
     fill: var(--gm3-sys-color-on-surface-variant);
-  }
-  .docs-gm
-    .docos-filter-settings
-    .filter-applied
-    .docs-material-menu-button-flat-default-dropdown-icon {
-    fill: var(--gm3-sys-color-primary);
   }
   .docs-gm
     .docos-filter-settings
@@ -22462,10 +21879,6 @@
     background-color: var(--gm3-sys-color-surface-container-lowest);
     color: var(--gm3-sys-color-on-surface-variant);
   }
-  .docos-gm-notification-icon-path,
-  .docos-new-comment-icon-path {
-    fill: var(--gm3-sys-color-primary);
-  }
   .docs-gm .docs-docos-activity-sidebar .docos-gm-notification-icon-path,
   .docs-gm .docs-docos-activity-sidebar .docos-new-comment-icon-path,
   .docs-gm .docs-docos-activity-sidebar .docos-search-comments-icon-path,
@@ -22584,9 +21997,6 @@
   .docos-streamdocoview .docos-replyview-quote {
     border-left: 1px solid var(--gm3-sys-color-outline-variant);
   }
-  .docs-gm .docos-streamdocoview .docos-replyview-quote {
-    border-left-color: var(--gm3-sys-color-primary);
-  }
   .docs-gm .docos-replyview-quote-caption {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -22629,27 +22039,8 @@
     .jfk-radiobutton-radio:before {
     border-color: var(--gm3-sys-color-primary-container);
   }
-  .docos-ssd-content
-    .docos-ssd-radio-button-group
-    .jfk-radiobutton-checked
-    .jfk-radiobutton-radio {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .docos-ssd-content
-    .docos-ssd-radio-button-group
-    .jfk-radiobutton-checked.jfk-radiobutton
-    .jfk-radiobutton-radio:after {
-    background-color: var(--gm3-sys-color-primary);
-    border-color: var(--gm3-sys-color-primary);
-  }
   .docos-ssd-radio-button-group .jfk-radiobutton-label label {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .docos-ssd-radio-button-group
-    .jfk-radiobutton-checked
-    .jfk-radiobutton-label
-    label {
-    color: var(--gm3-sys-color-primary);
   }
   .docos-ssd-radio-button-group .jfk-radiobutton-label span {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -23284,7 +22675,6 @@
     outline: 1px solid var(--transparent, transparent);
   }
   .peoplekitComponentsTagTag.isWarning {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .peopleKitStyleGm3 .peoplekitComponentsTagTag {
@@ -23352,12 +22742,6 @@
     );
   }
   .peoplekitComponentsCircularprogressColorOne {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .peoplekitComponentsCircularprogressColorThree {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .peoplekitComponentsCircularprogressColorFour {
     border-color: var(--gm3-sys-color-primary);
   }
   .peoplekitComponentsCircularprogressCircle {
@@ -23475,10 +22859,6 @@
   .goog-date-picker-selected,
   .goog-date-picker-selected:hover {
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .goog-date-picker-selected:before,
-  .goog-date-picker-selected:hover:before {
-    background-color: var(--gm3-sys-color-primary);
   }
   .smart-canvas-date-picker-bubble {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -23600,7 +22980,6 @@
   .waffle-banding-sidebar-clear {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-banding-sidebar-clear.goog-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
@@ -23609,7 +22988,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 8%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-banding-sidebar-clear.goog-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
@@ -23618,7 +22996,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-banding-sidebar-clear.goog-button-hover.goog-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
@@ -23627,7 +23004,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-banding-sidebar-clear.goog-button-active {
     border: 1px solid var(--transparent, transparent) !important;
@@ -23636,7 +23012,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 18%
     );
-    color: var(--gm3-sys-color-primary);
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -23645,6 +23020,10 @@
   }
   .waffle-conditionalformat-warning {
     background: var(--gm3-sys-color-surface-container-lowest);
+    border-bottom: 1px solid var(--gm3-sys-color-outline);
+  }
+  .jfk-button-clear-outline.waffle-conditionalformat-add-rule-button {
+    border: 1px solid var(--gm3-sys-color-outline);
   }
   .jfk-button-clear-outline.waffle-conditionalformat-add-another-rule-button {
     border: 1px solid
@@ -23709,6 +23088,9 @@
       var(--gm3-sys-color-on-surface) 12%
     );
   }
+  .waffle-conditionalformat-no-suggestions {
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
   .waffle-conditionalformat-suggestion-text {
     color: var(--gm3-sys-color-on-surface-variant);
   }
@@ -23732,7 +23114,6 @@
   .waffle-conditionalformat-add-another-rule-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
   .waffle-conditionalformat-view-pill {
@@ -23742,7 +23123,6 @@
   .waffle-conditionalformat-add-rule-button {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-conditionalformat-drag-item {
     border: 1px solid var(--gm3-sys-color-outline-variant);
@@ -23760,7 +23140,6 @@
   }
   #waffle-named-ranges-add-range {
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-named-ranges-add-range-active {
     color: var(--gm3-sys-color-error);
@@ -23836,12 +23215,6 @@
   #waffle-named-ranges-promo {
     background-color: var(--gm3-sys-color-primary-container);
   }
-  .waffle-named-ranges-promo-title {
-    color: var(--gm3-sys-color-primary);
-  }
-  .waffle-named-ranges-promo-content {
-    color: var(--gm3-sys-color-primary);
-  }
   .waffle-named-ranges-promo-example {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     color: var(--gm3-sys-color-on-surface);
@@ -23849,12 +23222,10 @@
   .waffle-named-ranges-promo-footer a {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-named-ranges-promo-footer a:hover {
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-named-ranges-promo-footer a:focus,
   .waffle-named-ranges-promo-footer a:hover:focus {
@@ -23864,7 +23235,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-named-ranges-promo-footer a:active,
   .waffle-named-ranges-promo-footer a:hover:active {
@@ -23874,7 +23244,6 @@
       transparent,
       var(--gm3-sys-color-on-surface) 16%
     );
-    color: var(--gm3-sys-color-primary);
     box-shadow: 0 1px 3px 1px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -23883,7 +23252,6 @@
   }
   .waffle-ritz-protection-link-button {
     background: var(--gm3-sys-color-surface-container-lowest);
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-ritz-protection-link-button:hover {
     background-color: color-mix(
@@ -23994,7 +23362,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
   }
   .waffle-ritz-protection-pill-contents
     .waffle-flat-multi-range-add-another:focus {
@@ -24060,7 +23427,6 @@
     .goog-tab.spreadsheet-settings-tab.goog-tab-hover,
   .goog-tab-bar.spreadsheet-settings-dialog-tab-bar
     .goog-tab.spreadsheet-settings-tab.goog-tab-selected {
-    border-bottom: 2px solid var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .goog-tab-bar.spreadsheet-settings-dialog-tab-bar:focus
@@ -24705,22 +24071,13 @@
     }
   }
   .javascriptMaterialdesignGm3WizBadgeBadge {
-    background-color: var(
-      --gm3-badge-color,
-      var(--gm3-sys-color-error, #b3261e)
-    );
+    background-color: var(--KoO2Cf, var(--gm3-sys-color-error, #b3261e));
   }
   .javascriptMaterialdesignGm3WizBadgeBadgeLarge {
-    background-color: var(
-      --gm3-badge-large-color,
-      var(--gm3-sys-color-error, #b3261e)
-    );
+    background-color: var(--M4R9Bb, var(--gm3-sys-color-error, #b3261e));
   }
   .javascriptMaterialdesignGm3WizBadgeBadgeValue {
-    color: var(
-      --gm3-badge-large-label-text-color,
-      var(--gm3-sys-color-on-error, #fff)
-    );
+    color: var(--xTmMle, var(--gm3-sys-color-on-error, #fff));
   }
   .mdc-ripple-surface:after,
   .mdc-ripple-surface:before {
@@ -26422,16 +25779,6 @@
     .mdc-circular-progress__indeterminate-circle-graphic {
     stroke: var(--gm3-sys-color-primary);
   }
-  .GmCircularProgress
-    .mdc-circular-progress__color-3
-    .mdc-circular-progress__indeterminate-circle-graphic {
-    stroke: var(--gm3-sys-color-primary);
-  }
-  .GmCircularProgress
-    .mdc-circular-progress__color-4
-    .mdc-circular-progress__indeterminate-circle-graphic {
-    stroke: var(--gm3-sys-color-primary);
-  }
   .mdc-elevation-overlay {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     background-color: var(--mdc-elevation-overlay-color, #fff);
@@ -27272,6 +26619,12 @@
   .javascriptMaterialdesignGm3WizCardFilled-card:before {
     border: 1px solid var(--transparent, transparent);
   }
+  .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarBytesEstimateErrorText {
+    color: var(--gm3-sys-color-error, #b3261e);
+  }
+  .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarBytesEstimateText {
+    color: var(--gm3-sys-color-outline, #747775);
+  }
   .waffleDataConnectorWizAdvancedAnalyticsDbForecastSidebarDataOutputOptionsCollapsibleList
     .appsElementsCollapsibleListSummaryButtonRoot {
     color: var(--gm3-sys-color-primary, #0b57d0);
@@ -27365,11 +26718,6 @@
   .appsElementsGenerativeaiAstCodeBlockContainer .hljs-variable {
     color: var(--gm3-sys-color-error);
   }
-  .appsElementsGenerativeaiAstCodeBlockContainer .hljs-addition,
-  .appsElementsGenerativeaiAstCodeBlockContainer .hljs-code,
-  .appsElementsGenerativeaiAstCodeBlockContainer .hljs-string {
-    color: var(--gm3-sys-color-primary);
-  }
   [data-code-type="1"]
     .appsElementsGenerativeaiAstCodeBlockContainer
     .hljs-literal,
@@ -27409,20 +26757,8 @@
   .appsElementsGenerativeaiAstAnchorTextHighlight {
     background-color: var(--gm3-sys-color-surface-container-highest, #dde3ea);
   }
-  .appsElementsLinkIconsBrandGreenWrapper {
-    color: var(--gm3-sys-color-primary);
-  }
-  .appsElementsLinkIconsBrandYellowWrapper {
-    color: var(--gm3-sys-color-primary);
-  }
   .appsElementsLinkIconsBrandBlueWrapper {
     color: var(--gm3-sys-color-primary);
-  }
-  .appsElementsLinkIconsBrandGreenFill {
-    fill: var(--gm3-sys-color-primary);
-  }
-  .appsElementsLinkIconsBrandYellowFill {
-    fill: var(--gm3-sys-color-primary);
   }
   .appsElementsLinkIconsBrandBlueFill {
     fill: var(--gm3-sys-color-primary);
@@ -28509,29 +27845,23 @@
     .javascriptMaterialdesignGm3WizBannerBannerFixed,
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated.javascriptMaterialdesignGm3WizBannerBanner {
     background-color: var(
-      --gm3-banner-container-color,
+      --Xwgg5d,
       var(--gm3-sys-color-surface-container-low, #f8fafd)
     );
   }
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated
     .javascriptMaterialdesignGm3WizBannerBannerGraphic {
-    color: var(--gm3-banner-with-image-image-color, #fff);
-    background-color: var(
-      --gm3-banner-with-image-image-container-color,
-      #6200ee
-    );
+    color: var(--BMRrs, #fff);
+    background-color: var(--TOBIqc, #6200ee);
   }
   .javascriptMaterialdesignGm3WizBannerBannerDeprecated
     .javascriptMaterialdesignGm3WizBannerBannerText {
-    color: var(
-      --gm3-banner-supporting-text-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBanner,
   .javascriptMaterialdesignGm3WizBannerBannerFixed {
     background-color: var(
-      --gm3-banner-expressive-container-color,
+      --leFxrb,
       var(--gm3-sys-color-primary-container, #d3e3fd)
     );
   }
@@ -28544,22 +27874,13 @@
     }
   }
   .javascriptMaterialdesignGm3WizBannerBannerGraphic {
-    color: var(
-      --gm3-banner-expressive-icon-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--BK3ddb, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBannerText {
-    color: var(
-      --gm3-banner-supporting-text-color,
-      var(--gm3-sys-color-on-surface-variant, #444746)
-    );
+    color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
   }
   .javascriptMaterialdesignGm3WizBannerBannerTitle {
-    color: var(
-      --gm3-banner-headline-color,
-      var(--gm3-sys-color-on-surface, #1f1f1f)
-    );
+    color: var(--nHWRyc, var(--gm3-sys-color-on-surface, #1f1f1f));
   }
   .appsDocsUiWizBannerBase:link {
     color: var(
@@ -28785,6 +28106,7 @@
   }
   .appsElementsModifierSelectorIconButtonSelected {
     color: var(--gm3-sys-color-primary, #0b57d0);
+    background-color: var(--gm3-sys-color-surface-container, #f0f4f9);
   }
   .appsElementsModifierSelectorCheckCircleIcon {
     color: var(--gm3-sys-color-primary, #0b57d0);
@@ -28855,22 +28177,8 @@
   .appsElementsWorkspaceRecommendationDisplayImageIconCloudBlueSegment {
     fill: var(--gm3-sys-color-primary);
   }
-  .appsElementsWorkspaceRecommendationDisplayImageIconCloudYellowSegment {
-    fill: var(--gm3-sys-color-primary);
-  }
-  .appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
-    fill: var(--gm3-sys-color-primary);
-  }
-  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+  .appsElementsGenerativeAiSourcesCitationsPanelSubHeaderTitle {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
-  }
-  @media (forced-colors: active) {
-    .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
-      outline: 1px solid var(--transparent, transparent);
-    }
-  }
-  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon:hover {
-    background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
   .appsElementsTreeNodeLabel {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
@@ -28895,6 +28203,17 @@
   }
   .appsElementsTreeMultiSelectSubText {
     color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+    color: var(--gm3-sys-color-on-surface-variant, #444746);
+  }
+  @media (forced-colors: active) {
+    .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon {
+      outline: 1px solid var(--transparent, transparent);
+    }
+  }
+  .appsElementsGenerativeAiSourcesPanelSourcePanelHeaderTooltipIcon:hover {
+    background-color: var(--gm3-sys-color-surface-variant, #e1e3e1);
   }
   .javascriptMaterialdesignGm3WizTextFieldFilled-text-field__affix--prefix {
     color: var(--gm3-text-field-filled-input-text-prefix-color, #5f6368);
@@ -29341,8 +28660,7 @@
   .appsElementsSidekickFeed {
     color: var(--gm3-sys-color-on-surface, #1f1f1f);
   }
-  .appsElementsSidekickFeedDisclaimer,
-  .appsElementsSidekickQuotaMessage {
+  .appsElementsSidekickFeedDisclaimer {
     color: var(--gm3-sys-color-outline, #747775);
   }
   .appsElementsSidekickLearnMoreLink:active,
@@ -29762,6 +29080,9 @@
   .appsElementsSidekickGeneralFeedbackFeedbackButton:before {
     border: 1px solid var(--transparent, transparent);
   }
+  .appsElementsSidekickQuotaMessageRoot {
+    color: var(--gm3-sys-color-outline, #747775);
+  }
   .appsElementsSidekickGemTileContentListItem:before {
     border: 1px solid var(--transparent, transparent);
   }
@@ -30083,10 +29404,6 @@
     border: 1px solid var(--transparent, transparent) !important;
     background: var(--gm3-sys-color-surface-container-lowest);
     border: 1px solid var(--gm3-sys-color-outline-variant) !important;
-    color: var(--gm3-sys-color-primary);
-  }
-  .docs-gm .waffle-gm-sidebar .docs-charts-editor-material-textbutton-label {
-    color: var(--gm3-sys-color-primary);
   }
   .docs-gm
     .waffle-gm-sidebar
@@ -30701,6 +30018,289 @@
   }
   .docs-material-color-picker-saturation-overlay {
     background: linear-gradient(90deg, #fff 0, hsla(0, 0%, 100%, 0));
+  }
+
+  /* Docs general components */
+  .docs-material-button-flat-dark,
+  .docs-material-button-flat-default,
+  .docs-material-button-flat-primary,
+  .docs-material-button-text-default {
+    background-color: var(--transparent, transparent);
+  }
+  .docs-material-button-hover.docs-material-button-raised-default,
+  .docs-material-button-hover.docs-material-button-raised-primary {
+    box-shadow:
+      0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
+      0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  .docs-material-button-active.docs-material-button-raised-default,
+  .docs-material-button-active.docs-material-button-raised-primary {
+    box-shadow:
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0
+        color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
+      0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  .docs-material-button-raised-primary {
+    background-color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-flat-primary {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-flat-dark {
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-hover.docs-material-button-flat-primary {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docs-material-button-focused.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docs-material-button-active.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
+  .docs-material-button-raised-default.docs-material-button-focused {
+    border: 1px inset var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-default.docs-material-button-focused,
+  .docs-material-button-flat-primary.docs-material-button-focused {
+    border: 1px inset var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-dark.docs-material-button-focused {
+    border: 1px solid var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-hover.docs-material-button-flat-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .docs-material-button-active.docs-material-button-flat-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-raised-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-active.docs-material-button-raised-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-disabled.docs-material-button-flat-default,
+  .docs-material-button-disabled.docs-material-button-flat-primary,
+  .docs-material-button-disabled.docs-material-button-raised-default {
+    background-color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-disabled.docs-material-button-raised-primary {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-flat-primary > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 32%
+    );
+  }
+  .docs-material-button-text-default > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
+  .docs-material-button-raised-default > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .docs-material-button-hairline-primary.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-text-default.docs-material-button {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-hairline-default.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .docs-material-button-hairline-default.docs-material-button-hover,
+  .docs-material-button-hairline-primary.docs-material-button-hover {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 50%
+      ) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-focused,
+  .docs-material-button-hairline-default.docs-material-button-focused.docs-material-button-no-focus-border,
+  .docs-material-button-hairline-primary.docs-material-button-focused,
+  .docs-material-button-hairline-primary.docs-material-button-focused.docs-material-button-no-focus-border {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 50%
+      ) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-hover.docs-material-button-focused,
+  .docs-material-button-hairline-primary.docs-material-button-hover.docs-material-button-focused {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 30%
+      ) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-active,
+  .docs-material-button-hairline-primary.docs-material-button-active {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid var(--transparent, transparent) !important;
+    box-shadow: 0 2px 6px 2px
+      color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .docs-material-button-hairline-default.docs-material-button-disabled,
+  .docs-material-button-hairline-primary.docs-material-button-disabled {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%) !important;
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-fill-primary.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-hover {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-focused,
+  .docs-material-button-fill-primary.docs-material-button-focused.docs-material-button-no-focus-border {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-hover.docs-material-button-focused {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-active {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-disabled {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-horizontal-button-group .docs-material-button-selected {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 30%
+      ) !important;
+  }
+  .docs-horizontal-button-group
+    .docs-material-button.docs-material-button-selected.docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+  }
+  .docs-horizontal-button-group
+    .docs-material-button.docs-material-button-selected.docs-material-button-hover
+    .docs-material-button-content {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-horizontal-button-group
+    .docs-material-button:not([class*="docs-material-button-selected"]) {
+    border-color: var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-horizontal-button-group
+    .docs-material-button:not(
+      [class*="docs-material-button-selected"]
+    ).docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
   }
 
   ::selection {

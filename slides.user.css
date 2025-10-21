@@ -2,7 +2,7 @@
 @name Google Slides Color Theme
 @namespace github.com/walkquackback/google-slides-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.20
+@version 2025.10.21
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/slides.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Slides to be themed using CSS variables. Comes by default with a dark theme.
@@ -208,6 +208,7 @@
   }
   .modal-dialog-buttons button[disabled] {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .modal-dialog-buttons .goog-buttonset-action {
     background-color: var(--gm3-sys-color-primary);
@@ -240,6 +241,7 @@
   }
   .goog-flat-menu-button-disabled {
     background-color: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .goog-flat-menu-button.goog-flat-menu-button-hover {
     background-color: color-mix(
@@ -428,6 +430,7 @@
   }
   .jfk-button-contrast.jfk-button-disabled {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .jfk-button-default {
     color: var(--gm3-sys-color-surface-container-lowest);
@@ -474,6 +477,7 @@
   }
   .jfk-button-mini.jfk-button-disabled {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .jfk-button-primary {
     border: 1px solid var(--transparent, transparent);
@@ -560,6 +564,7 @@
   }
   .jfk-button-standard.jfk-button-disabled {
     background: var(--gm3-sys-color-surface-container-lowest);
+    color: var(--gm3-sys-color-outline);
   }
   .jfk-textinput:focus {
     border: 1px solid var(--gm3-sys-color-primary);
@@ -573,6 +578,9 @@
   }
   .apps-shortcutshelppopup-close .modal-dialog-title-close {
     fill: var(--gm3-sys-color-on-surface-variant);
+  }
+  .apps-shortcutshelppopup-shortcut-desc {
+    color: var(--gm3-sys-color-on-surface-variant);
   }
   .apps-shortcutshelppopup-ac-renderer {
     background: var(--gm3-sys-color-surface-container-lowest);
@@ -822,11 +830,6 @@
     outline: 1px solid
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%);
   }
-  .docs-abuse-abusive-file-warning-banner-container,
-  .docs-abuse-abusive-file-warning-banner-container
-    .docs-abuse-warning-banner-flex-wrap {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .docs-abuse-warning-banner-not-spam-button .docs-material-button-content {
     box-shadow: 0 0 0 1px var(--gm3-sys-color-on-surface);
   }
@@ -1002,9 +1005,6 @@
   .activity-event-people-names {
     color: var(--dt-on-surface, #3c4043);
   }
-  .activity-event-approval-approved {
-    color: var(--gm3-sys-color-primary);
-  }
   .activity-event-section-heading {
     color: var(--dt-on-surface, #3c4043);
   }
@@ -1028,10 +1028,29 @@
     border: 1px solid var(--transparent, transparent);
     color: var(--dt-primary, #1a73e8);
   }
+  .activity-event-toggle-button-hover {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 4%
+    );
+  }
   .activity-event-toggle-button-focused {
     background-color: var(--dt-primary-container, #e8f0fe);
   }
+  .activity-event-toggle-button-hover.activity-event-toggle-button-focused {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
   .activity-event-toggle-button-active {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
     box-shadow:
       0 1px 2px 0 rgba(60, 64, 67, 0.3),
       0 1px 3px 1px
@@ -1377,32 +1396,21 @@
   }
   .analytics-btn-fill.jfk-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .analytics-btn-fill.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .analytics-btn-fill.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .analytics-btn-fill.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .analytics-btn-fill.jfk-button-focused.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .analytics-btn-fill.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     background: color-mix(
       in oklab,
       transparent,
@@ -1569,11 +1577,6 @@
     .docs-material-button {
     color: var(--gm3-sys-color-primary);
   }
-  .docs-feature-level-banner-sheets
-    .docs-approvals-banner-non-primary-button-wrapper
-    .docs-material-button {
-    color: var(--gm3-sys-color-primary);
-  }
   .docs-feature-level-banner-slides
     .docs-approvals-banner-non-primary-button-wrapper
     .docs-material-button {
@@ -1587,11 +1590,6 @@
       transparent,
       var(--gm3-sys-color-primary) 16%
     );
-  }
-  .docs-feature-level-banner-sheets
-    .docs-approvals-banner-icon
-    .docs-approvals-banner-icon-path {
-    fill: var(--gm3-sys-color-primary);
   }
   .docs-feature-level-banner-slides
     .docs-approvals-banner-icon
@@ -2157,9 +2155,6 @@
       var(--gm3-sys-color-on-surface) 8%
     );
     color: var(--gm3-sys-color-on-surface);
-  }
-  .docs-gm .docs-gm-sidebar-icon-path {
-    fill: var(--gm3-sys-color-primary);
   }
   .docs-sidebar-gm-titlebar-icon-button {
     background-color: var(--transparent, transparent);
@@ -2778,32 +2773,21 @@
   }
   .jfk-button.docs-contentembedding-updatebar-update-all-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button.docs-contentembedding-updatebar-update-all-button.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .jfk-button.docs-contentembedding-updatebar-update-all-button.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button.docs-contentembedding-updatebar-update-all-button.jfk-button-hover.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button.docs-contentembedding-updatebar-update-all-button.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .jfk-button.docs-contentembedding-updatebar-update-all-button.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     background: color-mix(
       in oklab,
       transparent,
@@ -2984,6 +2968,13 @@
       var(--gm3-sys-color-primary) 12%
     );
   }
+  .docs-material-button-hover.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 4%
+    );
+  }
   .docs-material-button-focused.docs-material-button-text-default {
     background-color: color-mix(
       in oklab,
@@ -2995,7 +2986,7 @@
     background-color: color-mix(
       in oklab,
       transparent,
-      var(--gm3-sys-color-primary) 16%
+      var(--gm3-sys-color-primary) 10%
     );
   }
   .docs-material-button-raised-default.docs-material-button-focused {
@@ -3053,7 +3044,7 @@
     background-color: color-mix(
       in oklab,
       transparent,
-      var(--gm3-sys-color-primary) 16%
+      var(--gm3-sys-color-primary) 10%
     );
   }
   .docs-material-button-raised-default > .docs-material-button-ripple-element {
@@ -3135,38 +3126,27 @@
   }
   .docs-material-button-fill-primary.docs-material-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-material-button-fill-primary.docs-material-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-material-button-fill-primary.docs-material-button-focused,
   .docs-material-button-fill-primary.docs-material-button-focused.docs-material-button-no-focus-border {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-material-button-fill-primary.docs-material-button-hover.docs-material-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-material-button-fill-primary.docs-material-button-active {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-material-button-fill-primary.docs-material-button-disabled {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     background: color-mix(
       in oklab,
       transparent,
@@ -3719,9 +3699,6 @@
   .docs-callout-important {
     background: var(--gm3-sys-color-primary-container);
   }
-  .docs-callout-warning {
-    background: var(--gm3-sys-color-primary);
-  }
   .docs-callout-message {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -3759,11 +3736,6 @@
   .docs-linkbubble-link-preview
     .docs-link-bubble-card-component.docs-link-bubble-action-card-component.add-on-install-prompt-card-container {
     background-color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .docs-linkbubble-link-preview .docs-link-bubble-abuse-card-component:before,
-  .docs-linkbubble-link-preview
-    .docs-link-bubble-card-component.docs-link-bubble-abuse-card-component {
-    background-color: var(--gm3-sys-color-primary);
   }
   .docs-linkbubble-link-preview
     .docs-link-bubble-card-component.docs-link-bubble-extract-card-component,
@@ -4079,6 +4051,14 @@
       var(--gm3-sys-color-on-surface) 38%
     );
   }
+  .docs-link-smartinsertlinkbubble-apply-button.jfk-button.jfk-button-standard:hover,
+  .docs-link-smartinsertlinkbubble-apply-button:hover {
+    background: color-mix(
+      in oklab,
+      var(--gm3-sys-color-primary),
+      transparent 4%
+    );
+  }
   .docs-link-back-to-search-icon-button {
     color: var(--gm3-sys-color-outline);
   }
@@ -4208,9 +4188,6 @@
   }
   [class*="docs-hc"] .docs-action-badge {
     border: 1px solid var(--transparent, transparent);
-  }
-  .docs-action-updated-dot {
-    background-color: var(--gm3-sys-color-primary);
   }
   .copy-link-dialog {
     color: var(--gm3-sys-color-shadow);
@@ -4639,11 +4616,23 @@
   .docs-material-slider-track-on {
     background-color: var(--gm3-sys-color-primary);
   }
+  .docs-material-slider-track-off {
+    background-color: var(--gm3-sys-color-outline);
+  }
+  .docs-material-slider.goog-slider-disabled
+    .docs-material-slider-thumb-grabber,
+  .docs-material-slider.goog-slider-disabled .docs-material-slider-track-on {
+    background-color: var(--gm3-sys-color-outline);
+    border-color: var(--gm3-sys-color-outline);
+  }
   .docs-gm .pub-dialog-info {
     color: var(--gm3-sys-color-outline);
   }
   .docs-gm .pub-dialog-state-published.pub-dialog-info {
     color: var(--gm3-sys-color-primary);
+  }
+  .goog-tab-bar.pub-dialog-tab-bar .goog-tab.pub-dialog-tab {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-gm .goog-tab-bar.pub-dialog-tab-bar .goog-tab.pub-dialog-tab {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -4910,6 +4899,9 @@
     > .apps-ui-material-slide-toggle-track {
     border: 1px solid var(--gm3-sys-color-surface-container-lowest);
   }
+  .docs-revisions-switch .apps-ui-material-slide-toggle-thumb {
+    background-color: var(--gm3-sys-color-outline);
+  }
   .docs-gm .docs-revisions-switch .apps-ui-material-slide-toggle-thumb {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -5084,6 +5076,14 @@
   .docs-vertical-ruler .docs-ruler-background-inner {
     border-right: 1px solid var(--gm3-sys-color-outline);
   }
+  .docs-horizontal-ruler .docs-ruler-face-major-division,
+  .docs-horizontal-ruler .docs-ruler-face-minor-division {
+    border-left: 1px solid var(--gm3-sys-color-on-surface-variant);
+  }
+  .docs-vertical-ruler .docs-ruler-face-major-division,
+  .docs-vertical-ruler .docs-ruler-face-minor-division {
+    border-top: 1px solid var(--gm3-sys-color-on-surface-variant);
+  }
   .docs-ruler-guide-tooltip {
     background: var(--gm3-sys-color-on-surface);
     color: var(--gm3-sys-color-surface-container-lowest);
@@ -5193,18 +5193,8 @@
   }
   .docs-gm #docs-spellcheckslidingdialog-button-change,
   .docs-gm #docs-spellcheckslidingdialog-button-change-menu {
-    background: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent);
     color: var(--gm3-sys-color-on-surface);
-  }
-  .docs-gm
-    #docs-spellcheckslidingdialog-button-change-menu.goog-flat-menu-button-hover,
-  .docs-gm #docs-spellcheckslidingdialog-button-change.jfk-button-hover {
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-gm
     #docs-spellcheckslidingdialog-button-change-menu.goog-flat-menu-button-disabled,
@@ -5310,30 +5300,21 @@
   }
   .docs-gm #docs-spellcheckslidingdialog-no-misspellings-footer .jfk-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm
@@ -5342,7 +5323,6 @@
   .docs-gm
     #docs-spellcheckslidingdialog-no-misspellings-footer
     .jfk-button.jfk-button-active.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-spell-menuitem-subtext {
@@ -5816,6 +5796,11 @@
   .docs-number-input-unit {
     color: var(--gm3-sys-color-outline);
   }
+  .docs-number-input-disabled .docs-number-input,
+  .docs-number-input-disabled .docs-number-input-label,
+  .docs-number-input-disabled .docs-number-input-unit {
+    color: var(--gm3-sys-color-outline);
+  }
   .docs-number-input-error-label {
     color: var(--gm3-sys-color-error);
   }
@@ -5910,9 +5895,6 @@
   .docs-gm-thumbnailcontrol-hover .docs-thumbnailcontrol-thumbnailcontainer {
     box-shadow: 0 4px 8px 3px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .docs-gm-thumbnailcontrol-focused .docs-thumbnailcontrol-thumbnailcontainer {
-    border-color: var(--gm3-sys-color-primary);
   }
   .docs-thumbnailcontrol-hover .docs-thumbnailcontrol-index {
     background-color: var(--gm3-sys-color-outline-variant);
@@ -6113,39 +6095,25 @@
   }
   .sketchy-audio-error-bubble-button-container .docs-material-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .sketchy-audio-error-bubble-button-container
     .docs-material-button.docs-material-button-focused,
   .sketchy-audio-error-bubble-button-container
     .docs-material-button.docs-material-button-focused.docs-material-button-no-focus-border {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .sketchy-audio-error-bubble-button-container
     .docs-material-button.docs-material-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .sketchy-audio-error-bubble-button-container
     .docs-material-button.docs-material-button-hover.docs-material-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .sketchy-audio-error-bubble-button-container
     .docs-material-button.docs-material-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-  }
-  .sketchy-audio-error-bubble-container
-    .docs-linkstodrive-link-component-inline {
-    color: var(--gm3-sys-color-primary);
   }
   @media screen and (forced-colors: active) {
     .appsSketchyContentlibraryUiSidebarShapesShapesSidebarContainer
@@ -7083,6 +7051,9 @@
   .docs-labeled-button-label {
     color: var(--gm3-sys-color-on-surface-variant);
   }
+  .docs-labeled-button-disabled .docs-labeled-button-label {
+    color: var(--gm3-sys-color-outline);
+  }
   .docs-sidebar-tile {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -7112,9 +7083,16 @@
   }
   .docs-sidebar-tile-header.docs-sidebar-tile-header-disabled {
     background-color: var(--transparent, transparent);
+    color: var(--gm3-sys-color-outline);
+  }
+  .docs-sidebar-tile-section-disabled .docs-sidebar-tile-section-title {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-sidebar-tile-label {
     color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .docs-sidebar-tile-controls-disabled .docs-sidebar-tile-label {
+    color: var(--gm3-sys-color-outline);
   }
   .docs-gm .docs-sidebar-tile-controls {
     background-color: var(--gm3-sys-color-surface, #fff);
@@ -7261,6 +7239,7 @@
   .goog-tab-bar.sketchy-editguidesdialog-tab-bar
     .sketchy-editguidesdialog-tab.goog-tab {
     border-bottom: 3px var(--transparent, transparent);
+    color: var(--gm3-sys-color-outline);
   }
   .docs-gm
     .goog-tab-bar.sketchy-editguidesdialog-tab-bar
@@ -7619,11 +7598,6 @@
       var(--gm3-sys-color-on-surface) 12%
     );
   }
-  .docs-sidebar-toggle-tabs
-    .jfk-button.docs-sidebar-toggle-tab-active
-    > div:after {
-    border-top: 3px solid var(--gm3-sys-color-primary);
-  }
   .docs-video-erroroverlaycomponent-bg {
     background: var(--gm3-sys-color-on-surface);
   }
@@ -7688,6 +7662,13 @@
   }
   .jfk-radiobutton-disabled .jfk-radiobutton-radio {
     border-color: var(--gm3-sys-color-surface-container);
+  }
+  .jfk-radiobutton-disabled.jfk-radiobutton-checked
+    .jfk-radiobutton-radio:after {
+    background: var(--gm3-sys-color-outline);
+  }
+  .jfk-radiobutton-disabled .jfk-radiobutton-label {
+    color: var(--gm3-sys-color-outline);
   }
   .jfk-radiobutton-disabled:active .jfk-radiobutton-radio,
   .jfk-radiobutton-disabled:hover .jfk-radiobutton-radio {
@@ -7858,7 +7839,6 @@
     color: var(--gm3-sys-color-on-surface);
   }
   .office-editing-file-extension {
-    background-color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent);
     color: var(--gm3-sys-color-on-surface);
   }
@@ -7869,7 +7849,6 @@
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docs-external-badge {
-    background-color: var(--gm3-sys-color-primary);
     border: 1px solid var(--transparent, transparent);
   }
   .docs-external-badge-text-expanded {
@@ -7920,7 +7899,6 @@
   }
   .docs-new-badge,
   .docs-premium-badge {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-default-badge {
@@ -7970,6 +7948,9 @@
   .companion-theme-dark.companion-app-switcher-container,
   .companion-theme-light.companion-app-switcher-container {
     background-color: var(--transparent, transparent);
+  }
+  .companion-app-switcher-loading-indicator-dot {
+    background-color: var(--gm3-sys-color-on-surface-variant);
   }
   .companion-theme-dark .companion-app-switcher-loading-indicator-dot {
     background-color: var(--gm3-sys-color-surface-container-lowest);
@@ -8146,12 +8127,6 @@
   .agca-gab-blue .agca-gab-icon-selection-indicator {
     background-color: var(--gm3-sys-color-primary);
   }
-  .agca-gab-green .agca-gab-icon-selection-indicator {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .agca-gab-yellow .agca-gab-icon-selection-indicator {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .companion-shell-header {
     background-color: var(--gm3-sys-color-surface-container-lowest);
     border-bottom: 1px solid
@@ -8306,26 +8281,6 @@
     .app-switcher-notification-bubble-footer
     .jfk-button {
     color: var(--gm3-sys-color-surface-container-lowest);
-  }
-  .app-switcher-notification-bubble
-    .app-switcher-notification-bubble-call-to-action-button {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .app-switcher-notification-bubble
-    .app-switcher-notification-bubble-call-to-action-button.jfk-button-hover {
-    background-color: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
-  }
-  .app-switcher-notification-bubble
-    .app-switcher-notification-bubble-call-to-action-button.jfk-button-focused {
-    background-color: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 12%
-    );
   }
   .app-switcher-notification-bubble
     .app-switcher-notification-bubble-dismiss-button {
@@ -8844,11 +8799,9 @@
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     background: color-mix(
       in oklab,
       transparent,
@@ -8857,28 +8810,19 @@
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button:focus {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
     border-color: var(--transparent, transparent) !important;
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-gm
     #docs-titlebar-share-client-button
     .jfk-button.jfk-button-hover:focus {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm #docs-titlebar-share-client-button .jfk-button.jfk-button-active,
   .docs-gm #docs-titlebar-share-client-button .jfk-button.jfk-button-checked {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .goog-toolbar-button,
@@ -9150,7 +9094,6 @@
   .punch-animation-sidebar-stop.jfk-button,
   .waffle-filterbox-button-container .jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-hover,
@@ -9159,13 +9102,7 @@
   .punch-animation-sidebar-play.jfk-button-hover,
   .punch-animation-sidebar-stop.jfk-button-hover,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-focused,
   .docs-suggestiondialog-accept-container .goog-flat-menu-button-focused,
@@ -9173,7 +9110,6 @@
   .punch-animation-sidebar-play.jfk-button-focused,
   .punch-animation-sidebar-stop.jfk-button-focused,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-offline-optinpromo-buttons
@@ -9185,7 +9121,6 @@
   .punch-animation-sidebar-stop.jfk-button-hover.jfk-button-focused,
   .waffle-filterbox-button-container
     .jfk-button-action.jfk-button-hover.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-pressed,
@@ -9194,7 +9129,6 @@
   .punch-animation-sidebar-play.jfk-button-pressed,
   .punch-animation-sidebar-stop.jfk-button-pressed,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-pressed {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-offline-optinpromo-buttons .jfk-button-action.jfk-button-disabled,
@@ -9203,7 +9137,6 @@
   .punch-animation-sidebar-play.jfk-button-disabled,
   .punch-animation-sidebar-stop.jfk-button-disabled,
   .waffle-filterbox-button-container .jfk-button-action.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     background: color-mix(
       in oklab,
       transparent,
@@ -9358,24 +9291,16 @@
   .docs-gm .modal-dialog .goog-buttonset-action,
   .docs-gm .modal-dialog .jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-hover,
   .docs-gm .modal-dialog .goog-buttonset-action:hover,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-focused,
   .docs-gm .modal-dialog .goog-buttonset-action:focus,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm
@@ -9385,7 +9310,6 @@
   .docs-gm
     .modal-dialog
     .jfk-button-action.jfk-button-hover.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-active,
@@ -9396,13 +9320,11 @@
   .docs-gm .modal-dialog .goog-buttonset-action:focus:active,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-active,
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-focus.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-gm .docs-material-bubble .jfk-button-action.jfk-button-disabled,
   .docs-gm .modal-dialog .goog-buttonset-action[disabled],
   .docs-gm .modal-dialog .jfk-button-action.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     background: color-mix(
       in oklab,
       transparent,
@@ -10238,9 +10160,6 @@
     box-shadow: 0 -2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
-  .docs-chat-not-encrypted-warning-container {
-    background-color: var(--gm3-sys-color-primary);
-  }
   .docs-chat-not-encrypted-warning-label {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -10341,32 +10260,22 @@
   }
   #docs-access-level-indicator.goog-flat-menu-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   #docs-access-level-indicator.goog-flat-menu-button-hover {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   #docs-access-level-indicator.goog-flat-menu-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   #docs-access-level-indicator.goog-flat-menu-button-hover.goog-flat-menu-button-focused {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   #docs-access-level-indicator.goog-flat-menu-button-disabled {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   #docs-access-level-indicator.goog-flat-menu-button-focused.goog-flat-menu-button-open,
@@ -10375,7 +10284,6 @@
   #docs-access-level-indicator.goog-flat-menu-button-pressed,
   #docs-access-level-indicator.goog-flat-menu-button:active {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-grille-gm3 #docs-access-level-indicator.goog-flat-menu-button {
@@ -10529,7 +10437,6 @@
     border-color: var(--transparent, transparent) #fafafa;
   }
   .docs-gm-promo.jfk-bubble.docs-promo-bubble {
-    background-color: var(--gm3-sys-color-primary);
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
   }
@@ -10543,7 +10450,7 @@
   .docs-gm-promo.jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowup
     .jfk-bubble-arrowimplafter {
-    border-color: var(--gm3-sys-color-primary) var(--transparent, transparent);
+    border-color: #fbbc04 var(--transparent, transparent);
   }
   .docs-gm-promo.jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowleft
@@ -10551,7 +10458,7 @@
   .docs-gm-promo.jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowright
     .jfk-bubble-arrowimplafter {
-    border-color: var(--transparent, transparent) var(--gm3-sys-color-primary);
+    border-color: var(--transparent, transparent) #fbbc04;
   }
   .docs-promo-header {
     color: var(--gm3-sys-color-shadow);
@@ -10842,11 +10749,9 @@
   }
   .docos.docs-gm .jfk-button.jfk-button-action {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docos.docs-gm .jfk-button.jfk-button-action.jfk-button-disabled {
-    background: var(--gm3-sys-color-primary);
     background: color-mix(
       in oklab,
       transparent,
@@ -10855,26 +10760,17 @@
     color: var(--gm3-sys-color-on-surface);
   }
   .docos.docs-gm .jfk-button.jfk-button-action.jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docos.docs-gm .jfk-button.jfk-button-action.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docos.docs-gm
     .jfk-button.jfk-button-action.jfk-button-focused.jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docos.docs-gm
     .jfk-button.jfk-button-action.jfk-button-focused.jfk-button-active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-grille-gm3.docos .jfk-button.jfk-button-action,
@@ -11113,12 +11009,6 @@
   .docos-comments-pe .docos-anchoreddocoview .docos-input-at-reply-message,
   .docos-comments-pe .docos-anchoreddocoview .docos-input-static-message {
     color: var(--gm3-sys-color-on-surface-variant);
-  }
-  .docs-gm
-    .docos-layout-vertical
-    .docos-anchoreddocoview
-    .docos-anchoreddocoview-arrow-inner.docos-assignee-you {
-    background-color: var(--gm3-sys-color-primary);
   }
   .docs-grille-gm3.docs-gm .docos-input-at-reply-message {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -11744,7 +11634,6 @@
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docos.docs-gm .docos-assigneeview.docos-assignee-you {
-    background-color: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docos-assigneeview .docos-mark-done-button-white:hover {
@@ -12315,6 +12204,22 @@
       in oklab,
       transparent,
       var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docos-navigation-bar-next:hover,
+  .docos-navigation-bar-previous:hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
+  }
+  .docos-navigation-bar-next:focus,
+  .docos-navigation-bar-previous:focus {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
     );
   }
   .docs-grille-gm3 .docos-navigation-bar {
@@ -13595,9 +13500,6 @@
   .docos-streamdocoview .docos-replyview-quote {
     border-left: 1px solid var(--gm3-sys-color-outline-variant);
   }
-  .docs-gm .docos-streamdocoview .docos-replyview-quote {
-    border-left-color: var(--gm3-sys-color-primary);
-  }
   .docs-gm .docos-replyview-quote-caption {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -14271,7 +14173,6 @@
     outline: 1px solid var(--transparent, transparent);
   }
   .peoplekitComponentsTagTag.isWarning {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .peopleKitStyleGm3 .peoplekitComponentsTagTag {
@@ -14339,12 +14240,6 @@
     );
   }
   .peoplekitComponentsCircularprogressColorOne {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .peoplekitComponentsCircularprogressColorThree {
-    border-color: var(--gm3-sys-color-primary);
-  }
-  .peoplekitComponentsCircularprogressColorFour {
     border-color: var(--gm3-sys-color-primary);
   }
   .peoplekitComponentsCircularprogressCircle {
@@ -14691,9 +14586,6 @@
     .jfk-bubble-arrowimplbefore {
     background: var(--gm3-sys-color-surface-container-lowest);
   }
-  .promo-bubble-dotted-progressbar-dot-highlighted {
-    background: var(--gm3-sys-color-primary);
-  }
   .docs-material-promo-walkthrough-bubble {
     background: var(--gm3-sys-color-surface, #fff);
     border: 1px solid var(--transparent, transparent);
@@ -14764,7 +14656,6 @@
   }
   #docs-toolbar-mode-switcher.suggest-mode {
     background-color: var(--gm3-sys-color-primary-container);
-    color: var(--gm3-sys-color-primary);
   }
   #docs-toolbar-mode-switcher.edit-mode {
     background-color: color-mix(
@@ -14797,10 +14688,6 @@
     border-left-color: var(--transparent, transparent);
     border-right-color: var(--transparent, transparent);
   }
-  #docs-toolbar-mode-switcher.suggest-mode .goog-toolbar-menu-button-dropdown {
-    border-bottom-color: var(--gm3-sys-color-primary);
-    border-top-color: var(--gm3-sys-color-primary);
-  }
   #docs-toolbar-mode-switcher.goog-toolbar-menu-button-open {
     background-color: color-mix(
       in oklab,
@@ -14825,12 +14712,6 @@
   }
   .goog-menuitem-disabled .docs-toolbar-mode-switcher-menu-description {
     color: var(--gm3-sys-color-outline-variant);
-  }
-  .docs-toolbar-mode-switcher-menu
-    .current-mode
-    .docs-toolbar-mode-switcher-suggesting-menu-item
-    .docs-toolbar-mode-switcher-menu-label {
-    color: var(--gm3-sys-color-primary);
   }
   .docs-grille-gm3.docs-gm #docs-toolbar-mode-switcher.suggest-mode {
     background: var(--gm3-sys-color-primary-container);
@@ -14874,24 +14755,15 @@
   }
   .gwef-promo-cta-button {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .gwef-promo-cta-button:hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .gwef-promo-cta-button:active {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .gwef-promo-cta-button:focus {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .gwef-promo-dismiss-button {
@@ -14967,23 +14839,15 @@
   }
   .docsInsertableTemplatesCssInfoTabComponentActionButton {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
     background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docsInsertableTemplatesCssInfoTabComponentActionButton .jfk-button-hover {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
-    background: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .docsInsertableTemplatesCssInfoTabComponentActionButton .jfk-button-focused {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
     color: var(--gm3-sys-color-surface-container-lowest);
   }
@@ -17039,7 +16903,6 @@
   }
   .docs-ml-promotion-action-button.docs-ml-promotion-yes-button.docs-ml-promotion-app-themed {
     border: 1px solid var(--transparent, transparent) !important;
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-ml-promotion-action-button.docs-ml-promotion-no-button.docs-ml-promotion-app-themed {
@@ -17050,7 +16913,6 @@
   }
   .docs-ml-promotion-action-button-wrapper:focus
     .docs-ml-promotion-action-button.docs-ml-promotion-yes-button.docs-ml-promotion-app-themed {
-    background: var(--gm3-sys-color-primary);
     color: var(--gm3-sys-color-on-surface);
   }
   .docs-ml-promotion-action-button-wrapper:focus
@@ -17164,17 +17026,6 @@
   }
   .docs-talk-track-record-button-text {
     color: var(--gm3-sys-color-on-surface);
-  }
-  .docs-talk-track-record-button-active,
-  .docs-talk-track-record-button-checked,
-  .docs-talk-track-record-button-focused,
-  .docs-talk-track-record-button-hover,
-  .docs-talk-track-record-button-selected {
-    background-color: color-mix(
-      in oklab,
-      var(--gm3-sys-color-primary),
-      var(--gm3-sys-color-on-primary) 8%
-    );
   }
   .docs-talk-track-empty-state-text {
     color: var(--gm3-sys-color-on-surface-variant);
@@ -17548,9 +17399,6 @@
   .punch-theme-colors-preview-section {
     box-shadow: 0 2px 6px 2px
       color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
-  }
-  .punch-theme-colors-loading-indicator .docs-indeterminate-loading-bar div {
-    background: var(--gm3-sys-color-primary);
   }
   .docs-hub .punch-theme-colors-sidebar {
     border: 1px solid var(--gm3-sys-color-outline-variant);
@@ -17998,7 +17846,6 @@
     border: 2px solid var(--transparent, transparent);
   }
   .sl-tabbar .docs-tabbar-tab-selected:before {
-    border-top: 3px solid var(--gm3-sys-color-primary);
     border-color: var(--gm3-sys-color-primary);
   }
   .sl-tabbar .docs-tabbar-tab .docs-tabbar-tablabel:focus {
@@ -18262,11 +18109,6 @@
   }
   .docs-gm
     .goog-menu
-    .filter-chip-color-menu-item.goog-menuitem.filter-chip-color-menu-item-green {
-    background-color: var(--gm3-sys-color-primary);
-  }
-  .docs-gm
-    .goog-menu
     .filter-chip-color-menu-item.goog-menuitem.filter-chip-color-menu-item-blue {
     background-color: var(--gm3-sys-color-primary);
   }
@@ -18525,6 +18367,10 @@
   .punch-present-iframe {
     background-color: var(--gm3-sys-color-shadow);
   }
+  #punch-start-presentation-right.goog-flat-menu-button-disabled
+    .goog-flat-menu-button-dropdown {
+    border-top-color: var(--gm3-sys-color-outline);
+  }
   #punch-start-presentation-left.jfk-button,
   #punch-start-presentation-left.jfk-button-clear-outline,
   #punch-start-presentation-left.jfk-button-disabled {
@@ -18645,11 +18491,6 @@
   }
   .punch-animation-tile-after-previous .punch-sidebar-tile-header {
     border-top: 1px dashed var(--gm3-sys-color-outline-variant);
-  }
-  .punch-animation-sidebar .docs-material-slider-thumb-grabber,
-  .punch-animation-sidebar .docs-material-slider-track-on {
-    background-color: var(--gm3-sys-color-primary);
-    border-color: var(--gm3-sys-color-primary);
   }
   .punch-transition-unsupported-dismiss,
   .punch-transition-unsupported-more {
@@ -20327,16 +20168,6 @@
   }
   .GmCircularProgress
     .mdc-circular-progress__color-1
-    .mdc-circular-progress__indeterminate-circle-graphic {
-    stroke: var(--gm3-sys-color-primary);
-  }
-  .GmCircularProgress
-    .mdc-circular-progress__color-3
-    .mdc-circular-progress__indeterminate-circle-graphic {
-    stroke: var(--gm3-sys-color-primary);
-  }
-  .GmCircularProgress
-    .mdc-circular-progress__color-4
     .mdc-circular-progress__indeterminate-circle-graphic {
     stroke: var(--gm3-sys-color-primary);
   }
@@ -22680,11 +22511,6 @@
   .appsElementsGenerativeaiAstCodeBlockContainer .hljs-variable {
     color: var(--gm3-sys-color-error);
   }
-  .appsElementsGenerativeaiAstCodeBlockContainer .hljs-addition,
-  .appsElementsGenerativeaiAstCodeBlockContainer .hljs-code,
-  .appsElementsGenerativeaiAstCodeBlockContainer .hljs-string {
-    color: var(--gm3-sys-color-primary);
-  }
   [data-code-type="1"]
     .appsElementsGenerativeaiAstCodeBlockContainer
     .hljs-literal,
@@ -22724,20 +22550,8 @@
   .appsElementsGenerativeaiAstAnchorTextHighlight {
     background-color: var(--gm3-sys-color-surface-container-highest, #dde3ea);
   }
-  .appsElementsLinkIconsBrandGreenWrapper {
-    color: var(--gm3-sys-color-primary);
-  }
-  .appsElementsLinkIconsBrandYellowWrapper {
-    color: var(--gm3-sys-color-primary);
-  }
   .appsElementsLinkIconsBrandBlueWrapper {
     color: var(--gm3-sys-color-primary);
-  }
-  .appsElementsLinkIconsBrandGreenFill {
-    fill: var(--gm3-sys-color-primary);
-  }
-  .appsElementsLinkIconsBrandYellowFill {
-    fill: var(--gm3-sys-color-primary);
   }
   .appsElementsLinkIconsBrandBlueFill {
     fill: var(--gm3-sys-color-primary);
@@ -22985,12 +22799,6 @@
     color: var(--gm3-sys-color-primary, #0b57d0);
   }
   .appsElementsWorkspaceRecommendationDisplayImageIconCloudBlueSegment {
-    fill: var(--gm3-sys-color-primary);
-  }
-  .appsElementsWorkspaceRecommendationDisplayImageIconCloudYellowSegment {
-    fill: var(--gm3-sys-color-primary);
-  }
-  .appsElementsWorkspaceRecommendationDisplayImageIconCloudGreenSegment {
     fill: var(--gm3-sys-color-primary);
   }
   .appsElementsGenerativeAiSourcesCitationsPanelSubHeaderTitle {
@@ -24359,6 +24167,289 @@
 
   [fill="#444746"] {
     fill: var(--gm3-sys-color-on-surface) !important;
+  }
+
+  /* Docs general components */
+  .docs-material-button-flat-dark,
+  .docs-material-button-flat-default,
+  .docs-material-button-flat-primary,
+  .docs-material-button-text-default {
+    background-color: var(--transparent, transparent);
+  }
+  .docs-material-button-hover.docs-material-button-raised-default,
+  .docs-material-button-hover.docs-material-button-raised-primary {
+    box-shadow:
+      0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
+      0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  .docs-material-button-active.docs-material-button-raised-default,
+  .docs-material-button-active.docs-material-button-raised-primary {
+    box-shadow:
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0
+        color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
+      0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  .docs-material-button-raised-primary {
+    background-color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-flat-primary {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-flat-dark {
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-hover.docs-material-button-flat-primary {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docs-material-button-focused.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docs-material-button-active.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
+  .docs-material-button-raised-default.docs-material-button-focused {
+    border: 1px inset var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-default.docs-material-button-focused,
+  .docs-material-button-flat-primary.docs-material-button-focused {
+    border: 1px inset var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-dark.docs-material-button-focused {
+    border: 1px solid var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-hover.docs-material-button-flat-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .docs-material-button-active.docs-material-button-flat-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-raised-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-active.docs-material-button-raised-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-disabled.docs-material-button-flat-default,
+  .docs-material-button-disabled.docs-material-button-flat-primary,
+  .docs-material-button-disabled.docs-material-button-raised-default {
+    background-color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-disabled.docs-material-button-raised-primary {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-flat-primary > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 32%
+    );
+  }
+  .docs-material-button-text-default > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
+  .docs-material-button-raised-default > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .docs-material-button-hairline-primary.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-text-default.docs-material-button {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-hairline-default.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .docs-material-button-hairline-default.docs-material-button-hover,
+  .docs-material-button-hairline-primary.docs-material-button-hover {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 50%
+      ) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-focused,
+  .docs-material-button-hairline-default.docs-material-button-focused.docs-material-button-no-focus-border,
+  .docs-material-button-hairline-primary.docs-material-button-focused,
+  .docs-material-button-hairline-primary.docs-material-button-focused.docs-material-button-no-focus-border {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 50%
+      ) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-hover.docs-material-button-focused,
+  .docs-material-button-hairline-primary.docs-material-button-hover.docs-material-button-focused {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 30%
+      ) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-active,
+  .docs-material-button-hairline-primary.docs-material-button-active {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid var(--transparent, transparent) !important;
+    box-shadow: 0 2px 6px 2px
+      color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .docs-material-button-hairline-default.docs-material-button-disabled,
+  .docs-material-button-hairline-primary.docs-material-button-disabled {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%) !important;
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-fill-primary.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-hover {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-focused,
+  .docs-material-button-fill-primary.docs-material-button-focused.docs-material-button-no-focus-border {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-hover.docs-material-button-focused {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-active {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-disabled {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-horizontal-button-group .docs-material-button-selected {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid
+      color-mix(
+        in oklab,
+        transparent,
+        var(--gm3-sys-color-primary-fixed-dim) 30%
+      ) !important;
+  }
+  .docs-horizontal-button-group
+    .docs-material-button.docs-material-button-selected.docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+  }
+  .docs-horizontal-button-group
+    .docs-material-button.docs-material-button-selected.docs-material-button-hover
+    .docs-material-button-content {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-horizontal-button-group
+    .docs-material-button:not([class*="docs-material-button-selected"]) {
+    border-color: var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-horizontal-button-group
+    .docs-material-button:not(
+      [class*="docs-material-button-selected"]
+    ).docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
   }
 
   ::selection {
