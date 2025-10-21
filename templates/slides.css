@@ -141,6 +141,273 @@
     fill: var(--gm3-sys-color-on-surface) !important
   }
 
+  /* Docs general components */
+  .docs-material-button-flat-dark,
+  .docs-material-button-flat-default,
+  .docs-material-button-flat-primary,
+  .docs-material-button-text-default {
+    background-color: var(--transparent, transparent);
+  }
+  .docs-material-button-hover.docs-material-button-raised-default,
+  .docs-material-button-hover.docs-material-button-raised-primary {
+    box-shadow:
+      0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px
+        color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
+      0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  .docs-material-button-active.docs-material-button-raised-default,
+  .docs-material-button-active.docs-material-button-raised-primary {
+    box-shadow:
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0
+        color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
+      0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+  .docs-material-button-raised-primary {
+    background-color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-flat-primary {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-flat-dark {
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-hover.docs-material-button-flat-primary {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docs-material-button-focused.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 12%
+    );
+  }
+  .docs-material-button-active.docs-material-button-text-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
+  .docs-material-button-raised-default.docs-material-button-focused {
+    border: 1px inset var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-default.docs-material-button-focused,
+  .docs-material-button-flat-primary.docs-material-button-focused {
+    border: 1px inset var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-flat-dark.docs-material-button-focused {
+    border: 1px solid var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-hover.docs-material-button-flat-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .docs-material-button-active.docs-material-button-flat-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-raised-default {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 4%
+    );
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-active.docs-material-button-raised-default {
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-disabled.docs-material-button-flat-default,
+  .docs-material-button-disabled.docs-material-button-flat-primary,
+  .docs-material-button-disabled.docs-material-button-raised-default {
+    background-color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-disabled.docs-material-button-raised-primary {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-flat-primary > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 32%
+    );
+  }
+  .docs-material-button-text-default > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-primary) 16%
+    );
+  }
+  .docs-material-button-raised-default > .docs-material-button-ripple-element {
+    background-color: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 12%
+    );
+  }
+  .docs-material-button-hairline-primary.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-text-default.docs-material-button {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-material-button-hairline-default.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-on-surface-variant);
+  }
+  .docs-material-button-hairline-default.docs-material-button-hover,
+  .docs-material-button-hairline-primary.docs-material-button-hover {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-primary-fixed-dim) 50%) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-focused,
+  .docs-material-button-hairline-default.docs-material-button-focused.docs-material-button-no-focus-border,
+  .docs-material-button-hairline-primary.docs-material-button-focused,
+  .docs-material-button-hairline-primary.docs-material-button-focused.docs-material-button-no-focus-border {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-primary-fixed-dim) 50%) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-hover.docs-material-button-focused,
+  .docs-material-button-hairline-primary.docs-material-button-hover.docs-material-button-focused {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-primary-fixed-dim) 30%) !important;
+  }
+  .docs-material-button-hairline-default.docs-material-button-active,
+  .docs-material-button-hairline-primary.docs-material-button-active {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid var(--transparent, transparent) !important;
+    box-shadow: 0 2px 6px 2px
+      color-mix(in oklab, transparent, var(--gm3-sys-color-shadow) 15%);
+  }
+  .docs-material-button-hairline-default.docs-material-button-disabled,
+  .docs-material-button-hairline-primary.docs-material-button-disabled {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-surface-container-lowest);
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%) !important;
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-material-button-fill-primary.docs-material-button {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-hover {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-focused,
+  .docs-material-button-fill-primary.docs-material-button-focused.docs-material-button-no-focus-border {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-hover.docs-material-button-focused {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-active {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+  }
+  .docs-material-button-fill-primary.docs-material-button-disabled {
+    border: 1px solid var(--transparent, transparent) !important;
+    background: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-container-lowest);
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-horizontal-button-group .docs-material-button-selected {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 18%
+    );
+    border: 1px solid
+      color-mix(in oklab, transparent, var(--gm3-sys-color-primary-fixed-dim) 30%) !important;
+  }
+  .docs-horizontal-button-group
+    .docs-material-button.docs-material-button-selected.docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 16%
+    );
+  }
+  .docs-horizontal-button-group
+    .docs-material-button.docs-material-button-selected.docs-material-button-hover
+    .docs-material-button-content {
+    color: var(--gm3-sys-color-primary);
+  }
+  .docs-horizontal-button-group
+    .docs-material-button:not([class*="docs-material-button-selected"]) {
+    border-color: var(--gm3-sys-color-outline-variant) !important;
+    color: var(--gm3-sys-color-on-surface);
+  }
+  .docs-horizontal-button-group
+    .docs-material-button:not(
+      [class*="docs-material-button-selected"]
+    ).docs-material-button-hover {
+    background: color-mix(
+      in oklab,
+      transparent,
+      var(--gm3-sys-color-on-surface) 8%
+    );
+  }
+
   ::selection {
     background-color: var(--gm3-sys-color-primary) !important;
     color: var(--gm3-sys-color-on-primary) !important;
