@@ -72,9 +72,9 @@ export const colorIndex: Record<string, string> = {
 
     "#f8f9fa": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
 
-    "#fbbc04": "var(--gm3-sys-color-primary)",
-    "#fbc117": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 8%)",
-    "#fdc154": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 12%)",
+    // "#fbbc04": "var(--gm3-sys-color-primary)",
+    // "#fbc117": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 8%)",
+    // "#fdc154": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 12%)",
 
     // Sheets
     
@@ -92,11 +92,11 @@ export const colorIndex: Record<string, string> = {
     "#dff2e4": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 18%)",
     "#e6f4ea": "var(--gm3-sys-color-primary-container)",
 
-    "#137333": "var(--gm3-sys-color-primary)",
-    "#188038": "var(--gm3-sys-color-primary)",
-    "#2a8947": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 8%)",
-    "#34a853": "var(--gm3-sys-color-primary)",
-    "#4f9e67": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 12%)",
+    // "#137333": "var(--gm3-sys-color-primary)",
+    // "#188038": "var(--gm3-sys-color-primary)",
+    // "#2a8947": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 8%)",
+    // "#34a853": "var(--gm3-sys-color-primary)",
+    // "#4f9e67": "color-mix(in oklab, var(--gm3-sys-color-primary), var(--gm3-sys-color-on-primary) 12%)",
 
     // Gmail
     "#0000CC": "var(--gm3-sys-color-primary)",
