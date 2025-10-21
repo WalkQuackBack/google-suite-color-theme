@@ -5,6 +5,318 @@
 .gb_B {
   background-color: var(--transparent, transparent);
 }
+.javascriptMaterialdesignGm3WizBannerBannerDeprecated
+  .javascriptMaterialdesignGm3WizBannerBannerFixed,
+.javascriptMaterialdesignGm3WizBannerBannerDeprecated.javascriptMaterialdesignGm3WizBannerBanner {
+  background-color: var(
+    --Xwgg5d,
+    var(--gm3-sys-color-surface-container-low, #f8fafd)
+  );
+}
+.javascriptMaterialdesignGm3WizBannerBannerDeprecated
+  .javascriptMaterialdesignGm3WizBannerBannerGraphic {
+  color: var(--BMRrs, #fff);
+  background-color: var(--TOBIqc, #6200ee);
+}
+.javascriptMaterialdesignGm3WizBannerBannerDeprecated
+  .javascriptMaterialdesignGm3WizBannerBannerText {
+  color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
+}
+.javascriptMaterialdesignGm3WizBannerBanner,
+.javascriptMaterialdesignGm3WizBannerBannerFixed {
+  background-color: var(
+    --leFxrb,
+    var(--gm3-sys-color-primary-container, #d3e3fd)
+  );
+}
+@media (forced-colors: active) {
+  .javascriptMaterialdesignGm3WizBannerBanner:not(
+      :has(.javascriptMaterialdesignGm3WizBannerBannerFixed)
+    ):before,
+  .javascriptMaterialdesignGm3WizBannerBannerFixed:before {
+    border: 1px solid var(--transparent, transparent);
+  }
+}
+.javascriptMaterialdesignGm3WizBannerBannerGraphic {
+  color: var(--BK3ddb, var(--gm3-sys-color-on-surface-variant, #444746));
+}
+.javascriptMaterialdesignGm3WizBannerBannerText {
+  color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
+}
+.javascriptMaterialdesignGm3WizBannerBannerTitle {
+  color: var(--nHWRyc, var(--gm3-sys-color-on-surface, #1f1f1f));
+}
+.javascriptMaterialdesignGm3WizFocusRingOutward-focusringoutward {
+  box-shadow: 0 0 0 var(--gm3-focus-ring-outward-track-width, 3px)
+    var(--gm3-focus-ring-outward-color, var(--gm3-sys-color-secondary, #00639b));
+  outline: var(--gm3-focus-ring-outward-track-width, 3px) solid
+    var(--transparent, transparent);
+}
+@keyframes gm3-focus-ring-outward-grows {
+  0% {
+    box-shadow: 0 0 0 0
+      var(
+        --gm3-focus-ring-outward-color,
+        var(--gm3-sys-color-secondary, #00639b)
+      );
+  }
+  to {
+    box-shadow: 0 0 0 8px
+      var(
+        --gm3-focus-ring-outward-color,
+        var(--gm3-sys-color-secondary, #00639b)
+      );
+  }
+}
+@keyframes gm3-focus-ring-outward-shrinks {
+  0% {
+    box-shadow: 0 0 0 8px
+      var(
+        --gm3-focus-ring-outward-color,
+        var(--gm3-sys-color-secondary, #00639b)
+      );
+  }
+}
+.javascriptMaterialdesignGm3WizRipple-ripple:before {
+  background-color: var(--gm3-ripple-hover-color, transparent);
+}
+.javascriptMaterialdesignGm3WizRipple-ripple:after {
+  background: radial-gradient(
+    closest-side,
+    var(--gm3-ripple-pressed-color, transparent) max(100% - 70px, 65%),
+    transparent 100%
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button {
+  background: var(--transparent, transparent);
+}
+.javascriptMaterialdesignGm3WizButtonText-button__label {
+  color: var(
+    --gm3-button-text-label-text-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:hover
+  .javascriptMaterialdesignGm3WizButtonText-button__label {
+  color: var(
+    --gm3-button-text-hover-label-text-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:focus-visible
+  .javascriptMaterialdesignGm3WizButtonText-button__label {
+  color: var(
+    --gm3-button-text-focus-label-text-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:active
+  .javascriptMaterialdesignGm3WizButtonText-button__label {
+  color: var(
+    --gm3-button-text-pressed-label-text-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:disabled
+  .javascriptMaterialdesignGm3WizButtonText-button__label {
+  color: var(
+    --gm3-button-text-disabled-label-text-color,
+    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0.38)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
+  color: var(
+    --gm3-button-text-with-icon-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:hover
+  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
+  color: var(
+    --gm3-button-text-with-icon-hover-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:focus-visible
+  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
+  color: var(
+    --gm3-button-text-with-icon-focus-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:active
+  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
+  color: var(
+    --gm3-button-text-with-icon-pressed-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:disabled
+  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
+  color: var(
+    --gm3-button-text-with-icon-disabled-icon-color,
+    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0.38)
+  );
+}
+.javascriptMaterialdesignGm3WizButtonText-button:before {
+  border: 1px solid var(--transparent, transparent);
+}
+.javascriptMaterialdesignGm3WizButtonText-button:disabled:before {
+  background-color: var(
+    --gm3-button-text-disabled-container-color,
+    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button {
+  background: var(--transparent, transparent);
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:before {
+  border: 1px solid var(--transparent, transparent);
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button {
+  color: var(
+    --gm3-icon-button-standard-unselected-icon-color,
+    var(--gm3-sys-color-on-surface-variant, #444746)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on {
+  color: var(
+    --gm3-icon-button-standard-selected-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:hover {
+  color: var(
+    --gm3-icon-button-standard-unselected-hover-icon-color,
+    var(--gm3-sys-color-on-surface-variant, #444746)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:focus-visible {
+  color: var(
+    --gm3-icon-button-standard-unselected-focus-icon-color,
+    var(--gm3-sys-color-on-surface-variant, #444746)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:active {
+  color: var(
+    --gm3-icon-button-standard-unselected-pressed-icon-color,
+    var(--gm3-sys-color-on-surface-variant, #444746)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on:hover {
+  color: var(
+    --gm3-icon-button-standard-selected-hover-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on:focus-visible {
+  color: var(
+    --gm3-icon-button-standard-selected-focus-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on:active {
+  color: var(
+    --gm3-icon-button-standard-selected-pressed-icon-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:disabled {
+  color: var(
+    --gm3-icon-button-standard-disabled-icon-color,
+    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0.38)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerContent {
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerIcon {
+  color: var(--gm3-sys-color-on-surface-variant, #444746);
+}
+.appsElementsWorkspaceRecommendationBannerContentNeutralBannerList {
+  background-color: var(--gm3-sys-color-surface, #fff);
+}
+.appsElementsWorkspaceRecommendationBannerContentTertiaryBannerList {
+  background-color: var(--gm3-sys-color-tertiary-container, #c4eed0);
+  color: var(--gm3-sys-color-on-tertiary-container, #0f5223);
+}
+.appsElementsWorkspaceRecommendationBannerContentTertiaryBannerList:link {
+  color: var(
+    --ae-banner-text-link-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerListHeader {
+  color: var(--gm3-sys-color-on-surface-variant, #444746);
+}
+.appsElementsWorkspaceRecommendationBannerContentContentWrapper {
+  border: 1px solid var(--transparent, transparent);
+}
+.appsElementsWorkspaceRecommendationBannerContentRibbon {
+  background-color: var(--gm3-sys-color-inverse-surface, #303030);
+  color: var(--gm3-sys-color-inverse-on-surface, #f2f2f2);
+}
+.appsElementsWorkspaceRecommendationBannerContentContentWrapperV2:link {
+  color: var(
+    --ae-banner-text-link-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerGraphicIconTertiary {
+  color: var(--gm3-sys-color-on-tertiary-container, #0f5223);
+  fill: var(--gm3-sys-color-on-tertiary-container, #0f5223);
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerGraphicIconPrimary {
+  color: var(--gm3-sys-color-primary, #0b57d0);
+  fill: var(--gm3-sys-color-primary, #0b57d0);
+}
+.appsElementsWorkspaceRecommendationBannerContentBannerGraphicIconError {
+  color: var(--gm3-sys-color-on-error-container, #8c1d18);
+  fill: var(--gm3-sys-color-on-error-container, #8c1d18);
+}
+.appsElementsWorkspaceRecommendationBannerContentTertiary:link {
+  color: var(
+    --ae-banner-text-link-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentNeutralOnSurface:link {
+  color: var(
+    --ae-banner-text-link-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentError:link {
+  color: var(
+    --ae-banner-text-link-color,
+    var(--gm3-sys-color-primary, #0b57d0)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentOnSurfaceBackground {
+  border: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+}
+.appsElementsWorkspaceRecommendationBannerContentG1BackgroundWarning {
+  background: var(--gm3-sys-color-surface, #fff);
+  border: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
+}
+.appsElementsWorkspaceRecommendationBannerContentBackgroundAlertEscalation {
+  background: var(
+    --ae-recommendation-banner-container-color,
+    var(--gm3-sys-color-error-container, #f9dedc)
+  );
+}
+.appsElementsWorkspaceRecommendationBannerContentOverlineV2 {
+  color: var(--gm3-sys-color-on-surface-variant, #444746);
+}
+.appsElementsWorkspaceRecommendationBannerContentOverlineV2AlertEscalation {
+  color: var(--gm3-sys-color-on-error-container, #8c1d18);
+}
+.appsElementsWorkspaceRecommendationBannerContentTitleV2 {
+  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+}
+.appsElementsWorkspaceRecommendationBannerContentDescriptionV2 {
+  color: var(--gm3-sys-color-on-surface-variant, #444746);
+}
 @keyframes enter-morph {
   0% {
     background: var(--gm3-sys-color-surface-container);
@@ -874,37 +1186,6 @@
 }
 .docs-generativeai-onboarding-dialog-privacy-footer a {
   color: var(--gm3-sys-color-outline);
-}
-.javascriptMaterialdesignGm3WizFocusRingOutward-focusringoutward {
-  box-shadow: 0 0 0 var(--gm3-focus-ring-outward-track-width, 3px)
-    var(--gm3-focus-ring-outward-color, var(--gm3-sys-color-secondary, #00639b));
-  outline: var(--gm3-focus-ring-outward-track-width, 3px) solid
-    var(--transparent, transparent);
-}
-@keyframes gm3-focus-ring-outward-grows {
-  0% {
-    box-shadow: 0 0 0 0
-      var(
-        --gm3-focus-ring-outward-color,
-        var(--gm3-sys-color-secondary, #00639b)
-      );
-  }
-  to {
-    box-shadow: 0 0 0 8px
-      var(
-        --gm3-focus-ring-outward-color,
-        var(--gm3-sys-color-secondary, #00639b)
-      );
-  }
-}
-@keyframes gm3-focus-ring-outward-shrinks {
-  0% {
-    box-shadow: 0 0 0 8px
-      var(
-        --gm3-focus-ring-outward-color,
-        var(--gm3-sys-color-secondary, #00639b)
-      );
-  }
 }
 .javascriptMaterialdesignGm3WizCardOutlined-card {
   background-color: var(
@@ -13328,16 +13609,6 @@ a:link {
     var(--gm3-sys-color-on-surface) 8%
   );
 }
-.javascriptMaterialdesignGm3WizRipple-ripple:before {
-  background-color: var(--gm3-ripple-hover-color, transparent);
-}
-.javascriptMaterialdesignGm3WizRipple-ripple:after {
-  background: radial-gradient(
-    closest-side,
-    var(--gm3-ripple-pressed-color, transparent) max(100% - 70px, 65%),
-    transparent 100%
-  );
-}
 .javascriptMaterialdesignGm3WizButtonOutlined-button {
   background: var(--transparent, transparent);
 }
@@ -14719,86 +14990,6 @@ a:link {
     var(--gm3-sys-color-inverse-on-surface, #f2f2f2)
   );
 }
-.javascriptMaterialdesignGm3WizButtonText-button {
-  background: var(--transparent, transparent);
-}
-.javascriptMaterialdesignGm3WizButtonText-button__label {
-  color: var(
-    --gm3-button-text-label-text-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:hover
-  .javascriptMaterialdesignGm3WizButtonText-button__label {
-  color: var(
-    --gm3-button-text-hover-label-text-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:focus-visible
-  .javascriptMaterialdesignGm3WizButtonText-button__label {
-  color: var(
-    --gm3-button-text-focus-label-text-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:active
-  .javascriptMaterialdesignGm3WizButtonText-button__label {
-  color: var(
-    --gm3-button-text-pressed-label-text-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:disabled
-  .javascriptMaterialdesignGm3WizButtonText-button__label {
-  color: var(
-    --gm3-button-text-disabled-label-text-color,
-    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0.38)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
-  color: var(
-    --gm3-button-text-with-icon-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:hover
-  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
-  color: var(
-    --gm3-button-text-with-icon-hover-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:focus-visible
-  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
-  color: var(
-    --gm3-button-text-with-icon-focus-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:active
-  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
-  color: var(
-    --gm3-button-text-with-icon-pressed-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:disabled
-  .javascriptMaterialdesignGm3WizButtonText-button__icon-slot {
-  color: var(
-    --gm3-button-text-with-icon-disabled-icon-color,
-    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0.38)
-  );
-}
-.javascriptMaterialdesignGm3WizButtonText-button:before {
-  border: 1px solid var(--transparent, transparent);
-}
-.javascriptMaterialdesignGm3WizButtonText-button:disabled:before {
-  background-color: var(
-    --gm3-button-text-disabled-container-color,
-    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0)
-  );
-}
 .javascriptMaterialdesignGm3WizCardFilled-card {
   background-color: var(
     --gm3-card-filled-container-color,
@@ -15279,66 +15470,6 @@ a:link {
 .GmIconButtonFocusRingEnabled .mdc-icon-button__focus-ring:after {
   border: 2px solid
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button {
-  background: var(--transparent, transparent);
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:before {
-  border: 1px solid var(--transparent, transparent);
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button {
-  color: var(
-    --gm3-icon-button-standard-unselected-icon-color,
-    var(--gm3-sys-color-on-surface-variant, #444746)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on {
-  color: var(
-    --gm3-icon-button-standard-selected-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:hover {
-  color: var(
-    --gm3-icon-button-standard-unselected-hover-icon-color,
-    var(--gm3-sys-color-on-surface-variant, #444746)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:focus-visible {
-  color: var(
-    --gm3-icon-button-standard-unselected-focus-icon-color,
-    var(--gm3-sys-color-on-surface-variant, #444746)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:active {
-  color: var(
-    --gm3-icon-button-standard-unselected-pressed-icon-color,
-    var(--gm3-sys-color-on-surface-variant, #444746)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on:hover {
-  color: var(
-    --gm3-icon-button-standard-selected-hover-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on:focus-visible {
-  color: var(
-    --gm3-icon-button-standard-selected-focus-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--on:active {
-  color: var(
-    --gm3-icon-button-standard-selected-pressed-icon-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.javascriptMaterialdesignGm3WizIconButtonStandard-icon-button:disabled {
-  color: var(
-    --gm3-icon-button-standard-disabled-icon-color,
-    rgba(var(--gm3-sys-color-on-surface-rgb, 31, 31, 31), 0.38)
-  );
 }
 .javascriptMaterialdesignGm3WizButtonDropdownText-button {
   background: var(--transparent, transparent);
@@ -21774,47 +21905,6 @@ a:link {
 .appsDocsUiMaterialWizCommonLabelledcomponentsHelperText {
   color: var(--gm3-sys-color-on-surface-variant, #444746);
 }
-.javascriptMaterialdesignGm3WizBannerBannerDeprecated
-  .javascriptMaterialdesignGm3WizBannerBannerFixed,
-.javascriptMaterialdesignGm3WizBannerBannerDeprecated.javascriptMaterialdesignGm3WizBannerBanner {
-  background-color: var(
-    --Xwgg5d,
-    var(--gm3-sys-color-surface-container-low, #f8fafd)
-  );
-}
-.javascriptMaterialdesignGm3WizBannerBannerDeprecated
-  .javascriptMaterialdesignGm3WizBannerBannerGraphic {
-  color: var(--BMRrs, #fff);
-  background-color: var(--TOBIqc, #6200ee);
-}
-.javascriptMaterialdesignGm3WizBannerBannerDeprecated
-  .javascriptMaterialdesignGm3WizBannerBannerText {
-  color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
-}
-.javascriptMaterialdesignGm3WizBannerBanner,
-.javascriptMaterialdesignGm3WizBannerBannerFixed {
-  background-color: var(
-    --leFxrb,
-    var(--gm3-sys-color-primary-container, #d3e3fd)
-  );
-}
-@media (forced-colors: active) {
-  .javascriptMaterialdesignGm3WizBannerBanner:not(
-      :has(.javascriptMaterialdesignGm3WizBannerBannerFixed)
-    ):before,
-  .javascriptMaterialdesignGm3WizBannerBannerFixed:before {
-    border: 1px solid var(--transparent, transparent);
-  }
-}
-.javascriptMaterialdesignGm3WizBannerBannerGraphic {
-  color: var(--BK3ddb, var(--gm3-sys-color-on-surface-variant, #444746));
-}
-.javascriptMaterialdesignGm3WizBannerBannerText {
-  color: var(--ByDq6e, var(--gm3-sys-color-on-surface-variant, #444746));
-}
-.javascriptMaterialdesignGm3WizBannerBannerTitle {
-  color: var(--nHWRyc, var(--gm3-sys-color-on-surface, #1f1f1f));
-}
 .appsDocsUiWizBannerBase:link {
   color: var(
     --ae-banner-text-link-color,
@@ -22610,96 +22700,6 @@ a:link {
 .appsElementsMultiPanelPanelContentInnerContainer,
 .appsElementsMultiPanelVideoPlayer {
   background-color: var(--gm3-sys-color-surface, #fff);
-}
-.appsElementsWorkspaceRecommendationBannerContentBannerContent {
-  color: var(--gm3-sys-color-on-surface, #1f1f1f);
-}
-.appsElementsWorkspaceRecommendationBannerContentBannerIcon {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
-}
-.appsElementsWorkspaceRecommendationBannerContentNeutralBannerList {
-  background-color: var(--gm3-sys-color-surface, #fff);
-}
-.appsElementsWorkspaceRecommendationBannerContentTertiaryBannerList {
-  background-color: var(--gm3-sys-color-tertiary-container, #c4eed0);
-  color: var(--gm3-sys-color-on-tertiary-container, #0f5223);
-}
-.appsElementsWorkspaceRecommendationBannerContentTertiaryBannerList:link {
-  color: var(
-    --ae-banner-text-link-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.appsElementsWorkspaceRecommendationBannerContentBannerListHeader {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
-}
-.appsElementsWorkspaceRecommendationBannerContentContentWrapper {
-  border: 1px solid var(--transparent, transparent);
-}
-.appsElementsWorkspaceRecommendationBannerContentRibbon {
-  background-color: var(--gm3-sys-color-inverse-surface, #303030);
-  color: var(--gm3-sys-color-inverse-on-surface, #f2f2f2);
-}
-.appsElementsWorkspaceRecommendationBannerContentContentWrapperV2:link {
-  color: var(
-    --ae-banner-text-link-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.appsElementsWorkspaceRecommendationBannerContentBannerGraphicIconTertiary {
-  color: var(--gm3-sys-color-on-tertiary-container, #0f5223);
-  fill: var(--gm3-sys-color-on-tertiary-container, #0f5223);
-}
-.appsElementsWorkspaceRecommendationBannerContentBannerGraphicIconPrimary {
-  color: var(--gm3-sys-color-primary, #0b57d0);
-  fill: var(--gm3-sys-color-primary, #0b57d0);
-}
-.appsElementsWorkspaceRecommendationBannerContentBannerGraphicIconError {
-  color: var(--gm3-sys-color-on-error-container, #8c1d18);
-  fill: var(--gm3-sys-color-on-error-container, #8c1d18);
-}
-.appsElementsWorkspaceRecommendationBannerContentTertiary:link {
-  color: var(
-    --ae-banner-text-link-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.appsElementsWorkspaceRecommendationBannerContentNeutralOnSurface:link {
-  color: var(
-    --ae-banner-text-link-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.appsElementsWorkspaceRecommendationBannerContentError:link {
-  color: var(
-    --ae-banner-text-link-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-}
-.appsElementsWorkspaceRecommendationBannerContentOnSurfaceBackground {
-  border: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
-}
-.appsElementsWorkspaceRecommendationBannerContentG1BackgroundWarning {
-  background: var(--gm3-sys-color-surface, #fff);
-  border: 1px solid var(--gm3-sys-color-outline-variant, #c4c7c5);
-}
-.appsElementsWorkspaceRecommendationBannerContentBackgroundAlertEscalation {
-  background: var(
-    --ae-recommendation-banner-container-color,
-    var(--gm3-sys-color-error-container, #f9dedc)
-  );
-}
-.appsElementsWorkspaceRecommendationBannerContentOverlineV2 {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
-}
-.appsElementsWorkspaceRecommendationBannerContentOverlineV2AlertEscalation {
-  color: var(--gm3-sys-color-on-error-container, #8c1d18);
-}
-.appsElementsWorkspaceRecommendationBannerContentTitleV2 {
-  color: var(--gm3-sys-color-on-surface, #1f1f1f);
-}
-.appsElementsWorkspaceRecommendationBannerContentDescriptionV2 {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
 }
 .appsElementsWorkspaceButtonActionGeminiShimmerButton {
   background: var(
