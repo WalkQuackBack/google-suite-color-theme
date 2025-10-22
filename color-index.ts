@@ -105,7 +105,11 @@ export const colorIndex: Record<string, string> = {
     "rgba(26,115,232,.04)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 4%)",
     "rgba(26,115,232,.08)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 8%)",
     "rgba(26,115,232,.12)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 12%)",
+    "rgba(26,115,232,.14)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 14%)",
     "rgba(26,115,232,.16)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 16%)",
+    "rgba(26,115,232,.2)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 20%)",
+    "rgba(26,115,232,.25)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 25%)",
+    "rgba(26,115,232,.5)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 50%)",
     "rgb(26,115,232)": "var(--gm3-sys-color-primary)",
     "rgb(25,103,210)": "var(--gm3-sys-color-primary)",
     "rgb(138,180,248)": "var(--gm3-sys-color-inverse-primary)",
@@ -134,6 +138,7 @@ export const colorIndex: Record<string, string> = {
     // Google Classroom
     "#1157ce": "var(--gm3-sys-color-primary)",
     "#1976d2": "var(--gm3-sys-color-secondary)",
+    "rgb(24,90,188)": "var(--gm3-sys-color-secondary)",
     "rgb(174,203,250)": "var(--gm3-sys-color-primary-container)",
     "rgb(241,243,244)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 16%)",
     "rgb(248,249,250)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
@@ -141,20 +146,33 @@ export const colorIndex: Record<string, string> = {
     "rgba(0,0,0,.549)": "var(--gm3-sys-color-outline)",
 
     "rgb(24,128,56)": "var(--gm3-sys-color-success)",
+    "#2e7d32": "var(--gm3-sys-color-success)",
+
+    "rgb(217,48,37)": "var(--gm3-sys-color-error)",
 
     // \/ HACK: Adjust replace-colors to have 0. prefix for matching.
     // In addition, three digit hex codes should also match six digit hex codes
     "rgba(0,0,0,0.87)":  "var(--gm3-sys-color-on-surface)",
     "#ffffff":  "var(--gm3-sys-color-surface)",
+    "rgb(66,133,244)": "var(--gm3-sys-color-primary)",
     "rgba(66,133,244,.04)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 4%)",
     "rgba(66,133,244,.1)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 10%)",
+    "rgba(66,133,244,0.16)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 16%)",
     "rgba(66,133,244,.16)": "color-mix(in oklab, transparent, var(--gm3-sys-color-primary) 16%)",
     "rgb(232,240,254)": "var(--gm3-sys-color-primary-container)",
+
+    // Switches
+    "#fafafa": "var(--gm3-sys-color-surface-bright)",
+    "#b9b9b9": "var(--gm3-sys-color-outline-variant)",
+
+    // Tooltip background
+    "rgba(97,97,97,.9)": "var(--gm3-sys-color-inverse-surface)",
 
     // Main
 
     "rgba(0,0,0,.04)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 4%)",
     'rgba(0,0,0,.12)': "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
+    "rgba(0,0,0,0.2)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 20%)",
     "rgba(0,0,0,.54)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.6)": "var(--gm3-sys-color-on-surface)",
     "rgba(0,0,0,.7)": "var(--gm3-sys-color-on-surface)",
@@ -170,6 +188,8 @@ export const colorIndex: Record<string, string> = {
     "rgba(68,71,70,.08)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%)",
     "rgba(68,71,70,.12)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%)",
     "rgb(95,99,104)": "var(--gm3-sys-color-on-surface)",
+    "rgba(153,153,153,0)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 0%)",
+    "rgba(153,153,153,.4)": "color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 40%)",
     "#202124": "var(--gm3-sys-color-on-surface)",
     "#222": "var(--gm3-sys-color-on-surface)",
     "#333": "var(--gm3-sys-color-on-surface)",
