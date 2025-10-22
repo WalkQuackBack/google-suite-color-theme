@@ -2924,22 +2924,29 @@ a.docs-blameview-warning-info {
 .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
   .jfk-bubble-arrowdown
   .jfk-bubble-arrowimplafter {
-  border-color: #fafafa var(--transparent, transparent);
+  border-color: var(--gm3-sys-color-surface-bright)
+    var(--transparent, transparent);
 }
 .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
   .jfk-bubble-arrowup
   .jfk-bubble-arrowimplafter {
-  border-color: #fafafa var(--transparent, transparent);
+  border-color: var(--gm3-sys-color-surface-bright)
+    var(--transparent, transparent);
 }
 .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
   .jfk-bubble-arrowleft
   .jfk-bubble-arrowimplafter {
-  border-color: var(--transparent, transparent) #fafafa;
+  border-color: var(--transparent, transparent)
+    var(--gm3-sys-color-surface-bright);
 }
 .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
   .jfk-bubble-arrowright
   .jfk-bubble-arrowimplafter {
-  border-color: var(--transparent, transparent) #fafafa;
+  border-color: var(--transparent, transparent)
+    var(--gm3-sys-color-surface-bright);
+}
+.jfk-bubble.docs-promo-bubble {
+  background-color: var(--gm3-sys-color-surface-bright);
 }
 .docs-gm-promo.jfk-bubble.docs-promo-bubble {
   box-shadow: 0 2px 6px 2px
@@ -7464,11 +7471,13 @@ body {
     0 2px 1px -1px
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
     0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--gm3-sys-color-surface-bright);
 }
 .docs-chat-message-tooltip-container
   .jfk-bubble-arrowup
   .jfk-bubble-arrowimplafter {
-  border-color: #fafafa var(--transparent, transparent);
+  border-color: var(--gm3-sys-color-surface-bright)
+    var(--transparent, transparent);
 }
 .docs-chat-message-tooltip-container
   .jfk-bubble-arrowup
@@ -8411,6 +8420,10 @@ a.docs-revisions-sidebar-revisions-empty-learn-more {
 }
 .docs-gm .docs-revisions-switch .apps-ui-material-slide-toggle-track {
   background-color: var(--gm3-sys-color-outline);
+}
+.docs-revisions-switch.apps-ui-material-slide-toggle-container-checked
+  .apps-ui-material-slide-toggle-thumb {
+  background-color: var(--gm3-sys-color-surface-bright);
 }
 .docs-revisions-switch.apps-ui-material-slide-toggle-container-checked
   .apps-ui-material-slide-toggle-track {
@@ -9495,6 +9508,9 @@ a.docs-bubble-link-disabled {
 .waffle-assistant-chart-highlights {
   color: var(--gm3-sys-color-on-surface-variant);
 }
+.waffle-assistant-facet-section {
+  background-color: var(--gm3-sys-color-surface-bright);
+}
 .waffle-assistant-facet-top-text {
   color: var(--gm3-sys-color-on-surface-variant);
 }
@@ -9573,10 +9589,18 @@ a.docs-bubble-link-disabled {
     0 0 2px 0
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
     0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  background: var(--gm3-sys-color-surface-bright);
+}
+.waffle-assistant-replaceable-title .waffle-assistant-answers-query-box {
+  background: var(--gm3-sys-color-surface-bright);
 }
 .waffle-assistant-answers-query-box.waffle-assistant-answers-query-box-focused,
 .waffle-assistant-answers-query-box:hover {
   background: var(--gm3-sys-color-surface-container-lowest);
+}
+.waffle-assistant-replaceable-title .waffle-assistant-answers-query-box-focused,
+.waffle-assistant-replaceable-title .waffle-assistant-answers-query-box:hover {
+  background: var(--gm3-sys-color-surface-bright);
 }
 .waffle-assistant-answers-input-box {
   background: var(--transparent, transparent);
@@ -9622,6 +9646,7 @@ a.docs-bubble-link-disabled {
     0 0 2px 0
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
     0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  background: var(--gm3-sys-color-surface-bright);
   color: var(--gm3-sys-color-on-surface-variant);
 }
 .waffle-assistant-answers-toolbar-ac-renderer {
@@ -10188,7 +10213,11 @@ a.waffle-hyperlink-tooltip-link {
   color: var(--gm3-sys-color-primary);
 }
 .waffle-function-localization-promo {
+  background-color: var(--gm3-sys-color-surface-bright);
   color: var(--gm3-sys-color-on-surface-variant);
+}
+.jfk-button.waffle-function-localization-promo-yes-button {
+  color: var(--gm3-sys-color-surface-bright);
 }
 .apps-ui-material-slide-toggle-container-checked
   .apps-ui-material-slide-toggle-track {
@@ -10766,6 +10795,7 @@ a.waffle-rich-text-link {
   background-color: var(--transparent, transparent);
 }
 .waffle-dashboard-fab-buttons {
+  background-color: var(--gm3-sys-color-surface-bright);
   box-shadow: 0 10px 10px var(--gm3-sys-color-outline);
 }
 .waffle-dashboard-fab-buttons:focus,
@@ -11443,6 +11473,7 @@ td.nfd-sample-label {
   color: var(--gm3-sys-color-surface-container-lowest);
 }
 .goog-palette-customcolor {
+  background-color: var(--gm3-sys-color-surface-bright);
   border: 1px solid
     color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
   color: var(--gm3-sys-color-on-surface-variant);
@@ -11649,6 +11680,9 @@ body.jfk-scrollbar::-webkit-scrollbar-corner {
 }
 .google-visualization-table-tr-even {
   background-color: var(--gm3-sys-color-surface-container-lowest);
+}
+.google-visualization-table-tr-odd {
+  background-color: var(--gm3-sys-color-surface-bright);
 }
 .google-visualization-table-seq {
   color: var(--gm3-sys-color-on-surface-variant);
@@ -14174,6 +14208,7 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
   color: var(--gm3-sys-color-on-surface);
 }
 .waffle-dataconnector-footer-sharing-message {
+  background-color: var(--gm3-sys-color-surface-bright);
   color: var(--gm3-sys-color-on-surface);
 }
 .waffle-dataconnector-query-parameter-prompt-rangepicker-focused {
@@ -16333,6 +16368,7 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
   border: 1px solid var(--gm3-sys-color-outline-variant);
 }
 .waffle-printing-select-list {
+  background-color: var(--gm3-sys-color-surface-bright);
   box-shadow:
     0 0 8px 0
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
@@ -16654,6 +16690,9 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
 .docs-charts-tooltip-entry-domain .docs-charts-tooltip-value {
   color: var(--gm3-sys-color-on-surface);
 }
+.docs-ml-header {
+  background: var(--gm3-sys-color-surface-bright);
+}
 .docsRecommendationBanner-banner-container {
   background: var(--gm3-sys-color-primary-container);
   color: var(--gm3-sys-color-on-surface);
@@ -16674,9 +16713,11 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
 }
 .docs-ml-promotion-action-button.docs-ml-promotion-yes-button {
   background-color: var(--gm3-sys-color-primary);
+  color: var(--gm3-sys-color-surface-bright);
   border: 1px solid var(--transparent, transparent);
 }
 .docs-ml-promotion-action-button.docs-ml-promotion-no-button {
+  background-color: var(--gm3-sys-color-surface-bright);
   color: var(--gm3-sys-color-on-surface-variant);
   border: 1px solid var(--gm3-sys-color-outline-variant);
 }
@@ -17431,6 +17472,7 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
   color: var(--gm3-sys-color-on-surface);
 }
 .waffle-printing-custom-headers-footers-pill-select {
+  background-color: var(--gm3-sys-color-surface-bright);
   box-shadow:
     0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0
@@ -17528,6 +17570,9 @@ input:disabled.waffle-countdown-bubble-input-field:hover {
 .waffle-promo .jfk-bubble-arrowright .jfk-bubble-arrowimplafter,
 .waffle-promo .jfk-bubble-arrowright .jfk-bubble-arrowimplbefore {
   border-color: var(--transparent, transparent) #188038 !important;
+}
+.waffle-shortcut-override-outside-promo {
+  background-color: var(--gm3-sys-color-surface-bright);
 }
 .waffle-shortcut-override-outside-promo-description {
   color: var(--gm3-sys-color-on-surface-variant);
@@ -18548,6 +18593,9 @@ a.waffle-charts-alert-link-close {
 }
 .docs-fontmenu .docs-fonts-section-header {
   color: var(--gm3-sys-color-on-surface);
+}
+.docs-hats-survey-followup-card {
+  background-color: var(--gm3-sys-color-surface-bright);
 }
 .docs-hats-survey-followup-card-text {
   color: var(--gm3-sys-color-on-surface);

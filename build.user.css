@@ -2,7 +2,7 @@
 @name Google Docs Color Theme
 @namespace github.com/walkquackback/google-docs-color-theme
 @homepageURL https://github.com/walkquackback/google-suite-color-theme
-@version 2025.10.21
+@version 2025.10.22
 @updateURL https://github.com/walkquackback/google-suite-color-theme/raw/refs/heads/main/build.user.css
 @supportURL https://github.com/walkquackback/google-suite-color-theme/issues?q=is%3Aopen+is%3Aissue
 @description Allows Google Docs to be themed using CSS variables. Comes by default with a dark theme.
@@ -34,6 +34,7 @@
     color: var(--gm3-sys-color-surface-container-lowest);
   }
   .goog-palette-customcolor {
+    background-color: var(--gm3-sys-color-surface-bright);
     border: 1px solid
       color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 8%);
     color: var(--gm3-sys-color-on-surface-variant);
@@ -8313,22 +8314,29 @@
   .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowdown
     .jfk-bubble-arrowimplafter {
-    border-color: #fafafa var(--transparent, transparent);
+    border-color: var(--gm3-sys-color-surface-bright)
+      var(--transparent, transparent);
   }
   .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowup
     .jfk-bubble-arrowimplafter {
-    border-color: #fafafa var(--transparent, transparent);
+    border-color: var(--gm3-sys-color-surface-bright)
+      var(--transparent, transparent);
   }
   .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowleft
     .jfk-bubble-arrowimplafter {
-    border-color: var(--transparent, transparent) #fafafa;
+    border-color: var(--transparent, transparent)
+      var(--gm3-sys-color-surface-bright);
   }
   .jfk-bubble.jfk-bubble-promo.docs-promo-bubble
     .jfk-bubble-arrowright
     .jfk-bubble-arrowimplafter {
-    border-color: var(--transparent, transparent) #fafafa;
+    border-color: var(--transparent, transparent)
+      var(--gm3-sys-color-surface-bright);
+  }
+  .jfk-bubble.docs-promo-bubble {
+    background-color: var(--gm3-sys-color-surface-bright);
   }
   .docs-gm-promo.jfk-bubble.docs-promo-bubble {
     background-color: var(--gm3-sys-color-primary);
@@ -9240,6 +9248,10 @@
   }
   .docs-gm .docs-revisions-switch .apps-ui-material-slide-toggle-track {
     background-color: var(--gm3-sys-color-outline);
+  }
+  .docs-revisions-switch.apps-ui-material-slide-toggle-container-checked
+    .apps-ui-material-slide-toggle-thumb {
+    background-color: var(--gm3-sys-color-surface-bright);
   }
   .docs-gm
     .docs-revisions-switch.apps-ui-material-slide-toggle-container-checked
@@ -12557,11 +12569,13 @@
       0 2px 1px -1px
         color-mix(in oklab, transparent, var(--gm3-sys-color-on-surface) 12%),
       0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    background-color: var(--gm3-sys-color-surface-bright);
   }
   .docs-chat-message-tooltip-container
     .jfk-bubble-arrowup
     .jfk-bubble-arrowimplafter {
-    border-color: #fafafa var(--transparent, transparent);
+    border-color: var(--gm3-sys-color-surface-bright)
+      var(--transparent, transparent);
   }
   .docs-chat-message-tooltip-container
     .jfk-bubble-arrowup
@@ -17382,6 +17396,9 @@
   .docs-gm .docs-dictionary-sidebar {
     background-color: var(--gm3-sys-color-surface-container-lowest);
   }
+  .docs-dictionary-sidebar-searchbar {
+    fill: var(--gm3-sys-color-surface-bright);
+  }
   .docs-body-pageless .docs-dictionary-sidebar,
   .docs-hub .docs-dictionary-sidebar {
     border: 1px solid var(--gm3-sys-color-outline-variant);
@@ -18667,6 +18684,9 @@
   .UserPrefsUnavailableBanner-banner-message {
     color: var(--gm3-sys-color-on-surface);
   }
+  .docs-hats-survey-followup-card {
+    background-color: var(--gm3-sys-color-surface-bright);
+  }
   .docs-hats-survey-followup-card-text {
     color: var(--gm3-sys-color-on-surface);
   }
@@ -19059,9 +19079,11 @@
   }
   .docs-ml-promotion-action-button.docs-ml-promotion-yes-button {
     background-color: var(--gm3-sys-color-primary);
+    color: var(--gm3-sys-color-surface-bright);
     border: 1px solid var(--transparent, transparent);
   }
   .docs-ml-promotion-action-button.docs-ml-promotion-no-button {
+    background-color: var(--gm3-sys-color-surface-bright);
     color: var(--gm3-sys-color-on-surface-variant);
     border: 1px solid var(--gm3-sys-color-outline-variant);
   }
