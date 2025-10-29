@@ -64,7 +64,7 @@ async function googleAuth() {
 
 async function main() {
     browser = await chromium.launch({
-        headless: true,
+        headless: false,
         args: [
             '--disable-blink-features=AutomationControlled',
         ]
