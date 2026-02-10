@@ -29,15 +29,15 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^24.4.0
-        version: 24.9.1
+        version: 24.10.13
       '@types/user-agents':
         specifier: ^1.0.4
         version: 1.0.4
 
 packages:
 
-  '@types/node@24.9.1':
-    resolution: {integrity: sha512-QoiaXANRkSXK6p0Duvt56W208du4P9Uye9hWLWgGMDTEoKPhuenzNcC4vGUmrNkiOKTlIrBoyNQYNpSwfEZXSg==}
+  '@types/node@24.10.13':
+    resolution: {integrity: sha512-oH72nZRfDv9lADUBSo104Aq7gPHpQZc4BTx38r9xf9pg5LfP6EzSyH2n7qFmmxRQXh7YlUXODcYsg6PuTDSxGg==}
 
   '@types/user-agents@1.0.4':
     resolution: {integrity: sha512-AjeFc4oX5WPPflgKfRWWJfkEk7Wu82fnj1rROPsiqFt6yElpdGFg8Srtm/4PU4rA9UiDUZlruGPgcwTMQlwq4w==}
@@ -132,7 +132,7 @@ packages:
 
 snapshots:
 
-  '@types/node@24.9.1':
+  '@types/node@24.10.13':
     dependencies:
       undici-types: 7.16.0
 
